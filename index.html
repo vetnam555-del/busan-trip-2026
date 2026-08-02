@@ -19,8 +19,19 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/ibm-plex-mono-600.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem('busan.theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 <style>
+  @font-face{
+    font-family:'Plex Mono'; font-style:normal; font-weight:400; font-display:swap;
+    src:url('fonts/ibm-plex-mono-400.woff2') format('woff2');
+    unicode-range:U+0000-00FF,U+2000-206F,U+2070-209F,U+20A0-20BF,U+2100-214F,U+2190-21FF,U+2212;
+  }
+  @font-face{
+    font-family:'Plex Mono'; font-style:normal; font-weight:600; font-display:swap;
+    src:url('fonts/ibm-plex-mono-600.woff2') format('woff2');
+    unicode-range:U+0000-00FF,U+2000-206F,U+2070-209F,U+20A0-20BF,U+2100-214F,U+2190-21FF,U+2212;
+  }
   *,*::before,*::after{ box-sizing:border-box; }
   html{ -webkit-text-size-adjust:100%; }
   img,svg{ max-width:100%; height:auto; display:block; }
@@ -60,8 +71,9 @@
     --sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
             'Apple SD Gothic Neo', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
             'Yu Gothic', 'Noto Sans KR', 'Noto Sans JP', 'Malgun Gothic', sans-serif;
-    --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
-            'Liberation Mono', monospace;
+    --mono: 'Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+            'Liberation Mono', 'Apple SD Gothic Neo', 'Hiragino Sans',
+            'Noto Sans KR', 'Malgun Gothic', monospace;
   }
 
   @media (prefers-color-scheme: dark){
@@ -167,15 +179,16 @@
     position:relative; overflow:hidden;
     margin:var(--pad); padding:34px 20px 24px;
     border-radius:20px;
-    background:var(--night);
+    background:linear-gradient(178deg,#12252F 0%, var(--night) 54%, #050E15 100%);
     color:#E9F1F2;
   }
-  .hero::after{
-    content:""; position:absolute; left:-10%; right:-10%; bottom:-58%;
-    height:78%; pointer-events:none;
-    background:radial-gradient(60% 100% at 50% 100%, var(--glow), transparent 72%);
-  }
   .hero > *{ position:relative; z-index:1; }
+  .heroArt{
+    display:block; max-width:none;
+    width:calc(100% + 40px); margin:26px -20px -24px;
+    aspect-ratio:600 / 170;
+  }
+  @media (min-width:640px){ .heroArt{ aspect-ratio:800 / 170; } }
   .hero .eyebrow{ color:#8AA6AC; }
   .hero h1{
     margin-top:10px; font-size:clamp(34px,10.5vw,46px); font-weight:800;
@@ -267,9 +280,18 @@
   /* ─────────── day header ─────────── */
   .dayHead{
     margin:44px var(--pad) 0;
-    padding-bottom:12px;
-    border-bottom:2px solid var(--ink);
+    padding-bottom:0;
   }
+  /* time-of-day arc — the gradient shows when each day actually runs */
+  .dayarc{ display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .dayarc i{ flex:1 1 auto; height:5px; border-radius:99px; }
+  .dayarc span{
+    flex:0 0 auto; font-family:var(--mono); font-size:11px; font-weight:600;
+    color:var(--muted); font-variant-numeric:tabular-nums; letter-spacing:.01em;
+  }
+  #d1 .dayarc i{ background:linear-gradient(90deg,#CFE0E4 0%,#F2C579 30%,#D97A34 52%,#3A5570 76%,#0E1C28 100%); }
+  #d2 .dayarc i{ background:linear-gradient(90deg,#2F5570 0%,#8FCBD5 18%,#E9F1EC 46%,#F2C579 72%,#C4682F 88%,#1B3244 100%); }
+  #d3 .dayarc i{ background:linear-gradient(90deg,#2F5570 0%,#8FCBD5 16%,#E9F1EC 50%,#DDE8E4 78%,#B9CFD4 100%); }
   .dayHead .row{ display:flex; align-items:flex-end; justify-content:space-between; gap:12px; }
   .dayHead .num{
     font-family:var(--mono); font-size:12px; font-weight:700;
@@ -635,6 +657,92 @@
       <div><span class="k">Zones</span><span class="v"><span class="ko">1일 광안리 · 2일 기장/원도심/송도 · 3일 영도</span><span class="ja">1日目 広安里 · 2日目 機張／旧都心／松島 · 3日目 影島</span></span></div>
       <div><span class="k">Food</span><span class="v"><span class="ko">밀면 2 · 회백밥 1 · 돼지국밥 1 · 낙곱새 1</span><span class="ja">ミルミョン2 · 刺身定食1 · テジクッパ1 · ナッコプセ1</span></span></div>
     </div>
+
+    <svg class="heroArt" viewBox="0 0 800 170" preserveAspectRatio="xMidYMid slice"
+         role="img" aria-label="광안대교 야경과 드론쇼 / 広安大橋の夜景とドローンショー">
+      <defs>
+        <radialGradient id="hz" cx="50%" cy="100%" r="62%">
+          <stop offset="0%" stop-color="#F0A64A" stop-opacity=".26"/>
+          <stop offset="100%" stop-color="#F0A64A" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2E7F8C" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#2E7F8C" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+
+      <ellipse cx="400" cy="128" rx="380" ry="52" fill="url(#hz)"/>
+
+      <!-- drone show -->
+      <g fill="#F0A64A">
+        <circle cx="332" cy="33" r="1.7" opacity=".75"/>
+        <circle cx="353" cy="24" r="2"   opacity=".9"/>
+        <circle cx="375" cy="18" r="1.6" opacity=".8"/>
+        <circle cx="399" cy="14" r="2.2" opacity="1"/>
+        <circle cx="423" cy="17" r="1.6" opacity=".85"/>
+        <circle cx="445" cy="23" r="2"   opacity=".9"/>
+        <circle cx="466" cy="32" r="1.7" opacity=".7"/>
+      </g>
+      <g fill="#59C6D2">
+        <circle cx="345" cy="45" r="1.5" opacity=".7"/>
+        <circle cx="389" cy="39" r="1.7" opacity=".8"/>
+        <circle cx="433" cy="42" r="1.5" opacity=".75"/>
+        <circle cx="472" cy="50" r="1.3" opacity=".55"/>
+        <circle cx="311" cy="53" r="1.3" opacity=".5"/>
+        <circle cx="492" cy="57" r="1.2" opacity=".45"/>
+      </g>
+
+      <!-- suspension cables -->
+      <g fill="none" stroke="#4E7285" stroke-width="1.6" stroke-linecap="round">
+        <path d="M0,122 Q130,118 250,34"/>
+        <path d="M250,34 Q400,150 550,34"/>
+        <path d="M550,34 Q670,118 800,122"/>
+      </g>
+
+      <!-- hangers -->
+      <g stroke="#3E5F70" stroke-width="1">
+        <path d="M60,115.8V126M120,100.6V126M180,75.8V126M220,53.6V126"/>
+        <path d="M280,54.9V126M310,71.1V126M340,82.7V126M370,89.7V126M400,92V126M430,89.7V126M460,82.7V126M490,71.1V126M520,54.9V126"/>
+        <path d="M580,53.6V126M620,75.8V126M680,100.6V126M740,115.8V126"/>
+      </g>
+
+      <!-- towers -->
+      <g stroke="#5B8194" stroke-width="2.6" stroke-linecap="round">
+        <path d="M244,28V128M256,28V128M544,28V128M556,28V128"/>
+      </g>
+      <g stroke="#5B8194" stroke-width="1.8">
+        <path d="M243,46H257M243,84H257M543,46H557M543,84H557"/>
+      </g>
+
+      <!-- deck -->
+      <path d="M0,126H800" stroke="#6C93A5" stroke-width="3.2"/>
+      <path d="M0,130H800" stroke="#25404E" stroke-width="2"/>
+
+      <!-- deck lights -->
+      <g fill="#F5B463">
+        <circle cx="20"  cy="120" r="1.6"/><circle cx="60"  cy="120" r="1.6"/>
+        <circle cx="100" cy="120" r="1.6"/><circle cx="140" cy="120" r="1.6"/>
+        <circle cx="180" cy="120" r="1.6"/><circle cx="220" cy="120" r="1.6"/>
+        <circle cx="260" cy="120" r="1.6"/><circle cx="300" cy="120" r="1.6"/>
+        <circle cx="340" cy="120" r="1.6"/><circle cx="380" cy="120" r="1.6"/>
+        <circle cx="420" cy="120" r="1.6"/><circle cx="460" cy="120" r="1.6"/>
+        <circle cx="500" cy="120" r="1.6"/><circle cx="540" cy="120" r="1.6"/>
+        <circle cx="580" cy="120" r="1.6"/><circle cx="620" cy="120" r="1.6"/>
+        <circle cx="660" cy="120" r="1.6"/><circle cx="700" cy="120" r="1.6"/>
+        <circle cx="740" cy="120" r="1.6"/><circle cx="780" cy="120" r="1.6"/>
+      </g>
+
+      <!-- sea -->
+      <rect x="0" y="130" width="800" height="40" fill="url(#sea)"/>
+      <g stroke="#F5B463" stroke-width="1.4" opacity=".38" stroke-linecap="round">
+        <path d="M140,133v14M300,133v18M420,133v16M540,133v13M660,133v15"/>
+      </g>
+      <g fill="none" stroke="#5FBECB" stroke-linecap="round">
+        <path d="M-20,143 q30,-6 60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0 t60,0" stroke-width="1.6" opacity=".5"/>
+        <path d="M-40,156 q34,-6 68,0 t68,0 t68,0 t68,0 t68,0 t68,0 t68,0 t68,0 t68,0 t68,0 t68,0 t68,0" stroke-width="1.4" opacity=".32"/>
+        <path d="M-10,167 q26,-5 52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0 t52,0" stroke-width="1.2" opacity=".18"/>
+      </g>
+    </svg>
   </header>
 
   <!-- ══════════ FLIGHTS ══════════ -->
@@ -720,6 +828,7 @@
       </div>
       <h2><span class="ko">영도 정착 · 광안리의 밤</span><span class="ja">影島に落ち着く · 広安里の夜</span></h2>
       <p class="sub"><span class="ko">토요일에만 열리는 드론쇼가 있는 날. 광안리 맛집 두 곳을 쇼 앞뒤로 붙여 이동을 한 번으로 줄였습니다.</span><span class="ja">土曜だけのドローンショーがある日。広安里の2軒をショーの前後に配置し、移動を1往復にまとめました。</span></p>
+      <div class="dayarc"><span>12:05</span><i></i><span>22:30</span></div>
     </div>
 
     <div class="legend">
@@ -900,6 +1009,7 @@
       </div>
       <h2><span class="ko">바다 절 · 자갈치 · 송도 일몰</span><span class="ja">海の寺 · チャガルチ · 松島の夕日</span></h2>
       <p class="sub"><span class="ko">오전에 멀리 한 번 다녀오고, 오후부터는 호텔 반경 20분 안에서만 움직입니다.</span><span class="ja">午前に一度遠出して、午後はホテルから20分圏内だけで動きます。</span></p>
+      <div class="dayarc"><span>07:30</span><i></i><span>21:05</span></div>
     </div>
 
     <ol class="stops">
@@ -1046,6 +1156,7 @@
       </div>
       <h2><span class="ko">영도의 아침 · 초량밀면 · 귀국</span><span class="ja">影島の朝 · 草梁ミルミョン · 帰国</span></h2>
       <p class="sub"><span class="ko">16:30 출발이라 오후 일정은 없습니다. 오전에만 움직이고 13:10에는 공항으로 출발합니다.</span><span class="ja">16:30発なので午後の予定はなし。午前だけ動いて13:10には空港へ向かいます。</span></p>
+      <div class="dayarc"><span>07:30</span><i></i><span>16:30 ✈</span></div>
     </div>
 
     <ol class="stops">
