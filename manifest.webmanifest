@@ -1,0 +1,20 @@
+{
+  "name": "부산 2박 3일 · 2026.08.22–24",
+  "short_name": "부산 2박3일",
+  "description": "2026년 8월 22일~24일 부산 여행 일정 (한국어/日本語)",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#EEF2F2",
+  "theme_color": "#0B1620",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
