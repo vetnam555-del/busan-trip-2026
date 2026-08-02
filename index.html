@@ -174,6 +174,34 @@
   .daynav .themebtn{ padding:7px 10px; font-size:13px; line-height:1.1; }
   .navctl{ display:flex; gap:5px; flex:0 0 auto; }
 
+  /* ─────────── live now/next bar (trip days only) ─────────── */
+  .nowbar{ position:sticky; top:var(--navh, 53px); z-index:45; margin:0 var(--pad); }
+  .nowbar[hidden]{ display:none; }
+  .nowbar a{
+    display:flex; flex-wrap:wrap; align-items:baseline; gap:5px 9px;
+    padding:10px 13px; border-radius:0 0 var(--r) var(--r);
+    background:var(--ink); color:var(--bg); text-decoration:none;
+    font-size:13.5px; line-height:1.45;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+  }
+  .nowbar .chip{
+    flex:0 0 auto;
+    font-family:var(--mono); font-size:9.5px; font-weight:700;
+    letter-spacing:.13em; text-transform:uppercase;
+    padding:2.5px 6px; border-radius:5px;
+    background:color-mix(in srgb, var(--bg) 22%, transparent);
+  }
+  .nowbar .chip.up{ background:var(--food); color:#14212B; }
+  .nowbar .row{ display:flex; align-items:baseline; gap:8px; width:100%; min-width:0; }
+  .nowbar .row[hidden]{ display:none; }
+  .nowbar .row.cur{ opacity:.62; font-size:12.5px; }
+  .nowbar .nm{ flex:1 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .nowbar b{ font-family:var(--mono); font-variant-numeric:tabular-nums; font-weight:600; }
+  .nowbar .rem{
+    flex:0 0 auto; font-family:var(--mono); font-size:11px;
+    opacity:.7; font-variant-numeric:tabular-nums;
+  }
+
   /* ─────────── hero ─────────── */
   .hero{
     position:relative; overflow:hidden;
@@ -276,6 +304,45 @@
   .brief .c .big{ margin-top:7px; font-size:15px; font-weight:700; letter-spacing:-.02em; }
   .brief .c .sm{ margin-top:5px; font-size:12.5px; color:var(--muted); line-height:1.55; }
   .brief .c.wide{ grid-column:1 / -1; }
+
+  /* ─────────── distance-from-hotel chart ─────────── */
+  .dist{ display:grid; gap:13px; margin-top:14px; }
+  .dist .r{ display:grid; grid-template-columns:34px 1fr auto; gap:4px 10px; align-items:center; }
+  .dist .day{
+    grid-row:span 2; align-self:start; margin-top:1px;
+    font-family:var(--mono); font-size:9.5px; font-weight:700; letter-spacing:.06em;
+    color:var(--faint); text-align:center;
+    border:1px solid var(--line-2); border-radius:5px; padding:3px 0;
+  }
+  .dist .nm{ font-size:13.5px; font-weight:600; letter-spacing:-.015em; line-height:1.35; min-width:0; }
+  .dist .nm em{ display:block; font-style:normal; font-size:11.5px; font-weight:400; color:var(--faint); }
+  .dist .v{
+    font-family:var(--mono); font-size:11.5px; color:var(--muted);
+    font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; align-self:start;
+  }
+  .dist .tr{ grid-column:2 / -1; position:relative; height:11px; }
+  .dist .tr::before{
+    content:""; position:absolute; left:0; right:0; top:50%; height:1px;
+    background:var(--line); transform:translateY(-50%);
+  }
+  .dist .tr i{
+    position:absolute; left:0; top:50%; height:3px; width:var(--pct);
+    background:var(--sight); border-radius:3px; transform:translateY(-50%);
+  }
+  .dist .tr b{
+    position:absolute; top:50%; left:var(--pct); width:10px; height:10px;
+    margin-left:-5px; border-radius:50%; background:var(--sight);
+    box-shadow:0 0 0 3px var(--bg); transform:translateY(-50%);
+  }
+  .dist .r.walk .tr i, .dist .r.walk .tr b{ background:var(--food); }
+  .dist .r.air  .tr i, .dist .r.air  .tr b{ background:var(--move); }
+  .distKey{
+    display:flex; flex-wrap:wrap; gap:12px; margin-top:14px;
+    font-family:var(--mono); font-size:10px; letter-spacing:.07em;
+    text-transform:uppercase; color:var(--faint);
+  }
+  .distKey span{ display:inline-flex; align-items:center; gap:6px; }
+  .distKey i{ width:16px; height:3px; border-radius:3px; }
 
   /* ─────────── day header ─────────── */
   .dayHead{
@@ -643,6 +710,21 @@
 
   <div class="main">
 
+  <div class="nowbar" id="nowbar" hidden>
+    <a href="#top" id="nowlink">
+      <span class="row cur" id="nowcur">
+        <span class="chip"><span class="ko">지금</span><span class="ja">現在</span></span>
+        <span class="nm" id="nowcurname"></span>
+      </span>
+      <span class="row">
+        <span class="chip up"><span class="ko">다음</span><span class="ja">次</span></span>
+        <b id="nownexttime"></b>
+        <span class="nm" id="nownextname"></span>
+        <span class="rem" id="nowrem"></span>
+      </span>
+    </a>
+  </div>
+
   <section id="top">
 
   <!-- ══════════ HERO ══════════ -->
@@ -815,6 +897,76 @@
         <h3>Apps</h3>
         <p class="sm" style="margin-top:8px"><span class="ko"><b>카카오T</b>(택시 호출·일본어 지원) · <b>네이버지도</b>(구글맵은 한국에서 길찾기가 제한됨) · <b>파파고</b>(번역) · <b>테이블링</b>(맛집 원격 줄서기) — 출국 전 미리 설치하고 로그인해 두세요.</span><span class="ja"><b>KakaoT</b>（タクシー配車・日本語対応）· <b>NAVER Map</b>（Googleマップは韓国内でルート検索が制限されます）· <b>Papago</b>（翻訳）· <b>Tabling</b>（人気店のリモート順番待ち）— 出発前にインストール＆ログインを。</span></p>
       </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="secHead">
+      <p class="eyebrow">Distance from the hotel</p>
+      <h2><span class="ko">숙소에서 얼마나 먼가</span><span class="ja">宿からどれくらい</span></h2>
+      <p class="note"><span class="ko">라발스호텔(영도)에서 각 목적지까지 걸리는 시간입니다. 막대가 길수록 멉니다 — 이 일정이 왜 이런 순서인지 한눈에 보입니다.</span><span class="ja">ラヴァルスホテル（影島）から各目的地までの所要時間です。バーが長いほど遠い — この日程がなぜこの順番なのかが一目でわかります。</span></p>
+    </div>
+
+    <div class="dist">
+      <div class="r walk" style="--pct:18%">
+        <span class="day">D1</span>
+        <span class="nm">삼진어묵 영도본점<em>サムジンオムク 影島本店</em></span>
+        <span class="v">도보 8분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+      <div class="r" style="--pct:18%">
+        <span class="day">D2</span>
+        <span class="nm">자갈치 · 남포동<em>チャガルチ・南浦洞</em></span>
+        <span class="v">택시 8분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+      <div class="r" style="--pct:22%">
+        <span class="day">D3</span>
+        <span class="nm">흰여울문화마을<em>フィニョウル文化村</em></span>
+        <span class="v">택시 10분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+      <div class="r" style="--pct:27%">
+        <span class="day">D3</span>
+        <span class="nm">부산역 · 초량밀면<em>釜山駅・チョリャンミルミョン</em></span>
+        <span class="v">택시 12분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+      <div class="r" style="--pct:33%">
+        <span class="day">D2</span>
+        <span class="nm">태종대<em>太宗台</em></span>
+        <span class="v">택시 15분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+      <div class="r" style="--pct:67%">
+        <span class="day">D1</span>
+        <span class="nm">광안리 · 민락<em>広安里・民楽</em></span>
+        <span class="v">택시 30분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+      <div class="r" style="--pct:84%">
+        <span class="day">D2</span>
+        <span class="nm">해운대 · 해리단길<em>海雲台・ヘリダンギル</em></span>
+        <span class="v">택시 38분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+      <div class="r air" style="--pct:89%">
+        <span class="day">✈</span>
+        <span class="nm">김해국제공항<em>金海国際空港</em></span>
+        <span class="v">택시 40분</span>
+        <span class="tr"><i></i><b></b></span>
+      </div>
+    </div>
+
+    <div class="distKey">
+      <span><i style="background:var(--food)"></i>도보 / 徒歩</span>
+      <span><i style="background:var(--sight)"></i>택시 / タクシー</span>
+      <span><i style="background:var(--move)"></i>공항 / 空港</span>
+    </div>
+
+    <div class="box" style="margin-left:0;margin-right:0">
+      <h4>Why it matters</h4>
+      <p><span class="ko">위쪽 다섯 곳은 전부 <b>15분 안</b>입니다 — 태종대·흰여울·삼진어묵은 호텔과 같은 영도 안이고, 자갈치·부산역은 다리 하나 건너면 됩니다. 그래서 <b>2일차 오전과 3일차 전체를 여기에 몰아넣었습니다.</b><br><br>먼 곳은 광안리와 해운대 둘뿐이라, 각각 <b>하루에 한 번씩만 왕복</b>하도록 저녁 일정을 통째로 묶었습니다. 광안리는 1일차 밤(드론쇼 + 맛집 두 곳), 해운대는 2일차 밤(해리단길 + 갈매기살)입니다.</span><span class="ja">上の5か所はすべて<b>15分以内</b>です — 太宗台・フィニョウル・サムジンオムクはホテルと同じ影島、チャガルチ・釜山駅は橋を一本渡るだけ。だから<b>2日目の午前と3日目の全部をここに集めました。</b><br><br>遠いのは広安里と海雲台の2か所だけなので、それぞれ<b>1日1往復だけ</b>で済むよう、夜の予定をまるごとまとめています。広安里は1日目の夜（ドローンショー＋2軒）、海雲台は2日目の夜（ヘリダンギル＋カルメギサル）です。</span></p>
     </div>
   </section>
   </section><!-- /#top -->
@@ -994,6 +1146,7 @@
         <div class="t">22:00</div><div class="nodewrap"><i class="node"></i></div>
         <div class="c">
           <p class="name"><span class="ko">택시 → 호텔 (22:30 도착)</span><span class="ja">タクシー → ホテル（22:30着）</span></p>
+          <p class="warn"><span class="ko"><b>이 밤의 유일한 복병은 택시입니다.</b> 드론쇼가 끝나는 20:15~21:00에는 광안리 일대에서 카카오T가 거의 안 잡힙니다. 우리는 국밥을 먹고 <b>피크가 지난 뒤에 움직이도록</b> 짜뒀지만, 그래도 안 잡히면:<br><br>① <b>해변에서 두 블록 안쪽 큰길</b>(수영로·광남로)로 걸어 나가서 잡기 — 해변도로에서는 빈 차가 안 섭니다<br>② <b>지하철</b> 2호선 광안역 → 서면 환승 → 1호선 남포역 (약 55분, 1인 1,700원대). 막차는 자정 전후라 여유 있습니다<br>③ 카카오T가 안 되면 <b>온다택시</b>나 길에서 손 흔들기</span><span class="ja"><b>この夜の唯一の伏兵はタクシーです。</b>ドローンショーが終わる20:15〜21:00は、広安里一帯でKakaoTがほぼつかまりません。クッパを食べて<b>ピークを外してから動く</b>組み立てにしていますが、それでもつかまらなければ:<br><br>① <b>ビーチから2ブロック内側の大通り</b>（水営路・広南路）まで歩いて拾う — 海沿いの道では空車が停まりません<br>② <b>地下鉄</b>2号線・広安駅 → 西面で乗換 → 1号線・南浦駅（約55分、1人1,700ウォン台）。終電は0時前後なので余裕があります<br>③ KakaoTがダメなら<b>オンダタクシー</b>か、路上で手を挙げる</span></p>
         </div>
       </li>
 
@@ -1038,7 +1191,7 @@
       </li>
 
       <li class="stop" data-kind="move">
-        <div class="t">10:10</div><div class="nodewrap"><i class="node"></i></div>
+        <div class="t">10:00</div><div class="nodewrap"><i class="node"></i></div>
         <div class="c">
           <p class="name"><span class="ko">택시 → 태종대</span><span class="ja">タクシー → 太宗台（テジョンデ）</span></p>
           <p class="d"><span class="ko">15분 · 약 9,000원. 호텔과 같은 영도 안이라 금방입니다.</span><span class="ja">15分・約9,000ウォン。ホテルと同じ影島の中なのですぐです。</span></p>
@@ -1046,10 +1199,10 @@
       </li>
 
       <li class="stop star" data-kind="sight">
-        <div class="t">10:30</div><div class="nodewrap"><i class="node"></i></div>
+        <div class="t">10:20</div><div class="nodewrap"><i class="node"></i></div>
         <div class="c">
           <p class="name"><span class="ko">태종대 · 다누비열차</span><span class="ja">太宗台（テジョンデ）· ダヌビ列車</span><span class="jp">영도구 전망로 24 · 입장 무료 · 다누비 성인 왕복 4,000원</span></p>
-          <p class="d"><span class="ko">해식 절벽과 소나무 숲이 바다를 감싸는 영도 남단의 국가지질공원. <b>호텔에서 15분</b>이라 아침에 느긋하게 나가도 됩니다.<br><br>핵심은 <b>다누비열차</b>(성인 왕복 4,000원, 6~8월 09:20~19:30 운행)입니다. 순환 코스를 도는 관광열차인데 <b>정거장마다 자유롭게 내렸다 다시 탈 수 있어서</b>, 오르막을 걷지 않고도 전망대·영도등대·신선바위를 다 볼 수 있습니다. 8월에 이건 큰 차이예요.<br><br>추천: 열차로 <b>전망대</b>까지 → 다음 편으로 <b>영도등대</b>(여기서 계단 내려가면 신선바위와 망부석) → 다시 타고 입구로. 1시간 30분이면 넉넉합니다.</span><span class="ja">海食崖と松林が海を囲む影島南端の国家地質公園。<b>ホテルから15分</b>なので、朝ゆっくり出ても大丈夫です。<br><br>ポイントは<b>ダヌビ列車</b>（大人往復4,000ウォン、6〜8月は09:20〜19:30運行）。園内を巡る観光列車で、<b>各停留所で自由に乗り降りできる</b>ので、坂を歩かずに展望台・影島灯台・神仙岩をすべて回れます。8月はこれが決定的に効きます。<br><br>おすすめ：列車で<b>展望台</b>へ → 次の便で<b>影島灯台</b>（ここから階段を下りると神仙岩と望夫石）→ また乗って入口へ。1時間30分あれば十分。</span></p>
+          <p class="d"><span class="ko">해식 절벽과 소나무 숲이 바다를 감싸는 영도 남단의 국가지질공원. <b>호텔에서 15분</b>이라 아침에 느긋하게 나가도 됩니다.<br><br>핵심은 <b>다누비열차</b>(성인 왕복 4,000원, 6~8월 09:20~19:30 운행)입니다. 순환 코스를 도는 관광열차인데 <b>정거장마다 자유롭게 내렸다 다시 탈 수 있어서</b>, 오르막을 걷지 않고도 전망대·영도등대·신선바위를 다 볼 수 있습니다. 8월에 이건 큰 차이예요.<br><br>추천: 열차로 <b>전망대</b>까지 → 다음 편으로 <b>영도등대</b>(여기서 계단 내려가면 신선바위와 망부석) → 다시 타고 입구로. <b>1시간 25분</b>이면 한 바퀴 돌고 나옵니다.</span><span class="ja">海食崖と松林が海を囲む影島南端の国家地質公園。<b>ホテルから15分</b>なので、朝ゆっくり出ても大丈夫です。<br><br>ポイントは<b>ダヌビ列車</b>（大人往復4,000ウォン、6〜8月は09:20〜19:30運行）。園内を巡る観光列車で、<b>各停留所で自由に乗り降りできる</b>ので、坂を歩かずに展望台・影島灯台・神仙岩をすべて回れます。8月はこれが決定的に効きます。<br><br>おすすめ：列車で<b>展望台</b>へ → 次の便で<b>影島灯台</b>（ここから階段を下りると神仙岩と望夫石）→ また乗って入口へ。1時間30分あれば十分。</span></p>
           <div class="acts">
             <button type="button" data-copy="부산 영도구 전망로 24 태종대유원지">📋 주소 복사</button>
             <a href="https://map.naver.com/p/search/태종대유원지" target="_blank" rel="noopener">N 지도</a>
@@ -1059,10 +1212,11 @@
       </li>
 
       <li class="stop" data-kind="move">
-        <div class="t">12:05</div><div class="nodewrap"><i class="node"></i></div>
+        <div class="t">11:45</div><div class="nodewrap"><i class="node"></i></div>
         <div class="c">
           <p class="name"><span class="ko">택시 → 자갈치</span><span class="ja">タクシー → チャガルチ</span></p>
-          <p class="d"><span class="ko">20~25분 · 약 13,000원. 영도 남단에서 영도대교를 건너면 바로입니다. 일찍 도착하면 자갈치시장을 먼저 한 바퀴 둘러보세요.</span><span class="ja">20〜25分・約13,000ウォン。影島の南端から影島大橋を渡ればすぐ。早く着いたらチャガルチ市場を先にひと回りしてみましょう。</span></p>
+          <p class="d"><span class="ko">20~25분 · 약 13,000원. 12:30 예약까지 <b>45분</b>을 잡아뒀습니다 — 태종대 입구에서 택시를 기다리는 시간까지 감안한 여유예요. 일찍 도착하면 자갈치시장을 먼저 한 바퀴 둘러보세요.</span><span class="ja">20〜25分・約13,000ウォン。12:30の予約まで<b>45分</b>とってあります — 太宗台の入口でタクシーを待つ時間まで見込んだ余裕です。早く着いたらチャガルチ市場を先にひと回りしてみましょう。</span></p>
+          <p class="warn"><span class="ko">태종대 입구 매표소 앞에 택시가 대기하지만, 일요일에는 빈 차가 바로 없을 수 있습니다. <b>다누비열차에서 내리면서 카카오T를 미리 호출</b>해 두세요.</span><span class="ja">太宗台入口の券売所前にタクシーは待機していますが、日曜は空車がすぐ見つからないことも。<b>ダヌビ列車を降りながらKakaoTを先に呼んで</b>おきましょう。</span></p>
         </div>
       </li>
 
@@ -1641,6 +1795,7 @@
   }catch(e){}
   btn.addEventListener('click', function(){
     setLang(app.getAttribute('data-lang') === 'ko' ? 'ja' : 'ko');
+    if (typeof renderNow === 'function') renderNow();
   });
 
   /* ── theme toggle ──────────────────── */
@@ -1718,6 +1873,100 @@
       }catch(e){}
     });
   });
+
+  /* ── live now/next during the trip ── */
+  var nav = document.querySelector('.daynav');
+  var mqDesk = window.matchMedia('(min-width:1024px)');
+  function setNavH(){
+    root.style.setProperty('--navh', mqDesk.matches ? '0px' : nav.offsetHeight + 'px');
+  }
+  setNavH();
+  window.addEventListener('resize', setNavH);
+
+  var schedule = [];
+  [['d1','2026-08-22'],['d2','2026-08-23'],['d3','2026-08-24']].forEach(function(pair){
+    var sec = document.getElementById(pair[0]);
+    if (!sec) return;
+    Array.prototype.forEach.call(sec.querySelectorAll('.stop'), function(st, i){
+      var tEl = st.querySelector('.t'), nEl = st.querySelector('.name');
+      if (!tEl || !nEl) return;
+      var m = (tEl.textContent || '').match(/(\d{1,2}):(\d{2})/);
+      if (!m) return;
+      if (!st.id) st.id = pair[0] + '-s' + i;
+      var koEl = nEl.querySelector('.ko'), jaEl = nEl.querySelector('.ja');
+      var plain = nEl.cloneNode(true);
+      Array.prototype.forEach.call(plain.querySelectorAll('.jp'), function(x){ x.remove(); });
+      var fallback = plain.textContent.replace(/\s+/g, ' ').trim();
+      schedule.push({
+        when: new Date(pair[1] + 'T' + ('0' + m[1]).slice(-2) + ':' + m[2] + ':00+09:00'),
+        t: ('0' + m[1]).slice(-2) + ':' + m[2],
+        ko: koEl ? koEl.textContent.trim() : fallback,
+        ja: jaEl ? jaEl.textContent.trim() : fallback,
+        id: st.id
+      });
+    });
+  });
+
+  var bar = document.getElementById('nowbar');
+  var elLink = document.getElementById('nowlink');
+  var elCurRow = document.getElementById('nowcur');
+  var elCurName = document.getElementById('nowcurname');
+  var elNextT = document.getElementById('nownexttime');
+  var elNextName = document.getElementById('nownextname');
+  var elRem = document.getElementById('nowrem');
+
+  function remainingLabel(ms, ja){
+    var mins = Math.max(0, Math.round(ms / 60000));
+    if (mins < 60) return ja ? (mins + '分後') : (mins + '분 후');
+    var h = Math.floor(mins / 60), mm = mins % 60;
+    if (ja) return mm ? (h + '時間' + mm + '分後') : (h + '時間後');
+    return mm ? (h + '시간 ' + mm + '분 후') : (h + '시간 후');
+  }
+
+  function renderNow(){
+    if (!schedule.length) { bar.hidden = true; return; }
+    var now = new Date();
+    var start = schedule[0].when.getTime() - 3 * 3600000;
+    var end = schedule[schedule.length - 1].when.getTime() + 3 * 3600000;
+    if (now.getTime() < start || now.getTime() > end) { bar.hidden = true; return; }
+
+    var ja = app.getAttribute('data-lang') === 'ja';
+    var cur = null, nxt = null;
+    for (var i = 0; i < schedule.length; i++) {
+      if (schedule[i].when <= now) cur = schedule[i];
+      else { nxt = schedule[i]; break; }
+    }
+
+    if (cur) {
+      elCurRow.hidden = false;
+      elCurName.textContent = ja ? cur.ja : cur.ko;
+      elLink.setAttribute('href', '#' + cur.id);
+    } else {
+      elCurRow.hidden = true;
+      elLink.setAttribute('href', '#' + schedule[0].id);
+    }
+
+    if (nxt) {
+      elNextT.textContent = nxt.t;
+      elNextName.textContent = ja ? nxt.ja : nxt.ko;
+      elRem.textContent = remainingLabel(nxt.when - now, ja);
+      elNextT.parentNode.hidden = false;
+    } else {
+      elNextT.textContent = '';
+      elNextName.textContent = ja ? 'おつかれさまでした ✈' : '수고하셨습니다 ✈';
+      elRem.textContent = '';
+    }
+    bar.hidden = false;
+  }
+  renderNow();
+  setInterval(renderNow, 30000);
+
+  /* ── offline: cache the page so it opens without data ── */
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
 
   /* ── scrollspy on day nav ──────────── */
   var links = {};
