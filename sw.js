@@ -1,5 +1,5 @@
 /* Offline support: the itinerary must open in Busan even with no data. */
-const CACHE = 'busan-trip-v3';
+const CACHE = 'busan-trip-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -30,13 +30,19 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET') return;
   if (new URL(req.url).origin !== self.location.origin) return;
 
-  // The page itself: network first, so edits reach her as soon as she has signal.
+  // The page itself: always go to the network first, and bypass the HTTP
+  // cache while doing it. GitHub Pages serves HTML with max-age=600, so a
+  // plain fetch() here can hand back a ten-minute-old page — which then gets
+  // written into the offline cache and pinned there. `cache: 'reload'` forces
+  // a real revalidation; the cached copy is only ever the offline fallback.
   if (req.mode === 'navigate') {
     e.respondWith(
-      fetch(req)
+      fetch(req.url, { cache: 'reload', credentials: 'same-origin' })
         .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put('./index.html', copy));
+          if (res && res.ok) {
+            const copy = res.clone();
+            caches.open(CACHE).then((c) => c.put('./index.html', copy));
+          }
           return res;
         })
         .catch(() => caches.match('./index.html'))
