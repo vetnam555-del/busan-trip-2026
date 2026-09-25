@@ -1,5 +1,6 @@
 /* Offline support: the itinerary must open in Busan even with no data. */
-const CACHE = 'busan-trip-v4';
+const PREFIX = 'busan-trip-';
+const CACHE = PREFIX + 'v5';
 const ASSETS = [
   './',
   './index.html',
@@ -17,10 +18,14 @@ self.addEventListener('install', (e) => {
   );
 });
 
+// Only clear this guide's own old caches: the Tokyo guide in tokyo/ shares
+// this origin and keeps its own cache.
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(
+        keys.filter((k) => k.startsWith(PREFIX) && k !== CACHE).map((k) => caches.delete(k))
+      ))
       .then(() => self.clients.claim())
   );
 });
@@ -28,7 +33,12 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET') return;
-  if (new URL(req.url).origin !== self.location.origin) return;
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+  // This worker's scope also covers tokyo/, which has its own worker. Leave
+  // those requests alone so the Tokyo page never lands in this cache as
+  // './index.html'.
+  if (url.pathname.startsWith(new URL('./tokyo/', self.registration.scope).pathname)) return;
 
   // The page itself: always go to the network first, and bypass the HTTP
   // cache while doing it. GitHub Pages serves HTML with max-age=600, so a
