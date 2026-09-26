@@ -1,6 +1,6 @@
 /* Offline support: the guide has to open in a Tokyo subway car with no signal. */
 const PREFIX = 'tokyo-trip-';
-const CACHE = PREFIX + 'v2';
+const CACHE = PREFIX + 'v3';
 const ASSETS = [
   './',
   './index.html',
@@ -40,6 +40,10 @@ self.addEventListener('fetch', (e) => {
   // max-age=600, so a plain fetch could hand back and pin a stale copy).
   // The cached copy is only the offline fallback.
   if (req.mode === 'navigate') {
+    // Only the guide itself is stored as the offline page. Other files opened
+    // from it (the .ics calendar) must not overwrite that copy.
+    const path = new URL(req.url).pathname;
+    if (!path.endsWith('/') && !path.endsWith('/index.html')) return;
     e.respondWith(
       fetch(req.url, { cache: 'reload', credentials: 'same-origin' })
         .then((res) => {

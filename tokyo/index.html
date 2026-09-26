@@ -546,11 +546,15 @@
     border:3px solid #fff; display:grid; place-items:center;
     font-family:var(--num); font-weight:600; font-size:1.3125rem; line-height:1;
   }
-  .today-card .eyebrow{ grid-column:2; grid-row:1; color:rgba(255,255,255,.85); }
+  .today-card .eyebrow{ grid-column:2; grid-row:1; color:rgba(255,255,255,.85); letter-spacing:.04em; }
   .today-card b{ grid-column:2; grid-row:2; font-size:1.0625rem; line-height:1.35; }
   .today-card .go{
     grid-column:3; grid-row:1 / span 2; font-weight:800; font-size:.875rem; white-space:nowrap;
     padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.2);
+  }
+  @media (max-width:420px){
+    .today-card .go{ width:38px; height:38px; padding:0; display:grid; place-items:center; font-size:0; }
+    .today-card .go::after{ content:"→"; font-size:1.125rem; }
   }
   .stop.past .t, .stop.past .c{ opacity:.48; }
   .stop.past .node::before{ border-color:var(--line-2); background:var(--line-2); }
@@ -610,6 +614,47 @@
   .status h4{ font-size:1rem; font-weight:800; margin-bottom:4px; }
   .status p{ font-size:.9063rem; color:var(--ink-2); }
 
+  /* ─────────── pre-trip, links, passes, rain, kamakura ─────────── */
+  .prep-card{
+    display:grid; gap:6px; padding:14px 16px; border-radius:var(--r); text-decoration:none;
+    background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--red);
+  }
+  .prep-card[hidden]{ display:none; }
+  .prep-card .eyebrow{ color:var(--red-ink); }
+  .prep-card b{ font-size:1.0625rem; line-height:1.4; }
+  .prep-card .items{ display:flex; flex-wrap:wrap; gap:6px; }
+  .prep-card .items[hidden]{ display:none; }
+  .prep-card .items span{ font-size:.8125rem; font-weight:700; padding:3px 9px; border-radius:999px; background:var(--red-bg); color:var(--red-ink); }
+  .prep-card .go{ font-size:.875rem; font-weight:800; color:var(--ink-2); }
+  .chk .lk{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .chk .lk a{
+    display:inline-flex; align-items:center; min-height:34px; padding:4px 12px; border-radius:999px;
+    border:1px solid var(--line-2); background:var(--surface); color:var(--ink);
+    font-size:.8125rem; font-weight:700; text-decoration:none; white-space:nowrap;
+  }
+  .chk .hot{ display:block; margin-top:4px; color:var(--red-ink); font-weight:700; }
+  .meta .pass{ border-color:var(--sight); color:var(--sight); background:var(--sight-bg); }
+  .dayacts{ display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+  .dayacts .btn{ min-height:36px; padding:6px 12px; }
+  .rainhint{
+    display:flex; align-items:center; gap:8px; margin-top:2px; padding:10px 12px; border-radius:12px;
+    background:var(--warn-bg); color:var(--ink); font-size:.9063rem; text-decoration:none;
+  }
+  .rainhint[hidden]{ display:none; }
+  .rainhint b{ color:var(--warn); }
+  .kmap{ margin-top:16px; }
+  .k-sea{ fill:var(--map-water); opacity:.6; }
+  .k-isle{ fill:var(--map-park); stroke:var(--map-water); stroke-width:1.5; }
+  .k-bridge{ stroke:var(--line-2); stroke-width:3; stroke-linecap:round; }
+  .k-eno{ fill:none; stroke:#2E7D5B; stroke-width:4.5; stroke-linecap:round; stroke-linejoin:round; }
+  .k-jr{ fill:none; stroke:var(--muted); stroke-width:2.5; stroke-dasharray:6 4; }
+  .k-walk{ fill:none; stroke:var(--ink); stroke-width:1.8; stroke-dasharray:1.5 3.5; stroke-linecap:round; }
+  .k-k-eno{ width:18px; height:4px; border-radius:2px; background:#2E7D5B; }
+  .k-k-walk{ width:18px; height:0; border-top:2px dotted var(--ink); }
+  .k-k-jr{ width:18px; height:0; border-top:2px dashed var(--muted); }
+  .conv .rate-note{ display:flex; flex-wrap:wrap; align-items:center; gap:2px 10px; font-size:.8125rem; opacity:.8; }
+  .conv .rate-note button{ border:0; background:none; color:inherit; text-decoration:underline; cursor:pointer; font-size:.8125rem; padding:6px 0; }
+
   /* ─────────── wider screens ─────────── */
   @media (min-width:600px){
     .bk{ grid-template-columns:1fr 1fr; }
@@ -645,11 +690,24 @@
     .ctl{ margin-top:auto; }
     .nowbar{ top:0; }
     .hero{ padding-top:40px; grid-template-columns:minmax(0,1fr) 360px; align-items:start; gap:28px; }
-    .hero-top, .today-card, .geo-card{ grid-column:1 / -1; }
+    .hero-top, .today-card, .prep-card, .geo-card{ grid-column:1 / -1; }
     .hero-title .kj{ font-size:7.5rem; }
   }
   @media print{
-    .rail, .nowbar, .acts, .ctl, #toast, .today-card, .share, .geo-card{ display:none !important; }
+    :root:not([data-p1]):not([data-p2]){
+      color-scheme:light; --bg:#fff; --surface:#fff; --surface-2:#F3F4F7;
+      --ink:#141925; --ink-2:#343B4A; --muted:#5A6273; --faint:#878E9D; --line:#DDE0E7; --line-2:#C6CBD5;
+      --red:#F62E36; --red-ink:#C8131C; --red-bg:#FDECEC; --red-strong:#C8131C;
+      --food:#9E4C14; --sight:#2B4A97; --sight-bg:#E8EDF8; --move:#687184; --warn:#8A5A00; --warn-bg:#FFF4DA;
+      --map-loop:#6BA94F; --map-water:#9CC3DE; --map-park:#D6E8CB;
+    }
+    .rail, .nowbar, .acts, .dayacts, .ctl, #toast, .today-card, .prep-card, .share, .geo-card, .wxbox, .dist,
+    .rainhint, .meta .wx, #i-todo, #i-conv, #i-phrases, .status, .chkbar, #offline{ display:none !important; }
+    body{ font-size:10.5pt; }
+    #app{ padding-bottom:0; }
+    .day{ break-before:page; padding-top:0; }
+    .stop, .card, .list li, .sos li, .kmap, .map, tr{ break-inside:avoid; }
+    .stop.star .box{ box-shadow:none; border-color:var(--line-2); }
   }
 </style>
 </head>
@@ -695,6 +753,12 @@
       <span class="eyebrow" id="today-date">오늘</span>
       <b id="today-title"></b>
       <span class="go">오늘 일정 →</span>
+    </a>
+    <a class="prep-card" id="prep" href="#i-todo" hidden>
+      <span class="eyebrow" id="prep-when">출발 전</span>
+      <b id="prep-title"></b>
+      <span class="items" id="prep-items"></span>
+      <span class="go">출국 전 할 일 보기 →</span>
     </a>
     <div class="geo-card" id="geo-card">
       <div class="g-off" id="geo-off">
@@ -840,6 +904,13 @@
           <button class="btn show" type="button" data-show="nex">창구 직원에게 보여주기</button>
         </div>
       </article>
+
+      <article class="card bkc span2" id="i-cal">
+        <div class="head"><span class="eyebrow">캘린더 · Alerts</span><b>11개 일정</b></div>
+        <h3 style="font-size:1.1875rem;font-weight:800;margin-top:8px">휴대폰 캘린더에 넣기</h3>
+        <p style="font-size:.9375rem;color:var(--ink-2);margin-top:6px">비행기 2편, N'EX 2번, 가마쿠라 출발, 시부야 스카이, 이마한, 우나후지처럼 <b>시간이 정해진 일정만</b> 미리 알림과 함께 넣습니다. 아이폰은 누르면 '모두 추가', 안드로이드는 받은 파일을 눌러 캘린더 앱으로 엽니다.</p>
+        <div class="acts"><a class="btn primary" href="tokyo-2026.ics" type="text/calendar">캘린더에 추가 (.ics)</a></div>
+      </article>
     </div>
   </div>
 
@@ -904,21 +975,21 @@
     </div>
     <div class="chkbar"><span id="todo-count">0 / 15</span><button type="button" data-reset="todo">체크 모두 지우기</button></div>
     <div class="chk" data-group="todo">
-      <label><input type="checkbox" data-ck="vjw"><span><b><em class="tag req">필수</em>Visit Japan Web 등록 · QR 캡처</b>3명 각각 입국심사·세관 정보 입력. 대표 1명 계정에 동반 가족을 추가할 수 있습니다. 공항 와이파이가 느리니 QR은 캡처해 두세요.</span></label>
-      <label><input type="checkbox" data-ck="sky"><span><b><em class="tag req">필수</em>SHIBUYA SKY 10/3(토) 3장 예매</b>16:40 입장 전후가 일몰(17:22 무렵)과 맞습니다. 일몰 시간대가 매진이면 17:40 이후 야경 시간대도 좋습니다. 공식 사이트 온라인 예매.</span></label>
-      <label><input type="checkbox" data-ck="unafuji"><span><b><em class="tag req">필수</em>우나후지 오페라시티점 10/4(일) 17:00 · 3명 예약</b>3명 이상은 전날까지 예약해야 들어갈 수 있습니다. 전화 <a class="num" href="tel:+81364575266">03-6457-5266</a> 또는 이큐(一休)·PayPay 그루메 온라인. 창가석을 부탁하세요.</span></label>
-      <label><input type="checkbox" data-ck="checkin"><span><b><em class="tag req">필수</em>숙소 '체크인 안내' 캡처 · 도착 시간 알리기</b>출입 방법·호실·와이파이를 전부 캡처하고, 아고다 앱 메시지로 호스트에게 "10/1 19:50쯤 도착"이라고 보내 두세요.</span></label>
+      <label data-short="Visit Japan Web"><input type="checkbox" data-ck="vjw"><span><b><em class="tag req">필수</em>Visit Japan Web 등록 · QR 캡처</b>3명 각각 입국심사·세관 정보 입력. 대표 1명 계정에 동반 가족을 추가할 수 있습니다. 공항 와이파이가 느리니 QR은 캡처해 두세요.<span class="lk"><a href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Visit Japan Web 열기</a></span></span></label>
+      <label data-short="SHIBUYA SKY 예매"><input type="checkbox" data-ck="sky"><span><b><em class="tag req">필수</em>SHIBUYA SKY 10/3(토) 3장 예매</b>16:40 입장 전후가 일몰(17:22 무렵)과 맞습니다. 일몰 시간대가 매진이면 17:40 이후 야경 시간대도 좋습니다.<span class="hot">온라인 표는 2주 전에 풀리고 일몰 시간대는 빨리 매진됩니다. 지금 바로 확인하세요.</span><span class="lk"><a href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank" rel="noopener">공식 예매</a></span></span></label>
+      <label data-short="우나후지 예약"><input type="checkbox" data-ck="unafuji"><span><b><em class="tag req">필수</em>우나후지 오페라시티점 10/4(일) 17:00 · 3명 예약</b>3명 이상은 전날까지 예약해야 들어갈 수 있습니다. 전화 <a class="num" href="tel:+81364575266">03-6457-5266</a> 또는 이큐(一休) 온라인 예약. 창가석을 부탁하세요.<span class="lk"><a href="https://restaurant.ikyu.com/149224" target="_blank" rel="noopener">이큐에서 예약</a></span></span></label>
+      <label data-short="숙소 체크인 안내"><input type="checkbox" data-ck="checkin"><span><b><em class="tag req">필수</em>숙소 '체크인 안내' 캡처 · 도착 시간 알리기</b>출입 방법·호실·와이파이를 전부 캡처하고, 아고다 앱 메시지로 호스트에게 "10/1 19:50쯤 도착"이라고 보내 두세요.</span></label>
       <label><input type="checkbox" data-ck="insure"><span><b><em class="tag rec">권장</em>여행자보험 3명</b>부모님 포함. 일본 병원은 보험이 없으면 진료비를 전부 내야 합니다. 보험사 앱에 증권을 받아 두세요.</span></label>
-      <label><input type="checkbox" data-ck="imahan"><span><b><em class="tag rec">권장</em>아사쿠사 이마한 10/4(일) 11:45 · 3명 점심 예약</b>전화 <a class="num" href="tel:+81338411114">03-3841-1114</a> (10:30~21:00) 또는 클룩 예약.</span></label>
-      <label><input type="checkbox" data-ck="tst"><span><b><em class="tag rec">권장</em>도쿄 서브웨이 티켓 48시간 × 3장</b>1인 ¥1,500. 10/3(토) 아침 첫 개찰부터 48시간이라 토·일 지하철이 전부 됩니다. QR형을 미리 사 두면 줄 설 필요가 없습니다.</span></label>
-      <label><input type="checkbox" data-ck="suica"><span><b><em class="tag rec">권장</em>Suica 교통카드 3명</b>금요일 가마쿠라(JR·에노덴)와 JR·게이오선은 지하철 패스가 안 됩니다. 아이폰은 'Welcome Suica Mobile' 앱, 안드로이드는 나리타공항 JR 창구(N'EX 교환하는 곳)에서 Welcome Suica 카드. 1인 ¥4,000 정도 충전.</span></label>
+      <label><input type="checkbox" data-ck="imahan"><span><b><em class="tag rec">권장</em>아사쿠사 이마한 10/4(일) 11:45 · 3명 점심 예약</b>전화 <a class="num" href="tel:+81338411114">03-3841-1114</a> (10:30~21:00) 또는 클룩 예약.<span class="lk"><a href="https://www.asakusaimahan.co.jp/kokusai" target="_blank" rel="noopener">이마한 공식</a></span></span></label>
+      <label><input type="checkbox" data-ck="tst"><span><b><em class="tag rec">권장</em>도쿄 서브웨이 티켓 48시간 × 3장</b>1인 ¥1,500. 10/3(토) 아침 첫 개찰부터 48시간이라 토·일 지하철이 전부 됩니다. QR형을 미리 사 두면 줄 설 필요가 없습니다.<span class="lk"><a href="https://www.tokyometro.jp/tst/en/index.html" target="_blank" rel="noopener">공식 판매 (QR)</a></span></span></label>
+      <label><input type="checkbox" data-ck="suica"><span><b><em class="tag rec">권장</em>Suica 교통카드 3명</b>금요일 가마쿠라(JR·에노덴)와 JR·게이오선은 지하철 패스가 안 됩니다. 아이폰은 'Welcome Suica Mobile' 앱, 안드로이드는 나리타공항 JR 창구(N'EX 교환하는 곳)에서 Welcome Suica 카드. 1인 ¥4,000 정도 충전.<span class="lk"><a href="https://www.jreast.co.jp/en/multi/welcomesuicamobile/" target="_blank" rel="noopener">Welcome Suica Mobile</a></span></span></label>
       <label><input type="checkbox" data-ck="esim"><span><b><em class="tag rec">권장</em>eSIM·로밍 3명 모두</b>부모님 폰도 데이터가 되어야 떨어졌을 때 연락과 지도가 됩니다.</span></label>
       <label><input type="checkbox" data-ck="family"><span><b><em class="tag rec">권장</em>부모님 폰에 이 페이지 넣기 · 위치 공유</b>바로 아래 '링크 보내기'로 보내고 홈 화면에 추가해 두세요. 카카오톡이나 구글 지도 위치 공유도 켜 두면 떨어졌을 때 찾기 쉽습니다.</span></label>
       <label><input type="checkbox" data-ck="money"><span><b><em class="tag rec">권장</em>트래블카드 엔화 충전 + 현금</b>대부분 카드가 되지만, 절·신사, 작은 가게, 코인로커용 현금 ¥20,000~30,000.</span></label>
-      <label><input type="checkbox" data-ck="midori"><span><b><em class="tag opt">선택</em>스시노미도리 시부야점 10/3(토) 18:20 좌석 예약</b>클룩에서 좌석 예약이 됩니다. 안 하면 현장 번호표.</span></label>
+      <label><input type="checkbox" data-ck="midori"><span><b><em class="tag opt">선택</em>스시노미도리 시부야점 10/3(토) 18:20 좌석 예약</b>테이블체크나 클룩에서 좌석 예약이 됩니다. 안 하면 현장 번호표.<span class="lk"><a href="https://www.tablecheck.com/en/shops/sushinomidori-shibuya/reserve" target="_blank" rel="noopener">테이블체크 예약</a></span></span></label>
       <label><input type="checkbox" data-ck="taxi"><span><b><em class="tag opt">선택</em>택시 앱 준비</b>카카오T 해외 호출(일본은 GO와 연동, 원화 결제) 또는 GO 앱 설치·카드 등록.</span></label>
-      <label><input type="checkbox" data-ck="cloak"><span><b><em class="tag opt">선택</em>10/5 짐 보관 예약 (ecbo cloak)</b>귀국일에 신주쿠역에서 쇼핑하는 동안 캐리어 3개를 맡길 곳. 앱에서 신주쿠역 남쪽·다카시마야 주변 장소를 미리 예약합니다 (1개 하루 ¥800 안팎).</span></label>
-      <label><input type="checkbox" data-ck="safety"><span><b><em class="tag opt">선택</em>Safety tips 앱 설치</b>일본 관광청 공식 앱. 지진·쓰나미·기상 경보를 한국어로 알려 줍니다.</span></label>
+      <label><input type="checkbox" data-ck="cloak"><span><b><em class="tag opt">선택</em>10/5 짐 보관 예약 (ecbo cloak)</b>귀국일에 신주쿠역에서 쇼핑하는 동안 캐리어 3개를 맡길 곳. 앱에서 신주쿠역 남쪽·다카시마야 주변 장소를 미리 예약합니다 (1개 하루 ¥800 안팎).<span class="lk"><a href="https://cloak.ecbo.io/en" target="_blank" rel="noopener">ecbo cloak</a></span></span></label>
+      <label><input type="checkbox" data-ck="safety"><span><b><em class="tag opt">선택</em>Safety tips 앱 설치</b>일본 관광청 공식 앱. 지진·쓰나미·기상 경보를 한국어로 알려 줍니다.<span class="lk"><a href="https://www.jnto.go.jp/safety-tips/eng/app.html" target="_blank" rel="noopener">앱 받기</a></span></span></label>
     </div>
     <div class="share">
       <b>가족 휴대폰에도 이 페이지를</b>
@@ -943,7 +1014,7 @@
       <div class="c">
         <h3>Climate · 평년</h3>
         <p class="big"><span class="num">18–26℃</span></p>
-        <p class="sm">낮엔 반팔, 아침저녁엔 얇은 겉옷. 10월은 비 오는 날이 꽤 있어 접이식 우산 필수. 일몰 17:25 전후.</p>
+        <p class="sm">낮엔 반팔, 아침저녁엔 얇은 겉옷. 10월은 비 오는 날이 꽤 있어 접이식 우산 필수. 해는 17:20~17:25에 집니다.</p>
       </div>
       <div class="c">
         <h3>Time</h3>
@@ -985,6 +1056,7 @@
         <span class="num">10:50 → 21:30</span>
         <span><span class="walk" aria-hidden="true"><i class="on"></i><i></i><i></i></span>걷기 적음</span>
         <span class="wx" hidden></span>
+        <span class="pass">교통 N'EX · 택시</span>
         <span class="bookreq">N'EX 교환 · 좌석 2번 지정</span>
       </div>
     </div>
@@ -1094,9 +1166,56 @@
         <span class="num">07:50 → 20:00</span>
         <span><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>걷기 많음 · 약 1.4만 보</span>
         <span class="wx" hidden></span>
-        <span class="bookreq">교통카드(Suica) 필요</span>
+        <span class="pass">교통 Suica (JR · 에노덴)</span>
       </div>
+      <a class="rainhint" href="#rain-d2" hidden><span aria-hidden="true">☔</span><span><b>비 예보</b> · 비 오면 4일차와 바꾸는 방법 보기 →</span></a>
+      <div class="dayacts"><a class="btn" href="https://www.google.com/maps/dir/%E6%96%B0%E5%AE%BF%E9%A7%85/%E9%B6%B4%E5%B2%A1%E5%85%AB%E5%B9%A1%E5%AE%AE/%E9%AB%98%E5%BE%B3%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F/%E9%95%B7%E8%B0%B7%E5%AF%BA%20%E9%8E%8C%E5%80%89/%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85/%E8%97%A4%E6%B2%A2%E9%A7%85/%E6%80%9D%E3%81%84%E5%87%BA%E6%A8%AA%E4%B8%81" target="_blank" rel="noopener">구글 지도에서 하루 동선 보기</a></div>
     </div>
+
+    <figure class="map kmap">
+      <svg viewBox="0 0 360 232" role="img" aria-labelledby="kmapt">
+          <title id="kmapt">가마쿠라 하루 동선 (대략 위치): 가마쿠라역에서 쓰루가오카하치만구와 점심, 에노덴으로 하세역, 대불과 하세데라, 가마쿠라코코마에 건널목, 후지사와역</title>
+          <path class="k-sea" d="M-3.6,152.3 L34.5,164.8 L53.6,170.9 L76.5,172.8 L103.2,178.8 L114.6,181.2 L149.0,185.8 L175.7,192.8 L192.8,202.1 L206.2,190.5 L221.4,176.5 L240.5,164.8 L263.4,162.5 L286.3,164.8 L309.2,171.8 L332.1,185.8 L362.6,204.5 L362.6,251.1 L-3.6,251.1 Z"/>
+          <ellipse class="k-isle" cx="34.5" cy="205.4" rx="19" ry="12"/>
+          <path class="k-bridge" d="M46.7,170.9 L40.2,190.5"/>
+          <path class="k-jr" d="M300.4,115.4 L290.1,69.3 L278.7,-0.7"/>
+          <path class="k-jr" d="M63.5,24.0 L107.0,15.7 L141.3,-0.7"/>
+          <path class="k-walk" d="M300.4,115.4 L326.4,83.7 L315.8,102.8 L300.4,115.4"/>
+          <path class="k-walk" d="M247.4,147.6 L247.0,126.6 L231.2,145.7 L247.4,147.6"/>
+          <path class="k-eno" d="M300.4,115.4 L281.7,140.1 L269.1,149.0 L247.4,147.6 L220.3,154.6 L196.3,173.2 L152.8,175.1 L113.1,173.2 L75.0,164.4 L63.9,156.4 L46.0,125.2 L40.6,91.6 L46.0,66.0 L54.7,44.6 L63.5,24.0"/>
+          <circle class="m-sta" cx="300.4" cy="115.4" r="4.2"/>
+          <circle class="m-sta" cx="247.4" cy="147.6" r="4.2"/>
+          <circle class="m-sta" cx="63.5" cy="24.0" r="4.2"/>
+          <g class="m-pt"><circle cx="326.4" cy="83.7" r="7.5"/><text x="326.4" y="87.3">1</text></g>
+          <g class="m-pt"><circle cx="315.8" cy="102.8" r="7.5"/><text x="315.8" y="106.4">2</text></g>
+          <g class="m-pt"><circle cx="247.0" cy="126.6" r="7.5"/><text x="247.0" y="130.2">3</text></g>
+          <g class="m-pt"><circle cx="231.2" cy="145.7" r="7.5"/><text x="231.2" y="149.3">4</text></g>
+          <g class="m-pt"><circle cx="113.1" cy="173.2" r="7.5"/><text x="113.1" y="176.8">5</text></g>
+          <text class="m-lb" x="326.4" y="70.7" text-anchor="middle">하치만구</text>
+          <text class="m-lb" x="326.8" y="107.3">점심</text>
+          <text class="m-lb" x="293.4" y="110.4" text-anchor="end">가마쿠라역</text>
+          <text class="m-lb" x="258.0" y="131.1">대불</text>
+          <text class="m-lb" x="221.2" y="141.7" text-anchor="end">하세데라</text>
+          <text class="m-lb sm" x="252.4" y="163.6">하세역</text>
+          <text class="m-lb sm" x="113.1" y="149.2" text-anchor="middle">가마쿠라코코마에</text>
+          <text class="m-lb" x="113.1" y="162.2" text-anchor="middle">건널목</text>
+          <text class="m-lb" x="72.5" y="40.0">후지사와역</text>
+          <text class="m-lb sm" x="72.5" y="53.0">JR로 신주쿠 약 55분</text>
+          <text class="m-lb sm" x="276" y="14" text-anchor="end">↑ JR 신주쿠에서 약 60분</text>
+          <text class="m-lb sm" x="34.5" y="229" text-anchor="middle">에노시마</text>
+          <text class="m-lb sm" x="190" y="222" text-anchor="middle">사가미만</text>
+          <path class="m-axis" d="M306,222 H348 M306,218 V226 M348,218 V226"/>
+          <text class="m-lb sm num" x="327" y="214" text-anchor="middle">1 km</text>
+          <path class="m-axis" d="M12,22 V8 M8,12 L12,7 L16,12"/>
+          <text class="m-lb sm num" x="19" y="18">N</text>
+        </svg>
+      <figcaption>
+        <span><i class="k-k-eno"></i>에노덴 (가마쿠라 → 하세 → 가마쿠라코코마에 → 후지사와)</span>
+        <span><i class="k-k-walk"></i>걷는 구간</span>
+        <span><i class="k-k-jr"></i>JR (신주쿠 오가는 길)</span>
+        <span><i class="k-pt">1</i>가는 순서 · 대략적인 위치</span>
+      </figcaption>
+    </figure>
 
     <ol class="stops">
       <li class="stop" data-kind="move">
@@ -1105,6 +1224,7 @@
           <p class="nm">숙소 → JR 신주쿠역</p>
           <div class="rt"><span class="seg"><span class="ln m">M</span> 신주쿠교엔마에 → 신주쿠 · 2정거장</span><span class="arr">→</span><span class="seg"><span class="ln wk wide">도보</span> JR 개찰구</span></div>
           <p class="d">오늘은 JR과 에노덴을 타서 지하철 패스 대신 <b>Suica</b>로 다닙니다. 'JR 쇼난신주쿠라인(湘南新宿ライン)' 승강장으로 갑니다.</p>
+          <p class="tip"><b>평일 출근 시간이라</b> 신주쿠역이 붐빕니다. 짐이 없어 지하철도 괜찮지만, 편하게 가려면 숙소 앞에서 택시로 JR 신주쿠역 동쪽 출구까지 가세요 (약 10분 · ¥1,200 안팎).</p>
         </div>
       </li>
       <li class="stop star" data-kind="move">
@@ -1113,8 +1233,8 @@
           <p class="nm">JR 쇼난신주쿠라인 → 가마쿠라</p>
           <div class="rt"><span class="seg"><span class="ln jr wide">JR</span> 신주쿠 → 가마쿠라</span><span class="arr">·</span><span class="num">약 60분 · ¥950 안팎</span></div>
           <p class="d"><b>즈시(逗子)행</b>을 타면 갈아타지 않고 가마쿠라까지 갑니다. 오다와라(小田原)행을 탔다면 오후나(大船)에서 요코스카선으로 한 번 갈아탑니다.</p>
-          <p class="tip"><b>부모님과 편하게 가려면</b> 2층 특실인 <b>그린샤</b>(グリーン車)를 타세요. 승강장 발매기에서 Suica로 그린권을 사면 1인 ¥1,000 안팎이 추가되고, 넓은 좌석에 앉아 갑니다.</p>
-          <div class="acts"><a class="btn" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank" rel="noopener">JR 운행정보</a></div>
+          <p class="tip"><b>부모님과 편하게 가려면</b> 2층 특실인 <b>그린샤</b>(グリーン車)를 타세요. 승강장 발매기에서 Suica로 그린권을 사면 1인 ¥1,000 안팎이 추가되고, 넓은 좌석에 앉아 갑니다. 출근 방향과 반대라 아침에도 자리가 있습니다.</p>
+          <div class="acts"><button class="btn show" type="button" data-show="kamakura">역무원에게: 가마쿠라 가나요?</button><button class="btn show" type="button" data-show="green">그린권 어디서 사요?</button><a class="btn" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank" rel="noopener">JR 운행정보</a></div>
         </div>
       </li>
       <li class="stop star" data-kind="sight" data-geo="35.3259,139.5565">
@@ -1253,8 +1373,11 @@
         <span class="num">08:30 → 20:00</span>
         <span><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>걷기 많음 · 약 1.2만 보</span>
         <span class="wx" hidden></span>
+        <span class="pass">교통 48시간 패스 시작 · JR만 Suica</span>
         <span class="bookreq">시부야 스카이 예매 필수</span>
       </div>
+      <a class="rainhint" href="#rain-d3" hidden><span aria-hidden="true">☔</span><span><b>비 예보</b> · 비 오는 날 이렇게 바꾸세요 →</span></a>
+      <div class="dayacts"><a class="btn" href="https://www.google.com/maps/dir/%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE/%E3%81%BE%E3%81%84%E6%B3%89%20%E9%9D%92%E5%B1%B1%E6%9C%AC%E5%BA%97/THE%20HARVEST%20KITCHEN%20GENERAL%20STORE%20%E6%81%B5%E6%AF%94%E5%AF%BF/EAST%20table%20%E6%81%B5%E6%AF%94%E5%AF%BF%E5%BA%97/%E6%B8%8B%E8%B0%B7%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%AB%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2/%E7%BE%8E%E7%99%BB%E5%88%A9%E5%AF%BF%E5%8F%B8%20%E6%B8%8B%E8%B0%B7%E5%BA%97" target="_blank" rel="noopener">구글 지도에서 하루 동선 보기</a></div>
     </div>
 
     <ol class="stops">
@@ -1352,12 +1475,14 @@
           <div class="box">
             <p class="kicker">오늘의 하이라이트 · 예매 필수</p>
             <p class="nm">SHIBUYA SKY<span class="ja" lang="ja">渋谷スクランブルスクエア 14階 入口</span></p>
-            <p class="d">14층에서 입장해 46층 옥상으로 올라갑니다. 해가 <b>17:21 무렵</b> 지고, 30분쯤 지나면 도시 불이 켜집니다. 둘 다 보고 내려오세요. 날이 맑으면 서쪽으로 후지산 윤곽이 보입니다.</p>
+            <p class="d">14층에서 입장해 46층 옥상으로 올라갑니다. 해가 <b>17:22 무렵</b> 지고, 30분쯤 지나면 도시 불이 켜집니다. 둘 다 보고 내려오세요. 날이 맑으면 서쪽으로 후지산 윤곽이 보입니다.</p>
             <dl class="spec">
-              <div><dt>요금</dt><dd>온라인 1인 ¥3,400 안팎 (15시 이후)</dd></div>
+              <div><dt>요금</dt><dd>1인 ¥3,400~3,700 (15시 이후 · 온라인이 조금 쌉니다)</dd></div>
               <div><dt>규칙</dt><dd>옥상엔 모자·가방 반입 불가 → 무료 사물함</dd></div>
             </dl>
             <p class="tip"><b>바람이 세거나 비가 오면</b> 옥상이 닫히고 실내 전망층만 열립니다.</p>
+            <p class="tip"><b>표를 못 구했으면</b> 당일 14층 매표소에서 남은 시간대를 확인하세요. 무료로 보려면 역 건너편 <b>시부야 히카리에 11층</b>이나 <b>미야시타 파크 옥상 공원</b>도 있습니다.</p>
+            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%B8%8B%E8%B0%B7%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%AB%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a><a class="btn" href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank" rel="noopener">공식 예매</a></div>
           </div>
         </div>
       </li>
@@ -1403,8 +1528,11 @@
         <span class="num">09:00 → 19:00</span>
         <span><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>걷기 보통 · 약 1만 보</span>
         <span class="wx" hidden></span>
+        <span class="pass">교통 48시간 패스 · 게이오선만 Suica</span>
         <span class="bookreq">우나후지 예약 필수</span>
       </div>
+      <a class="rainhint" href="#rain-d4" hidden><span aria-hidden="true">☔</span><span><b>비 예보</b> · 비 오는 날 이렇게 바꾸세요 →</span></a>
+      <div class="dayacts"><a class="btn" href="https://www.google.com/maps/dir/%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91/%E6%B5%85%E8%8D%89%E5%AF%BA/%E6%B5%85%E8%8D%89%E4%BB%8A%E5%8D%8A%20%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E6%9C%AC%E5%BA%97/%E9%8A%80%E5%BA%A7%E5%9B%9B%E4%B8%81%E7%9B%AE%E4%BA%A4%E5%B7%AE%E7%82%B9/%E6%9D%B1%E4%BA%AC%E3%82%AA%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%86%E3%82%A3" target="_blank" rel="noopener">구글 지도에서 하루 동선 보기</a></div>
     </div>
 
     <ol class="stops">
@@ -1480,6 +1608,7 @@
               <div><dt>쇼핑</dt><dd>긴자 식스(옥상정원 무료), 미츠코시 지하 식품관, 유니클로 긴자</dd></div>
               <div><dt>시간</dt><dd class="num">토·일 12:00–17:00 (10–3월) · 비 오면 취소</dd></div>
             </dl>
+            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%8A%80%E5%BA%A7%E5%9B%9B%E4%B8%81%E7%9B%AE%E4%BA%A4%E5%B7%AE%E7%82%B9&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a></div>
           </div>
         </div>
       </li>
@@ -1507,7 +1636,7 @@
               <div><dt>예약</dt><dd><b>3명 이상은 전날까지 예약 필수</b> · <a class="num" href="tel:+81364575266">03-6457-5266</a> · 이큐·PayPay 그루메 온라인</dd></div>
               <div><dt>주소</dt><dd lang="ja">新宿区西新宿3-20-2 東京オペラシティビル53階</dd></div>
             </dl>
-            <p class="tip"><b>17시 입장이 딱 좋은 이유:</b> 해가 17:19 무렵 지니, 창가 자리에서 노을을 보며 먹고 나올 땐 야경입니다. 맑은 날엔 서쪽으로 후지산 실루엣도 보입니다. 예약할 때 창가석을 부탁하세요.</p>
+            <p class="tip"><b>17시 입장이 딱 좋은 이유:</b> 해가 17:21 무렵 지니, 창가 자리에서 노을을 보며 먹고 나올 땐 야경입니다. 맑은 날엔 서쪽으로 후지산 실루엣도 보입니다. 예약할 때 창가석을 부탁하세요.</p>
             <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%81%86%E3%81%AA%E5%AF%8C%E5%A3%AB%20%E6%9D%B1%E4%BA%AC%E3%82%AA%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%86%E3%82%A3%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a><button class="btn show" type="button" data-show="window">창가 자리 부탁 카드</button></div>
           </div>
         </div>
@@ -1535,6 +1664,7 @@
         <span class="num">08:00 → 19:10</span>
         <span><span class="walk" aria-hidden="true"><i class="on"></i><i></i><i></i></span>걷기 적음</span>
         <span class="wx" hidden></span>
+        <span class="pass">교통 택시 · N'EX</span>
         <span class="bookreq">N'EX 좌석 시간 확인</span>
       </div>
     </div>
@@ -1563,6 +1693,7 @@
             <p class="nm">짐 맡기고 마지막 쇼핑<span class="ja" lang="ja">新宿駅 南口 · タカシマヤ タイムズスクエア</span></p>
             <p class="d">캐리어는 미리 예약해 둔 <b>에크보 클로크</b>(ecbo cloak) 보관 장소에 맡깁니다. 신주쿠역 남쪽·다카시마야 주변에 여러 곳, 캐리어 1개 하루 ¥800 안팎. 예약을 못 했으면 남쪽 개찰구 주변 대형 코인로커(¥700~)를 찾으세요. 오전이면 빈칸이 금방 없어집니다.</p>
             <p class="d">쇼핑은 다카시마야(10:30 오픈), 뉴우먼, 루미네. 지하 식품관에서 <b>기차에서 먹을 도시락(에키벤)</b>과 선물 과자를 삽니다.</p>
+            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%AE%BF%E3%82%BF%E3%82%AB%E3%82%B7%E3%83%9E%E3%83%A4%20%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2&amp;travelmode=transit" target="_blank" rel="noopener">다카시마야 길찾기</a><button class="btn show" type="button" data-show="luggage">짐 맡겨도 돼요?</button></div>
           </div>
         </div>
       </li>
@@ -1571,6 +1702,7 @@
         <div class="c">
           <p class="nm">짐 찾기 → JR 신주쿠역 N'EX 승강장</p>
           <p class="d">JR 남쪽 개찰구로 들어가 'Narita Express' 표지를 따라갑니다. 출발 10분 전에는 승강장에.</p>
+          <div class="acts"><button class="btn show" type="button" data-show="nexplat">역무원에게: N'EX 타는 곳?</button></div>
         </div>
       </li>
       <li class="stop star" data-kind="move">
@@ -1587,7 +1719,7 @@
         <div class="t">13:45</div><div class="node"></div>
         <div class="c">
           <p class="nm">공항제2빌딩역 → 제3터미널<span class="ja" lang="ja">第3ターミナル</span></p>
-          <div class="rt"><span class="seg"><span class="ln wk wide">도보 13분</span> 바닥의 'Terminal 3' 표시</span><span class="arr">또는</span><span class="seg">무료 셔틀버스</span></div>
+          <div class="rt"><span class="seg"><span class="ln wk wide">도보 13분</span> 바닥의 파란 안내선</span><span class="arr">또는</span><span class="seg">무료 셔틀버스</span></div>
           <p class="d">평평한 연결 통로라 캐리어를 끌고 가기 편합니다.</p>
         </div>
       </li>
@@ -1638,7 +1770,7 @@
         </li>
         <li>
           <h4><span class="tag rec">부모님과</span>지하철 팁</h4>
-          엘리베이터는 역마다 'エレベーター' 표지와 바닥 노란 점자 블록을 따라가면 있습니다. 도쿄 에스컬레이터는 <b>왼쪽에 서고</b> 오른쪽을 비웁니다. 출구 번호(A2, A5 등)를 먼저 확인하고 나가면 헤매지 않습니다. 평일 아침 8~9시 러시아워는 피하도록 출발 시간을 잡았습니다.
+          엘리베이터는 역마다 'エレベーター' 표지와 바닥 노란 점자 블록을 따라가면 있습니다. 도쿄 에스컬레이터는 <b>왼쪽에 서고</b> 오른쪽을 비웁니다. 출구 번호(A2, A5 등)를 먼저 확인하고 나가면 헤매지 않습니다. 평일 아침 러시아워(7:30~9:30)에 도심으로 들어가는 전철은 타지 않게 짰습니다. 금요일 아침 가마쿠라행은 반대 방향이라 덜 붐비고, 그린샤면 앉아 갑니다.
         </li>
       </ul>
 
@@ -1692,11 +1824,11 @@
 
     <div class="isec" id="i-rain">
       <h3>비가 오면</h3>
-      <p class="note">날짜별 머리글의 날씨 칩에 비 올 확률이 뜹니다. 50%를 넘으면 칩이 노랗게 바뀝니다.</p>
+      <p class="note">날짜별 머리글의 날씨 칩에 강수확률(비 올 확률)이 뜹니다. 50%를 넘으면 칩이 노랗게 바뀌고, 그 날 머리글에 이 안내로 오는 링크가 생깁니다.</p>
       <ul class="list">
-        <li><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">2</span>가마쿠라</h4>종일 비 예보면 <b>4일차(일)와 통째로 바꾸는 게</b> 낫습니다. 금요일에 아사쿠사·긴자(보행자천국은 주말에만 열리니 긴자 식스·미츠코시 안에서), 일요일에 가마쿠라. 우나후지 예약 날짜도 같이 옮기세요. 약한 비면 그대로 가고 바닷가 건널목만 짧게.</li>
-        <li><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">3</span>하라주쿠 · 에비스 · 시부야</h4>메이지신궁은 짧게 본전만. 에비스 그릇 가게는 실내라 그대로. 시부야 스카이 옥상이 닫히면 실내 전망층만 열리니 예매 변경 규정을 전날 확인하세요.</li>
-        <li><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">4</span>아사쿠사 · 긴자</h4>센소지는 우산 쓰고 그대로. 보행자천국은 비 오면 열리지 않으니 긴자 식스·미츠코시 안에서 보냅니다. 우나후지는 실내라 그대로 (구름이 많으면 후지산은 안 보입니다).</li>
+        <li id="rain-d2"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">2</span>가마쿠라</h4>종일 비 예보면 <b>4일차(일)와 낮 일정만 바꾸고 저녁은 그대로</b> 둡니다. 금요일: 아사쿠사·긴자(보행자천국은 주말에만 열리니 긴자 식스·미츠코시 안에서) → 저녁 오모이데요코초. 일요일: 가마쿠라 → 저녁 우나후지(돌아오는 신주쿠 바로 다음 역이라 그대로 이어집니다). <b>우나후지 예약은 날짜 그대로</b> 두고 시간만 17:30으로, 이마한 점심만 금요일로 옮기세요. 지하철 48시간 패스는 금요일 아침부터 쓰면 토요일까지 됩니다. 약한 비면 그대로 가고 바닷가 건널목만 짧게.</li>
+        <li id="rain-d3"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">3</span>하라주쿠 · 에비스 · 시부야</h4>메이지신궁은 짧게 본전만. 에비스 그릇 가게는 실내라 그대로. 시부야 스카이 옥상이 닫히면 실내 전망층만 열리니 예매 변경 규정을 전날 확인하세요.</li>
+        <li id="rain-d4"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">4</span>아사쿠사 · 긴자</h4>센소지는 우산 쓰고 그대로. 보행자천국은 비 오면 열리지 않으니 긴자 식스·미츠코시 안에서 보냅니다. 우나후지는 실내라 그대로 (구름이 많으면 후지산은 안 보입니다).</li>
       </ul>
     </div>
 
@@ -1768,7 +1900,7 @@
         <div class="quick" aria-label="자주 쓰는 금액">
           <button type="button" data-yen="500">¥500</button><button type="button" data-yen="1000">¥1,000</button><button type="button" data-yen="3000">¥3,000</button><button type="button" data-yen="5000">¥5,000</button><button type="button" data-yen="10000">¥10,000</button>
         </div>
-        <p style="font-size:.8125rem;opacity:.75">9월 말 기준 100엔 ≈ 870원. 환율은 바꿔 넣을 수 있고, 이 휴대폰에 저장됩니다.</p>
+        <p class="rate-note"><span id="rate-note">인터넷이 되면 오늘 환율로 자동으로 바뀝니다</span><button type="button" id="rate-auto" hidden>자동 환율로 되돌리기</button></p>
       </div>
     </div>
 
@@ -1794,6 +1926,11 @@
         <button type="button" data-show="luggage"><span class="k">짐 맡겨도 돼요?</span><span class="j" lang="ja">荷物を預けても…</span></button>
         <button type="button" data-show="hospital"><span class="k">병원에 가고 싶어요</span><span class="j" lang="ja">病院に行きたいです</span></button>
         <button type="button" data-show="nex"><span class="k">N'EX 좌석 지정</span><span class="j" lang="ja">座席を予約したいです</span></button>
+        <button type="button" data-show="nexplat"><span class="k">N'EX 타는 곳이 어디예요?</span><span class="j" lang="ja">成田エクスプレスのホームは…</span></button>
+        <button type="button" data-show="kamakura"><span class="k">이 전철 가마쿠라 가요?</span><span class="j" lang="ja">この電車は鎌倉に行きますか？</span></button>
+        <button type="button" data-show="green"><span class="k">그린권 어디서 사요?</span><span class="j" lang="ja">グリーン券はどこで…</span></button>
+        <button type="button" data-show="photo"><span class="k">사진 좀 찍어 주세요</span><span class="j" lang="ja">写真を撮っていただけますか</span></button>
+        <button type="button" data-show="water"><span class="k">물 주세요</span><span class="j" lang="ja">お水をください</span></button>
         <button type="button" data-show="busta"><span class="k">바스타 신주쿠로 (택시)</span><span class="j" lang="ja">バスタ新宿まで</span></button>
       </div>
     </div>
@@ -1805,6 +1942,7 @@
         <li><span class="w">경찰<small>일본어 · 가까운 파출소(交番)도 도와줍니다</small></span><a href="tel:110">110</a></li>
         <li><span class="w">구급차 · 화재<small>일본어</small></span><a href="tel:119">119</a></li>
         <li><span class="w">Japan Visitor Hotline<small>24시간 · 한국어 가능 · 사고·아플 때 안내</small></span><a href="tel:+815038162787">050-3816-2787</a></li>
+        <li><span class="w">도쿄도 의료 안내 '히마와리'<small>매일 09:00–20:00 · 한국어 상담 · 외국어 되는 병원 안내</small></span><a href="tel:+81352858181">03-5285-8181</a></li>
         <li><span class="w">주일본 한국대사관 영사부<small>평일 09:00–17:00</small></span><a href="tel:+81334552601">03-3455-2601</a></li>
         <li><span class="w">대사관 긴급 당직<small>야간 · 휴일 사건사고</small></span><a href="tel:+817021535454">070-2153-5454</a></li>
         <li><span class="w">외교부 영사콜센터<small>24시간 · 서울</small></span><a href="tel:+82232100404">+82-2-3210-0404</a></li>
@@ -1972,7 +2110,12 @@
     window:  { tag:'お店 · 가게', ja:'窓側の席を\nお願いします。', yomi:'마도가와노 세키오 오네가이시마스', ko:'창가 자리로 부탁해요.' },
     engmenu: { tag:'お店 · 가게', ja:'英語のメニューは\nありますか？', yomi:'에-고노 메뉴-와 아리마스카', ko:'영어 메뉴 있어요?' },
     luggage: { tag:'荷物 · 짐', ja:'荷物を預けても\nいいですか？', yomi:'니모츠오 아즈케테모 이이데스카', ko:'짐을 맡겨도 될까요?' },
-    hospital:{ tag:'HELP · 도움', ja:'病院に\n行きたいです。', yomi:'뵤-인니 이키타이데스', ko:'병원에 가고 싶어요.' }
+    hospital:{ tag:'HELP · 도움', ja:'病院に\n行きたいです。', yomi:'뵤-인니 이키타이데스', ko:'병원에 가고 싶어요.' },
+    kamakura:{ tag:'駅 · 역', ja:'この電車は\n鎌倉に\n行きますか？', yomi:'코노 덴샤와 카마쿠라니 이키마스카', ko:'이 전철 가마쿠라에 가나요?' },
+    green:   { tag:'駅 · 역', ja:'グリーン券は\nどこで\n買えますか？', yomi:'구리-인켄와 도코데 카에마스카', ko:'그린샤(2층 특실) 표는 어디서 사나요?' },
+    nexplat: { tag:'駅 · 역', ja:'成田エクスプレスの\nホームは\nどこですか？', yomi:'나리타 엑스푸레스노 호-무와 도코데스카', ko:'나리타 익스프레스 타는 곳이 어디예요?' },
+    photo:   { tag:'お願い · 부탁', ja:'写真を\n撮っていただけ\nますか？', yomi:'샤신오 톳테 이타다케마스카', ko:'사진 좀 찍어 주시겠어요?' },
+    water:   { tag:'お店 · 가게', ja:'お水を\nください。', yomi:'오미즈오 쿠다사이', ko:'물 주세요.' }
   };
   var ov = document.getElementById('show');
   var ovJa = document.getElementById('show-ja'), ovKo = document.getElementById('show-ko');
@@ -2012,6 +2155,27 @@
     if (c){ copyText(c.getAttribute('data-copy')); return; }
   });
 
+  /* ── before the trip: required to-dos still open ── */
+  var prep = document.getElementById('prep');
+  function renderPrep(){
+    if (!prep) return;
+    var msLeft = TRIP_START.getTime() - Date.now();
+    if (msLeft <= 0){ prep.hidden = true; return; }
+    var left = [];
+    document.querySelectorAll('.chk[data-group="todo"] label[data-short]').forEach(function(l){
+      var b = l.querySelector('input[data-ck]');
+      if (b && !b.checked) left.push(l.getAttribute('data-short'));
+    });
+    var days = Math.ceil(msLeft / 86400000);
+    document.getElementById('prep-when').textContent = days <= 1 ? '내일 출발' : '출발 ' + days + '일 전';
+    document.getElementById('prep-title').textContent = left.length ? '꼭 해야 할 일 ' + left.length + '개가 남았습니다' : '꼭 해야 할 일은 모두 끝냈습니다';
+    var box = document.getElementById('prep-items');
+    box.innerHTML = '';
+    left.forEach(function(t){ var sp = document.createElement('span'); sp.textContent = t; box.appendChild(sp); });
+    box.hidden = !left.length;
+    prep.hidden = false;
+  }
+
   /* ── checklists ────────────────────── */
   function countGroup(g){
     var box = document.querySelector('.chk[data-group="' + g + '"]');
@@ -2026,7 +2190,7 @@
     box.querySelectorAll('input[data-ck]').forEach(function(b){
       var key = 'tokyo.ck.' + b.getAttribute('data-ck');
       if (load(key) === '1') b.checked = true;
-      b.addEventListener('change', function(){ store(key, b.checked ? '1' : null); countGroup(g); });
+      b.addEventListener('change', function(){ store(key, b.checked ? '1' : null); countGroup(g); renderPrep(); });
     });
     countGroup(g);
   });
@@ -2040,14 +2204,28 @@
         b.checked = false; store('tokyo.ck.' + b.getAttribute('data-ck'), null);
       });
       countGroup(g);
+      renderPrep();
     });
   });
 
   /* ── yen → won ─────────────────────── */
   var rateEl = document.getElementById('rate'), yenEl = document.getElementById('yen'), wonEl = document.getElementById('won');
-  var savedRate = parseFloat(load('tokyo.rate'));
+  var rateNote = document.getElementById('rate-note'), rateAuto = document.getElementById('rate-auto');
+  var fx = null;
+  try{ fx = JSON.parse(load('tokyo.fx') || 'null'); }catch(e){}
+  var savedRate = parseFloat(load('tokyo.rate'));   // only set when typed by hand
   if (savedRate > 0) rateEl.value = String(savedRate);
+  else if (fx && fx.r > 0) rateEl.value = fx.r.toFixed(2);
   function num(v){ return parseFloat(String(v).replace(/[^\d.]/g, '')) || 0; }
+  function paintRate(){
+    var r = num(rateEl.value);
+    var per100 = r ? ' · 100엔 ≈ ' + Math.round(r * 100).toLocaleString('ko-KR') + '원' : '';
+    var manual = parseFloat(load('tokyo.rate')) > 0;
+    if (manual) rateNote.textContent = '직접 넣은 환율' + per100;
+    else if (fx && fx.r) rateNote.textContent = fx.d + ' 환율 자동 반영' + per100;
+    else rateNote.textContent = '인터넷이 되면 오늘 환율로 자동으로 바뀝니다' + per100;
+    rateAuto.hidden = !manual;
+  }
   function won(n){ return '₩' + Math.round(n).toLocaleString('ko-KR'); }
   function convert(){
     var r = num(rateEl.value), y = num(yenEl.value);
@@ -2057,13 +2235,40 @@
       if (w) w.textContent = r ? won(num(td.getAttribute('data-yen')) * r) : '';
     });
   }
-  rateEl.addEventListener('input', function(){ var r = num(rateEl.value); if (r > 0) store('tokyo.rate', String(r)); convert(); });
+  rateEl.addEventListener('input', function(){ var r = num(rateEl.value); if (r > 0) store('tokyo.rate', String(r)); convert(); paintRate(); });
+  rateAuto.addEventListener('click', function(){
+    store('tokyo.rate', null);
+    rateEl.value = fx && fx.r ? fx.r.toFixed(2) : '8.7';
+    convert(); paintRate();
+  });
   yenEl.addEventListener('input', convert);
   yenEl.addEventListener('blur', function(){ var y = num(yenEl.value); yenEl.value = y ? y.toLocaleString('ko-KR') : ''; });
   document.querySelectorAll('.quick [data-yen]').forEach(function(b){
     b.addEventListener('click', function(){ yenEl.value = num(b.getAttribute('data-yen')).toLocaleString('ko-KR'); convert(); });
   });
   convert();
+  paintRate();
+
+  // Today's rate, no key needed. Several sources in case one is down; failures keep the last value.
+  var FX_URLS = [
+    'https://api.frankfurter.dev/v1/latest?base=JPY&symbols=KRW',
+    'https://api.frankfurter.app/latest?from=JPY&to=KRW',
+    'https://open.er-api.com/v6/latest/JPY'
+  ];
+  function fetchFx(i){
+    if (i >= FX_URLS.length || !window.fetch) return;
+    fetch(FX_URLS[i]).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); }).then(function(d){
+      var r = d && d.rates && d.rates.KRW;
+      if (!(r > 3 && r < 30)) throw new Error('rate');
+      var day = d.date || jstDate(d.time_last_update_unix ? new Date(d.time_last_update_unix * 1000) : new Date());
+      var p = day.split('-');
+      fx = { r:r, d:(+p[1]) + '/' + (+p[2]), t:Date.now() };
+      store('tokyo.fx', JSON.stringify(fx));
+      if (!(parseFloat(load('tokyo.rate')) > 0)){ rateEl.value = r.toFixed(2); convert(); }
+      paintRate();
+    }).catch(function(){ fetchFx(i + 1); });
+  }
+  if (!fx || Date.now() - fx.t > 6 * 3600000) fetchFx(0);
 
   /* ── nav height for sticky offsets ─── */
   var nav = document.querySelector('.rail');
@@ -2132,11 +2337,13 @@
   }
   /* ── "today" card at the top during the trip ── */
   var todayCard = document.getElementById('today');
+  var wxToday = {};   // date → short weather text, filled by the forecast below
   function renderToday(){
     var sec = document.querySelector('section.day[data-date="' + jstDate(new Date()) + '"]');
     if (!sec){ todayCard.hidden = true; return; }
     document.getElementById('today-n').textContent = sec.id.replace('d', '');
-    document.getElementById('today-date').textContent = '오늘 · ' + sec.querySelector('.dd').textContent;
+    var w = wxToday[sec.getAttribute('data-date')];
+    document.getElementById('today-date').textContent = '오늘 · ' + sec.querySelector('.dd').textContent + (w ? ' · ' + w : '');
     document.getElementById('today-title').textContent = sec.querySelector('.dayhead h2').textContent;
     todayCard.setAttribute('href', '#' + sec.id);
     todayCard.hidden = false;
@@ -2144,7 +2351,8 @@
 
   renderNow();
   renderToday();
-  setInterval(function(){ renderNow(); renderToday(); dday(); if (watchId) renderDist(); }, 30000);
+  renderPrep();
+  setInterval(function(){ renderNow(); renderToday(); renderPrep(); dday(); if (watchId) renderDist(); }, 30000);
 
   /* ── live weather (Open-Meteo, no API key) ── */
   var WX_URL = 'https://api.open-meteo.com/v1/forecast?latitude=35.6895,35.3192&longitude=139.6917,139.5467'
@@ -2174,14 +2382,21 @@
     if (!data || !data.length) return;
     var tokyo = data[0], kama = data[1] || data[0];
     document.querySelectorAll('section.day[data-date]').forEach(function(sec){
-      var chip = sec.querySelector('.meta .wx');
+      var chip = sec.querySelector('.meta .wx'), hint = sec.querySelector('.rainhint');
       if (!chip) return;
-      var w = dayWx(sec.getAttribute('data-wx') === 'kamakura' ? kama : tokyo, sec.getAttribute('data-date'));
-      if (!w){ chip.hidden = true; return; }
-      var l = wxLabel(w.code);
-      chip.textContent = l[0] + ' ' + l[1] + ' ' + Math.round(w.max) + '°/' + Math.round(w.min) + '° · 비 ' + (w.rain == null ? '–' : w.rain) + '%';
-      chip.classList.toggle('wet', w.rain >= 50);
+      var date = sec.getAttribute('data-date');
+      var w = dayWx(sec.getAttribute('data-wx') === 'kamakura' ? kama : tokyo, date);
+      var wet = !!w && w.rain >= 50;
+      if (hint){
+        hint.hidden = !wet;
+        if (wet) hint.querySelector('b').textContent = '비 올 확률 ' + w.rain + '%';
+      }
+      if (!w){ chip.hidden = true; delete wxToday[date]; return; }
+      var l = wxLabel(w.code), rain = (w.rain == null ? '–' : w.rain) + '%';
+      chip.textContent = l[0] + ' ' + l[1] + ' ' + Math.round(w.max) + '°/' + Math.round(w.min) + '° · 강수 ' + rain;
+      chip.classList.toggle('wet', wet);
       chip.hidden = false;
+      wxToday[date] = l[0] + ' ' + Math.round(w.max) + '° · 강수\u00a0' + rain;
     });
     var list = document.getElementById('wx-days'), shown = 0;
     list.innerHTML = '';
@@ -2196,7 +2411,7 @@
         li.querySelector('.wi').textContent = l[0];
         li.querySelector('.ww').textContent = l[1];
         li.querySelector('.wt').textContent = Math.round(w.max) + '°/' + Math.round(w.min) + '°';
-        li.querySelector('.wr').textContent = '비 ' + (w.rain == null ? '–' : w.rain) + '%';
+        li.querySelector('.wr').textContent = '강수 ' + (w.rain == null ? '–' : w.rain) + '%';
       } else {
         li.innerHTML = '<span class="wd"></span><span class="wi">·</span><span class="ww">예보 전</span>';
       }
@@ -2213,6 +2428,7 @@
     document.getElementById('wx-foot').textContent = (shown < WX_DAYS.length ? '예보는 약 2주 전부터 날짜별로 채워집니다. ' : '')
       + '업데이트 ' + (t.getUTCMonth() + 1) + '/' + t.getUTCDate() + ' ' + ('0' + t.getUTCHours()).slice(-2) + ':' + ('0' + t.getUTCMinutes()).slice(-2) + ' · Open-Meteo';
     document.getElementById('wx').hidden = false;
+    renderToday();
   }
   function loadWx(){
     var cached = null;
