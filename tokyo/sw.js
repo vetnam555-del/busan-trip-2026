@@ -1,6 +1,6 @@
 /* Offline support: the guide has to open in a Tokyo subway car with no signal. */
 const PREFIX = 'tokyo-trip-';
-const CACHE = PREFIX + 'v3';
+const CACHE = PREFIX + 'v4';
 const ASSETS = [
   './',
   './index.html',
