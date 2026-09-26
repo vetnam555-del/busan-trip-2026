@@ -54,6 +54,7 @@
     --red:     #F62E36;   /* 마루노우치선 — 숙소 앞 노선 */
     --red-ink: #C8131C;
     --red-bg:  #FDECEC;
+    --red-strong: #C8131C;   /* 흰 글씨를 올리는 빨강 */
 
     --food:    #9E4C14;
     --food-bg: #FAEEE3;
@@ -88,7 +89,7 @@
       --bg:#0D1017; --surface:#161A23; --surface-2:#1D222D;
       --ink:#E9ECF2; --ink-2:#C6CBD6; --muted:#9AA1B0; --faint:#6E7586;
       --line:#262C38; --line-2:#343C4B;
-      --red:#FF4B53; --red-ink:#FF6F75; --red-bg:#2C1518;
+      --red:#FF4B53; --red-ink:#FF6F75; --red-bg:#2C1518; --red-strong:#B3141C; --ok:#5CC98C;
       --food:#EFA064; --food-bg:#2A1D14; --sight:#95AFEF; --sight-bg:#172036;
       --move:#8B94A6; --warn:#F2C25B; --warn-bg:#2A2312;
       --map-loop:#5E9446; --map-water:#2C4A60; --map-park:#1E3322;
@@ -100,7 +101,7 @@
     --bg:#0D1017; --surface:#161A23; --surface-2:#1D222D;
     --ink:#E9ECF2; --ink-2:#C6CBD6; --muted:#9AA1B0; --faint:#6E7586;
     --line:#262C38; --line-2:#343C4B;
-    --red:#FF4B53; --red-ink:#FF6F75; --red-bg:#2C1518;
+    --red:#FF4B53; --red-ink:#FF6F75; --red-bg:#2C1518; --red-strong:#B3141C; --ok:#5CC98C;
     --food:#EFA064; --food-bg:#2A1D14; --sight:#95AFEF; --sight-bg:#172036;
     --move:#8B94A6; --warn:#F2C25B; --warn-bg:#2A2312;
     --map-loop:#5E9446; --map-water:#2C4A60; --map-park:#1E3322;
@@ -204,6 +205,7 @@
   .hero{ padding:26px 0 8px; display:grid; gap:22px; }
   .hero-top{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
   .dday{
+    flex:0 0 auto; white-space:nowrap;
     font-family:var(--num); font-weight:600; font-size:.9375rem; letter-spacing:.04em;
     padding:4px 11px; border-radius:999px; background:var(--red); color:#fff;
   }
@@ -427,11 +429,11 @@
   .ln.f{ --c:var(--ln-f); } .ln.a{ --c:var(--ln-a); } .ln.jr{ --c:var(--ln-jr); } .ln.tx{ --c:var(--ink); color:var(--surface); }
   .ln.wk{ --c:var(--surface-2); color:var(--ink); border:1px solid var(--line-2); }
 
-  .opt{
+  .optbox{
     margin:14px 0 0 76px; padding:14px 15px; border-radius:var(--r);
     border:1.5px dashed var(--line-2); font-size:.9375rem; color:var(--ink-2);
   }
-  .opt h4{ font-size:.9375rem; font-weight:800; color:var(--ink); margin-bottom:4px; }
+  .optbox h4{ font-size:.9375rem; font-weight:800; color:var(--ink); margin-bottom:4px; }
 
   /* ─────────── info ─────────── */
   #info{ padding-top:56px; }
@@ -532,16 +534,52 @@
   #toast.show{ opacity:1; transform:translate(-50%, 0); }
   @media (prefers-reduced-motion: reduce){ #toast{ transition:none; } .st .dot{ transition:none; } }
 
+  /* ─────────── trip-day states ─────────── */
+  .today-card{
+    display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:2px 14px;
+    padding:14px 16px; border-radius:var(--r); text-decoration:none;
+    background:var(--red-strong); color:#fff; box-shadow:var(--shadow);
+  }
+  .today-card[hidden]{ display:none; }
+  .today-card .n{
+    grid-column:1; grid-row:1 / span 2; width:46px; height:46px; border-radius:50%;
+    border:3px solid #fff; display:grid; place-items:center;
+    font-family:var(--num); font-weight:600; font-size:1.3125rem; line-height:1;
+  }
+  .today-card .eyebrow{ grid-column:2; grid-row:1; color:rgba(255,255,255,.85); }
+  .today-card b{ grid-column:2; grid-row:2; font-size:1.0625rem; line-height:1.35; }
+  .today-card .go{
+    grid-column:3; grid-row:1 / span 2; font-weight:800; font-size:.875rem; white-space:nowrap;
+    padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.2);
+  }
+  .stop.past .t, .stop.past .c{ opacity:.48; }
+  .stop.past .node::before{ border-color:var(--line-2); background:var(--line-2); }
+  .stop.now .node::before{ border-color:var(--red); box-shadow:0 0 0 5px color-mix(in srgb, var(--red) 26%, transparent); }
+  .stop.now .t::after{
+    content:"지금"; display:block; width:max-content; margin-top:5px; padding:3px 6px; border-radius:6px;
+    font:800 .6875rem/1 var(--sans); letter-spacing:0; color:#fff; background:var(--red-strong);
+  }
+  .share{ display:grid; gap:8px; margin-top:12px; padding:16px; border-radius:var(--r); background:var(--surface-2); }
+  .share b{ font-size:1rem; }
+  .share p{ font-size:.9375rem; color:var(--ink-2); }
+  .share .how{ font-size:.8438rem; color:var(--muted); }
+  .share .acts{ margin-top:4px; }
+  .quake{ margin-top:10px; padding:13px 15px; border-radius:14px; background:var(--warn-bg); font-size:.9375rem; color:var(--ink); }
+  .quake b{ color:var(--warn); }
+  #offline{ color:var(--ok); font-weight:700; }
+  .brief .c.w2{ grid-column:1 / -1; }
+
   /* ─────────── wider screens ─────────── */
   @media (min-width:600px){
     .bk{ grid-template-columns:1fr 1fr; }
     .bk .span2{ grid-column:1 / -1; }
     .brief{ grid-template-columns:repeat(3, 1fr); }
     .brief .c.wide{ grid-column:span 3; }
+    .brief .c.w2{ grid-column:span 2; }
     .phr{ grid-template-columns:repeat(3, 1fr); }
     .stops::before{ left:69px; }
     .stop{ grid-template-columns:56px 28px minmax(0,1fr); }
-    .opt{ margin-left:84px; }
+    .optbox{ margin-left:84px; }
   }
   @media (min-width:1024px){
     #app{ max-width:1180px; display:grid; grid-template-columns:260px minmax(0,1fr); gap:0 48px; padding:0 32px 80px; }
@@ -566,11 +604,11 @@
     .ctl{ margin-top:auto; }
     .nowbar{ top:0; }
     .hero{ padding-top:40px; grid-template-columns:minmax(0,1fr) 360px; align-items:start; gap:28px; }
-    .hero-top{ grid-column:1 / -1; }
+    .hero-top, .today-card{ grid-column:1 / -1; }
     .hero-title .kj{ font-size:7.5rem; }
   }
   @media print{
-    .rail, .nowbar, .acts, .ctl, #toast{ display:none !important; }
+    .rail, .nowbar, .acts, .ctl, #toast, .today-card, .share{ display:none !important; }
   }
 </style>
 </head>
@@ -611,6 +649,12 @@
 
   <!-- ══════════ HERO ══════════ -->
   <header class="hero">
+    <a class="today-card" id="today" href="#d1" hidden>
+      <span class="n" id="today-n">1</span>
+      <span class="eyebrow" id="today-date">오늘</span>
+      <b id="today-title"></b>
+      <span class="go">오늘 일정 →</span>
+    </a>
     <div class="hero-top">
       <p class="eyebrow">Tokyo · 4 nights 5 days · 3 people</p>
       <p class="dday" id="dday">D-6</p>
@@ -738,7 +782,7 @@
         <div class="acts">
           <button class="btn show" type="button" data-show="home">택시 기사에게 보여주기</button>
           <button class="btn" type="button" data-copy="東京都新宿区新宿1丁目7-2">주소 복사</button>
-          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2" target="_blank" rel="noopener">구글 지도</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
         </div>
       </article>
 
@@ -787,7 +831,7 @@
         <span class="n">4</span>
         <span class="t"><span class="kj" lang="ja">御苑 · 銀座</span><span class="dt">10.04 SUN</span></span>
         <span class="w"><span class="walk" aria-label="걷기 많음"><i class="on"></i><i class="on"></i><i class="on"></i></span>많음</span>
-        <span class="s">신주쿠교엔 → 도쿄역 → 붕장어 점심 → 긴자 보행자천국 → 비어홀</span>
+        <span class="s">신주쿠교엔 → 붕장어 이른 점심 → 도쿄역 → 긴자 보행자천국 → 비어홀</span>
       </a>
       <a href="#d5">
         <span class="n">5</span>
@@ -816,18 +860,28 @@
       <h2>출국 전에 할 일</h2>
       <p class="note">체크하면 이 휴대폰에 저장됩니다. 가족 각자 폰에서 따로 체크됩니다.</p>
     </div>
-    <div class="chkbar"><span id="todo-count">0 / 10</span><button type="button" data-reset="todo">체크 모두 지우기</button></div>
+    <div class="chkbar"><span id="todo-count">0 / 14</span><button type="button" data-reset="todo">체크 모두 지우기</button></div>
     <div class="chk" data-group="todo">
       <label><input type="checkbox" data-ck="vjw"><span><b><em class="tag req">필수</em>Visit Japan Web 등록 · QR 캡처</b>3명 각각 입국심사·세관 정보 입력. 대표 1명 계정에 동반 가족을 추가할 수 있습니다. 공항 와이파이가 느리니 QR은 캡처해 두세요.</span></label>
       <label><input type="checkbox" data-ck="sky"><span><b><em class="tag req">필수</em>SHIBUYA SKY 10/3(토) 3장 예매</b>16:40 입장 전후가 일몰(17:22 무렵)과 맞습니다. 일몰 시간대가 매진이면 17:40 이후 야경 시간대도 좋습니다. 공식 사이트 온라인 예매.</span></label>
       <label><input type="checkbox" data-ck="checkin"><span><b><em class="tag req">필수</em>숙소 '체크인 안내' 캡처 · 도착 시간 알리기</b>출입 방법·호실·와이파이를 전부 캡처하고, 아고다 앱 메시지로 호스트에게 "10/1 19:50쯤 도착"이라고 보내 두세요.</span></label>
+      <label><input type="checkbox" data-ck="insure"><span><b><em class="tag rec">권장</em>여행자보험 3명</b>부모님 포함. 일본 병원은 보험이 없으면 진료비를 전부 내야 합니다. 보험사 앱에 증권을 받아 두세요.</span></label>
       <label><input type="checkbox" data-ck="imahan"><span><b><em class="tag rec">권장</em>아사쿠사 이마한 10/2(금) 12:30 · 3명 점심 예약</b>전화 <a class="num" href="tel:+81338411114">03-3841-1114</a> (10:30~21:00) 또는 클룩 예약.</span></label>
       <label><input type="checkbox" data-ck="tst"><span><b><em class="tag rec">권장</em>도쿄 서브웨이 티켓 72시간 × 3장</b>1인 ¥2,000. QR형을 미리 사 두면 공항에서 줄 설 필요가 없습니다. 10/2 아침 첫 개찰부터 72시간.</span></label>
       <label><input type="checkbox" data-ck="esim"><span><b><em class="tag rec">권장</em>eSIM·로밍 3명 모두</b>부모님 폰도 데이터가 되어야 떨어졌을 때 연락과 지도가 됩니다.</span></label>
+      <label><input type="checkbox" data-ck="family"><span><b><em class="tag rec">권장</em>부모님 폰에 이 페이지 넣기 · 위치 공유</b>바로 아래 '링크 보내기'로 보내고 홈 화면에 추가해 두세요. 카카오톡이나 구글 지도 위치 공유도 켜 두면 떨어졌을 때 찾기 쉽습니다.</span></label>
       <label><input type="checkbox" data-ck="money"><span><b><em class="tag rec">권장</em>트래블카드 엔화 충전 + 현금</b>대부분 카드가 되지만, 절·신사, 작은 가게, 코인로커용 현금 ¥20,000~30,000.</span></label>
       <label><input type="checkbox" data-ck="midori"><span><b><em class="tag opt">선택</em>스시노미도리 시부야점 10/3(토) 18:20 좌석 예약</b>클룩에서 좌석 예약이 됩니다. 안 하면 현장 번호표.</span></label>
       <label><input type="checkbox" data-ck="taxi"><span><b><em class="tag opt">선택</em>택시 앱 준비</b>카카오T 해외 호출(일본은 GO와 연동, 원화 결제) 또는 GO 앱 설치·카드 등록.</span></label>
-      <label><input type="checkbox" data-ck="nezu"><span><b><em class="tag opt">선택</em>네즈미술관 10/3(토) 13:00 예약</b>전시 교체 기간엔 휴관합니다. 10월 전시 일정을 확인하고 온라인 예약.</span></label>
+      <label><input type="checkbox" data-ck="nezu"><span><b><em class="tag opt">선택</em>네즈미술관 10/3(토) 13:00 예약</b>공식 사이트에서 날짜·시간 지정 온라인 예약. 10/3엔 도자기 명품전(10/12까지)이 열립니다.</span></label>
+      <label><input type="checkbox" data-ck="cloak"><span><b><em class="tag opt">선택</em>10/5 짐 보관 예약 (ecbo cloak)</b>귀국일에 신주쿠역에서 쇼핑하는 동안 캐리어 3개를 맡길 곳. 앱에서 신주쿠역 남쪽·다카시마야 주변 장소를 미리 예약합니다 (1개 하루 ¥800 안팎).</span></label>
+      <label><input type="checkbox" data-ck="safety"><span><b><em class="tag opt">선택</em>Safety tips 앱 설치</b>일본 관광청 공식 앱. 지진·쓰나미·기상 경보를 한국어로 알려 줍니다.</span></label>
+    </div>
+    <div class="share">
+      <b>가족 휴대폰에도 이 페이지를</b>
+      <p>링크를 보내 한 번 열어 두면, 홈 화면 아이콘으로 앱처럼 열리고 데이터가 없어도 볼 수 있습니다.</p>
+      <p class="how">아이폰: Safari 아래 공유 버튼 → '홈 화면에 추가' · 안드로이드: 크롬 ⋮ → '홈 화면에 추가'. 카카오톡 안에서 열렸다면 메뉴에서 다른 브라우저로 먼저 여세요. 추가한 뒤 아이콘으로 한 번 열어 두면 끝입니다.</p>
+      <div class="acts"><button class="btn primary" type="button" id="share">링크 보내기</button></div>
     </div>
   </div>
 
@@ -854,9 +908,14 @@
         <p class="sm">납작한 11자 두 핀. 한국 플러그는 안 맞으니 변환 어댑터(돼지코) 2~3개. 폰 충전기는 그대로 됩니다.</p>
       </div>
       <div class="c">
-        <h3>Pay</h3>
+        <h3>Tip</h3>
+        <p class="big">팁 없음</p>
+        <p class="sm">계산서 금액 그대로. 돈은 손으로 건네지 말고 계산대의 작은 쟁반에 올려 두세요.</p>
+      </div>
+      <div class="c w2">
+        <h3>Pay · Cash</h3>
         <p class="big">카드 대부분 OK</p>
-        <p class="sm">절·신사, 작은 식당의 식권 자판기, 코인로커는 현금이 필요할 때가 있습니다.</p>
+        <p class="sm">절·신사, 작은 식당의 식권 자판기, 코인로커는 현금이 필요할 때가 있습니다. 현금이 모자라면 <b>트래블로그(마스터카드)</b>는 세븐일레븐 ATM, <b>트래블월렛(비자)</b>은 이온 ATM에서 뽑아야 수수료가 적습니다.</p>
       </div>
       <div class="c wide">
         <h3>Holiday</h3>
@@ -914,6 +973,7 @@
               <div><dt>오늘</dt><dd>가장 빠른 신주쿠행 N'EX</dd></div>
               <div><dt>10/5</dt><dd>신주쿠 <b class="num">12:00–12:30</b> 출발 → 공항제2빌딩역</dd></div>
             </dl>
+            <p class="tip"><b>창구 줄이 길면</b> 옆의 지정석 발매기(<span lang="ja">指定席券売機</span>)에서 바우처 QR과 여권으로 발권되는지 먼저 해 보세요. 안 되면 창구로.</p>
             <p class="tip"><b>말이 안 통하면</b> 아래 버튼 화면을 그대로 보여주면 됩니다.</p>
             <div class="acts"><button class="btn show" type="button" data-show="nex">창구 직원에게 보여주기</button></div>
           </div>
@@ -951,13 +1011,14 @@
             <p class="nm">하야시다 신주쿠 본점<span class="ja" lang="ja">らぁ麺 はやし田 新宿本店</span></p>
             <p class="d">맑은 닭 육수에 간장·소금 라멘. 짜지 않고 깔끔해서 첫날 저녁으로 부담이 없습니다. 입구 식권 자판기에서 3명분 먼저 사고 줄을 섭니다. 저녁엔 10~20분 기다릴 수 있습니다.</p>
             <dl class="spec">
-              <div><dt>영업</dt><dd class="num">11:00–22:00</dd></div>
+              <div><dt>영업</dt><dd><span class="num">11:00–16:00 · 18:00–22:00</span> (쉬는 시간 없이 여는 날도 있음)</dd></div>
               <div><dt>위치</dt><dd>신주쿠산초메역 A5 출구 1분 · 숙소에서 걸어서 약 10분</dd></div>
               <div><dt>예산</dt><dd>1인 ¥1,300–1,800</dd></div>
+              <div><dt>주소</dt><dd lang="ja">新宿区新宿3-31-5</dd></div>
             </dl>
             <p class="tip"><b>다른 선택:</b> 츠나하치 튀김은 목요일 21:00이 마지막 주문이라 오늘은 빠듯합니다. 2일차 저녁에 넣었습니다.</p>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%89%E3%81%81%E9%BA%BA+%E3%81%AF%E3%82%84%E3%81%97%E7%94%B0+%E6%96%B0%E5%AE%BF%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%82%89%E3%81%81%E9%BA%BA+%E3%81%AF%E3%82%84%E3%81%97%E7%94%B0+%E6%96%B0%E5%AE%BF%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -980,7 +1041,7 @@
       <h2>츠키지 아침, 아사쿠사 스키야키</h2>
       <p class="sub">츠키지 장외시장이 문을 여는 금요일입니다. 오전에 동쪽을 한 번에 돌고, 오후엔 숙소에서 쉬었다가 저녁에 다시 나갑니다.</p>
       <div class="meta">
-        <span class="num">08:40 → 20:00</span>
+        <span class="num">09:00 → 20:00</span>
         <span><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>걷기 보통 · 약 1만 보</span>
         <span class="bookreq">이마한 예약 권장</span>
       </div>
@@ -988,18 +1049,18 @@
 
     <ol class="stops">
       <li class="stop" data-kind="move">
-        <div class="t">08:40</div><div class="node"></div>
+        <div class="t">09:00</div><div class="node"></div>
         <div class="c">
           <p class="nm">숙소 → 츠키지</p>
           <div class="rt">
             <span class="seg"><span class="ln m">M</span> 신주쿠교엔마에 → 긴자</span><span class="arr">→</span>
             <span class="seg"><span class="ln h">H</span> 긴자 → 츠키지</span><span class="arr">·</span><span class="num">약 35분</span>
           </div>
-          <p class="d">72시간 지하철 패스가 오늘 첫 개찰부터 시작됩니다. 출근 시간 끝물이라 붐비면 택시도 괜찮습니다 (약 25분 · ¥4,000 안팎).</p>
+          <p class="d">72시간 지하철 패스가 오늘 첫 개찰부터 시작됩니다. 아침 8~9시 출근 러시가 지난 뒤에 출발합니다. 그래도 붐비면 택시도 괜찮습니다 (약 25분 · ¥4,000 안팎).</p>
         </div>
       </li>
       <li class="stop star" data-kind="food">
-        <div class="t">09:15</div><div class="node"></div>
+        <div class="t">09:35</div><div class="node"></div>
         <div class="c">
           <div class="box">
             <p class="kicker">아침 · 초밥과 시장 간식</p>
@@ -1013,13 +1074,13 @@
             </dl>
             <p class="tip"><b>10시가 넘으면</b> 단체 관광객이 몰립니다. 초밥부터 먹고 간식은 그다음에.</p>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%99%E3%81%97%E3%81%96%E3%82%93%E3%81%BE%E3%81%84+%E6%9C%AC%E5%BA%97+%E7%AF%89%E5%9C%B0" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%81%99%E3%81%97%E3%81%96%E3%82%93%E3%81%BE%E3%81%84+%E6%9C%AC%E5%BA%97+%E7%AF%89%E5%9C%B0&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
       </li>
       <li class="stop" data-kind="move">
-        <div class="t">10:40</div><div class="node"></div>
+        <div class="t">10:50</div><div class="node"></div>
         <div class="c">
           <p class="nm">츠키지 → 아사쿠사</p>
           <div class="rt">
@@ -1030,7 +1091,7 @@
         </div>
       </li>
       <li class="stop star" data-kind="sight">
-        <div class="t">11:10</div><div class="node"></div>
+        <div class="t">11:15</div><div class="node"></div>
         <div class="c">
           <div class="box">
             <p class="kicker">도쿄에서 가장 오래된 절</p>
@@ -1041,7 +1102,7 @@
               <div><dt>간식</dt><dd>아사쿠사 카게츠도 멜론빵 <span lang="ja">浅草花月堂</span></dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%85%E8%8D%89%E5%AF%BA" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%B5%85%E8%8D%89%E5%AF%BA&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -1060,7 +1121,7 @@
               <div><dt>주소</dt><dd lang="ja">台東区西浅草3-1-12</dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%85%E8%8D%89%E4%BB%8A%E5%8D%8A+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%B5%85%E8%8D%89%E4%BB%8A%E5%8D%8A+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -1084,6 +1145,7 @@
             <span class="seg"><span class="ln m">M</span> → 신주쿠교엔마에</span><span class="arr">·</span><span class="num">약 40분</span>
           </div>
           <p class="d">아카사카미츠케역에서는 <b>같은 층 건너편</b>에 마루노우치선(오기쿠보 방면)이 섭니다. 계단 없이 갈아탑니다.</p>
+          <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener">숙소 길찾기</a></div>
         </div>
       </li>
       <li class="stop" data-kind="move">
@@ -1106,7 +1168,7 @@
               <div><dt>주소</dt><dd lang="ja">新宿区新宿3-31-8</dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%A4%E3%81%AA%E5%85%AB+%E7%B7%8F%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%81%A4%E3%81%AA%E5%85%AB+%E7%B7%8F%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -1119,7 +1181,7 @@
         </div>
       </li>
     </ol>
-    <div class="opt">
+    <div class="optbox">
       <h4>체력이 남으면: 도쿄 스카이트리</h4>
       아사쿠사에서 한 정거장입니다. 전망대는 ¥2,000대부터. 대신 오후 휴식 시간이 없어지니, 부모님 컨디션을 보고 정하세요.
     </div>
@@ -1163,7 +1225,7 @@
               <div><dt>길</dt><dd>굵은 자갈길이라 편한 운동화로</dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -1189,7 +1251,7 @@
               <div><dt>주소</dt><dd lang="ja">渋谷区神宮前4-8-5</dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%BE%E3%81%84%E6%B3%89+%E9%9D%92%E5%B1%B1%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%81%BE%E3%81%84%E6%B3%89+%E9%9D%92%E5%B1%B1%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -1205,7 +1267,7 @@
               <div><dt>시간</dt><dd class="num">10:00–17:00 · 월요일 휴관</dd></div>
               <div><dt>입장</dt><dd>¥1,300 안팎 · 온라인 예약 권장</dd></div>
             </dl>
-            <p class="tip"><b>전시 교체 기간</b>에는 정원까지 문을 닫습니다. 전날 공식 사이트에서 확인하세요. 안 열면 캣스트리트를 따라 시부야까지 걸어가도 됩니다 (15분).</p>
+            <p class="tip"><b>10/3 전시</b>는 도자기 명품전 「<span lang="ja">やきもの名品紀行 ―中国・日本・朝鮮半島―</span>」(8/15~10/12). 중국·일본 도자기와 함께 한반도 도자기도 나옵니다.</p>
           </div>
         </div>
       </li>
@@ -1251,7 +1313,7 @@
               <div><dt>예산</dt><dd>1인 ¥3,000–4,500</dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%BE%8E%E7%99%BB%E5%88%A9%E5%AF%BF%E5%8F%B8+%E6%B8%8B%E8%B0%B7%E5%BA%97" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E7%BE%8E%E7%99%BB%E5%88%A9%E5%AF%BF%E5%8F%B8+%E6%B8%8B%E8%B0%B7%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -1265,7 +1327,7 @@
             <span class="seg"><span class="ln wk wide">도보 8분</span></span><span class="arr">·</span><span class="num">약 20분</span>
           </div>
           <p class="d">많이 걸은 날이니 택시도 좋습니다 (약 20분 · ¥2,500–3,000).</p>
-          <div class="acts"><button class="btn show" type="button" data-show="home">숙소 주소 보여주기</button></div>
+          <div class="acts"><button class="btn show" type="button" data-show="home">숙소 주소 보여주기</button><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener">숙소 길찾기</a></div>
         </div>
       </li>
     </ol>
@@ -1305,33 +1367,27 @@
               <div><dt>입구</dt><dd>신주쿠문 또는 오키도문</dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
       </li>
       <li class="stop" data-kind="move">
-        <div class="t">10:45</div><div class="node"></div>
+        <div class="t">10:15</div><div class="node"></div>
         <div class="c">
-          <p class="nm">도쿄역으로</p>
-          <div class="rt"><span class="seg"><span class="ln m">M</span> 신주쿠교엔마에 → 도쿄</span><span class="arr">·</span><span class="num">환승 없이 약 17분</span></div>
-        </div>
-      </li>
-      <li class="stop" data-kind="sight">
-        <div class="t">11:10</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="nm">도쿄역 마루노우치 역사 · KITTE 옥상정원<span class="ja" lang="ja">東京駅 丸の内駅舎 · KITTEガーデン</span></p>
-            <p class="d">1914년에 지은 붉은 벽돌 역사. 마루노우치 광장에서 정면 사진을 찍고, 길 건너 KITTE 6층 옥상정원(무료)에 올라가 역과 선로를 내려다봅니다.</p>
-            <p class="d">여유가 있으면 황거 앞 니주바시까지 걸어서 15분입니다.</p>
+          <p class="nm">도쿄역 → 니혼바시</p>
+          <div class="rt">
+            <span class="seg"><span class="ln m">M</span> 신주쿠교엔마에 → 도쿄</span><span class="arr">→</span>
+            <span class="seg"><span class="ln wk wide">도보 8분</span> 야에스 쪽</span><span class="arr">·</span><span class="num">약 30분</span>
           </div>
+          <p class="d">마루노우치선 한 번에 도쿄역까지 갑니다. 역 안을 가로질러 반대편 야에스 출구로 나가면 니혼바시입니다.</p>
         </div>
       </li>
       <li class="stop star" data-kind="food">
-        <div class="t">12:10</div><div class="node"></div>
+        <div class="t">10:50</div><div class="node"></div>
         <div class="c">
           <div class="box">
-            <p class="kicker">점심 · 붕장어</p>
+            <p class="kicker">이른 점심 · 붕장어</p>
             <p class="nm">니혼바시 타마이 본점<span class="ja" lang="ja">日本橋 玉ゐ 本店</span></p>
             <p class="d">1953년에 지은 술 가게 건물을 고쳐 쓰는 아나고(붕장어) 전문점. 나무 상자에 밥과 부드러운 아나고를 담은 <b>하코메시</b>가 대표 메뉴입니다. 장어보다 담백해서 부모님 입맛에 잘 맞습니다.</p>
             <dl class="spec">
@@ -1340,26 +1396,36 @@
               <div><dt>예산</dt><dd>1인 ¥3,000–4,500</dd></div>
               <div><dt>주소</dt><dd lang="ja">中央区日本橋2-9-9</dd></div>
             </dl>
-            <p class="tip"><b>주말 점심엔</b> 줄이 있을 수 있습니다. 도쿄역 안을 가로질러 가면 가깝습니다.</p>
+            <p class="tip"><b>문 여는 11:00 전에</b> 도착해 있으면 주말 점심 줄을 거의 피합니다. 12~13시엔 줄이 길어집니다.</p>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%9C%AC%E6%A9%8B+%E7%8E%89%E3%82%90+%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%97%A5%E6%9C%AC%E6%A9%8B+%E7%8E%89%E3%82%90+%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
       </li>
-      <li class="stop" data-kind="move">
-        <div class="t">13:30</div><div class="node"></div>
+      <li class="stop" data-kind="sight">
+        <div class="t">12:10</div><div class="node"></div>
         <div class="c">
-          <p class="nm">니혼바시 → 긴자</p>
-          <div class="rt">
-            <span class="seg"><span class="ln wk wide">도보 20분</span> 주오도리 따라 남쪽으로</span><span class="arr">또는</span>
-            <span class="seg"><span class="ln g">G</span> 니혼바시 → 긴자 · 2정거장</span>
+          <div class="box">
+            <p class="nm">도쿄역 마루노우치 역사 · KITTE 옥상정원<span class="ja" lang="ja">東京駅 丸の内駅舎 · KITTEガーデン</span></p>
+            <p class="d">다시 역 안을 가로질러 마루노우치 쪽으로 나오면 1914년에 지은 붉은 벽돌 역사가 보입니다. 광장에서 정면 사진을 찍고, 길 건너 KITTE 6층 옥상정원(무료)에 올라가 역과 선로를 내려다봅니다.</p>
+            <p class="d">여유가 있으면 황거 앞 니주바시까지 걸어서 15분입니다.</p>
           </div>
-          <p class="d">일본 도로의 기점인 니혼바시 다리를 보고 큰길을 따라 곧장 내려가면 긴자입니다.</p>
+        </div>
+      </li>
+      <li class="stop" data-kind="move">
+        <div class="t">13:00</div><div class="node"></div>
+        <div class="c">
+          <p class="nm">마루노우치 → 긴자</p>
+          <div class="rt">
+            <span class="seg"><span class="ln wk wide">도보 20분</span> 나카도리 가로수길 따라 남쪽으로</span><span class="arr">또는</span>
+            <span class="seg"><span class="ln m">M</span> 도쿄 → 긴자 · 1정거장</span>
+          </div>
+          <p class="d">가로수와 상점이 이어지는 마루노우치 나카도리를 따라 유라쿠초를 지나면 긴자입니다.</p>
         </div>
       </li>
       <li class="stop star" data-kind="sight">
-        <div class="t">14:00</div><div class="node"></div>
+        <div class="t">13:30</div><div class="node"></div>
         <div class="c">
           <div class="box">
             <p class="kicker">일요일에만 · 차 없는 거리</p>
@@ -1387,7 +1453,7 @@
               <div><dt>주소</dt><dd lang="ja">中央区銀座7-9-20</dd></div>
             </dl>
             <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%93%E3%83%A4%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3+%E9%8A%80%E5%BA%A7%E4%B8%83%E4%B8%81%E7%9B%AE%E5%BA%97" target="_blank" rel="noopener">구글 지도</a>
+              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%83%93%E3%83%A4%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3+%E9%8A%80%E5%BA%A7%E4%B8%83%E4%B8%81%E7%9B%AE%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener">길찾기</a>
             </div>
           </div>
         </div>
@@ -1398,6 +1464,7 @@
           <p class="nm">숙소로 · 짐 싸기</p>
           <div class="rt"><span class="seg"><span class="ln m">M</span> 긴자 → 신주쿠교엔마에</span><span class="arr">·</span><span class="num">환승 없이 약 16분</span></div>
           <p class="d">오늘 밤 짐을 싸고 무게를 재 두세요. <b>위탁 1인 15kg, 기내 10kg</b>입니다.</p>
+          <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener">숙소 길찾기</a></div>
         </div>
       </li>
     </ol>
@@ -1439,8 +1506,8 @@
         <div class="c">
           <div class="box">
             <p class="nm">짐 맡기고 마지막 쇼핑<span class="ja" lang="ja">新宿駅 南口 · タカシマヤ タイムズスクエア</span></p>
-            <p class="d">남쪽 개찰구 주변 대형 코인로커(¥700~)에 캐리어를 넣습니다. 자리가 없으면 바스타 신주쿠의 짐 보관 카운터를 찾으세요.</p>
-            <p class="d">쇼핑은 다카시마야 타임스스퀘어, 뉴우먼, 루미네. 지하 식품관에서 <b>기차에서 먹을 도시락(에키벤)</b>과 선물 과자를 삽니다.</p>
+            <p class="d">캐리어는 미리 예약해 둔 <b>에크보 클로크</b>(ecbo cloak) 보관 장소에 맡깁니다. 신주쿠역 남쪽·다카시마야 주변에 여러 곳, 캐리어 1개 하루 ¥800 안팎. 예약을 못 했으면 남쪽 개찰구 주변 대형 코인로커(¥700~)를 찾으세요. 오전이면 빈칸이 금방 없어집니다.</p>
+            <p class="d">쇼핑은 다카시마야(10:30 오픈), 뉴우먼, 루미네. 지하 식품관에서 <b>기차에서 먹을 도시락(에키벤)</b>과 선물 과자를 삽니다.</p>
           </div>
         </div>
       </li>
@@ -1514,7 +1581,7 @@
         </li>
         <li>
           <h4><span class="tag rec">부모님과</span>지하철 팁</h4>
-          엘리베이터는 역마다 'エレベーター' 표지와 바닥 노란 점자 블록을 따라가면 있습니다. 도쿄 에스컬레이터는 <b>왼쪽에 서고</b> 오른쪽을 비웁니다. 출구 번호(A2, A5 등)를 먼저 확인하고 나가면 헤매지 않습니다. 평일 08:00~09:30 러시아워는 피했습니다.
+          엘리베이터는 역마다 'エレベーター' 표지와 바닥 노란 점자 블록을 따라가면 있습니다. 도쿄 에스컬레이터는 <b>왼쪽에 서고</b> 오른쪽을 비웁니다. 출구 번호(A2, A5 등)를 먼저 확인하고 나가면 헤매지 않습니다. 평일 아침 8~9시 러시아워는 피하도록 출발 시간을 잡았습니다.
         </li>
       </ul>
     </div>
@@ -1539,12 +1606,12 @@
           <thead><tr><th>언제</th><th>어디 · 무엇</th><th class="r">1인</th></tr></thead>
           <tbody>
             <tr><td class="n">1일 20:20</td><td>하야시다<span class="ja" lang="ja">らぁ麺 はやし田</span><span class="what">라멘</span></td><td class="n r">¥1,500</td></tr>
-            <tr><td class="n">2일 09:15</td><td>스시잔마이 본점<span class="ja" lang="ja">すしざんまい 本店</span><span class="what">초밥 아침</span></td><td class="n r">¥3,000</td></tr>
+            <tr><td class="n">2일 09:35</td><td>스시잔마이 본점<span class="ja" lang="ja">すしざんまい 本店</span><span class="what">초밥 아침</span></td><td class="n r">¥3,000</td></tr>
             <tr><td class="n">2일 12:30</td><td>아사쿠사 이마한<span class="ja" lang="ja">浅草今半</span><span class="what">스키야키 · 예약 권장</span></td><td class="n r">¥4,500</td></tr>
             <tr><td class="n">2일 18:00</td><td>츠나하치 총본점<span class="ja" lang="ja">つな八 総本店</span><span class="what">튀김</span></td><td class="n r">¥3,000</td></tr>
             <tr><td class="n">3일 11:30</td><td>마이센 아오야마<span class="ja" lang="ja">まい泉 青山本店</span><span class="what">돈카츠</span></td><td class="n r">¥3,000</td></tr>
             <tr><td class="n">3일 18:20</td><td>스시노미도리 시부야<span class="ja" lang="ja">美登利寿司 渋谷店</span><span class="what">초밥 · 클룩 예약</span></td><td class="n r">¥4,000</td></tr>
-            <tr><td class="n">4일 12:10</td><td>니혼바시 타마이<span class="ja" lang="ja">日本橋 玉ゐ</span><span class="what">붕장어</span></td><td class="n r">¥4,000</td></tr>
+            <tr><td class="n">4일 10:50</td><td>니혼바시 타마이<span class="ja" lang="ja">日本橋 玉ゐ</span><span class="what">붕장어</span></td><td class="n r">¥4,000</td></tr>
             <tr><td class="n">4일 17:30</td><td>라이온 긴자 7초메<span class="ja" lang="ja">ビヤホールライオン</span><span class="what">비어홀 · 양식</span></td><td class="n r">¥4,500</td></tr>
             <tr><td class="n">5일 12:15</td><td>N'EX 열차 안<span class="what">에키벤 (도시락)</span></td><td class="n r">¥1,800</td></tr>
           </tbody>
@@ -1647,6 +1714,8 @@
         <button type="button" data-show="wasabi"><span class="k">와사비 빼 주세요</span><span class="j" lang="ja">わさび抜きで</span></button>
         <button type="button" data-show="bill"><span class="k">계산할게요</span><span class="j" lang="ja">お会計お願いします</span></button>
         <button type="button" data-show="toilet"><span class="k">화장실 어디예요?</span><span class="j" lang="ja">トイレはどこですか？</span></button>
+        <button type="button" data-show="elevator"><span class="k">엘리베이터 어디예요?</span><span class="j" lang="ja">エレベーターはどこですか？</span></button>
+        <button type="button" data-show="plates"><span class="k">앞접시 3개 주세요</span><span class="j" lang="ja">取り皿を3枚ください</span></button>
         <button type="button" data-show="luggage"><span class="k">짐 맡겨도 돼요?</span><span class="j" lang="ja">荷物を預けても…</span></button>
         <button type="button" data-show="hospital"><span class="k">병원에 가고 싶어요</span><span class="j" lang="ja">病院に行きたいです</span></button>
         <button type="button" data-show="nex"><span class="k">N'EX 좌석 지정</span><span class="j" lang="ja">座席を予約したいです</span></button>
@@ -1666,6 +1735,7 @@
         <li><span class="w">외교부 영사콜센터<small>24시간 · 서울</small></span><a href="tel:+82232100404">+82-2-3210-0404</a></li>
         <li><span class="w">숙소 호스트<small>Room In Tokyo</small></span><a href="tel:+819037005566">090-3700-5566</a></li>
       </ul>
+      <p class="quake"><b>지진이 나면</b> 흔들리는 동안은 테이블 밑에 들어가거나 가방으로 머리를 보호하고, 멈추면 출구 쪽으로 나갑니다. 엘리베이터는 타지 않습니다. 관광청 공식 앱 <b>Safety tips</b>를 깔아 두면 지진·쓰나미 경보가 한국어로 옵니다.</p>
     </div>
 
     <div class="isec" id="i-pack">
@@ -1692,7 +1762,8 @@
     </div>
 
     <footer>
-      <p>영업시간·요금은 2026년 9월에 확인한 값이며 바뀔 수 있습니다. 특히 N'EX 정확한 출발 시각, 숙소 체크아웃 시간, 네즈미술관 전시 일정은 직접 확인이 필요합니다.</p>
+      <p>영업시간·요금은 2026년 9월에 확인한 값이며 바뀔 수 있습니다. 특히 N'EX 정확한 출발 시각과 숙소 체크아웃 시간은 직접 확인이 필요합니다.</p>
+      <p id="offline" hidden>✓ 이 휴대폰에 저장됨 · 데이터가 없어도 열립니다</p>
       <p class="num">TOKYO 2026.10.01–05 · YP735 / ZE610</p>
     </footer>
   </section>
@@ -1790,8 +1861,8 @@
   }
 
   /* ── copy ──────────────────────────── */
-  function copyText(text){
-    var done = function(){ say('주소를 복사했습니다'); };
+  function copyText(text, msg){
+    var done = function(){ say(msg || '주소를 복사했습니다'); };
     if (navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text, done); });
     } else fallbackCopy(text, done);
@@ -1821,6 +1892,8 @@
     wasabi:  { tag:'お寿司 · 초밥', ja:'わさび抜きで\nお願いします。', yomi:'와사비 누키데 오네가이시마스', ko:'와사비 빼 주세요.' },
     bill:    { tag:'お会計 · 계산', ja:'お会計\nお願いします。', yomi:'오카이케- 오네가이시마스', ko:'계산할게요.' },
     toilet:  { tag:'トイレ · 화장실', ja:'トイレは\nどこですか？', yomi:'토이레와 도코데스카', ko:'화장실이 어디예요?' },
+    elevator:{ tag:'駅 · 역', ja:'エレベーターは\nどこですか？', yomi:'에레베-타-와 도코데스카', ko:'엘리베이터가 어디예요?' },
+    plates:  { tag:'お店 · 가게', ja:'取り皿を\n3枚ください。', yomi:'토리자라오 산마이 쿠다사이', ko:'앞접시 3개 주세요.' },
     luggage: { tag:'荷物 · 짐', ja:'荷物を預けても\nいいですか？', yomi:'니모츠오 아즈케테모 이이데스카', ko:'짐을 맡겨도 될까요?' },
     hospital:{ tag:'HELP · 도움', ja:'病院に\n行きたいです。', yomi:'뵤-인니 이키타이데스', ko:'병원에 가고 싶어요.' }
   };
@@ -1943,6 +2016,16 @@
       });
     });
   });
+  function markStops(cur){
+    var nowMs = Date.now();
+    schedule.forEach(function(s){
+      var el = document.getElementById(s.id);
+      if (!el) return;
+      var isNow = !!cur && s === cur && (nowMs - s.when.getTime()) < 3 * 3600000;
+      el.classList.toggle('now', isNow);
+      el.classList.toggle('past', !!cur && (s.when < cur.when || (s === cur && !isNow)));
+    });
+  }
   var bar = document.getElementById('nowbar');
   var elLink = document.getElementById('nowlink'), elCurRow = document.getElementById('nowcur');
   var elCurName = document.getElementById('nowcurname'), elNextT = document.getElementById('nownexttime');
@@ -1958,19 +2041,42 @@
     var now = new Date();
     var start = schedule[0].when.getTime() - 3 * 3600000;
     var end = schedule[schedule.length - 1].when.getTime() + 3 * 3600000;
-    if (now.getTime() < start || now.getTime() > end){ bar.hidden = true; return; }
+    if (now.getTime() < start || now.getTime() > end){ bar.hidden = true; markStops(null); return; }
     var cur = null, nxt = null;
     for (var i = 0; i < schedule.length; i++){
       if (schedule[i].when <= now) cur = schedule[i]; else { nxt = schedule[i]; break; }
     }
+    markStops(cur);
     if (cur){ elCurRow.hidden = false; elCurName.textContent = cur.name; elLink.setAttribute('href', '#' + cur.id); }
     else { elCurRow.hidden = true; elLink.setAttribute('href', '#' + schedule[0].id); }
     if (nxt){ elNextT.textContent = nxt.t; elNextName.textContent = nxt.name; elRem.textContent = remaining(nxt.when - now); }
     else { elNextT.textContent = ''; elNextName.textContent = '수고하셨습니다'; elRem.textContent = ''; }
     bar.hidden = false;
   }
+  /* ── "today" card at the top during the trip ── */
+  var todayCard = document.getElementById('today');
+  function renderToday(){
+    var sec = document.querySelector('section.day[data-date="' + jstDate(new Date()) + '"]');
+    if (!sec){ todayCard.hidden = true; return; }
+    document.getElementById('today-n').textContent = sec.id.replace('d', '');
+    document.getElementById('today-date').textContent = '오늘 · ' + sec.querySelector('.dd').textContent;
+    document.getElementById('today-title').textContent = sec.querySelector('.dayhead h2').textContent;
+    todayCard.setAttribute('href', '#' + sec.id);
+    todayCard.hidden = false;
+  }
+
   renderNow();
-  setInterval(function(){ renderNow(); dday(); }, 30000);
+  renderToday();
+  setInterval(function(){ renderNow(); renderToday(); dday(); }, 30000);
+
+  /* ── send the link to family ───────── */
+  var shareBtn = document.getElementById('share');
+  if (shareBtn) shareBtn.addEventListener('click', function(){
+    var url = location.href.split('#')[0];
+    if (navigator.share){
+      navigator.share({ title: document.title, text: '도쿄 4박 5일 일정 (10/1–10/5)', url: url }).catch(function(){});
+    } else copyText(url, '링크를 복사했습니다');
+  });
 
   /* ── scrollspy ─────────────────────── */
   var links = {};
@@ -1988,11 +2094,15 @@
   mark('top');
 
   /* ── offline ───────────────────────── */
-  if ('serviceWorker' in navigator && location.protocol === 'https:'){
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')){
     window.addEventListener('load', function(){
       navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' })
         .then(function(reg){ reg.update(); })
         .catch(function(){});
+    });
+    navigator.serviceWorker.ready.then(function(){
+      var o = document.getElementById('offline');
+      if (o) o.hidden = false;
     });
   }
 })();
