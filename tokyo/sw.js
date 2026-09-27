@@ -1,6 +1,6 @@
 /* Offline support: the guide has to open in a Tokyo subway car with no signal. */
 const PREFIX = 'tokyo-trip-';
-const CACHE = PREFIX + 'r6-20260927';
+const CACHE = PREFIX + 'final-20260927';
 const ASSETS = [
   './',
   './index.html',
@@ -12,7 +12,7 @@ const ASSETS = [
   './manifest.webmanifest',
   './fonts/barlow-sc-500.woff2',
   './fonts/barlow-sc-600.woff2',
-  './fonts/shippori-mincho-800-v2.woff2'
+  './fonts/shippori-mincho-800-v3.woff2'
 ];
 
 self.addEventListener('install', (e) => {
