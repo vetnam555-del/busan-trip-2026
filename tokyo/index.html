@@ -13,7 +13,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="도쿄 4박 5일 · 2026.10.01–05">
-<meta property="og:description" content="3인 가족 도쿄 여행 — 가마쿠라·오모이데요코초, 메이지신궁·에비스·시부야, 아사쿠사·긴자.">
+<meta property="og:description" content="3인 가족 도쿄 여행 — 가마쿠라(날씨 따라 10/2·10/3), 오모테산도·메구로, 아사쿠사·긴자·우나후지.">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -47,7 +47,7 @@
     --ink:   #141925;
     --ink-2: #343B4A;
     --muted: #5A6273;
-    --faint: #878E9D;
+    --faint: #646B7B;
     --line:   #DDE0E7;
     --line-2: #C6CBD5;
 
@@ -87,7 +87,7 @@
     :root:not([data-theme="light"]){
       color-scheme: dark;
       --bg:#0D1017; --surface:#161A23; --surface-2:#1D222D;
-      --ink:#E9ECF2; --ink-2:#C6CBD6; --muted:#9AA1B0; --faint:#6E7586;
+      --ink:#E9ECF2; --ink-2:#C6CBD6; --muted:#9AA1B0; --faint:#868D9E;
       --line:#262C38; --line-2:#343C4B;
       --red:#FF4B53; --red-ink:#FF6F75; --red-bg:#2C1518; --red-strong:#B3141C; --ok:#5CC98C;
       --food:#EFA064; --food-bg:#2A1D14; --sight:#95AFEF; --sight-bg:#172036;
@@ -99,7 +99,7 @@
   :root[data-theme="dark"]{
     color-scheme: dark;
     --bg:#0D1017; --surface:#161A23; --surface-2:#1D222D;
-    --ink:#E9ECF2; --ink-2:#C6CBD6; --muted:#9AA1B0; --faint:#6E7586;
+    --ink:#E9ECF2; --ink-2:#C6CBD6; --muted:#9AA1B0; --faint:#868D9E;
     --line:#262C38; --line-2:#343C4B;
     --red:#FF4B53; --red-ink:#FF6F75; --red-bg:#2C1518; --red-strong:#B3141C; --ok:#5CC98C;
     --food:#EFA064; --food-bg:#2A1D14; --sight:#95AFEF; --sight-bg:#172036;
@@ -521,7 +521,7 @@
   .show-ov .body{ flex:1 1 auto; display:grid; align-content:center; gap:18px; overflow:auto; padding:10px 0; }
   .show-ov .ja{ font-family:var(--jp); font-weight:700; font-size:clamp(1.75rem, 8.4vw, 3rem); line-height:1.45; word-break:normal; overflow-wrap:anywhere; white-space:pre-line; }
   .show-ov .ja.addr{ font-size:clamp(1.9rem, 9vw, 3.25rem); }
-  .show-ov .ko{ font-size:1.0625rem; color:var(--ink-2); border-top:1px solid var(--line); padding-top:14px; white-space:pre-line; }
+  .show-ov #show-ko{ font-size:1.0625rem; color:var(--ink-2); border-top:1px solid var(--line); padding-top:14px; white-space:pre-line; }
   .show-ov .yomi{ font-size:.9375rem; color:var(--muted); }
   .show-ov .hint{ font-size:.8125rem; color:var(--faint); text-align:center; }
 
@@ -716,7 +716,7 @@
   @media print{
     :root:not([data-p1]):not([data-p2]){
       color-scheme:light; --bg:#fff; --surface:#fff; --surface-2:#F3F4F7;
-      --ink:#141925; --ink-2:#343B4A; --muted:#5A6273; --faint:#878E9D; --line:#DDE0E7; --line-2:#C6CBD5;
+      --ink:#141925; --ink-2:#343B4A; --muted:#5A6273; --faint:#646B7B; --line:#DDE0E7; --line-2:#C6CBD5;
       --red:#F62E36; --red-ink:#C8131C; --red-bg:#FDECEC; --red-strong:#C8131C;
       --food:#9E4C14; --sight:#2B4A97; --sight-bg:#E8EDF8; --move:#687184; --warn:#8A5A00; --warn-bg:#FFF4DA;
       --map-loop:#6BA94F; --map-water:#9CC3DE; --map-park:#D6E8CB;
@@ -730,7 +730,57 @@
     .stop.star .box{ box-shadow:none; border-color:var(--line-2); }
   }
 </style>
-<style>.choice{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.choice button{font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer}.choice button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}.cafe-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.cafe-item{padding:24px 0;border-top:1px solid var(--line)}.cafe-item h3{font-size:20px}.cafe-item .d{font-size:16px;margin:12px 0}.kama-compare{padding:16px 0;display:grid;gap:8px}.kama-compare p{font-size:15px}.acts{flex-wrap:wrap}.btn{white-space:normal}#i-choice .callout{margin-top:16px}#i-choice,#i-cafes{scroll-margin-top:90px}@media(max-width:640px){.cafe-list{grid-template-columns:1fr}.choice{display:grid;grid-template-columns:1fr 1fr}.choice button{font-size:14px;padding:12px 8px}.stop .t{font-size:14px}.dayhead h2{font-size:28px} .map .m-lb.red{font-size:9px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}</style><style>.ov a{grid-template-columns:36px 58px minmax(0,1fr);gap:12px;min-height:64px;align-items:center}.ov .s{grid-column:3;grid-row:1}.ov .n{grid-row:1}.ov .t{grid-row:1}</style><style>.show-ov .body{min-height:0;align-content:safe center}.show-ov .bar,.show-ov .hint{flex-shrink:0}.show-ov .ja,.show-ov .ja.addr{font-size:30px}.show-ov .ja.long{font-size:26px}</style></head>
+<style>.choice{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.choice button{font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer}.choice button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}.cafe-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.cafe-item{padding:24px 0;border-top:1px solid var(--line)}.cafe-item h3{font-size:20px}.cafe-item .d{font-size:16px;margin:12px 0}.kama-compare{padding:16px 0;display:grid;gap:8px}.kama-compare p{font-size:15px}.acts{flex-wrap:wrap}.btn{white-space:normal}#i-choice .callout{margin-top:16px}#i-choice,#i-cafes{scroll-margin-top:90px}@media(max-width:640px){.cafe-list{grid-template-columns:1fr}.choice{display:grid;grid-template-columns:1fr 1fr}.choice button{font-size:14px;padding:12px 8px}.stop .t{font-size:14px}.dayhead h2{font-size:28px} .map .m-lb.red{font-size:9px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}</style><style>.ov a{grid-template-columns:36px 58px minmax(0,1fr);gap:12px;min-height:64px;align-items:center}.ov .s{grid-column:3;grid-row:1}.ov .n{grid-row:1}.ov .t{grid-row:1}</style><style>.show-ov .body{min-height:0;align-content:safe center}.show-ov .bar,.show-ov .hint{flex-shrink:0}.show-ov .ja,.show-ov .ja.addr{font-size:30px}.show-ov .ja.long{font-size:26px}</style><style>
+  /* ── round 6: alert, private info, QR, in-app banner, contrast ── */
+  [hidden]{ display:none !important; }
+  .dday, .dayhead .dn, .st.on .dot, .nowbar .chip.up, .tag.req{ background:var(--red-strong); }
+  .alert{ display:grid; gap:10px; padding:14px 16px; border-radius:var(--r); background:var(--warn-bg); color:var(--ink);
+          border:1px solid color-mix(in srgb, var(--warn) 40%, transparent); }
+  .alert .a-head{ display:flex; align-items:baseline; justify-content:space-between; gap:4px 10px; flex-wrap:wrap; }
+  .alert .a-head b{ font-size:1.0625rem; line-height:1.4; }
+  .alert .a-head small{ font-size:.75rem; color:var(--muted); white-space:nowrap; }
+  .alert ul{ display:grid; gap:7px; font-size:.9063rem; color:var(--ink-2); line-height:1.6; }
+  .alert li{ position:relative; padding-left:14px; }
+  .alert li::before{ content:""; position:absolute; left:2px; top:.72em; width:6px; height:6px; border-radius:50%; background:var(--warn); }
+  .alert li b{ color:var(--ink); }
+  .alert .acts{ margin-top:0; }
+  .hero > .alert{ grid-column:1 / -1; }
+  .alert .btn{ min-height:38px; padding:7px 13px; }
+  .btn[aria-pressed="true"]{ background:var(--ink); color:var(--bg); border-color:var(--ink); }
+  .btn[aria-pressed="true"] .when-off, .btn:not([aria-pressed="true"]) .when-on{ display:none; }
+  .today-card .rain{ grid-column:2 / -1; grid-row:3; font-size:.875rem; font-weight:700; color:rgba(255,255,255,.94); line-height:1.4; }
+  .prep-card .items span.more{ background:var(--surface-2); color:var(--muted); }
+  .inapp{ display:flex; align-items:center; gap:10px; margin:10px 0 0; padding:12px 14px; border-radius:14px;
+          background:var(--ink); color:var(--bg); font-size:.9063rem; line-height:1.5; }
+  .inapp .btn{ flex:0 0 auto; background:var(--bg); color:var(--ink); border-color:var(--bg); }
+  .qr{ display:flex; align-items:center; gap:14px; margin-top:8px; }
+  .qr svg{ width:118px; height:118px; flex:0 0 auto; padding:6px; background:#fff; border-radius:10px; border:1px solid var(--line); }
+  .qr p{ font-size:.875rem; color:var(--ink-2); }
+  .me{ display:grid; gap:12px; padding:16px; border-radius:var(--r); background:var(--surface); border:1px solid var(--line); }
+  .me .f{ display:grid; gap:5px; min-width:0; margin:0; padding:0; border:0; font-size:.875rem; font-weight:700; color:var(--ink-2); }
+  .me .f legend{ padding:0; margin-bottom:6px; }
+  .me input[type="text"], .me input[type="tel"], .me textarea{
+    width:100%; min-width:0; font:inherit; font-size:1rem; font-weight:500; line-height:1.45; padding:10px 12px;
+    border-radius:10px; border:1px solid var(--line-2); background:var(--bg); color:var(--ink); }
+  .me textarea{ min-height:66px; resize:vertical; font-family:var(--jp); }
+  .me input::placeholder, .me textarea::placeholder{ color:var(--faint); }
+  .me .row2{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.35fr); gap:8px; }
+  .me .foods{ display:flex; flex-wrap:wrap; gap:6px; }
+  .me .foods label{ display:inline-flex; align-items:center; gap:6px; min-height:36px; padding:5px 11px; border-radius:999px; cursor:pointer;
+                    border:1px solid var(--line-2); background:var(--surface); font-size:.875rem; font-weight:700; color:var(--ink); }
+  .me .foods input{ width:16px; height:16px; margin:0; accent-color:var(--red-strong); }
+  .me .foods label:has(input:checked){ background:var(--red-bg); border-color:var(--red-strong); color:var(--red-ink); }
+  .me .hint{ font-size:.8125rem; font-weight:500; color:var(--muted); line-height:1.55; }
+  .me .me-st{ font-size:.875rem; font-weight:700; color:var(--ink-2); }
+  .me .acts{ margin-top:0; }
+  .btn .cfm, .btn.armed .std{ display:none; }
+  .btn.armed .cfm{ display:inline; }
+  .show-ov .ov-acts{ display:flex; flex-wrap:wrap; gap:8px; }
+  .show-ov .ov-acts a{ display:inline-flex; align-items:center; gap:8px; min-height:48px; padding:10px 18px; border-radius:999px;
+                       background:var(--red-strong); color:#fff; font-weight:800; font-size:1.0625rem; text-decoration:none; }
+  html[data-lang="ja"] .show-ov .yomi{ display:none; }
+  @media print{ .alert, .inapp, .qr, #i-me{ display:none !important; } }
+</style></head>
 <body>
 <div id="app">
 
@@ -756,7 +806,9 @@
     </div>
   </nav>
 
-  <div class="main">
+  <div class="main" role="main">
+
+  <div class="inapp" id="inapp" hidden><span><span class="ko">카카오톡 안에서 열려 있어요. 홈 화면 추가와 오프라인 저장은 기본 브라우저에서 됩니다.</span><span class="jp" lang="ja">カカオトークの中で開いています。ホーム画面への追加やオフライン保存は標準ブラウザで行えます。</span></span><a class="btn" id="inapp-open" href="#"><span class="ko">브라우저로 열기</span><span class="jp" lang="ja">ブラウザで開く</span></a></div>
 
   <div class="nowbar" id="nowbar" hidden>
     <a href="#top" id="nowlink">
@@ -769,10 +821,26 @@
 
   <!-- ══════════ HERO ══════════ -->
   <header class="hero">
+    <section class="alert" id="alert-typhoon" aria-labelledby="alert-typhoon-t" hidden>
+      <div class="a-head"><b id="alert-typhoon-t"><span class="ko">⚠ 태풍 26호 · 10/1~2 도쿄 접근 예보</span><span class="jp" lang="ja">⚠ 台風26号 · 10/1〜2 関東に接近予報</span></b><small><span class="ko">9/27 기상청 예보 기준</span><span class="jp" lang="ja">9/27 気象庁の予報</span></small></div>
+      <ul>
+        <li><span class="ko"><b>10/1 도착편 YP735</b> — 9/30 밤과 10/1 아침에 에어프레미아 운항 공지·문자와 실시간 운항 상태를 확인하세요. 지연·결항이면 항공사 안내대로 바꿉니다.</span><span class="jp" lang="ja"><b>10/1 到着便 YP735</b> — 9/30の夜と10/1の朝に、エアプレミアの運航案内・SMSとリアルタイムの運航状況を確認。遅延・欠航なら航空会社の案内に従って変更します。</span></li>
+        <li><span class="ko"><b>공항 → 신주쿠</b> — 강풍이면 N'EX가 계획운휴(計画運休)할 수 있습니다. JR 운행정보를 먼저 보고, 멈췄으면 리무진버스·게이세이선 운행도 확인하세요. 모두 멈추면 무리하지 말고 공항에서 기다리거나 공항 근처 호텔을 생각합니다.</span><span class="jp" lang="ja"><b>空港 → 新宿</b> — 強風だとN'EXが計画運休することがあります。まずJR運行情報を確認し、止まっていればリムジンバス・京成線も確認。すべて止まっていたら無理せず空港で待つか、空港近くのホテルも検討します。</span></li>
+        <li><span class="ko"><b>가마쿠라는 10/3로</b> — 태풍은 10/2 오전에 일본 동쪽으로 빠질 예보지만 바람·비와 운행 지연이 남을 수 있습니다. 바닷가 일정은 10/3(토)로 옮기는 것을 권합니다.</span><span class="jp" lang="ja"><b>鎌倉は10/3に</b> — 台風は10/2の午前に日本の東へ抜ける予報ですが、風雨や運行の乱れが残るおそれがあります。海沿いの予定は10/3（土）に移すのがおすすめです。</span></li>
+        <li><span class="ko"><b>폭풍 경보 중에는 숙소에</b> — 10/1 저녁은 숙소 근처 편의점이나 가까운 식당으로 간단히. Safety tips 앱 알림을 켜 두세요.</span><span class="jp" lang="ja"><b>暴風警報中は宿で</b> — 10/1の夜は宿の近くのコンビニや近い店で簡単に。Safety tipsアプリの通知をオンに。</span></li>
+      </ul>
+      <div class="acts">
+        <button class="btn" type="button" data-kama="2026-10-03"><span class="when-off"><span class="ko">가마쿠라를 10/3로 바꾸기</span><span class="jp" lang="ja">鎌倉を10/3に変更</span></span><span class="when-on"><span class="ko">✓ 가마쿠라 10/3 선택됨</span><span class="jp" lang="ja">✓ 鎌倉は10/3</span></span></button>
+        <a class="btn" href="https://tenki.jp/bousai/typhoon/" target="_blank" rel="noopener"><span class="ko">태풍 진로</span><span class="jp" lang="ja">台風の進路</span></a>
+        <a class="btn" href="https://traininfo.jreast.co.jp/train_info/express.aspx?group=nex" target="_blank" rel="noopener"><span class="ko">N'EX 운행</span><span class="jp" lang="ja">N'EX運行</span></a>
+        <a class="btn" href="https://www.flightaware.com/live/flight/APZ735" target="_blank" rel="noopener"><span class="ko">YP735 운항 상태</span><span class="jp" lang="ja">YP735 運航状況</span></a>
+      </div>
+    </section>
     <a class="today-card" id="today" href="#d1" hidden>
       <span class="n" id="today-n">1</span>
       <span class="eyebrow" id="today-date">오늘</span>
       <b id="today-title"></b>
+      <span class="rain" id="today-rain" hidden></span>
       <span class="go"><span class="ko">오늘 일정 →</span><span class="jp" lang="ja">今日の予定 →</span></span>
     </a>
     <a class="prep-card" id="prep" href="#i-todo" hidden>
@@ -876,6 +944,7 @@
           <div><dt><span class="ko">수하물</span><span class="jp" lang="ja">手荷物</span></dt><dd><span class="ko">위탁 1인 15kg 1개 · 기내 10kg 1개 + 소지품</span><span class="jp" lang="ja">預け 1人15kg×1 · 機内 10kg×1 + 身の回り品</span></dd></div>
           <div><dt><span class="ko">공항</span><span class="jp" lang="ja">空港</span></dt><dd><span class="ko">인천 <b class="num">10:50</b>까지 도착 (출발 3시간 전)</span><span class="jp" lang="ja">仁川に <b class="num">10:50</b> までに到着（出発3時間前）</span></dd></div>
         </dl>
+        <div class="acts"><a class="btn" href="https://www.flightaware.com/live/flight/APZ735" target="_blank" rel="noopener"><span class="ko">실시간 운항 상태</span><span class="jp" lang="ja">リアルタイム運航状況</span></a><a class="btn" href="https://www.airpremia.com/" target="_blank" rel="noopener"><span class="ko">에어프레미아</span><span class="jp" lang="ja">エアプレミア</span></a></div>
       </article>
 
       <article class="card fl">
@@ -891,9 +960,10 @@
           <div><dt><span class="ko">공항</span><span class="jp" lang="ja">空港</span></dt><dd><span class="ko">나리타 <b>제3터미널 13:00~13:20</b> 도착 목표</span><span class="jp" lang="ja">成田 <b>第3ターミナル13:00〜13:20</b> 到着目標</span></dd></div>
         </dl>
         <p class="callout"><span class="ko"><b>터미널이 다릅니다.</b> 올 때는 제2터미널, 갈 때는 <b>제3터미널</b>. N'EX는 공항제2빌딩역에서 내려 걸어서 약 13분입니다.</span><span class="jp" lang="ja"><b>ターミナルが違います。</b>行きは第2ターミナル、帰りは<b>第3ターミナル</b>。N'EXは空港第2ビル駅で降りて、歩いて約13分です。</span></p>
+        <div class="acts"><a class="btn" href="https://www.flightaware.com/live/flight/ESR610" target="_blank" rel="noopener"><span class="ko">실시간 운항 상태</span><span class="jp" lang="ja">リアルタイム運航状況</span></a><a class="btn" href="https://www.eastarjet.com/" target="_blank" rel="noopener"><span class="ko">이스타항공</span><span class="jp" lang="ja">イースター航空</span></a><a class="btn" href="https://www.narita-airport.jp/en/flight/dep-search/?keywordAirlineCodeL=EASTARJET&amp;keywordAirlineCodeV=ZE" target="_blank" rel="noopener"><span class="ko">나리타 출발 안내</span><span class="jp" lang="ja">成田の出発案内</span></a></div>
       </article>
 
-      <article class="card bkc span2"><h3><span class="ko">숙소 · 신주쿠교엔마에 주변</span><span class="jp" lang="ja">宿 · 新宿御苑前周辺</span></h3><p class="d"><span class="ko">정확한 주소·호실·출입 방법·호스트 연락처는 예약 앱과 가족용 개인 보관 파일에서 확인하세요. 귀국일 체크아웃 시각도 예약 앱 기준입니다.</span><span class="jp" lang="ja">住所・部屋番号・入室方法・ホストの連絡先は予約アプリで確認。チェックアウト時刻も予約内容を優先します.</span></p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91%E5%89%8D%E9%A7%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></article><article class="card bkc span2"><h3><span class="ko">공항열차 · 실제 지정석 확인</span><span class="jp" lang="ja">空港列車 · 実際の指定席を確認</span></h3><p class="d"><span class="ko">N’EX 왕복 바우처의 교환 장소·시간은 구매 내역을 우선합니다. 귀국은 T3 도착 목표에서 역산하고, 3명 좌석을 실제로 지정받으세요.</span><span class="jp" lang="ja">N’EXバウチャーの引換場所・時間は購入条件を優先。帰国T3到着目標から逆算し、実際に3人分の指定席を確保。</span></p><a class="btn" href="https://www.jreast.co.jp/multi/en/nex/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></article><article class="card bkc span2" id="i-cal"><h3><span class="ko">일정 파일 · 같은 버전으로 보관</span><span class="jp" lang="ja">日程ファイル · 同じ版で保存</span></h3><p class="d"><span class="ko">엑셀은 10/2 가마쿠라 기본안과 날짜 교체 안내, 카페·식당 21곳을 담았습니다. 캘린더는 위에서 선택한 날짜안입니다. <b>이전 캘린더는 삭제 후 한 가지 안만 가져오세요.</b> 이미 가져온 일정이나 예약을 자동 변경하지 않습니다.</span><span class="jp" lang="ja">Excelは10/2鎌倉の基本案、入替案、21店舗を収録。カレンダーは選択した日程です。<b>旧カレンダーを削除し1案だけ取り込んでください。</b>既存予定や予約は自動変更しません。</span></p><div class="acts"><a class="btn primary" id="calendar-download" href="tokyo-2026.ics"><span class="ko">선택 일정 캘린더 (.ics)</span><span class="jp" lang="ja">選択日程カレンダー (.ics)</span></a><a class="btn" href="tokyo-family-final.xlsx" download><span class="ko">최종 엑셀 (.xlsx)</span><span class="jp" lang="ja">最終Excel (.xlsx)</span></a></div></article></div>
+      <article class="card bkc span2"><h3><span class="ko">숙소 · 신주쿠교엔마에 주변</span><span class="jp" lang="ja">宿 · 新宿御苑前周辺</span></h3><p class="d"><span class="ko">정확한 주소·호실·출입 방법·호스트 연락처는 예약 앱과 가족용 개인 보관 파일에서 확인하세요. 귀국일 체크아웃 시각도 예약 앱 기준입니다.</span><span class="jp" lang="ja">住所・部屋番号・入室方法・ホストの連絡先は予約アプリで確認。チェックアウト時刻も予約内容を優先します。</span></p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91%E5%89%8D%E9%A7%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></article><article class="card bkc span2"><h3><span class="ko">공항열차 · 실제 지정석 확인</span><span class="jp" lang="ja">空港列車 · 実際の指定席を確認</span></h3><p class="d"><span class="ko">N’EX 왕복 바우처의 교환 장소·시간은 구매 내역을 우선합니다. 귀국은 T3 도착 목표에서 역산하고, 3명 좌석을 실제로 지정받으세요.</span><span class="jp" lang="ja">N’EXバウチャーの引換場所・時間は購入条件を優先。帰国T3到着目標から逆算し、実際に3人分の指定席を確保。</span></p><a class="btn" href="https://www.jreast.co.jp/multi/en/nex/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></article><article class="card bkc span2" id="i-cal"><h3><span class="ko">일정 파일 · 같은 버전으로 보관</span><span class="jp" lang="ja">日程ファイル · 同じ版で保存</span></h3><p class="d"><span class="ko">엑셀은 10/2 가마쿠라 기본안과 날짜 교체 안내, 카페·식당 21곳을 담았습니다. 캘린더는 위에서 선택한 날짜안입니다. <b>이전 캘린더는 삭제 후 한 가지 안만 가져오세요.</b> 이미 가져온 일정이나 예약을 자동 변경하지 않습니다.</span><span class="jp" lang="ja">Excelは10/2鎌倉の基本案、入替案、21店舗を収録。カレンダーは選択した日程です。<b>旧カレンダーを削除し1案だけ取り込んでください。</b>既存予定や予約は自動変更しません。</span></p><div class="acts"><a class="btn primary" id="calendar-download" href="tokyo-2026.ics"><span class="ko">선택 일정 캘린더 (.ics)</span><span class="jp" lang="ja">選択日程カレンダー (.ics)</span></a><a class="btn" href="tokyo-family-final.xlsx" download><span class="ko">최종 엑셀 (.xlsx)</span><span class="jp" lang="ja">最終Excel (.xlsx)</span></a></div></article></div>
   </div>
 
   <!-- ══════════ OVERVIEW ══════════ -->
@@ -904,13 +974,14 @@
       <h2><span class="ko">출국 전에 할 일</span><span class="jp" lang="ja">出発前にやること</span></h2>
       <p class="note"><span class="ko">체크는 이 기기의 확인 표시입니다. 실제 예약 시스템과 연동되지 않으며, 체크만으로 예약이 완료되지 않습니다.</span><span class="jp" lang="ja">チェックはこの端末の確認印。予約システムとは連携しておらず、チェックだけで予約は完了しません。</span></p>
     </div>
-    <div class="chkbar"><span id="todo-count">0 / 8</span><button type="button" data-reset="todo">체크 모두 지우기</button></div>
-    <div class="chk" data-group="todo"><label data-short="가마쿠라 날짜와 가족 체력 확인" data-short-ja="鎌倉の日と家族の体調確認"><input type="checkbox" data-ck="route-final"><span><b><span class="ko">가마쿠라 날짜와 가족 체력 확인</span><span class="jp" lang="ja">鎌倉の日と家族の体調確認</span></b><span class="ko">날씨·계단 이용·알레르기를 확인한 뒤 식당 예약을 진행합니다.</span><span class="jp" lang="ja">天気・階段・アレルギーを確認してから予約。</span></span></label><label data-short="10/4 17:00 우나후지 3명 예약 확인" data-short-ja="10/4 17:00 うな富士3名の予約確認"><input type="checkbox" data-ck="unafuji-final"><span><b><span class="ko">10/4 17:00 우나후지 3명 예약 확인</span><span class="jp" lang="ja">10/4 17:00 うな富士3名の予約確認</span></b><span class="ko">일반석·단품 가능 여부·취소 조건 확인. 빈자리 미확인, 창가 보장 없음.</span><span class="jp" lang="ja">一般席・単品可否・取消条件を確認。空席未確認、窓側保証なし。</span><span class="lk"><a class="btn" href="https://sumiyaki-unafuji.com/shops/tokyo_opera_city/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="도쿄 서부 일정일 14:00 카나데 좌석 확인" data-short-ja="東京西側の日 14:00 KANADEの席を確認"><input type="checkbox" data-ck="kanade-final"><span><b><span class="ko">도쿄 서부 일정일 14:00 카나데 좌석 확인</span><span class="jp" lang="ja">東京西側の日 14:00 KANADEの席を確認</span></b><span class="ko">카나데를 택할 때만 예약. 2시간 이용·10분 지각 취소 안내를 확인합니다.</span><span class="jp" lang="ja">KANADEを選ぶ場合のみ。2時間利用・10分遅刻取消の案内を確認。</span><span class="lk"><a class="btn" href="https://www.tablecheck.com/ja/shops/gajoentokyo-kanadelounge/reserve" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="로바타·폰가 저녁 선택 및 예약 확인" data-short-ja="ろばた・ぽんがの夕食選択と予約確認"><input type="checkbox" data-ck="dinner-final"><span><b><span class="ko">로바타·폰가 저녁 선택 및 예약 확인</span><span class="jp" lang="ja">ろばた・ぽんがの夕食選択と予約確認</span></b><span class="ko">로바타는 계단, 폰가는 총액·생식 메뉴·승강기를 먼저 확인. 부담되면 대안으로 교체합니다.</span><span class="jp" lang="ja">ろばたは階段、ぽんがは総額・生食・エレベーターを確認。難しければ別の店へ。</span></span></label><label data-short="항공권·터미널·N’EX 실제 지정석 재확인" data-short-ja="航空券・ターミナル・N’EX指定席の再確認"><input type="checkbox" data-ck="nex-final"><span><b><span class="ko">항공권·터미널·N’EX 실제 지정석 재확인</span><span class="jp" lang="ja">航空券・ターミナル・N’EX指定席の再確認</span></b><span class="ko">귀국 T3 13:00~13:20 도착 목표. 바우처 구매와 지정석 발권은 별개입니다.</span><span class="jp" lang="ja">帰国T3到着13:00〜13:20目標。バウチャー購入と指定席発券は別です。</span></span></label><label data-short="숙소 주소·체크인 안내 개인 보관" data-short-ja="宿の住所・入室案内を個人保管"><input type="checkbox" data-ck="checkin"><span><b><span class="ko">숙소 주소·체크인 안내 개인 보관</span><span class="jp" lang="ja">宿の住所・入室案内を個人保管</span></b><span class="ko">예약 앱의 주소·호실·체크아웃 마감을 가족끼리 공유합니다. 공개 페이지에는 넣지 않습니다.</span><span class="jp" lang="ja">予約アプリの住所・部屋・チェックアウト期限を家族間で共有。公開ページには掲載しません。</span></span></label><label data-short="Visit Japan Web 등록 권장" data-short-ja="Visit Japan Web 登録推奨"><input type="checkbox" data-ck="vjw"><span><b><span class="ko">Visit Japan Web 등록 권장</span><span class="jp" lang="ja">Visit Japan Web 登録推奨</span></b><span class="ko">입국·세관 절차를 위한 사전 등록 도구입니다. 가족별 필요한 정보를 확인합니다.</span><span class="jp" lang="ja">入国・税関の事前登録サービス。家族分の必要情報を確認。</span><span class="lk"><a class="btn" href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="통신·여권·교통카드·상비약 준비" data-short-ja="通信・旅券・交通系IC・常備薬"><input type="checkbox" data-ck="esim"><span><b><span class="ko">통신·여권·교통카드·상비약 준비</span><span class="jp" lang="ja">通信・旅券・交通系IC・常備薬</span></b><span class="ko">3명 각각 연락 가능하게 준비. 여권은 일본 체류기간 중 유효해야 하며, 항공사 조건도 확인합니다.</span><span class="jp" lang="ja">3人それぞれ連絡可能に。旅券は日本滞在中有効なものを用意し、航空会社の条件も確認。</span><span class="lk"><a class="btn" href="https://www.kr.emb-japan.go.jp/itpr_ko/visa_QnA.html" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label></div>
+    <div class="chkbar"><span id="todo-count">0 / 9</span><button type="button" data-reset="todo">체크 모두 지우기</button></div>
+    <div class="chk" data-group="todo"><label data-short="태풍 26호·YP735 운항 확인" data-short-ja="台風26号・YP735の運航確認"><input type="checkbox" data-ck="typhoon26"><span><b><span class="ko">태풍 26호 진로 · YP735 운항 확인</span><span class="jp" lang="ja">台風26号の進路 · YP735の運航確認</span></b><span class="ko">9/30 밤과 10/1 아침. 에어프레미아 공지·문자, N'EX 계획운휴, 가마쿠라 10/3 전환을 함께 확인합니다.</span><span class="jp" lang="ja">9/30の夜と10/1の朝。エアプレミアの案内・SMS、N'EXの計画運休、鎌倉の10/3への変更を一緒に確認。</span><span class="lk"><a class="btn" href="https://tenki.jp/bousai/typhoon/" target="_blank" rel="noopener"><span class="ko">태풍 진로</span><span class="jp" lang="ja">台風の進路</span></a><a class="btn" href="https://www.airpremia.com/" target="_blank" rel="noopener"><span class="ko">에어프레미아</span><span class="jp" lang="ja">エアプレミア</span></a></span></span></label><label data-short="가마쿠라 날짜와 가족 체력 확인" data-short-ja="鎌倉の日と家族の体調確認"><input type="checkbox" data-ck="route-final"><span><b><span class="ko">가마쿠라 날짜와 가족 체력 확인</span><span class="jp" lang="ja">鎌倉の日と家族の体調確認</span></b><span class="ko">날씨·계단 이용·알레르기를 확인한 뒤 식당 예약을 진행합니다.</span><span class="jp" lang="ja">天気・階段・アレルギーを確認してから予約。</span></span></label><label data-short="10/4 17:00 우나후지 3명 예약 확인" data-short-ja="10/4 17:00 うな富士3名の予約確認"><input type="checkbox" data-ck="unafuji-final"><span><b><span class="ko">10/4 17:00 우나후지 3명 예약 확인</span><span class="jp" lang="ja">10/4 17:00 うな富士3名の予約確認</span></b><span class="ko">일반석·단품 가능 여부·취소 조건 확인. 빈자리 미확인, 창가 보장 없음.</span><span class="jp" lang="ja">一般席・単品可否・取消条件を確認。空席未確認、窓側保証なし。</span><span class="lk"><a class="btn" href="https://sumiyaki-unafuji.com/shops/tokyo_opera_city/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="도쿄 서부 일정일 14:00 카나데 좌석 확인" data-short-ja="東京西側の日 14:00 KANADEの席を確認"><input type="checkbox" data-ck="kanade-final"><span><b><span class="ko">도쿄 서부 일정일 14:00 카나데 좌석 확인</span><span class="jp" lang="ja">東京西側の日 14:00 KANADEの席を確認</span></b><span class="ko">카나데를 택할 때만 예약. 2시간 이용·10분 지각 취소 안내를 확인합니다.</span><span class="jp" lang="ja">KANADEを選ぶ場合のみ。2時間利用・10分遅刻取消の案内を確認。</span><span class="lk"><a class="btn" href="https://www.tablecheck.com/ja/shops/gajoentokyo-kanadelounge/reserve" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="로바타·폰가 저녁 선택 및 예약 확인" data-short-ja="ろばた・ぽんがの夕食選択と予約確認"><input type="checkbox" data-ck="dinner-final"><span><b><span class="ko">로바타·폰가 저녁 선택 및 예약 확인</span><span class="jp" lang="ja">ろばた・ぽんがの夕食選択と予約確認</span></b><span class="ko">로바타는 계단, 폰가는 총액·생식 메뉴·승강기를 먼저 확인. 부담되면 대안으로 교체합니다.</span><span class="jp" lang="ja">ろばたは階段、ぽんがは総額・生食・エレベーターを確認。難しければ別の店へ。</span></span></label><label data-short="항공권·터미널·N’EX 실제 지정석 재확인" data-short-ja="航空券・ターミナル・N’EX指定席の再確認"><input type="checkbox" data-ck="nex-final"><span><b><span class="ko">항공권·터미널·N’EX 실제 지정석 재확인</span><span class="jp" lang="ja">航空券・ターミナル・N’EX指定席の再確認</span></b><span class="ko">귀국 T3 13:00~13:20 도착 목표. 바우처 구매와 지정석 발권은 별개입니다.</span><span class="jp" lang="ja">帰国T3到着13:00〜13:20目標。バウチャー購入と指定席発券は別です。</span></span></label><label data-short="숙소 주소·체크인 안내 개인 보관" data-short-ja="宿の住所・入室案内を個人保管"><input type="checkbox" data-ck="checkin"><span><b><span class="ko">숙소 주소·체크인 안내 개인 보관</span><span class="jp" lang="ja">宿の住所・入室案内を個人保管</span></b><span class="ko">예약 앱의 주소·호실·체크아웃 마감을 가족끼리 공유합니다. 공개 페이지에는 넣지 않습니다.</span><span class="jp" lang="ja">予約アプリの住所・部屋・チェックアウト期限を家族間で共有。公開ページには掲載しません。</span></span></label><label data-short="Visit Japan Web 등록 권장" data-short-ja="Visit Japan Web 登録推奨"><input type="checkbox" data-ck="vjw"><span><b><span class="ko">Visit Japan Web 등록 권장</span><span class="jp" lang="ja">Visit Japan Web 登録推奨</span></b><span class="ko">입국·세관 절차를 위한 사전 등록 도구입니다. 가족별 필요한 정보를 확인합니다.</span><span class="jp" lang="ja">入国・税関の事前登録サービス。家族分の必要情報を確認。</span><span class="lk"><a class="btn" href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="통신·여권·교통카드·상비약 준비" data-short-ja="通信・旅券・交通系IC・常備薬"><input type="checkbox" data-ck="esim"><span><b><span class="ko">통신·여권·교통카드·상비약 준비</span><span class="jp" lang="ja">通信・旅券・交通系IC・常備薬</span></b><span class="ko">3명 각각 연락 가능하게 준비. 여권은 일본 체류기간 중 유효해야 하며, 항공사 조건도 확인합니다.</span><span class="jp" lang="ja">3人それぞれ連絡可能に。旅券は日本滞在中有効なものを用意し、航空会社の条件も確認。</span><span class="lk"><a class="btn" href="https://www.kr.emb-japan.go.jp/itpr_ko/visa_QnA.html" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label></div>
     <div class="share">
       <b><span class="ko">가족 휴대폰에도 이 페이지를</span><span class="jp" lang="ja">家族のスマホにもこのページを</span></b>
       <p><span class="ko">가족에게 링크를 보내고 온라인에서 한 번 열어 두세요. 출발 전 비행기 모드에서도 본문이 열리는지 확인하세요. 지도·예보·예약은 인터넷이 필요합니다.</span><span class="jp" lang="ja">家族へリンクを送りオンラインで一度開きます。出発前に機内モードでも本文が開くか確認。地図・予報・予約には通信が必要。</span></p>
       <p class="how"><span class="ko">아이폰: Safari 아래 공유 버튼 → '홈 화면에 추가' · 안드로이드: 크롬 ⋮ → '홈 화면에 추가'. 카카오톡 안에서 열렸다면 메뉴에서 다른 브라우저로 먼저 여세요. 추가한 뒤 아이콘으로 한 번 열어 두면 끝입니다.</span><span class="jp" lang="ja">iPhone：Safari下の共有ボタン → 「ホーム画面に追加」· Android：Chrome ⋮ → 「ホーム画面に追加」。カカオトークの中で開いた場合は、メニューから先に別のブラウザで開いてください。追加したら、アイコンから一度開いておけば完了です。</span></p>
       <div class="acts"><button class="btn primary" type="button" id="share"><span class="ko">링크 보내기</span><span class="jp" lang="ja">リンクを送る</span></button></div>
+      <div class="qr"><svg viewBox="0 0 41 41" data-kama-qr="2026-10-02" role="img" aria-label="QR: https://vetnam555-del.github.io/busan-trip-2026/tokyo/?kamakura=2026-10-02" shape-rendering="crispEdges"><rect width="41" height="41" fill="#fff"/><path fill="#111" d="M2 2h7v1h-7zM10 2h4v1h-4zM17 2h1v1h-1zM19 2h1v1h-1zM21 2h3v1h-3zM26 2h3v1h-3zM32 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM10 3h3v1h-3zM15 3h1v1h-1zM17 3h1v1h-1zM21 3h1v1h-1zM24 3h1v1h-1zM26 3h2v1h-2zM30 3h1v1h-1zM32 3h1v1h-1zM38 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM10 4h1v1h-1zM12 4h1v1h-1zM14 4h1v1h-1zM21 4h1v1h-1zM23 4h7v1h-7zM32 4h1v1h-1zM34 4h3v1h-3zM38 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM11 5h1v1h-1zM13 5h2v1h-2zM16 5h2v1h-2zM19 5h1v1h-1zM23 5h1v1h-1zM27 5h3v1h-3zM32 5h1v1h-1zM34 5h3v1h-3zM38 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM10 6h2v1h-2zM14 6h2v1h-2zM21 6h1v1h-1zM23 6h1v1h-1zM32 6h1v1h-1zM34 6h3v1h-3zM38 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM12 7h5v1h-5zM23 7h1v1h-1zM25 7h1v1h-1zM32 7h1v1h-1zM38 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h1v1h-1zM28 8h1v1h-1zM30 8h1v1h-1zM32 8h7v1h-7zM15 9h2v1h-2zM19 9h2v1h-2zM22 9h1v1h-1zM26 9h2v1h-2zM30 9h1v1h-1zM2 10h1v1h-1zM5 10h6v1h-6zM12 10h1v1h-1zM15 10h2v1h-2zM21 10h1v1h-1zM24 10h2v1h-2zM28 10h4v1h-4zM34 10h1v1h-1zM36 10h3v1h-3zM2 11h1v1h-1zM4 11h2v1h-2zM7 11h1v1h-1zM11 11h1v1h-1zM13 11h4v1h-4zM18 11h1v1h-1zM20 11h1v1h-1zM23 11h4v1h-4zM28 11h2v1h-2zM31 11h1v1h-1zM33 11h2v1h-2zM36 11h2v1h-2zM2 12h3v1h-3zM8 12h1v1h-1zM10 12h2v1h-2zM14 12h1v1h-1zM17 12h2v1h-2zM20 12h4v1h-4zM25 12h2v1h-2zM29 12h2v1h-2zM32 12h2v1h-2zM35 12h1v1h-1zM38 12h1v1h-1zM2 13h3v1h-3zM6 13h2v1h-2zM11 13h2v1h-2zM14 13h1v1h-1zM18 13h2v1h-2zM21 13h2v1h-2zM24 13h3v1h-3zM28 13h1v1h-1zM30 13h2v1h-2zM34 13h1v1h-1zM36 13h3v1h-3zM2 14h1v1h-1zM5 14h1v1h-1zM8 14h1v1h-1zM10 14h2v1h-2zM13 14h2v1h-2zM17 14h1v1h-1zM22 14h1v1h-1zM25 14h2v1h-2zM28 14h2v1h-2zM32 14h1v1h-1zM38 14h1v1h-1zM2 15h2v1h-2zM7 15h1v1h-1zM10 15h1v1h-1zM16 15h3v1h-3zM20 15h1v1h-1zM23 15h3v1h-3zM28 15h2v1h-2zM34 15h2v1h-2zM37 15h1v1h-1zM2 16h1v1h-1zM5 16h2v1h-2zM8 16h2v1h-2zM11 16h1v1h-1zM14 16h4v1h-4zM20 16h4v1h-4zM29 16h1v1h-1zM34 16h3v1h-3zM38 16h1v1h-1zM2 17h3v1h-3zM9 17h5v1h-5zM18 17h1v1h-1zM21 17h1v1h-1zM25 17h1v1h-1zM31 17h3v1h-3zM35 17h2v1h-2zM2 18h2v1h-2zM5 18h1v1h-1zM7 18h2v1h-2zM10 18h1v1h-1zM12 18h1v1h-1zM15 18h2v1h-2zM19 18h4v1h-4zM25 18h1v1h-1zM27 18h1v1h-1zM32 18h1v1h-1zM36 18h3v1h-3zM2 19h3v1h-3zM9 19h1v1h-1zM11 19h1v1h-1zM19 19h1v1h-1zM26 19h4v1h-4zM31 19h1v1h-1zM33 19h1v1h-1zM36 19h1v1h-1zM6 20h3v1h-3zM10 20h2v1h-2zM14 20h1v1h-1zM16 20h1v1h-1zM18 20h6v1h-6zM25 20h3v1h-3zM29 20h1v1h-1zM32 20h1v1h-1zM35 20h1v1h-1zM38 20h1v1h-1zM3 21h1v1h-1zM5 21h1v1h-1zM9 21h3v1h-3zM13 21h3v1h-3zM17 21h2v1h-2zM22 21h1v1h-1zM24 21h4v1h-4zM29 21h1v1h-1zM31 21h2v1h-2zM38 21h1v1h-1zM3 22h1v1h-1zM5 22h1v1h-1zM8 22h2v1h-2zM13 22h3v1h-3zM18 22h2v1h-2zM21 22h1v1h-1zM26 22h1v1h-1zM28 22h1v1h-1zM30 22h5v1h-5zM5 23h2v1h-2zM9 23h3v1h-3zM13 23h1v1h-1zM17 23h1v1h-1zM19 23h4v1h-4zM24 23h2v1h-2zM28 23h2v1h-2zM31 23h1v1h-1zM34 23h1v1h-1zM36 23h2v1h-2zM2 24h1v1h-1zM4 24h3v1h-3zM8 24h1v1h-1zM10 24h8v1h-8zM23 24h1v1h-1zM25 24h2v1h-2zM29 24h2v1h-2zM33 24h1v1h-1zM35 24h1v1h-1zM37 24h2v1h-2zM2 25h1v1h-1zM5 25h3v1h-3zM10 25h1v1h-1zM12 25h3v1h-3zM17 25h2v1h-2zM20 25h3v1h-3zM28 25h1v1h-1zM30 25h1v1h-1zM33 25h4v1h-4zM38 25h1v1h-1zM2 26h1v1h-1zM4 26h1v1h-1zM6 26h4v1h-4zM11 26h1v1h-1zM13 26h2v1h-2zM17 26h1v1h-1zM19 26h1v1h-1zM24 26h1v1h-1zM29 26h5v1h-5zM2 27h1v1h-1zM6 27h2v1h-2zM11 27h2v1h-2zM14 27h2v1h-2zM19 27h2v1h-2zM22 27h1v1h-1zM24 27h4v1h-4zM29 27h2v1h-2zM34 27h2v1h-2zM2 28h7v1h-7zM10 28h2v1h-2zM17 28h1v1h-1zM19 28h1v1h-1zM21 28h1v1h-1zM24 28h1v1h-1zM27 28h3v1h-3zM31 28h3v1h-3zM35 28h1v1h-1zM37 28h2v1h-2zM2 29h1v1h-1zM5 29h2v1h-2zM9 29h4v1h-4zM14 29h2v1h-2zM18 29h1v1h-1zM20 29h1v1h-1zM22 29h1v1h-1zM24 29h1v1h-1zM28 29h2v1h-2zM32 29h3v1h-3zM36 29h1v1h-1zM2 30h1v1h-1zM4 30h1v1h-1zM6 30h6v1h-6zM17 30h2v1h-2zM20 30h1v1h-1zM22 30h1v1h-1zM26 30h2v1h-2zM30 30h8v1h-8zM10 31h6v1h-6zM17 31h1v1h-1zM19 31h4v1h-4zM24 31h1v1h-1zM26 31h1v1h-1zM30 31h1v1h-1zM34 31h1v1h-1zM36 31h2v1h-2zM2 32h7v1h-7zM10 32h2v1h-2zM15 32h1v1h-1zM17 32h5v1h-5zM23 32h4v1h-4zM28 32h1v1h-1zM30 32h1v1h-1zM32 32h1v1h-1zM34 32h1v1h-1zM37 32h2v1h-2zM2 33h1v1h-1zM8 33h1v1h-1zM10 33h1v1h-1zM12 33h1v1h-1zM18 33h1v1h-1zM21 33h2v1h-2zM27 33h4v1h-4zM34 33h1v1h-1zM38 33h1v1h-1zM2 34h1v1h-1zM4 34h3v1h-3zM8 34h1v1h-1zM10 34h1v1h-1zM12 34h1v1h-1zM14 34h2v1h-2zM17 34h2v1h-2zM20 34h1v1h-1zM22 34h1v1h-1zM24 34h2v1h-2zM28 34h7v1h-7zM38 34h1v1h-1zM2 35h1v1h-1zM4 35h3v1h-3zM8 35h1v1h-1zM10 35h1v1h-1zM13 35h2v1h-2zM16 35h1v1h-1zM19 35h1v1h-1zM21 35h6v1h-6zM28 35h1v1h-1zM31 35h2v1h-2zM35 35h1v1h-1zM38 35h1v1h-1zM2 36h1v1h-1zM4 36h3v1h-3zM8 36h1v1h-1zM11 36h2v1h-2zM15 36h1v1h-1zM19 36h1v1h-1zM24 36h2v1h-2zM30 36h2v1h-2zM34 36h1v1h-1zM36 36h1v1h-1zM38 36h1v1h-1zM2 37h1v1h-1zM8 37h1v1h-1zM14 37h1v1h-1zM17 37h1v1h-1zM19 37h1v1h-1zM22 37h1v1h-1zM24 37h3v1h-3zM28 37h2v1h-2zM34 37h5v1h-5zM2 38h7v1h-7zM10 38h1v1h-1zM12 38h3v1h-3zM16 38h1v1h-1zM22 38h1v1h-1zM25 38h2v1h-2zM29 38h2v1h-2zM33 38h1v1h-1zM38 38h1v1h-1z"/></svg><svg hidden viewBox="0 0 41 41" data-kama-qr="2026-10-03" role="img" aria-label="QR: https://vetnam555-del.github.io/busan-trip-2026/tokyo/?kamakura=2026-10-03" shape-rendering="crispEdges"><rect width="41" height="41" fill="#fff"/><path fill="#111" d="M2 2h7v1h-7zM10 2h2v1h-2zM13 2h1v1h-1zM18 2h2v1h-2zM21 2h3v1h-3zM26 2h3v1h-3zM32 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM10 3h6v1h-6zM18 3h1v1h-1zM21 3h1v1h-1zM24 3h1v1h-1zM26 3h2v1h-2zM30 3h1v1h-1zM32 3h1v1h-1zM38 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM10 4h1v1h-1zM12 4h2v1h-2zM18 4h1v1h-1zM21 4h1v1h-1zM23 4h7v1h-7zM32 4h1v1h-1zM34 4h3v1h-3zM38 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM11 5h1v1h-1zM13 5h2v1h-2zM16 5h1v1h-1zM19 5h1v1h-1zM23 5h1v1h-1zM27 5h3v1h-3zM32 5h1v1h-1zM34 5h3v1h-3zM38 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM10 6h2v1h-2zM14 6h1v1h-1zM21 6h1v1h-1zM23 6h1v1h-1zM32 6h1v1h-1zM34 6h3v1h-3zM38 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM11 7h1v1h-1zM13 7h2v1h-2zM16 7h1v1h-1zM23 7h1v1h-1zM25 7h1v1h-1zM32 7h1v1h-1zM38 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h1v1h-1zM28 8h1v1h-1zM30 8h1v1h-1zM32 8h7v1h-7zM12 9h1v1h-1zM16 9h1v1h-1zM19 9h2v1h-2zM22 9h1v1h-1zM26 9h2v1h-2zM30 9h1v1h-1zM2 10h1v1h-1zM5 10h6v1h-6zM12 10h1v1h-1zM21 10h1v1h-1zM24 10h2v1h-2zM28 10h4v1h-4zM34 10h1v1h-1zM36 10h3v1h-3zM2 11h4v1h-4zM10 11h2v1h-2zM13 11h1v1h-1zM15 11h1v1h-1zM18 11h1v1h-1zM20 11h1v1h-1zM23 11h4v1h-4zM28 11h2v1h-2zM31 11h1v1h-1zM33 11h2v1h-2zM36 11h2v1h-2zM2 12h4v1h-4zM8 12h1v1h-1zM10 12h2v1h-2zM13 12h2v1h-2zM17 12h2v1h-2zM20 12h4v1h-4zM25 12h2v1h-2zM29 12h2v1h-2zM32 12h2v1h-2zM35 12h1v1h-1zM38 12h1v1h-1zM2 13h2v1h-2zM5 13h3v1h-3zM11 13h4v1h-4zM18 13h2v1h-2zM21 13h2v1h-2zM24 13h3v1h-3zM28 13h1v1h-1zM30 13h2v1h-2zM34 13h1v1h-1zM36 13h3v1h-3zM2 14h1v1h-1zM5 14h1v1h-1zM8 14h4v1h-4zM13 14h2v1h-2zM17 14h1v1h-1zM22 14h1v1h-1zM25 14h2v1h-2zM28 14h2v1h-2zM32 14h1v1h-1zM38 14h1v1h-1zM2 15h2v1h-2zM7 15h1v1h-1zM10 15h2v1h-2zM15 15h4v1h-4zM20 15h1v1h-1zM23 15h3v1h-3zM28 15h2v1h-2zM34 15h2v1h-2zM37 15h1v1h-1zM2 16h2v1h-2zM5 16h2v1h-2zM8 16h2v1h-2zM14 16h1v1h-1zM16 16h2v1h-2zM20 16h4v1h-4zM29 16h1v1h-1zM34 16h3v1h-3zM38 16h1v1h-1zM2 17h1v1h-1zM4 17h1v1h-1zM7 17h1v1h-1zM9 17h2v1h-2zM12 17h2v1h-2zM15 17h2v1h-2zM18 17h1v1h-1zM21 17h1v1h-1zM25 17h1v1h-1zM31 17h3v1h-3zM35 17h2v1h-2zM3 18h1v1h-1zM5 18h1v1h-1zM7 18h2v1h-2zM11 18h1v1h-1zM16 18h1v1h-1zM19 18h4v1h-4zM25 18h1v1h-1zM27 18h1v1h-1zM32 18h1v1h-1zM36 18h3v1h-3zM2 19h1v1h-1zM7 19h1v1h-1zM11 19h3v1h-3zM19 19h1v1h-1zM26 19h4v1h-4zM31 19h1v1h-1zM33 19h1v1h-1zM36 19h1v1h-1zM4 20h8v1h-8zM14 20h1v1h-1zM16 20h1v1h-1zM18 20h4v1h-4zM23 20h1v1h-1zM25 20h3v1h-3zM29 20h1v1h-1zM32 20h1v1h-1zM35 20h1v1h-1zM38 20h1v1h-1zM3 21h1v1h-1zM5 21h1v1h-1zM10 21h2v1h-2zM13 21h1v1h-1zM15 21h1v1h-1zM17 21h2v1h-2zM22 21h1v1h-1zM24 21h4v1h-4zM29 21h1v1h-1zM31 21h2v1h-2zM38 21h1v1h-1zM3 22h1v1h-1zM5 22h1v1h-1zM8 22h2v1h-2zM13 22h3v1h-3zM18 22h2v1h-2zM21 22h1v1h-1zM26 22h1v1h-1zM28 22h1v1h-1zM30 22h5v1h-5zM2 23h1v1h-1zM5 23h1v1h-1zM9 23h3v1h-3zM13 23h1v1h-1zM15 23h1v1h-1zM17 23h1v1h-1zM19 23h4v1h-4zM24 23h2v1h-2zM28 23h2v1h-2zM31 23h1v1h-1zM34 23h1v1h-1zM36 23h2v1h-2zM2 24h1v1h-1zM4 24h2v1h-2zM7 24h2v1h-2zM10 24h2v1h-2zM13 24h2v1h-2zM17 24h1v1h-1zM23 24h1v1h-1zM25 24h2v1h-2zM29 24h2v1h-2zM33 24h1v1h-1zM35 24h1v1h-1zM37 24h2v1h-2zM2 25h1v1h-1zM5 25h3v1h-3zM10 25h1v1h-1zM13 25h2v1h-2zM16 25h3v1h-3zM20 25h3v1h-3zM28 25h1v1h-1zM30 25h1v1h-1zM33 25h4v1h-4zM38 25h1v1h-1zM4 26h1v1h-1zM8 26h3v1h-3zM13 26h5v1h-5zM19 26h1v1h-1zM24 26h1v1h-1zM29 26h5v1h-5zM2 27h1v1h-1zM6 27h1v1h-1zM11 27h3v1h-3zM15 27h2v1h-2zM19 27h2v1h-2zM22 27h1v1h-1zM24 27h4v1h-4zM29 27h2v1h-2zM34 27h2v1h-2zM2 28h10v1h-10zM14 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM21 28h1v1h-1zM24 28h1v1h-1zM27 28h3v1h-3zM31 28h3v1h-3zM35 28h1v1h-1zM37 28h2v1h-2zM2 29h1v1h-1zM6 29h1v1h-1zM11 29h5v1h-5zM18 29h1v1h-1zM20 29h1v1h-1zM22 29h1v1h-1zM24 29h1v1h-1zM28 29h2v1h-2zM32 29h3v1h-3zM36 29h1v1h-1zM2 30h1v1h-1zM4 30h1v1h-1zM6 30h6v1h-6zM13 30h1v1h-1zM17 30h2v1h-2zM20 30h1v1h-1zM22 30h1v1h-1zM26 30h2v1h-2zM30 30h8v1h-8zM10 31h6v1h-6zM17 31h1v1h-1zM19 31h4v1h-4zM24 31h1v1h-1zM26 31h1v1h-1zM30 31h1v1h-1zM34 31h1v1h-1zM36 31h2v1h-2zM2 32h7v1h-7zM10 32h1v1h-1zM17 32h5v1h-5zM23 32h4v1h-4zM28 32h1v1h-1zM30 32h1v1h-1zM32 32h1v1h-1zM34 32h1v1h-1zM37 32h2v1h-2zM2 33h1v1h-1zM8 33h1v1h-1zM10 33h1v1h-1zM15 33h2v1h-2zM18 33h1v1h-1zM21 33h2v1h-2zM27 33h4v1h-4zM34 33h1v1h-1zM38 33h1v1h-1zM2 34h1v1h-1zM4 34h3v1h-3zM8 34h1v1h-1zM10 34h2v1h-2zM16 34h3v1h-3zM20 34h1v1h-1zM22 34h1v1h-1zM24 34h2v1h-2zM28 34h7v1h-7zM38 34h1v1h-1zM2 35h1v1h-1zM4 35h3v1h-3zM8 35h1v1h-1zM10 35h1v1h-1zM14 35h1v1h-1zM16 35h1v1h-1zM19 35h1v1h-1zM21 35h6v1h-6zM28 35h1v1h-1zM31 35h2v1h-2zM35 35h1v1h-1zM38 35h1v1h-1zM2 36h1v1h-1zM4 36h3v1h-3zM8 36h1v1h-1zM11 36h2v1h-2zM15 36h1v1h-1zM19 36h1v1h-1zM24 36h2v1h-2zM30 36h2v1h-2zM34 36h1v1h-1zM36 36h1v1h-1zM38 36h1v1h-1zM2 37h1v1h-1zM8 37h1v1h-1zM17 37h1v1h-1zM19 37h1v1h-1zM22 37h1v1h-1zM24 37h3v1h-3zM28 37h2v1h-2zM34 37h5v1h-5zM2 38h7v1h-7zM10 38h1v1h-1zM12 38h1v1h-1zM14 38h1v1h-1zM16 38h1v1h-1zM22 38h1v1h-1zM25 38h2v1h-2zM29 38h2v1h-2zM33 38h1v1h-1zM38 38h1v1h-1z"/></svg><p><span class="ko">옆에 있는 가족 폰 카메라로 이 QR을 비추면 바로 열립니다. 카카오톡을 거치지 않아 홈 화면 추가도 쉽습니다. 위에서 고른 가마쿠라 날짜가 그대로 담깁니다.</span><span class="jp" lang="ja">隣にいる家族のスマホのカメラでこのQRを読み取ると、すぐに開きます。カカオトークを経由しないので、ホーム画面への追加も簡単。上で選んだ鎌倉の日付もそのまま引き継がれます。</span></p></div>
     </div>
   </div>
 
@@ -1002,8 +1073,12 @@
       <h3><span class="ko">보여주기 카드</span><span class="jp" lang="ja">見せるカード</span></h3>
       <p class="note"><span class="ko">누르면 화면 가득 일본어로 크게 뜹니다. 말하지 않고 휴대폰을 보여주면 됩니다.</span><span class="jp" lang="ja">タップすると画面いっぱいに日本語が大きく表示されます。話さなくても、スマホを見せれば伝わります。</span></p>
       <div class="phr">
-        <button type="button" class="wide" data-show="home"><span class="k"><span class="ko">숙소로 가 주세요 (택시)</span><span class="jp" lang="ja">宿までお願いします（タクシー）</span></span><span class="j" lang="ja">新宿御苑前駅（宿の住所は予約アプリで確認）</span></button>
+        <button type="button" class="wide" data-show="home"><span class="k"><span class="ko">숙소로 가 주세요 (택시)</span><span class="jp" lang="ja">宿までお願いします（タクシー）</span></span><span class="j" lang="ja" id="home-sub">新宿御苑前駅（宿の住所は予約アプリで確認）</span></button>
         <button type="button" data-show="lost"><span class="k"><span class="ko">길을 잃었어요</span><span class="jp" lang="ja">道に迷いました</span></span><span class="j" lang="ja">道に迷いました</span></button>
+        <button type="button" data-show="family"><span class="k"><span class="ko">가족에게 전화해 주세요</span><span class="jp" lang="ja">家族に電話してください</span></span><span class="j" lang="ja">家族に電話を…</span></button>
+        <button type="button" data-show="food"><span class="k"><span class="ko">못 먹는 음식이 있어요</span><span class="jp" lang="ja">食べられないものがあります</span></span><span class="j" lang="ja">食べられないもの…</span></button>
+        <button type="button" data-show="taxicall"><span class="k"><span class="ko">택시 불러 주세요</span><span class="jp" lang="ja">タクシーを呼んでください</span></span><span class="j" lang="ja">タクシーを呼んで…</span></button>
+        <button type="button" data-show="light"><span class="k"><span class="ko">싱겁게 해 주세요</span><span class="jp" lang="ja">味を薄めにお願いします</span></span><span class="j" lang="ja">味を薄めに…</span></button>
         <button type="button" data-show="three"><span class="k"><span class="ko">3명이에요</span><span class="jp" lang="ja">3人です</span></span><span class="j" lang="ja">3人です</span></button>
         <button type="button" data-show="card"><span class="k"><span class="ko">카드 되나요?</span><span class="jp" lang="ja">カードは使えますか？</span></span><span class="j" lang="ja">カードで払えますか？</span></button>
         <button type="button" data-show="taxfree"><span class="k"><span class="ko">면세 되나요?</span><span class="jp" lang="ja">免税できますか？</span></span><span class="j" lang="ja">免税できますか？</span></button>
@@ -1026,6 +1101,24 @@
         <button type="button" data-show="photo"><span class="k"><span class="ko">사진 좀 찍어 주세요</span><span class="jp" lang="ja">写真を撮っていただけますか？</span></span><span class="j" lang="ja">写真を撮っていただけますか</span></button>
         <button type="button" data-show="water"><span class="k"><span class="ko">물 주세요</span><span class="jp" lang="ja">お水をください</span></span><span class="j" lang="ja">お水をください</span></button>
         <button type="button" data-show="busta"><span class="k"><span class="ko">바스타 신주쿠로 (택시)</span><span class="jp" lang="ja">バスタ新宿まで（タクシー）</span></span><span class="j" lang="ja">バスタ新宿まで</span></button>
+      </div>
+    </div>
+
+    <div class="isec" id="i-me">
+      <h3><span class="ko">이 폰에만 저장하는 정보</span><span class="jp" lang="ja">このスマホだけに保存する情報</span></h3>
+      <p class="note"><span class="ko">공개 페이지에 넣지 않은 숙소 주소와 가족 연락처를 여기에 적어 두면, 택시·길을 잃었을 때 카드에 크게 나옵니다. 이 휴대폰에만 저장되고 어디에도 보내지 않습니다.</span><span class="jp" lang="ja">公開ページに載せていない宿の住所と家族の連絡先をここに入れておくと、タクシーや道に迷ったときのカードに大きく表示されます。このスマホだけに保存され、どこにも送信しません。</span></p>
+      <div class="me" id="me">
+        <label class="f"><span><span class="ko">숙소 주소 (일본어 그대로)</span><span class="jp" lang="ja">宿の住所（日本語のまま）</span></span><textarea id="me-addr" maxlength="120" rows="2" lang="ja" autocomplete="off" spellcheck="false"></textarea><span class="hint"><span class="ko">예약 앱의 주소를 복사해 붙여 넣으세요.</span><span class="jp" lang="ja">予約アプリの住所をコピーして貼り付け。</span></span></label>
+        <div class="row2"><label class="f"><span><span class="ko">가족 1 이름</span><span class="jp" lang="ja">家族1 名前</span></span><input id="me-n1" type="text" maxlength="20" autocomplete="off"></label><label class="f"><span><span class="ko">전화번호</span><span class="jp" lang="ja">電話番号</span></span><input id="me-p1" type="tel" maxlength="25" autocomplete="off" placeholder="+82 10-0000-0000"></label></div>
+        <div class="row2"><label class="f"><span><span class="ko">가족 2 이름</span><span class="jp" lang="ja">家族2 名前</span></span><input id="me-n2" type="text" maxlength="20" autocomplete="off"></label><label class="f"><span><span class="ko">전화번호</span><span class="jp" lang="ja">電話番号</span></span><input id="me-p2" type="tel" maxlength="25" autocomplete="off" placeholder="+82 10-0000-0000"></label></div>
+        <fieldset class="f"><legend><span class="ko">못 먹는 음식 (카드에 일본어로 나옵니다)</span><span class="jp" lang="ja">食べられないもの（カードに日本語で表示）</span></legend><div class="foods" id="me-foods"><label><input type="checkbox" value="soba"><span class="ko">메밀</span><span class="jp" lang="ja">そば</span></label><label><input type="checkbox" value="ebi"><span class="ko">새우</span><span class="jp" lang="ja">えび</span></label><label><input type="checkbox" value="kani"><span class="ko">게</span><span class="jp" lang="ja">かに</span></label><label><input type="checkbox" value="egg"><span class="ko">달걀</span><span class="jp" lang="ja">卵</span></label><label><input type="checkbox" value="milk"><span class="ko">우유·유제품</span><span class="jp" lang="ja">乳製品</span></label><label><input type="checkbox" value="wheat"><span class="ko">밀가루</span><span class="jp" lang="ja">小麦</span></label><label><input type="checkbox" value="peanut"><span class="ko">땅콩</span><span class="jp" lang="ja">落花生</span></label><label><input type="checkbox" value="walnut"><span class="ko">호두</span><span class="jp" lang="ja">くるみ</span></label><label><input type="checkbox" value="raw"><span class="ko">날것(회·날달걀)</span><span class="jp" lang="ja">生もの</span></label><label><input type="checkbox" value="shell"><span class="ko">조개류</span><span class="jp" lang="ja">貝類</span></label><label><input type="checkbox" value="pork"><span class="ko">돼지고기</span><span class="jp" lang="ja">豚肉</span></label></div></fieldset>
+        <p class="me-st" id="me-status" aria-live="polite"></p>
+        <div class="acts">
+          <button class="btn primary" type="button" id="me-send"><span class="ko">가족 폰에도 저장하기</span><span class="jp" lang="ja">家族のスマホにも保存</span></button>
+          <button class="btn show" type="button" data-show="home"><span class="ko">택시 카드 보기</span><span class="jp" lang="ja">タクシー用カードを見る</span></button>
+          <button class="btn" type="button" id="me-clear"><span class="std"><span class="ko">모두 지우기</span><span class="jp" lang="ja">すべて消す</span></span><span class="cfm"><span class="ko">한 번 더 누르면 지웁니다</span><span class="jp" lang="ja">もう一度押すと消えます</span></span></button>
+        </div>
+        <p class="hint"><span class="ko">'가족 폰에도 저장하기'는 이 정보가 담긴 링크를 만듭니다. 가족이 그 링크를 한 번 열면 그 폰에도 저장됩니다. 링크를 받은 대화방에는 주소가 남으니 가족끼리만 주고받으세요.</span><span class="jp" lang="ja">「家族のスマホにも保存」は、この情報を含むリンクを作ります。家族がそのリンクを一度開くと、そのスマホにも保存されます。送ったトーク画面には住所が残るので、家族の間だけでやり取りしてください。</span></p>
       </div>
     </div>
 
@@ -1082,6 +1175,7 @@
       <p class="ja" id="show-ja" lang="ja"></p>
       <p class="yomi" id="show-yomi"></p>
       <p class="ko" id="show-ko"></p>
+      <div class="ov-acts" id="show-acts" hidden></div>
     </div>
     <p class="hint"><span class="ko">화면을 상대에게 보여주세요 · 닫기는 × 또는 뒤로가기</span><span class="jp" lang="ja">画面を相手に見せてください · 閉じるには × または戻る</span></p>
   </div>
@@ -1217,14 +1311,103 @@
     green:   { tag:'駅 · 역', ja:'グリーン券は\nどこで\n買えますか？', yomi:'구리-인켄와 도코데 카에마스카', ko:'그린샤(2층 특실) 표는 어디서 사나요?' },
     nexplat: { tag:'駅 · 역', ja:'成田エクスプレスの\nホームは\nどこですか？', yomi:'나리타 엑스푸레스노 호-무와 도코데스카', ko:'나리타 익스프레스 타는 곳이 어디예요?' },
     photo:   { tag:'お願い · 부탁', ja:'写真を\n撮っていただけ\nますか？', yomi:'샤신오 톳테 이타다케마스카', ko:'사진 좀 찍어 주시겠어요?' },
-    water:   { tag:'お店 · 가게', ja:'お水を\nください。', yomi:'오미즈오 쿠다사이', ko:'물 주세요.' }
+    water:   { tag:'お店 · 가게', ja:'お水を\nください。', yomi:'오미즈오 쿠다사이', ko:'물 주세요.' },
+    taxicall:{ tag:'TAXI · 택시', ja:'タクシーを\n呼んでいただけ\nますか？\n\n3人です。', yomi:'타쿠시-오 욘데 이타다케마스카', ko:'택시를 불러 주시겠어요? 3명이에요.' },
+    light:   { tag:'お店 · 가게', ja:'味を薄めに\nお願いします。', yomi:'아지오 우스메니 오네가이시마스', ko:'싱겁게(간을 약하게) 해 주세요.' }
   };
+
+  /* ── private info kept on this phone only (address, family phones, foods) ── */
+  var ME_KEY = 'tokyo.me';
+  var FOODS = { soba:['메밀','そば'], ebi:['새우','えび'], kani:['게','かに'], egg:['달걀','卵'], milk:['우유·유제품','乳製品'],
+                wheat:['밀가루','小麦'], peanut:['땅콩','落花生（ピーナッツ）'], walnut:['호두','くるみ'], raw:['날것(회·날달걀)','生もの（刺身・生卵）'],
+                shell:['조개류','貝類'], pork:['돼지고기','豚肉'] };
+  function clip(v, n){ return String(v == null ? '' : v).replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n); }
+  function cleanMe(o){
+    o = (o && typeof o === 'object') ? o : {};
+    var c = Array.isArray(o.c) ? o.c : [];
+    return {
+      a: clip(o.a, 120),
+      c: [0, 1].map(function(i){ var x = Array.isArray(c[i]) ? c[i] : []; return [clip(x[0], 20), clip(x[1], 25).replace(/[^\d+\-() ]/g, '').trim()]; }),
+      f: (Array.isArray(o.f) ? o.f : []).filter(function(k, i, a){ return Object.prototype.hasOwnProperty.call(FOODS, k) && a.indexOf(k) === i; })
+    };
+  }
+  function meEmpty(m){ return !m.a && !m.c[0][1] && !m.c[1][1] && !m.f.length; }
+  var me = cleanMe(null);
+  try{ me = cleanMe(JSON.parse(load(ME_KEY) || 'null')); }catch(e){}
+  function saveMe(){ store(ME_KEY, meEmpty(me) ? null : JSON.stringify(me)); }
+  function b64e(str){
+    var bytes = new TextEncoder().encode(str), bin = '';
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+  function b64d(str){
+    str = str.replace(/-/g, '+').replace(/_/g, '/');
+    while (str.length % 4) str += '=';
+    var bin = atob(str), bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  // A family setup link carries the data in the #fragment, which browsers never send to the server.
+  (function(){
+    var m = location.hash.match(/^#me=([A-Za-z0-9_-]{1,3000})$/);
+    if (!m) return;
+    try{
+      var incoming = cleanMe(JSON.parse(b64d(m[1])));
+      if (!meEmpty(incoming)){
+        me = incoming; saveMe();
+        setTimeout(function(){ say(L('숙소 주소와 가족 정보를 이 폰에 저장했어요', '宿の住所と家族の情報をこのスマホに保存しました')); }, 600);
+      }
+    }catch(e){}
+    try{ history.replaceState(null, '', location.pathname + location.search); }catch(e){}
+  })();
+  function phones(){ return me.c.filter(function(x){ return x[1]; }); }
+  function phoneLines(list){ return list.map(function(x){ return (x[0] ? x[0] + '\n' : '') + x[1]; }).join('\n\n'); }
+  function dynCard(key){
+    var addr = me.a, ph = phones();
+    if (key === 'home'){
+      if (!addr) return null;   // static card: asks to show the booking app
+      return { tag:'TAXI · 택시', addr:true, ja:'この住所まで\nお願いします。\n\n' + addr, yomi:'코노 쥬-쇼 마데 오네가이시마스', ko:'이 주소로 가 주세요.' };
+    }
+    if (key === 'lost'){
+      if (!addr && !ph.length) return null;
+      return { tag:'HELP · 도움', addr:!!addr,
+        ja:'道に迷いました。' + (addr ? '\nこの住所に行きたいです。\n\n' + addr : '') + (ph.length ? '\n\n家族の電話：\n' + phoneLines(ph) : ''),
+        yomi:'미치니 마요이마시타', ko:'길을 잃었어요.' + (addr ? ' 이 주소로 가고 싶어요.' : '') + (ph.length ? ' 아래는 가족 전화번호예요.' : ''), tel:ph };
+    }
+    if (key === 'family'){
+      if (!ph.length) return 'need';
+      return { tag:'HELP · 도움', ja:'家族とはぐれました。\nこの番号に電話して\nいただけますか？\n\n' + phoneLines(ph) + '\n\n（韓国の携帯電話です）',
+        yomi:'카조쿠토 하구레마시타. 코노 방고-니 뎅와시테 이타다케마스카', ko:'가족과 떨어졌어요. 이 번호로 전화해 주시겠어요? (한국 휴대폰 번호)', tel:ph };
+    }
+    if (key === 'food'){
+      if (!me.f.length) return 'need';
+      return { tag:'お食事 · 식사', ja:'次のものが\n食べられません。\n\n' + me.f.map(function(k){ return '・' + FOODS[k][1]; }).join('\n') + '\n\nこれが入っていない料理は\nありますか？',
+        yomi:'츠기노 모노가 타베라레마셍', ko:'다음 음식을 못 먹어요: ' + me.f.map(function(k){ return FOODS[k][0]; }).join(', ') + '. 이것이 들어가지 않은 메뉴가 있나요?' };
+    }
+    return null;
+  }
   var ov = document.getElementById('show');
   var ovJa = document.getElementById('show-ja'), ovKo = document.getElementById('show-ko');
   var ovYomi = document.getElementById('show-yomi'), ovTag = document.getElementById('show-tag');
   var lastFocus = null, wake = null;
+  var ovActs = document.getElementById('show-acts');
   function openShow(key){
-    var c = CARDS[key]; if (!c) return;
+    var d = dynCard(key);
+    if (d === 'need'){
+      var sec = document.getElementById('i-me');
+      if (sec) sec.scrollIntoView({ behavior:'smooth', block:'start' });
+      say(L('먼저 \'이 폰에만 저장하는 정보\'를 채워 주세요', '先に「このスマホだけに保存する情報」を入力してください'));
+      return;
+    }
+    var c = d || CARDS[key]; if (!c) return;
+    ovActs.innerHTML = '';
+    (c.tel || []).forEach(function(x){
+      var a = document.createElement('a');
+      a.href = 'tel:' + x[1].replace(/[^\d+]/g, '');
+      a.textContent = '📞 ' + (x[0] ? x[0] + ' ' : '') + x[1];
+      ovActs.appendChild(a);
+    });
+    ovActs.hidden = !(c.tel && c.tel.length);
     lastFocus = document.activeElement;
     ovTag.textContent = c.tag;
     ovJa.textContent = c.ja;
@@ -1276,7 +1459,13 @@
       : L('출발 전 확인 항목을 모두 체크했습니다', '出発前の確認項目をすべてチェック済み');
     var box = document.getElementById('prep-items');
     box.innerHTML = '';
-    left.forEach(function(t){ var sp = document.createElement('span'); sp.textContent = t; box.appendChild(sp); });
+    left.slice(0, 4).forEach(function(t){ var sp = document.createElement('span'); sp.textContent = t; box.appendChild(sp); });
+    if (left.length > 4){
+      var more = document.createElement('span');
+      more.className = 'more';
+      more.textContent = L('외 ' + (left.length - 4) + '개', 'ほか' + (left.length - 4) + '件');
+      box.appendChild(more);
+    }
     box.hidden = !left.length;
     prep.hidden = false;
   }
@@ -1450,6 +1639,29 @@
   }
   /* ── "today" card at the top during the trip ── */
   var todayCard = document.getElementById('today');
+  // From now (or 07:00) to 21:00 on that day: first hour with ≥50% rain, and the strongest wind.
+  function rainOutlook(date, loc){
+    var h = loc && loc.hourly;
+    if (!h || !h.time || !h.precipitation_probability) return '';
+    var nowH = new Date(Date.now() + 9 * 3600000).getUTCHours();
+    var from = date === jstDate(new Date()) ? Math.max(nowH, 7) : 7;
+    if (from > 21) return '';
+    var first = -1, maxP = -1, maxW = -1;
+    for (var i = 0; i < h.time.length; i++){
+      if (h.time[i].slice(0, 10) !== date) continue;
+      var hr = +h.time[i].slice(11, 13);
+      if (hr < from || hr > 21) continue;
+      var p = h.precipitation_probability[i], w = h.wind_speed_10m && h.wind_speed_10m[i];
+      if (typeof p === 'number'){ if (p > maxP) maxP = p; if (first < 0 && p >= 50) first = hr; }
+      if (typeof w === 'number' && w > maxW) maxW = w;
+    }
+    if (maxP < 0) return '';
+    var txt = first >= 0 ? L('☔ ' + first + '시쯤부터 비 가능성 높음 (최대 ' + maxP + '%)', '☔ ' + first + '時ごろから雨の可能性大（最大' + maxP + '%）')
+      : maxP >= 30 ? L('🌂 한때 비 올 수 있음 (최대 ' + maxP + '%)', '🌂 一時雨の可能性（最大' + maxP + '%）')
+      : L('☀ 21시까지 비 걱정 적음', '☀ 21時まで雨の心配は少なめ');
+    if (maxW >= 36) txt += L(' · 💨 바람 강함 ' + Math.round(maxW) + 'km/h', ' · 💨 風が強い ' + Math.round(maxW) + 'km/h');
+    return txt;
+  }
   var wxToday = {};   // date → short weather text, filled by the forecast below
   function renderToday(){
     var sec = document.querySelector('section.day[data-date="' + jstDate(new Date()) + '"]');
@@ -1458,6 +1670,10 @@
     var w = wxToday[sec.getAttribute('data-date')];
     document.getElementById('today-date').textContent = L('오늘 · ', '今日 · ') + sec.querySelector('.dd').textContent + (w ? ' · ' + w : '');
     document.getElementById('today-title').textContent = tx(sec.querySelector('.dayhead h2'));
+    var rl = document.getElementById('today-rain');
+    var loc = wxLast && wxLast.d && (sec.getAttribute('data-wx') === 'kamakura' ? wxLast.d[1] : wxLast.d[0]);
+    var out = rainOutlook(sec.getAttribute('data-date'), loc);
+    rl.textContent = out; rl.hidden = !out;
     todayCard.setAttribute('href', '#' + sec.id);
     todayCard.hidden = false;
   }
@@ -1651,6 +1867,87 @@
     navigator.permissions.query({ name:'geolocation' }).then(function(r){ if (r.state === 'granted') geoStart(); }, function(){});
   }
 
+  /* ── private info form ─────────────── */
+  var meBox = document.getElementById('me');
+  var homeSub = document.getElementById('home-sub'), homeSubDefault = homeSub ? homeSub.textContent : '';
+  function paintMe(){
+    if (homeSub) homeSub.textContent = me.a || homeSubDefault;
+    var st = document.getElementById('me-status');
+    if (!st) return;
+    if (meEmpty(me)){ st.textContent = L('아직 저장된 정보가 없습니다.', 'まだ保存された情報はありません。'); return; }
+    var bits = [];
+    if (me.a) bits.push(L('숙소 주소', '宿の住所'));
+    if (phones().length) bits.push(L('가족 연락처 ' + phones().length + '명', '家族の連絡先 ' + phones().length + '件'));
+    if (me.f.length) bits.push(L('못 먹는 음식 ' + me.f.length + '개', '食べられないもの ' + me.f.length + '件'));
+    st.textContent = L('✓ 이 폰에 저장됨 · ', '✓ このスマホに保存済み · ') + bits.join(' · ');
+  }
+  if (meBox){
+    var fA = document.getElementById('me-addr');
+    var fN = [document.getElementById('me-n1'), document.getElementById('me-n2')];
+    var fP = [document.getElementById('me-p1'), document.getElementById('me-p2')];
+    var foodBoxes = meBox.querySelectorAll('#me-foods input[type="checkbox"]');
+    var fillMe = function(){
+      fA.value = me.a;
+      fN.forEach(function(el, i){ el.value = me.c[i][0]; });
+      fP.forEach(function(el, i){ el.value = me.c[i][1]; });
+      foodBoxes.forEach(function(b){ b.checked = me.f.indexOf(b.value) >= 0; });
+      paintMe();
+    };
+    var readForm = function(){
+      me = cleanMe({ a:fA.value, c:[[fN[0].value, fP[0].value], [fN[1].value, fP[1].value]],
+        f:[].filter.call(foodBoxes, function(b){ return b.checked; }).map(function(b){ return b.value; }) });
+      saveMe(); paintMe();
+    };
+    var meT;
+    meBox.addEventListener('input', function(){ clearTimeout(meT); meT = setTimeout(readForm, 250); });
+    meBox.addEventListener('change', readForm);
+    fillMe();
+    document.getElementById('me-send').addEventListener('click', function(){
+      readForm();
+      if (meEmpty(me)){ say(L('먼저 주소나 연락처를 입력하세요', '先に住所か連絡先を入力してください')); fA.focus(); return; }
+      var url = location.origin + location.pathname + location.search + '#me=' + b64e(JSON.stringify(me));
+      var text = L('도쿄 여행 가이드 · 이 링크를 한 번 열면 숙소 주소와 가족 연락처가 폰에 저장돼요', '東京旅行ガイド · このリンクを一度開くと宿の住所と家族の連絡先がスマホに保存されます');
+      if (navigator.share) navigator.share({ title:document.title, text:text, url:url }).catch(function(){});
+      else copyText(url, L('저장 링크를 복사했습니다', '保存用リンクをコピーしました'));
+    });
+    var clearBtn = document.getElementById('me-clear'), clearT;
+    clearBtn.addEventListener('click', function(){
+      if (!clearBtn.classList.contains('armed')){
+        clearBtn.classList.add('armed');
+        clearT = setTimeout(function(){ clearBtn.classList.remove('armed'); }, 3000);
+        return;
+      }
+      clearTimeout(clearT); clearBtn.classList.remove('armed');
+      me = cleanMe(null); saveMe(); fillMe();
+      say(L('이 폰에 저장한 정보를 지웠습니다', 'このスマホの保存情報を消しました'));
+    });
+  } else paintMe();
+
+  /* ── QR follows the chosen Kamakura date ── */
+  document.querySelectorAll('[data-kama-qr]').forEach(function(svg){
+    svg.hidden = svg.getAttribute('data-kama-qr') !== (root.dataset.kamakura || '2026-10-02');
+  });
+
+  /* ── KakaoTalk in-app browser: offer the phone's own browser ── */
+  // The in-app browser keeps its own storage, so the saved address and contacts travel along
+  // in the #fragment when the page is reopened in Safari or Chrome.
+  if (/KAKAOTALK/i.test(navigator.userAgent)){
+    var inapp = document.getElementById('inapp');
+    if (inapp){
+      var openOut = document.getElementById('inapp-open');
+      var outUrl = function(){
+        return location.origin + location.pathname + location.search + (meEmpty(me) ? '' : '#me=' + b64e(JSON.stringify(me)));
+      };
+      openOut.setAttribute('href', 'kakaotalk://web/openExternal?url=' + encodeURIComponent(outUrl()));
+      openOut.addEventListener('click', function(){ openOut.setAttribute('href', 'kakaotalk://web/openExternal?url=' + encodeURIComponent(outUrl())); });
+      inapp.hidden = false;
+    }
+  }
+
+  /* ── typhoon notice stays up until the Kamakura decision is behind us ── */
+  var alertT = document.getElementById('alert-typhoon');
+  if (alertT) alertT.hidden = Date.now() >= new Date('2026-10-04T00:00:00+09:00').getTime();
+
   /* ── send the link to family ───────── */
   var shareBtn = document.getElementById('share');
   if (shareBtn) shareBtn.addEventListener('click', function(){
@@ -1677,7 +1974,7 @@
     store('tokyo.lang', l === 'ja' ? 'ja' : null);
     paintLang(); dday(); paintTheme(); paintFs(); paintResets();
     countGroup('todo'); countGroup('pack'); paintRate();
-    renderNow(); renderToday(); renderPrep();
+    renderNow(); renderToday(); renderPrep(); paintMe();
     if (wxLast) renderWx(wxLast.d, wxLast.at);
     renderDist();
   }
@@ -1708,7 +2005,7 @@
         .then(function(reg){ reg.update(); })
         .catch(function(){});
     });
-    navigator.serviceWorker.ready.then(function(){ return caches.open('tokyo-trip-final-20260927-2'); }).then(function(c){ return c.match('./index.html'); }).then(function(hit){ if (hit) document.getElementById('offline').hidden = false; }).catch(function(){});
+    navigator.serviceWorker.ready.then(function(){ return caches.match(new URL('index.html', location.href).href); }).then(function(hit){ if (hit) document.getElementById('offline').hidden = false; }).catch(function(){});
   }
 })();
 </script>

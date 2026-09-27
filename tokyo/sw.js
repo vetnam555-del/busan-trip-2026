@@ -1,6 +1,6 @@
 /* Offline support: the guide has to open in a Tokyo subway car with no signal. */
 const PREFIX = 'tokyo-trip-';
-const CACHE = PREFIX + 'final-20260927-2';
+const CACHE = PREFIX + 'r6-20260927';
 const ASSETS = [
   './',
   './index.html',
@@ -18,7 +18,7 @@ const ASSETS = [
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE)
-      .then((c) => c.addAll(ASSETS))
+      .then((c) => c.addAll(ASSETS.map((u) => new Request(u, { cache: 'reload' }))))
       .then(() => self.skipWaiting())
   );
 });
@@ -62,17 +62,23 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // Fonts and icon never change: cache first.
+  const keep = (res) => {
+    if (res && res.ok) {
+      const copy = res.clone();
+      caches.open(CACHE).then((c) => c.put(req, copy));
+    }
+    return res;
+  };
+
+  // Fonts and the icon never change: cache first.
+  if (/\.(woff2|svg)$/.test(new URL(req.url).pathname)) {
+    e.respondWith(caches.match(req).then((hit) => hit || fetch(req).then(keep)));
+    return;
+  }
+
+  // Scripts and downloads: network first, so a new deploy never runs next to
+  // an old final-plan.js. The cached copy is the offline fallback.
   e.respondWith(
-    caches.match(req).then((hit) =>
-      hit ||
-      fetch(req).then((res) => {
-        if (res && res.ok) {
-          const copy = res.clone();
-          caches.open(CACHE).then((c) => c.put(req, copy));
-        }
-        return res;
-      })
-    )
+    fetch(req, { cache: 'no-cache' }).then(keep).catch(() => caches.match(req))
   );
 });
