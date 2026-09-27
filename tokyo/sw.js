@@ -1,9 +1,13 @@
 /* Offline support: the guide has to open in a Tokyo subway car with no signal. */
 const PREFIX = 'tokyo-trip-';
-const CACHE = PREFIX + 'v4';
+const CACHE = PREFIX + 'final-20260927-2';
 const ASSETS = [
   './',
   './index.html',
+  './final-plan.js',
+  './tokyo-2026.ics',
+  './tokyo-2026-kamakura-oct3.ics',
+  './tokyo-family-final.xlsx',
   './icon.svg',
   './manifest.webmanifest',
   './fonts/barlow-sc-500.woff2',

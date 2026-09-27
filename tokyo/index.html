@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -730,7 +730,7 @@
     .stop.star .box{ box-shadow:none; border-color:var(--line-2); }
   }
 </style>
-</head>
+<style>.choice{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.choice button{font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer}.choice button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}.cafe-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}.cafe-item{padding:24px 0;border-top:1px solid var(--line)}.cafe-item h3{font-size:20px}.cafe-item .d{font-size:16px;margin:12px 0}.kama-compare{padding:16px 0;display:grid;gap:8px}.kama-compare p{font-size:15px}.acts{flex-wrap:wrap}.btn{white-space:normal}#i-choice .callout{margin-top:16px}#i-choice,#i-cafes{scroll-margin-top:90px}@media(max-width:640px){.cafe-list{grid-template-columns:1fr}.choice{display:grid;grid-template-columns:1fr 1fr}.choice button{font-size:14px;padding:12px 8px}.stop .t{font-size:14px}.dayhead h2{font-size:28px} .map .m-lb.red{font-size:9px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}</style><style>.ov a{grid-template-columns:36px 58px minmax(0,1fr);gap:12px;min-height:64px;align-items:center}.ov .s{grid-column:3;grid-row:1}.ov .n{grid-row:1}.ov .t{grid-row:1}</style><style>.show-ov .body{min-height:0;align-content:safe center}.show-ov .bar,.show-ov .hint{flex-shrink:0}.show-ov .ja,.show-ov .ja.addr{font-size:30px}.show-ov .ja.long{font-size:26px}</style></head>
 <body>
 <div id="app">
 
@@ -743,8 +743,8 @@
     <div class="stations">
       <a class="st edge" href="#top" data-t="top"><i class="dot" aria-hidden="true"></i><span class="lb" lang="ko"><span class="ko">준비</span><span class="jp" lang="ja">準備</span></span><span class="full"><b><span class="ko">준비</span><span class="jp" lang="ja">準備</span></b><small>BOOKINGS · TODO</small></span></a>
       <a class="st" href="#d1" data-t="d1" data-date="2026-10-01"><i class="dot">1</i><span class="lb">10/1</span><span class="full"><b><span class="ko">도착 · 신주쿠</span><span class="jp" lang="ja">到着 · 新宿</span></b><small>10.01 THU</small></span></a>
-      <a class="st" href="#d2" data-t="d2" data-date="2026-10-02"><i class="dot">2</i><span class="lb">10/2</span><span class="full"><b><span class="ko">가마쿠라 · 요코초</span><span class="jp" lang="ja">鎌倉 · 横丁</span></b><small>10.02 FRI</small></span></a>
-      <a class="st" href="#d3" data-t="d3" data-date="2026-10-03"><i class="dot">3</i><span class="lb">10/3</span><span class="full"><b><span class="ko">하라주쿠 · 에비스 · 시부야</span><span class="jp" lang="ja">原宿 · 恵比寿 · 渋谷</span></b><small>10.03 SAT</small></span></a>
+      <a class="st" href="#d2" data-t="d2" data-date="2026-10-02"><i class="dot">2</i><span class="lb">10/2</span><span class="full"><b><span class="ko">가마쿠라 · 신주쿠</span><span class="jp" lang="ja">鎌倉 · 新宿</span></b><small>10.02 FRI</small></span></a>
+      <a class="st" href="#d3" data-t="d3" data-date="2026-10-03"><i class="dot">3</i><span class="lb">10/3</span><span class="full"><b><span class="ko">오모테산도 · 메구로</span><span class="jp" lang="ja">表参道 · 目黒</span></b><small>10.03 SAT</small></span></a>
       <a class="st" href="#d4" data-t="d4" data-date="2026-10-04"><i class="dot">4</i><span class="lb">10/4</span><span class="full"><b><span class="ko">아사쿠사 · 긴자</span><span class="jp" lang="ja">浅草 · 銀座</span></b><small>10.04 SUN</small></span></a>
       <a class="st" href="#d5" data-t="d5" data-date="2026-10-05"><i class="dot">5</i><span class="lb">10/5</span><span class="full"><b><span class="ko">귀국</span><span class="jp" lang="ja">帰国</span></b><small>10.05 MON</small></span></a>
       <a class="st edge" href="#info" data-t="info"><i class="dot" aria-hidden="true"></i><span class="lb" lang="ko"><span class="ko">정보</span><span class="jp" lang="ja">情報</span></span><span class="full"><b><span class="ko">교통 · 식당 · 비상</span><span class="jp" lang="ja">交通 · 食事 · 緊急</span></b><small>INFO</small></span></a>
@@ -783,11 +783,11 @@
     </a>
     <div class="geo-card" id="geo-card">
       <div class="g-off" id="geo-off">
-        <span><span class="ko"><b>내 위치</b>를 켜면 숙소와 각 장소까지 거리가 보입니다.</span><span class="jp" lang="ja"><b>現在地</b>をオンにすると、宿や各スポットまでの距離が表示されます。</span></span>
-        <button class="btn" type="button" id="geo-on-btn"><span class="ko"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>켜기</span><span class="jp" lang="ja"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>オン</span></button>
+        <span><span class="ko">내 위치를 켜면 신주쿠교엔마에역과 좌표가 있는 장소까지 거리가 보입니다. 도보 시간은 직선거리 기반 추정입니다.</span><span class="jp" lang="ja">位置情報をオンにすると新宿御苑前駅と座標のある場所までの距離を表示。徒歩時間は直線距離からの推定です。</span></span>
+        <button class="btn" type="button" id="geo-on-btn"><span class="ko"><svg class="pin" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.2"></path><circle cx="12" cy="10" r="2.6" fill="currentColor"></circle></svg>켜기</span><span class="jp" lang="ja"><svg class="pin" viewbox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.2"></path><circle cx="12" cy="10" r="2.6" fill="currentColor"></circle></svg>オン</span></button>
       </div>
       <div class="g-on" id="geo-on" hidden>
-        <div class="g-row"><span class="g-k"><span class="ko">숙소까지</span><span class="jp" lang="ja">宿まで</span></span><span class="g-v" id="geo-home">…</span><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
+        <div class="g-row"><span class="g-k"><span class="ko">신주쿠교엔마에역까지</span><span class="jp" lang="ja">新宿御苑前駅まで</span></span><span class="g-v" id="geo-home">…</span><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91%E5%89%8D%E9%A7%85&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
         <div class="g-row" id="geo-next-row" hidden><span class="g-k"><span class="ko">다음 장소</span><span class="jp" lang="ja">次の場所</span></span><span class="g-v" id="geo-next">…</span><a class="btn" id="geo-next-dir" href="#" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
         <div class="g-foot"><span id="geo-foot"><span class="ko">위치는 이 휴대폰 안에서만 계산하고 어디에도 보내지 않습니다.</span><span class="jp" lang="ja">位置情報はこのスマホの中だけで計算し、どこにも送信しません。</span></span><button class="btn" type="button" id="geo-off-btn"><span class="ko">끄기</span><span class="jp" lang="ja">オフ</span></button></div>
       </div>
@@ -804,67 +804,63 @@
       <p class="kj" lang="ja" aria-hidden="true">東京</p>
       <h1><span class="ko">도쿄 4박 5일</span><span class="jp" lang="ja">東京 4泊5日</span></h1>
       <p class="dates num">2026.10.01 THU — 10.05 MON</p>
-      <p class="lead"><span class="ko">숙소 바로 앞 <b>마루노우치선</b>(빨간 선)이 신주쿠·긴자까지 환승 없이 갑니다. 하루는 가마쿠라, 하루는 도쿄 서쪽, 하루는 동쪽으로 한 방향씩만 다녀오는 일정이라 부모님과 다니기 편합니다.</span><span class="jp" lang="ja">宿のすぐ前を走る<b>丸ノ内線</b>（赤い線）で、新宿・銀座まで乗り換えなしで行けます。1日は鎌倉、1日は都内の西側、1日は東側と、毎日ひとつの方向だけを回るので、両親と一緒でも無理がありません。</span></p>
-    </div>
+      <p class="lead"><span class="ko">하루 한 지역, 카페 한 곳, 앉아서 쉬는 시간. 가마쿠라는 날씨를 보고 2일 또는 3일에 다녀오고, 나머지는 도쿄 서쪽과 동쪽으로 나눕니다. 식당·열차 시간은 예약 내역과 구분한 계획입니다.</span><span class="jp" lang="ja">1日1エリア、カフェ1か所、座って休む時間。鎌倉は天気を見て2日か3日に。ほかは東京の西側・東側に分けます。飲食店と列車の時刻は計画で、予約確定ではありません。</span></p>
+    <div class="acts"><a class="btn" href="#i-choice"><span class="ko">가마쿠라 날짜</span><span class="jp" lang="ja">鎌倉の日付</span></a><a class="btn" href="#i-cafes"><span class="ko">카페 6곳</span><span class="jp" lang="ja">カフェ6選</span></a><a class="btn" href="#i-cal"><span class="ko">일정 다운로드</span><span class="jp" lang="ja">日程ダウンロード</span></a></div></div>
 
     <figure class="map">
-<svg viewBox="0 0 378 345" role="img" aria-labelledby="mapt">
-        <title id="mapt">숙소와 날짜별 목적지 위치 (실제 축척) / 宿と日ごとの行き先（実際の縮尺）</title>
+<svg viewbox="0 0 378 345" role="img" aria-labelledby="mapt">
+        <title id="mapt">도쿄 주요 지역 위치 참고 / 東京の主なエリア位置</title>
         <defs>
-          <linearGradient id="fadeB" x1="0" y1="0" x2="0" y2="1">
-            <stop offset=".9" stop-color="#fff"/>
-            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-          </linearGradient>
-          <mask id="mfade"><rect width="378" height="345" fill="url(#fadeB)"/></mask>
+          <lineargradient id="fadeB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset=".9" stop-color="#fff"></stop>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+          </lineargradient>
+          <mask id="mfade"><rect width="378" height="345" fill="url(#fadeB)"></rect></mask>
         </defs>
         <g mask="url(#mfade)">
-          <path class="m-water" d="M352.6,0.0 L358.0,36.6 L349.8,63.3 L339.0,99.9 L322.7,129.9 L309.2,163.2 L303.7,196.5 L295.6,229.8 L282.0,263.1 L265.8,293.0 L254.9,346.3"/>
-          <ellipse class="m-park" cx="213.7" cy="195.8" rx="22.5" ry="25.5"/>
-          <ellipse class="m-park" cx="96.0" cy="196.8" rx="19" ry="9" transform="rotate(-8 96.0 196.8)"/>
-          <ellipse class="m-park" cx="69.2" cy="227.1" rx="12" ry="16"/>
-          <path class="m-loop" d="M252.5,209.1 L262.8,173.8 L268.8,151.8 L273.4,121.5 L279.3,100.6 L282.0,77.9 L263.1,53.9 L251.7,40.0 L235.4,19.6 L198.0,25.0 L177.1,35.3 L148.1,40.6 L100.1,48.3 L88.4,75.9 L80.8,104.6 L71.1,142.2 L72.1,181.2 L75.9,202.8 L77.8,245.8 L74.9,286.4 L97.9,324.0 L113.1,368.3 L134.5,392.3 L148.1,413.9 L175.5,384.6 L180.9,361.3 L199.6,327.3 L225.1,294.7 L228.6,258.7 L241.4,229.4 Z"/>
-          <path class="m-line" d="M71.3,171.8 L83.5,177.8 L99.5,184.5 L125.0,186.1 L152.4,195.5 L171.4,223.1 L192.3,232.1 L208.6,234.8 L246.5,240.1 L252.2,208.5 L244.1,192.5"/>
+          <path class="m-water" d="M352.6,0.0 L358.0,36.6 L349.8,63.3 L339.0,99.9 L322.7,129.9 L309.2,163.2 L303.7,196.5 L295.6,229.8 L282.0,263.1 L265.8,293.0 L254.9,346.3"></path>
+          <ellipse class="m-park" cx="213.7" cy="195.8" rx="22.5" ry="25.5"></ellipse>
+          <ellipse class="m-park" cx="96.0" cy="196.8" rx="19" ry="9" transform="rotate(-8 96.0 196.8)"></ellipse>
+          <ellipse class="m-park" cx="69.2" cy="227.1" rx="12" ry="16"></ellipse>
+          <path class="m-loop" d="M252.5,209.1 L262.8,173.8 L268.8,151.8 L273.4,121.5 L279.3,100.6 L282.0,77.9 L263.1,53.9 L251.7,40.0 L235.4,19.6 L198.0,25.0 L177.1,35.3 L148.1,40.6 L100.1,48.3 L88.4,75.9 L80.8,104.6 L71.1,142.2 L72.1,181.2 L75.9,202.8 L77.8,245.8 L74.9,286.4 L97.9,324.0 L113.1,368.3 L134.5,392.3 L148.1,413.9 L175.5,384.6 L180.9,361.3 L199.6,327.3 L225.1,294.7 L228.6,258.7 L241.4,229.4 Z"></path>
+          <path class="m-line" d="M71.3,171.8 L83.5,177.8 L99.5,184.5 L125.0,186.1 L152.4,195.5 L171.4,223.1 L192.3,232.1 L208.6,234.8 L246.5,240.1 L252.2,208.5 L244.1,192.5"></path>
         </g>
-        <path class="m-axis" d="M16,34 H46 M16,30 V38 M46,30 V38"/>
+        <path class="m-axis" d="M16,34 H46 M16,30 V38 M46,30 V38"></path>
         <text class="m-lb sm num" x="52" y="38">1 km</text>
-        <path class="m-axis" d="M22,22 V8 M18,12 L22,7 L26,12"/>
+        <path class="m-axis" d="M22,22 V8 M18,12 L22,7 L26,12"></path>
         <text class="m-lb sm num" x="29" y="18">N</text>
         <text class="m-lb sm ko" x="213.7" y="199.5" text-anchor="middle">황거</text><text class="m-lb sm jp" x="213.7" y="199.5" text-anchor="middle">皇居</text>
         <text class="m-lb sm ko" x="372" y="18" text-anchor="end">나리타공항 약 60km →</text><text class="m-lb sm jp" x="372" y="18" text-anchor="end">成田空港 約60km →</text>
         <text class="m-lb ko" x="8" y="342">↙ 가마쿠라 약 45km</text><text class="m-lb jp" x="8" y="342">↙ 鎌倉 約45km</text>
-        <g class="m-pt"><circle cx="69.4" cy="177.8" r="7.5"/><text x="69.4" y="181.4">2</text></g>
+        <g class="m-pt"><circle cx="69.4" cy="177.8" r="7.5"></circle><text x="69.4" y="181.4">·</text></g>
         <text class="m-lb ko" x="57.9" y="183.2" text-anchor="end">신주쿠역</text><text class="m-lb jp" x="57.9" y="183.2" text-anchor="end">新宿駅</text>
-        <g class="m-pt"><circle cx="34.7" cy="201.8" r="7.5"/><text x="34.7" y="205.4">4</text></g>
+        <g class="m-pt"><circle cx="34.7" cy="201.8" r="7.5"></circle><text x="34.7" y="205.4">·</text></g>
         <text class="m-lb ko" x="46.2" y="206.2">오페라시티</text><text class="m-lb jp" x="46.2" y="206.2">オペラシティ</text>
-        <g class="m-pt"><circle cx="68.6" cy="225.1" r="7.5"/><text x="68.6" y="228.7">3</text></g>
+        <g class="m-pt"><circle cx="68.6" cy="225.1" r="7.5"></circle><text x="68.6" y="228.7">·</text></g>
         <text class="m-lb ko" x="80.6" y="239.1">메이지신궁</text><text class="m-lb jp" x="80.6" y="239.1">明治神宮</text>
-        <g class="m-pt"><circle cx="97.6" cy="253.1" r="7.5"/><text x="97.6" y="256.7">3</text></g>
+        <g class="m-pt"><circle cx="97.6" cy="253.1" r="7.5"></circle><text x="97.6" y="256.7">·</text></g>
         <text class="m-lb ko" x="109.1" y="257.5">오모테산도</text><text class="m-lb jp" x="109.1" y="257.5">表参道</text>
-        <g class="m-pt"><circle cx="74.9" cy="286.4" r="7.5"/><text x="74.9" y="290.0">3</text></g>
+        <g class="m-pt"><circle cx="74.9" cy="286.4" r="7.5"></circle><text x="74.9" y="290.0">·</text></g>
         <text class="m-lb ko" x="86.4" y="290.8">시부야</text><text class="m-lb jp" x="86.4" y="290.8">渋谷</text>
-        <g class="m-pt"><circle cx="97.9" cy="324.0" r="7.5"/><text x="97.9" y="327.6">3</text></g>
+        <g class="m-pt"><circle cx="97.9" cy="324.0" r="7.5"></circle><text x="97.9" y="327.6">·</text></g>
         <text class="m-lb ko" x="109.4" y="328.4">에비스</text><text class="m-lb jp" x="109.4" y="328.4">恵比寿</text>
-        <g class="m-pt"><circle cx="332.8" cy="97.2" r="7.5"/><text x="332.8" y="100.8">4</text></g>
+        <g class="m-pt"><circle cx="332.8" cy="97.2" r="7.5"></circle><text x="332.8" y="100.8">·</text></g>
         <text class="m-lb ko" x="332.8" y="119.5" text-anchor="middle">아사쿠사</text><text class="m-lb jp" x="332.8" y="119.5" text-anchor="middle">浅草</text>
-        <g class="m-pt"><circle cx="246.8" cy="240.8" r="7.5"/><text x="246.8" y="244.4">4</text></g>
+        <g class="m-pt"><circle cx="246.8" cy="240.8" r="7.5"></circle><text x="246.8" y="244.4">·</text></g>
         <text class="m-lb ko" x="235.3" y="245.2" text-anchor="end">긴자</text><text class="m-lb jp" x="235.3" y="245.2" text-anchor="end">銀座</text>
-        <g class="m-home"><circle cx="101.7" cy="184.8" r="9.5"/><path d="M96.7,185.8 L101.7,180.8 L106.7,185.8 V189.4 H96.7 Z"/></g>
-        <text class="m-lb red ko" x="114.3" y="178.0">숙소</text><text class="m-lb red jp" x="114.3" y="178.0">宿</text>
+        <g class="m-home"><circle cx="101.7" cy="184.8" r="9.5"></circle><path d="M96.7,185.8 L101.7,180.8 L106.7,185.8 V189.4 H96.7 Z"></path></g>
+        <text class="m-lb red ko" x="114.3" y="178.0">신주쿠교엔마에</text><text class="m-lb red jp" x="114.3" y="178.0">新宿御苑前</text>
       </svg>
-      <figcaption>
-        <span><span class="ko"><i class="k-line"></i>마루노우치선 (숙소 앞 → 긴자·도쿄역 직통)</span><span class="jp" lang="ja"><i class="k-line"></i>丸ノ内線（宿の前 → 銀座・東京駅まで直通）</span></span>
-        <span><span class="ko"><i class="k-loop"></i>JR 야마노테선 (참고)</span><span class="jp" lang="ja"><i class="k-loop"></i>JR山手線（参考）</span></span>
-        <span><span class="ko"><i class="k-pt">2</i>숫자 = 가는 날 (2일 가마쿠라는 지도 밖 남서쪽, 저녁은 신주쿠역 오모이데요코초)</span><span class="jp" lang="ja"><i class="k-pt">2</i>数字 = 行く日（2日目の鎌倉は地図の外・南西、夜は新宿駅の思い出横丁）</span></span>
-      </figcaption>
+      <figcaption><span class="ko">지역 위치 참고 · 날짜별 실제 동선은 아래 일정과 지도에서 확인하세요.</span><span class="jp" lang="ja">エリアの位置関係。日ごとのルートは下の日程と地図で確認。</span></figcaption>
     </figure>
   </header>
 
   <!-- ══════════ BOOKINGS ══════════ -->
-  <div class="sec" id="i-bookings">
+  <div class="sec" id="i-overview"><div class="sh"><p class="eyebrow">Final plan · 2026.09.27</p><h2><span class="ko">5일 한눈에</span><span class="jp" lang="ja">5日間のまとめ</span></h2></div><div class="ov"><a href="#d1"><span class="n">1</span><span class="t"><span class="dt">10.01</span></span><span class="s"><span class="ko">도착 · 신주쿠</span><span class="jp" lang="ja">到着 · 新宿</span></span></a><a href="#d2"><span class="n">2</span><span class="t"><span class="dt">10.02</span></span><span class="s"><span class="ko">가마쿠라 · 신주쿠</span><span class="jp" lang="ja">鎌倉 · 新宿</span></span></a><a href="#d3"><span class="n">3</span><span class="t"><span class="dt">10.03</span></span><span class="s"><span class="ko">오모테산도 · 메구로</span><span class="jp" lang="ja">表参道 · 目黒</span></span></a><a href="#d4"><span class="n">4</span><span class="t"><span class="dt">10.04</span></span><span class="s"><span class="ko">아사쿠사 · 긴자</span><span class="jp" lang="ja">浅草 · 銀座</span></span></a><a href="#d5"><span class="n">5</span><span class="t"><span class="dt">10.05</span></span><span class="s"><span class="ko">귀국</span><span class="jp" lang="ja">帰国</span></span></a></div><p class="callout"><span class="ko">추천 장소를 모두 가는 일정이 아닙니다. 매일 카페 한 곳과 휴식을 우선하고, 식사 대기가 길면 다음 관광지를 줄이세요. 일정표·예약 희망·예약 완료는 서로 다릅니다.</span><span class="jp" lang="ja">おすすめを全部回る計画ではありません。1日1カフェと休憩を優先。食事で待ったら次の観光を減らします。計画・予約希望・予約完了は別です。</span></p></div><div class="sec" id="i-choice"><div class="sh"><p class="eyebrow">Weather choice</p><h2><span class="ko">가마쿠라, 어느 날 갈까요?</span><span class="jp" lang="ja">鎌倉はどちらの日に？</span></h2></div><div class="choice" role="group" aria-label="가마쿠라 날짜 / 鎌倉の日付"><button type="button" data-kama="2026-10-02" aria-pressed="true"><span class="ko">10/2 금 · 기본</span><span class="jp" lang="ja">10/2 金 · 基本</span></button><button type="button" data-kama="2026-10-03" aria-pressed="false"><span class="ko">10/3 토 · 우천 대안</span><span class="jp" lang="ja">10/3 土 · 雨天代替</span></button></div><p class="d"><span class="ko">날씨가 비슷하면 금요일. 2일 낮에 비가 오고 3일이 더 좋거나, 도착 다음 날 피로가 크면 토요일로 바꿉니다. <b>9/30과 10/1 저녁에 9~16시 비·바람과 운행 상황을 확인</b>하세요.</span><span class="jp" lang="ja">天気が同じ程度なら金曜日。2日の日中が雨で3日の方がよい、または到着翌日の疲れが強ければ土曜日へ。<b>9/30と10/1夜に9〜16時の雨・風・運行を確認</b>。</span></p><p class="callout"><span class="ko">선택하면 2·3일의 하루 일정과 캘린더를 서로 바꿉니다. <b>로바타·카나데·폰가 예약은 자동 변경되지 않습니다.</b> 예약이 있다면 변경 가능 여부와 취소 수수료부터 확인하세요. 선택은 이 기기에 저장되며 공유 링크에도 반영됩니다.</span><span class="jp" lang="ja">選択すると2日と3日の日程・カレンダーを入れ替えます。<b>飲食店の予約は自動変更されません。</b>変更可否と取消料を先に確認。選択は端末に保存され共有リンクにも反映。</span></p><div id="kama-compare" class="kama-compare" aria-live="polite"><span class="ko">가마쿠라 두 날짜 예보를 불러오는 중입니다.</span><span class="jp" lang="ja">鎌倉の2日分の予報を取得中。</span></div><a class="btn" href="https://tenki.jp/forecast/3/17/4610/14204/10days.html" target="_blank" rel="noopener"><span class="ko">가마쿠라 시간대별 예보 확인</span><span class="jp" lang="ja">鎌倉の時間帯別予報へ</span></a></div><div class="sec" id="i-bookings">
     <div class="sh">
       <p class="eyebrow">Bookings</p>
       <h2><span class="ko">예약 한눈에</span><span class="jp" lang="ja">予約まとめ</span></h2>
-      <p class="note"><span class="ko">예약번호와 탑승권은 각 앱(아고다 · 클룩)에 있습니다. 이 페이지에는 일부러 넣지 않았습니다.</span><span class="jp" lang="ja">予約番号や搭乗券は各アプリ（Agoda · Klook）にあります。このページにはあえて載せていません。</span></p>
+      <p class="note"><span class="ko">항공편·수하물·바우처는 기존 가이드 정보이며 실제 예약 내역은 이번 작업에서 열람하지 않았습니다. 출발 전 각 앱의 최신 조건을 확인하세요. 식당은 모두 예약 여부 미확인입니다.</span><span class="jp" lang="ja">航空便・荷物・バウチャーは旧ガイド情報で、今回予約原本は未確認。出発前にアプリの最新条件を確認。飲食店の予約状況はすべて未確認。</span></p>
     </div>
 
     <div class="bk">
@@ -892,132 +888,27 @@
         <dl class="kv">
           <div><dt><span class="ko">항공편</span><span class="jp" lang="ja">便名</span></dt><dd><span class="ko"><span class="num">ZE 610</span> · 이스타항공</span><span class="jp" lang="ja"><span class="num">ZE 610</span> · イースター航空</span></dd></div>
           <div><dt><span class="ko">수하물</span><span class="jp" lang="ja">手荷物</span></dt><dd><span class="ko">위탁 1인 15kg 1개 · 기내 10kg 1개 (55×40×20cm)</span><span class="jp" lang="ja">預け 1人15kg×1 · 機内 10kg×1（55×40×20cm）</span></dd></div>
-          <div><dt><span class="ko">공항</span><span class="jp" lang="ja">空港</span></dt><dd><span class="ko">나리타 <b>제3터미널</b> <b class="num">14:00</b>까지 도착</span><span class="jp" lang="ja">成田 <b>第3ターミナル</b>に <b class="num">14:00</b> までに到着</span></dd></div>
+          <div><dt><span class="ko">공항</span><span class="jp" lang="ja">空港</span></dt><dd><span class="ko">나리타 <b>제3터미널 13:00~13:20</b> 도착 목표</span><span class="jp" lang="ja">成田 <b>第3ターミナル13:00〜13:20</b> 到着目標</span></dd></div>
         </dl>
         <p class="callout"><span class="ko"><b>터미널이 다릅니다.</b> 올 때는 제2터미널, 갈 때는 <b>제3터미널</b>. N'EX는 공항제2빌딩역에서 내려 걸어서 약 13분입니다.</span><span class="jp" lang="ja"><b>ターミナルが違います。</b>行きは第2ターミナル、帰りは<b>第3ターミナル</b>。N'EXは空港第2ビル駅で降りて、歩いて約13分です。</span></p>
       </article>
 
-      <article class="card bkc span2">
-        <div class="head"><span class="eyebrow"><span class="ko">숙소 · Stay · 4박</span><span class="jp" lang="ja">宿 · Stay · 4泊</span></span><b>10.01 — 10.05</b></div>
-        <h3 style="font-size:1.1875rem;font-weight:800;margin-top:8px"><span class="ko">신주쿠 1초메 아파트 <span style="font-size:.9375rem;color:var(--muted);font-weight:600">40㎡ · 아고다</span></span><span class="jp" lang="ja">新宿1丁目のアパート <span style="font-size:.9375rem;color:var(--muted);font-weight:600">40㎡ · Agoda</span></span></h3>
-        <p class="addr-ja" lang="ja" style="margin-top:6px">東京都新宿区新宿1丁目7-2 <span class="num" style="font-weight:500;color:var(--muted)">〒160-0022</span></p>
-        <dl class="kv">
-          <div><dt><span class="ko">체크인</span><span class="jp" lang="ja">チェックイン</span></dt><dd><span class="ko"><b class="num">15:00</b>부터 · 이번엔 <b class="num">19:50</b>쯤 도착 예정</span><span class="jp" lang="ja"><b class="num">15:00</b>から · 今回は <b class="num">19:50</b>ごろ到着予定</span></dd></div>
-          <div><dt><span class="ko">체크아웃</span><span class="jp" lang="ja">チェックアウト</span></dt><dd><span class="ko">10/5 월 · 시간은 앱의 <b>체크인 안내</b>에서 확인</span><span class="jp" lang="ja">10/5（月）· 時間はアプリの<b>チェックイン案内</b>で確認</span></dd></div>
-          <div><dt><span class="ko">가까운 역</span><span class="jp" lang="ja">最寄り駅</span></dt><dd><span class="ko">신주쿠교엔마에 <span class="ln m" aria-label="마루노우치선">M</span> <span class="num">M10</span> 도보 1분 · 신주쿠산초메 <span class="ln f" aria-label="후쿠토신선">F</span> <span class="num">F13</span> 도보 8분</span><span class="jp" lang="ja">新宿御苑前 <span class="ln m" aria-label="丸ノ内線">M</span> <span class="num">M10</span> 徒歩1分 · 新宿三丁目 <span class="ln f" aria-label="副都心線">F</span> <span class="num">F13</span> 徒歩8分</span></dd></div>
-          <div><dt><span class="ko">호스트</span><span class="jp" lang="ja">ホスト</span></dt><dd>Room In Tokyo · <a class="num" href="tel:+819037005566">+81 90-3700-5566</a></dd></div>
-          <div><dt><span class="ko">무료 취소</span><span class="jp" lang="ja">無料キャンセル</span></dt><dd><span class="ko">9/29 23:59 (도쿄 시간)까지</span><span class="jp" lang="ja">9/29 23:59（東京時間）まで</span></dd></div>
-        </dl>
-        <div class="acts">
-          <button class="btn show" type="button" data-show="home"><span class="ko">택시 기사에게 보여주기</span><span class="jp" lang="ja">タクシー運転手に見せる</span></button>
-          <button class="btn" type="button" data-copy="東京都新宿区新宿1丁目7-2"><span class="ko">주소 복사</span><span class="jp" lang="ja">住所をコピー</span></button>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a>
-        </div>
-      </article>
-
-      <article class="card bkc span2">
-        <div class="head"><span class="eyebrow"><span class="ko">공항철도 · N'EX 왕복</span><span class="jp" lang="ja">空港鉄道 · N'EX 往復</span></span><b><span class="ko">3 × 성인</span><span class="jp" lang="ja">3 × 大人</span></b></div>
-        <h3 style="font-size:1.1875rem;font-weight:800;margin-top:8px"><span class="ko">나리타 익스프레스 왕복 <span style="font-size:.9375rem;color:var(--muted);font-weight:600">클룩 · 나리타공항 ↔ 도쿄 광역</span></span><span class="jp" lang="ja">成田エクスプレス 往復 <span style="font-size:.9375rem;color:var(--muted);font-weight:600">Klook · 成田空港 ↔ 東京広域</span></span></h3>
-        <dl class="kv">
-          <div><dt><span class="ko">교환 장소</span><span class="jp" lang="ja">引き換え場所</span></dt><dd><span class="ko"><b>나리타공항에서만</b> 교환됩니다 (도쿄역·신주쿠역 불가). 우리는 제2터미널 지하 1층 <b>JR EAST Travel Service Center</b> <span class="num">08:30–20:00</span></span><span class="jp" lang="ja"><b>成田空港でのみ</b>引き換えできます（東京駅・新宿駅は不可）。私たちは第2ターミナル地下1階の <b>JR EAST Travel Service Center</b> <span class="num">08:30–20:00</span></span></dd></div>
-          <div><dt><span class="ko">필요한 것</span><span class="jp" lang="ja">必要なもの</span></dt><dd><span class="ko">3명 <b>여권 실물 모두</b> + 클룩 바우처 (앱 화면)</span><span class="jp" lang="ja">3人分の<b>パスポート原本すべて</b> + Klookのバウチャー（アプリ画面）</span></dd></div>
-          <div><dt><span class="ko">유효</span><span class="jp" lang="ja">有効期間</span></dt><dd><span class="ko">10/1부터 14일 안에 왕복 · 신주쿠까지 약 80~90분</span><span class="jp" lang="ja">10/1から14日以内に往復 · 新宿まで約80〜90分</span></dd></div>
-          <div><dt><span class="ko">좌석</span><span class="jp" lang="ja">座席</span></dt><dd><span class="ko">교환할 때 <b>10/5 귀국 편 좌석까지</b> 같이 지정 (아래 1일차 카드 참고)</span><span class="jp" lang="ja">引き換えのときに<b>10/5 帰りの座席まで</b>一緒に指定（下の1日目カード参照）</span></dd></div>
-        </dl>
-        <div class="acts">
-          <button class="btn show" type="button" data-show="nex"><span class="ko">창구 직원에게 보여주기</span><span class="jp" lang="ja">窓口の係員に見せる</span></button>
-        </div>
-      </article>
-
-      <article class="card bkc span2" id="i-cal">
-        <div class="head"><span class="eyebrow"><span class="ko">캘린더 · Alerts</span><span class="jp" lang="ja">カレンダー · Alerts</span></span><b><span class="ko">11개 일정</span><span class="jp" lang="ja">11件の予定</span></b></div>
-        <h3 style="font-size:1.1875rem;font-weight:800;margin-top:8px"><span class="ko">휴대폰 캘린더에 넣기</span><span class="jp" lang="ja">スマホのカレンダーに入れる</span></h3>
-        <p style="font-size:.9375rem;color:var(--ink-2);margin-top:6px"><span class="ko">비행기 2편, N'EX 2번, 가마쿠라 출발, 시부야 스카이, 이마한, 우나후지처럼 <b>시간이 정해진 일정만</b> 미리 알림과 함께 넣습니다. 아이폰은 누르면 '모두 추가', 안드로이드는 받은 파일을 눌러 캘린더 앱으로 엽니다.</span><span class="jp" lang="ja">飛行機2便、N'EX 2回、鎌倉への出発、SHIBUYA SKY、今半、うな富士など、<b>時間が決まっている予定だけ</b>を通知付きで入れます。iPhoneはタップすると「すべて追加」、Androidはダウンロードしたファイルをタップしてカレンダーアプリで開きます。</span></p>
-        <div class="acts"><a class="btn primary" href="tokyo-2026.ics" type="text/calendar"><span class="ko">캘린더에 추가 (.ics)</span><span class="jp" lang="ja">カレンダーに追加（.ics）</span></a></div>
-      </article>
-    </div>
+      <article class="card bkc span2"><h3><span class="ko">숙소 · 신주쿠교엔마에 주변</span><span class="jp" lang="ja">宿 · 新宿御苑前周辺</span></h3><p class="d"><span class="ko">정확한 주소·호실·출입 방법·호스트 연락처는 예약 앱과 가족용 개인 보관 파일에서 확인하세요. 귀국일 체크아웃 시각도 예약 앱 기준입니다.</span><span class="jp" lang="ja">住所・部屋番号・入室方法・ホストの連絡先は予約アプリで確認。チェックアウト時刻も予約内容を優先します.</span></p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91%E5%89%8D%E9%A7%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></article><article class="card bkc span2"><h3><span class="ko">공항열차 · 실제 지정석 확인</span><span class="jp" lang="ja">空港列車 · 実際の指定席を確認</span></h3><p class="d"><span class="ko">N’EX 왕복 바우처의 교환 장소·시간은 구매 내역을 우선합니다. 귀국은 T3 도착 목표에서 역산하고, 3명 좌석을 실제로 지정받으세요.</span><span class="jp" lang="ja">N’EXバウチャーの引換場所・時間は購入条件を優先。帰国T3到着目標から逆算し、実際に3人分の指定席を確保。</span></p><a class="btn" href="https://www.jreast.co.jp/multi/en/nex/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></article><article class="card bkc span2" id="i-cal"><h3><span class="ko">일정 파일 · 같은 버전으로 보관</span><span class="jp" lang="ja">日程ファイル · 同じ版で保存</span></h3><p class="d"><span class="ko">엑셀은 10/2 가마쿠라 기본안과 날짜 교체 안내, 카페·식당 21곳을 담았습니다. 캘린더는 위에서 선택한 날짜안입니다. <b>이전 캘린더는 삭제 후 한 가지 안만 가져오세요.</b> 이미 가져온 일정이나 예약을 자동 변경하지 않습니다.</span><span class="jp" lang="ja">Excelは10/2鎌倉の基本案、入替案、21店舗を収録。カレンダーは選択した日程です。<b>旧カレンダーを削除し1案だけ取り込んでください。</b>既存予定や予約は自動変更しません。</span></p><div class="acts"><a class="btn primary" id="calendar-download" href="tokyo-2026.ics"><span class="ko">선택 일정 캘린더 (.ics)</span><span class="jp" lang="ja">選択日程カレンダー (.ics)</span></a><a class="btn" href="tokyo-family-final.xlsx" download><span class="ko">최종 엑셀 (.xlsx)</span><span class="jp" lang="ja">最終Excel (.xlsx)</span></a></div></article></div>
   </div>
 
   <!-- ══════════ OVERVIEW ══════════ -->
-  <div class="sec" id="i-overview">
-    <div class="sh">
-      <p class="eyebrow">Five days</p>
-      <h2><span class="ko">5일 한눈에</span><span class="jp" lang="ja">5日間のまとめ</span></h2>
-    </div>
-    <div class="ov">
-      <a href="#d1">
-        <span class="n">1</span>
-        <span class="t"><span class="kj" lang="ja">新宿</span><span class="dt">10.01 THU</span></span>
-        <span class="w"><span class="ko"><span class="walk" aria-label="걷기 적음"><i class="on"></i><i></i><i></i></span>적음</span><span class="jp" lang="ja"><span class="walk" aria-label="歩き 少なめ"><i class="on"></i><i></i><i></i></span>少なめ</span></span>
-        <span class="s"><span class="ko">도착 · N'EX로 신주쿠 · 숙소 근처 라멘</span><span class="jp" lang="ja">到着 · N'EXで新宿へ · 宿の近くでラーメン</span></span>
-      </a>
-      <a href="#d2">
-        <span class="n">2</span>
-        <span class="t"><span class="kj" lang="ja">鎌倉</span><span class="dt">10.02 FRI</span></span>
-        <span class="w"><span class="ko"><span class="walk" aria-label="걷기 많음"><i class="on"></i><i class="on"></i><i class="on"></i></span>많음</span><span class="jp" lang="ja"><span class="walk" aria-label="歩き 多め"><i class="on"></i><i class="on"></i><i class="on"></i></span>多め</span></span>
-        <span class="s"><span class="ko">가마쿠라 당일치기: 쓰루가오카하치만구 → 시라스동 → 대불·하세데라 → 바닷가 건널목 → 저녁 오모이데요코초</span><span class="jp" lang="ja">鎌倉日帰り：鶴岡八幡宮 → しらす丼 → 大仏・長谷寺 → 海辺の踏切 → 夜は思い出横丁</span></span>
-      </a>
-      <a href="#d3">
-        <span class="n">3</span>
-        <span class="t"><span class="kj" lang="ja">原宿 · 渋谷</span><span class="dt">10.03 SAT</span></span>
-        <span class="w"><span class="ko"><span class="walk" aria-label="걷기 많음"><i class="on"></i><i class="on"></i><i class="on"></i></span>많음</span><span class="jp" lang="ja"><span class="walk" aria-label="歩き 多め"><i class="on"></i><i class="on"></i><i class="on"></i></span>多め</span></span>
-        <span class="s"><span class="ko">메이지신궁 → 돈카츠 → 에비스 그릇 가게 → 시부야 스카이 일몰 → 초밥</span><span class="jp" lang="ja">明治神宮 → とんかつ → 恵比寿の器の店 → SHIBUYA SKYで夕日 → 寿司</span></span>
-      </a>
-      <a href="#d4">
-        <span class="n">4</span>
-        <span class="t"><span class="kj" lang="ja">浅草 · 銀座</span><span class="dt">10.04 SUN</span></span>
-        <span class="w"><span class="ko"><span class="walk" aria-label="걷기 보통"><i class="on"></i><i class="on"></i><i></i></span>보통</span><span class="jp" lang="ja"><span class="walk" aria-label="歩き ふつう"><i class="on"></i><i class="on"></i><i></i></span>ふつう</span></span>
-        <span class="s"><span class="ko">센소지 → 스키야키 → 긴자 보행자천국 → 우나후지 53층 장어 저녁</span><span class="jp" lang="ja">浅草寺 → すき焼き → 銀座の歩行者天国 → うな富士53階でうなぎの夕食</span></span>
-      </a>
-      <a href="#d5">
-        <span class="n">5</span>
-        <span class="t"><span class="kj" lang="ja">帰国</span><span class="dt">10.05 MON</span></span>
-        <span class="w"><span class="ko"><span class="walk" aria-label="걷기 적음"><i class="on"></i><i></i><i></i></span>적음</span><span class="jp" lang="ja"><span class="walk" aria-label="歩き 少なめ"><i class="on"></i><i></i><i></i></span>少なめ</span></span>
-        <span class="s"><span class="ko">체크아웃 → 신주쿠역 쇼핑 → 12시대 N'EX → 제3터미널</span><span class="jp" lang="ja">チェックアウト → 新宿駅で買い物 → 12時台のN'EX → 第3ターミナル</span></span>
-      </a>
-    </div>
-
-    <div class="why">
-      <h3><span class="ko">이렇게 짠 이유</span><span class="jp" lang="ja">この日程にした理由</span></h3>
-      <ul>
-        <li><span class="ko"><b>꼭 가실 네 곳을 먼저 놓았습니다.</b> 가마쿠라(2일), 오모이데요코초(2일 저녁, 가마쿠라에서 돌아오는 신주쿠역 바로 옆), 에비스 그릇 가게 THE HARVEST·EAST table(3일, 걸어서 5분 거리라 두 곳 다), 우나후지 오페라시티점(4일, 53층에서 일몰).</span><span class="jp" lang="ja"><b>必ず行きたい4か所を先に決めました。</b>鎌倉（2日目）、思い出横丁（2日目の夜、鎌倉から戻る新宿駅のすぐ横）、恵比寿の器の店 THE HARVEST・EAST table（3日目、歩いて5分の距離なので両方）、うな富士 オペラシティ店（4日目、53階で夕日）。</span></li>
-        <li><span class="ko"><b>요일에 맞췄습니다.</b> 가마쿠라는 주말이면 에노덴과 대불 앞 줄이 길어 평일인 금요일에, 긴자 보행자천국은 주말에만 열려 일요일에, 그릇 가게는 11시에 열어 3일차 점심 뒤에 넣었습니다.</span><span class="jp" lang="ja"><b>曜日に合わせました。</b>鎌倉は週末だと江ノ電や大仏前の行列が長いので平日の金曜日に、銀座の歩行者天国は週末だけなので日曜日に、器の店は11時開店なので3日目の昼食の後に入れました。</span></li>
-        <li><span class="ko"><b>환승을 줄였습니다.</b> 도쿄 안에서는 숙소 앞 마루노우치선이나 신주쿠산초메역 후쿠토신선 한 번이면 대부분 갑니다. 가마쿠라도 신주쿠에서 JR 한 번입니다.</span><span class="jp" lang="ja"><b>乗り換えを減らしました。</b>都内は宿の前の丸ノ内線か、新宿三丁目駅の副都心線1本でほとんど行けます。鎌倉も新宿からJR1本です。</span></li>
-        <li><span class="ko"><b>부모님 체력.</b> 가장 많이 걷는 2일차는 점심을 앉아서 먹고 이동은 에노덴·그린샤로 앉아 가게 했습니다. 마지막 4일차는 걷는 양을 줄이고 저녁을 앉아서 길게 먹습니다. 서서 먹는 가게와 좁은 계단 가게는 뺐습니다(오모이데요코초는 예외라 좁다는 점을 적어 두었습니다).</span><span class="jp" lang="ja"><b>両親の体力。</b>いちばん歩く2日目は、昼食を座って食べ、移動は江ノ電・グリーン車で座れるようにしました。最終日の4日目は歩く量を減らし、夕食を座ってゆっくり食べます。立ち食いの店や狭い階段の店は外しました（思い出横丁は例外なので、狭いことを書いておきました）。</span></li>
-        <li><span class="ko"><b>줄 서는 시간을 줄였습니다.</b> 우나후지(3명 이상 예약 필수)와 시부야 스카이는 예약, 스키야키는 예약 권장, 초밥은 클룩 좌석 예약이 됩니다.</span><span class="jp" lang="ja"><b>行列の時間を減らしました。</b>うな富士（3名以上は予約必須）とSHIBUYA SKYは予約、すき焼きは予約推奨、寿司はKlookで席の予約ができます。</span></li>
-        <li><span class="ko"><b>교통권.</b> 금요일은 JR·에노덴이라 Suica로, 토·일은 48시간 지하철 패스로 다닙니다.</span><span class="jp" lang="ja"><b>乗車券。</b>金曜日はJR・江ノ電なのでSuicaで、土・日は48時間の地下鉄パスで回ります。</span></li>
-      </ul>
-    </div>
-  </div>
-
   <!-- ══════════ TODO ══════════ -->
   <div class="sec" id="i-todo">
     <div class="sh">
       <p class="eyebrow">Before you fly</p>
       <h2><span class="ko">출국 전에 할 일</span><span class="jp" lang="ja">出発前にやること</span></h2>
-      <p class="note"><span class="ko">체크하면 이 휴대폰에 저장됩니다. 가족 각자 폰에서 따로 체크됩니다.</span><span class="jp" lang="ja">チェックするとこのスマホに保存されます。家族それぞれのスマホで別々に記録されます。</span></p>
+      <p class="note"><span class="ko">체크는 이 기기의 확인 표시입니다. 실제 예약 시스템과 연동되지 않으며, 체크만으로 예약이 완료되지 않습니다.</span><span class="jp" lang="ja">チェックはこの端末の確認印。予約システムとは連携しておらず、チェックだけで予約は完了しません。</span></p>
     </div>
-    <div class="chkbar"><span id="todo-count">0 / 15</span><button type="button" data-reset="todo">체크 모두 지우기</button></div>
-    <div class="chk" data-group="todo">
-      <label data-short="Visit Japan Web" data-short-ja="Visit Japan Web"><input type="checkbox" data-ck="vjw"><span><span class="ko"><b><em class="tag req">필수</em>Visit Japan Web 등록 · QR 캡처</b>3명 각각 입국심사·세관 정보 입력. 대표 1명 계정에 동반 가족을 추가할 수 있습니다. 공항 와이파이가 느리니 QR은 캡처해 두세요.<span class="lk"><a href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Visit Japan Web 열기</a></span></span><span class="jp" lang="ja"><b><em class="tag req">必須</em>Visit Japan Web 登録 · QRをスクショ</b>3人それぞれ入国審査・税関の情報を入力。代表1人のアカウントに同行家族を追加できます。空港のWi-Fiは遅いので、QRはスクリーンショットしておきましょう。<span class="lk"><a href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener">Visit Japan Webを開く</a></span></span></span></label>
-      <label data-short="SHIBUYA SKY 예매" data-short-ja="SHIBUYA SKY 予約"><input type="checkbox" data-ck="sky"><span><span class="ko"><b><em class="tag req">필수</em>SHIBUYA SKY 10/3(토) 3장 예매</b>16:40 입장 전후가 일몰(17:22 무렵)과 맞습니다. 일몰 시간대가 매진이면 17:40 이후 야경 시간대도 좋습니다.<span class="hot">온라인 표는 2주 전에 풀리고 일몰 시간대는 빨리 매진됩니다. 지금 바로 확인하세요.</span><span class="lk"><a href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank" rel="noopener">공식 예매</a></span></span><span class="jp" lang="ja"><b><em class="tag req">必須</em>SHIBUYA SKY 10/3（土）3枚予約</b>16:40前後の入場が日没（17:22ごろ）に合います。日没の時間帯が売り切れなら、17:40以降の夜景の時間帯もおすすめです。<span class="hot">オンライン券は2週間前に発売され、日没の時間帯はすぐ売り切れます。今すぐ確認してください。</span><span class="lk"><a href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank" rel="noopener">公式サイトで予約</a></span></span></span></label>
-      <label data-short="우나후지 예약" data-short-ja="うな富士 予約"><input type="checkbox" data-ck="unafuji"><span><span class="ko"><b><em class="tag req">필수</em>우나후지 오페라시티점 10/4(일) 17:00 · 3명 예약</b>3명 이상은 전날까지 예약해야 들어갈 수 있습니다. 전화 <a class="num" href="tel:+81364575266">03-6457-5266</a> 또는 이큐(一休) 온라인 예약. 창가석을 부탁하세요.<span class="lk"><a href="https://restaurant.ikyu.com/149224" target="_blank" rel="noopener">이큐에서 예약</a></span></span><span class="jp" lang="ja"><b><em class="tag req">必須</em>うな富士 オペラシティ店 10/4（日）17:00 · 3名予約</b>3名以上は前日までの予約が必要です。電話 <a class="num" href="tel:+81364575266">03-6457-5266</a> または一休のオンライン予約。窓側の席をお願いしましょう。<span class="lk"><a href="https://restaurant.ikyu.com/149224" target="_blank" rel="noopener">一休で予約</a></span></span></span></label>
-      <label data-short="숙소 체크인 안내" data-short-ja="宿のチェックイン案内"><input type="checkbox" data-ck="checkin"><span><span class="ko"><b><em class="tag req">필수</em>숙소 '체크인 안내' 캡처 · 도착 시간 알리기</b>출입 방법·호실·와이파이를 전부 캡처하고, 아고다 앱 메시지로 호스트에게 "10/1 19:50쯤 도착"이라고 보내 두세요.</span><span class="jp" lang="ja"><b><em class="tag req">必須</em>宿の「チェックイン案内」をスクショ · 到着時間を連絡</b>入り方・部屋番号・Wi-Fiをすべてスクリーンショットし、Agodaアプリのメッセージでホストに「10/1 19:50ごろ到着」と送っておきましょう。</span></span></label>
-      <label><input type="checkbox" data-ck="insure"><span><span class="ko"><b><em class="tag rec">권장</em>여행자보험 3명</b>부모님 포함. 일본 병원은 보험이 없으면 진료비를 전부 내야 합니다. 보험사 앱에 증권을 받아 두세요.</span><span class="jp" lang="ja"><b><em class="tag rec">推奨</em>海外旅行保険 3人分</b>両親も含めて。日本の病院は保険がないと医療費を全額払うことになります。保険会社のアプリに証券を入れておきましょう。</span></span></label>
-      <label><input type="checkbox" data-ck="imahan"><span><span class="ko"><b><em class="tag rec">권장</em>아사쿠사 이마한 10/4(일) 11:45 · 3명 점심 예약</b>전화 <a class="num" href="tel:+81338411114">03-3841-1114</a> (10:30~21:00) 또는 클룩 예약.<span class="lk"><a href="https://www.asakusaimahan.co.jp/kokusai" target="_blank" rel="noopener">이마한 공식</a></span></span><span class="jp" lang="ja"><b><em class="tag rec">推奨</em>浅草今半 10/4（日）11:45 · 3名で昼食予約</b>電話 <a class="num" href="tel:+81338411114">03-3841-1114</a>（10:30〜21:00）またはKlookで予約。<span class="lk"><a href="https://www.asakusaimahan.co.jp/kokusai" target="_blank" rel="noopener">今半 公式サイト</a></span></span></span></label>
-      <label><input type="checkbox" data-ck="tst"><span><span class="ko"><b><em class="tag rec">권장</em>도쿄 서브웨이 티켓 48시간 × 3장</b>1인 ¥1,500. 10/3(토) 아침 첫 개찰부터 48시간이라 토·일 지하철이 전부 됩니다. QR형을 미리 사 두면 줄 설 필요가 없습니다.<span class="lk"><a href="https://www.tokyometro.jp/tst/en/index.html" target="_blank" rel="noopener">공식 판매 (QR)</a></span></span><span class="jp" lang="ja"><b><em class="tag rec">推奨</em>Tokyo Subway Ticket 48時間 × 3枚</b>1人¥1,500。10/3（土）朝の最初の改札から48時間なので、土・日の地下鉄が全部乗れます。QR版を事前に買っておけば並ばずに済みます。<span class="lk"><a href="https://www.tokyometro.jp/tst/en/index.html" target="_blank" rel="noopener">公式販売（QR）</a></span></span></span></label>
-      <label><input type="checkbox" data-ck="suica"><span><span class="ko"><b><em class="tag rec">권장</em>Suica 교통카드 3명</b>금요일 가마쿠라(JR·에노덴)와 JR·게이오선은 지하철 패스가 안 됩니다. 아이폰은 'Welcome Suica Mobile' 앱, 안드로이드는 나리타공항 JR 창구(N'EX 교환하는 곳)에서 Welcome Suica 카드. 1인 ¥4,000 정도 충전.<span class="lk"><a href="https://www.jreast.co.jp/en/multi/welcomesuicamobile/" target="_blank" rel="noopener">Welcome Suica Mobile</a></span></span><span class="jp" lang="ja"><b><em class="tag rec">推奨</em>Suica 交通系ICカード 3人分</b>金曜日の鎌倉（JR・江ノ電）とJR・京王線は地下鉄パスが使えません。iPhoneは「Welcome Suica Mobile」アプリ、Androidは成田空港のJR窓口（N'EXを引き換える所）でWelcome Suicaカード。1人¥4,000ほどチャージ。<span class="lk"><a href="https://www.jreast.co.jp/en/multi/welcomesuicamobile/" target="_blank" rel="noopener">Welcome Suica Mobile</a></span></span></span></label>
-      <label><input type="checkbox" data-ck="esim"><span><span class="ko"><b><em class="tag rec">권장</em>eSIM·로밍 3명 모두</b>부모님 폰도 데이터가 되어야 떨어졌을 때 연락과 지도가 됩니다.</span><span class="jp" lang="ja"><b><em class="tag rec">推奨</em>eSIM・ローミング 3人全員</b>両親のスマホもデータ通信ができないと、はぐれたときに連絡も地図も使えません。</span></span></label>
-      <label><input type="checkbox" data-ck="family"><span><span class="ko"><b><em class="tag rec">권장</em>부모님 폰에 이 페이지 넣기 · 위치 공유</b>바로 아래 '링크 보내기'로 보내고 홈 화면에 추가해 두세요. 카카오톡이나 구글 지도 위치 공유도 켜 두면 떨어졌을 때 찾기 쉽습니다.</span><span class="jp" lang="ja"><b><em class="tag rec">推奨</em>両親のスマホにこのページを入れる · 位置情報の共有</b>すぐ下の「リンクを送る」で送り、ホーム画面に追加しておきましょう。カカオトークやGoogleマップの位置共有もオンにしておくと、はぐれたときに探しやすくなります。</span></span></label>
-      <label><input type="checkbox" data-ck="money"><span><span class="ko"><b><em class="tag rec">권장</em>트래블카드 엔화 충전 + 현금</b>대부분 카드가 되지만, 절·신사, 작은 가게, 코인로커용 현금 ¥20,000~30,000.</span><span class="jp" lang="ja"><b><em class="tag rec">推奨</em>トラベルカードに円をチャージ + 現金</b>ほとんどカードが使えますが、寺・神社、小さな店、コインロッカー用に現金¥20,000〜30,000。</span></span></label>
-      <label><input type="checkbox" data-ck="midori"><span><span class="ko"><b><em class="tag opt">선택</em>스시노미도리 시부야점 10/3(토) 18:20 좌석 예약</b>테이블체크나 클룩에서 좌석 예약이 됩니다. 안 하면 현장 번호표.<span class="lk"><a href="https://www.tablecheck.com/en/shops/sushinomidori-shibuya/reserve" target="_blank" rel="noopener">테이블체크 예약</a></span></span><span class="jp" lang="ja"><b><em class="tag opt">任意</em>美登利寿司 渋谷店 10/3（土）18:20 席の予約</b>TableCheckかKlookで席を予約できます。しなければ店頭の整理券。<span class="lk"><a href="https://www.tablecheck.com/en/shops/sushinomidori-shibuya/reserve" target="_blank" rel="noopener">TableCheckで予約</a></span></span></span></label>
-      <label><input type="checkbox" data-ck="taxi"><span><span class="ko"><b><em class="tag opt">선택</em>택시 앱 준비</b>카카오T 해외 호출(일본은 GO와 연동, 원화 결제) 또는 GO 앱 설치·카드 등록.</span><span class="jp" lang="ja"><b><em class="tag opt">任意</em>タクシーアプリの準備</b>カカオTの海外配車（日本ではGOと連携、ウォン決済）またはGOアプリをインストールしてカードを登録。</span></span></label>
-      <label><input type="checkbox" data-ck="cloak"><span><span class="ko"><b><em class="tag opt">선택</em>10/5 짐 보관 예약 (ecbo cloak)</b>귀국일에 신주쿠역에서 쇼핑하는 동안 캐리어 3개를 맡길 곳. 앱에서 신주쿠역 남쪽·다카시마야 주변 장소를 미리 예약합니다 (1개 하루 ¥800 안팎).<span class="lk"><a href="https://cloak.ecbo.io/en" target="_blank" rel="noopener">ecbo cloak</a></span></span><span class="jp" lang="ja"><b><em class="tag opt">任意</em>10/5 荷物預かりの予約（ecbo cloak）</b>帰国日に新宿駅で買い物をする間、スーツケース3個を預ける場所。アプリで新宿駅南口・高島屋周辺の場所を事前に予約します（1個1日¥800前後）。<span class="lk"><a href="https://cloak.ecbo.io/en" target="_blank" rel="noopener">ecbo cloak</a></span></span></span></label>
-      <label><input type="checkbox" data-ck="safety"><span><span class="ko"><b><em class="tag opt">선택</em>Safety tips 앱 설치</b>일본 관광청 공식 앱. 지진·쓰나미·기상 경보를 한국어로 알려 줍니다.<span class="lk"><a href="https://www.jnto.go.jp/safety-tips/eng/app.html" target="_blank" rel="noopener">앱 받기</a></span></span><span class="jp" lang="ja"><b><em class="tag opt">任意</em>Safety tips アプリを入れる</b>観光庁の公式アプリ。地震・津波・気象の警報を韓国語で知らせてくれます。<span class="lk"><a href="https://www.jnto.go.jp/safety-tips/eng/app.html" target="_blank" rel="noopener">アプリを入手</a></span></span></span></label>
-    </div>
+    <div class="chkbar"><span id="todo-count">0 / 8</span><button type="button" data-reset="todo">체크 모두 지우기</button></div>
+    <div class="chk" data-group="todo"><label data-short="가마쿠라 날짜와 가족 체력 확인" data-short-ja="鎌倉の日と家族の体調確認"><input type="checkbox" data-ck="route-final"><span><b><span class="ko">가마쿠라 날짜와 가족 체력 확인</span><span class="jp" lang="ja">鎌倉の日と家族の体調確認</span></b><span class="ko">날씨·계단 이용·알레르기를 확인한 뒤 식당 예약을 진행합니다.</span><span class="jp" lang="ja">天気・階段・アレルギーを確認してから予約。</span></span></label><label data-short="10/4 17:00 우나후지 3명 예약 확인" data-short-ja="10/4 17:00 うな富士3名の予約確認"><input type="checkbox" data-ck="unafuji-final"><span><b><span class="ko">10/4 17:00 우나후지 3명 예약 확인</span><span class="jp" lang="ja">10/4 17:00 うな富士3名の予約確認</span></b><span class="ko">일반석·단품 가능 여부·취소 조건 확인. 빈자리 미확인, 창가 보장 없음.</span><span class="jp" lang="ja">一般席・単品可否・取消条件を確認。空席未確認、窓側保証なし。</span><span class="lk"><a class="btn" href="https://sumiyaki-unafuji.com/shops/tokyo_opera_city/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="도쿄 서부 일정일 14:00 카나데 좌석 확인" data-short-ja="東京西側の日 14:00 KANADEの席を確認"><input type="checkbox" data-ck="kanade-final"><span><b><span class="ko">도쿄 서부 일정일 14:00 카나데 좌석 확인</span><span class="jp" lang="ja">東京西側の日 14:00 KANADEの席を確認</span></b><span class="ko">카나데를 택할 때만 예약. 2시간 이용·10분 지각 취소 안내를 확인합니다.</span><span class="jp" lang="ja">KANADEを選ぶ場合のみ。2時間利用・10分遅刻取消の案内を確認。</span><span class="lk"><a class="btn" href="https://www.tablecheck.com/ja/shops/gajoentokyo-kanadelounge/reserve" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="로바타·폰가 저녁 선택 및 예약 확인" data-short-ja="ろばた・ぽんがの夕食選択と予約確認"><input type="checkbox" data-ck="dinner-final"><span><b><span class="ko">로바타·폰가 저녁 선택 및 예약 확인</span><span class="jp" lang="ja">ろばた・ぽんがの夕食選択と予約確認</span></b><span class="ko">로바타는 계단, 폰가는 총액·생식 메뉴·승강기를 먼저 확인. 부담되면 대안으로 교체합니다.</span><span class="jp" lang="ja">ろばたは階段、ぽんがは総額・生食・エレベーターを確認。難しければ別の店へ。</span></span></label><label data-short="항공권·터미널·N’EX 실제 지정석 재확인" data-short-ja="航空券・ターミナル・N’EX指定席の再確認"><input type="checkbox" data-ck="nex-final"><span><b><span class="ko">항공권·터미널·N’EX 실제 지정석 재확인</span><span class="jp" lang="ja">航空券・ターミナル・N’EX指定席の再確認</span></b><span class="ko">귀국 T3 13:00~13:20 도착 목표. 바우처 구매와 지정석 발권은 별개입니다.</span><span class="jp" lang="ja">帰国T3到着13:00〜13:20目標。バウチャー購入と指定席発券は別です。</span></span></label><label data-short="숙소 주소·체크인 안내 개인 보관" data-short-ja="宿の住所・入室案内を個人保管"><input type="checkbox" data-ck="checkin"><span><b><span class="ko">숙소 주소·체크인 안내 개인 보관</span><span class="jp" lang="ja">宿の住所・入室案内を個人保管</span></b><span class="ko">예약 앱의 주소·호실·체크아웃 마감을 가족끼리 공유합니다. 공개 페이지에는 넣지 않습니다.</span><span class="jp" lang="ja">予約アプリの住所・部屋・チェックアウト期限を家族間で共有。公開ページには掲載しません。</span></span></label><label data-short="Visit Japan Web 등록 권장" data-short-ja="Visit Japan Web 登録推奨"><input type="checkbox" data-ck="vjw"><span><b><span class="ko">Visit Japan Web 등록 권장</span><span class="jp" lang="ja">Visit Japan Web 登録推奨</span></b><span class="ko">입국·세관 절차를 위한 사전 등록 도구입니다. 가족별 필요한 정보를 확인합니다.</span><span class="jp" lang="ja">入国・税関の事前登録サービス。家族分の必要情報を確認。</span><span class="lk"><a class="btn" href="https://www.vjw.digital.go.jp/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label><label data-short="통신·여권·교통카드·상비약 준비" data-short-ja="通信・旅券・交通系IC・常備薬"><input type="checkbox" data-ck="esim"><span><b><span class="ko">통신·여권·교통카드·상비약 준비</span><span class="jp" lang="ja">通信・旅券・交通系IC・常備薬</span></b><span class="ko">3명 각각 연락 가능하게 준비. 여권은 일본 체류기간 중 유효해야 하며, 항공사 조건도 확인합니다.</span><span class="jp" lang="ja">3人それぞれ連絡可能に。旅券は日本滞在中有効なものを用意し、航空会社の条件も確認。</span><span class="lk"><a class="btn" href="https://www.kr.emb-japan.go.jp/itpr_ko/visa_QnA.html" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></span></span></label></div>
     <div class="share">
       <b><span class="ko">가족 휴대폰에도 이 페이지를</span><span class="jp" lang="ja">家族のスマホにもこのページを</span></b>
-      <p><span class="ko">링크를 보내 한 번 열어 두면, 홈 화면 아이콘으로 앱처럼 열리고 데이터가 없어도 볼 수 있습니다.</span><span class="jp" lang="ja">リンクを送って一度開いておけば、ホーム画面のアイコンからアプリのように開き、データ通信がなくても見られます。</span></p>
+      <p><span class="ko">가족에게 링크를 보내고 온라인에서 한 번 열어 두세요. 출발 전 비행기 모드에서도 본문이 열리는지 확인하세요. 지도·예보·예약은 인터넷이 필요합니다.</span><span class="jp" lang="ja">家族へリンクを送りオンラインで一度開きます。出発前に機内モードでも本文が開くか確認。地図・予報・予約には通信が必要。</span></p>
       <p class="how"><span class="ko">아이폰: Safari 아래 공유 버튼 → '홈 화면에 추가' · 안드로이드: 크롬 ⋮ → '홈 화면에 추가'. 카카오톡 안에서 열렸다면 메뉴에서 다른 브라우저로 먼저 여세요. 추가한 뒤 아이콘으로 한 번 열어 두면 끝입니다.</span><span class="jp" lang="ja">iPhone：Safari下の共有ボタン → 「ホーム画面に追加」· Android：Chrome ⋮ → 「ホーム画面に追加」。カカオトークの中で開いた場合は、メニューから先に別のブラウザで開いてください。追加したら、アイコンから一度開いておけば完了です。</span></p>
       <div class="acts"><button class="btn primary" type="button" id="share"><span class="ko">링크 보내기</span><span class="jp" lang="ja">リンクを送る</span></button></div>
     </div>
@@ -1048,7 +939,7 @@
       <div class="c">
         <h3>Power</h3>
         <p class="big"><span class="ko"><span class="num">100V</span> · A타입</span><span class="jp" lang="ja"><span class="num">100V</span> · Aタイプ</span></p>
-        <p class="sm"><span class="ko">납작한 11자 두 핀. 한국 플러그는 안 맞으니 변환 어댑터(돼지코) 2~3개. 폰 충전기는 그대로 됩니다.</span><span class="jp" lang="ja">平たい2本ピン。韓国のプラグは合わないので変換アダプターを2〜3個。スマホの充電器はそのまま使えます。</span></p>
+        <p class="sm"><span class="ko">일본은 100V·A형 플러그. 충전기 INPUT 100–240V 표시를 확인하세요. 변환 플러그는 전압을 바꾸지 않습니다.</span><span class="jp" lang="ja">日本は100V・A型。充電器のINPUT 100–240Vを確認。変換プラグは電圧を変えません。</span></p>
       </div>
       <div class="c">
         <h3>Tip</h3>
@@ -1070,732 +961,18 @@
   </section><!-- /#top -->
 
   <!-- ══════════ DAY 1 ══════════ -->
-  <section id="d1" class="day" data-date="2026-10-01">
-    <div class="dayhead">
-      <div class="row"><span class="dn">DAY 1</span><span class="dd">10.01 THU</span></div>
-      <p class="kj" lang="ja">新宿</p>
-      <h2><span class="ko">도착 · 신주쿠에 짐 풀기</span><span class="jp" lang="ja">到着 · 新宿で荷ほどき</span></h2>
-      <p class="sub"><span class="ko">오후에 도착해 N'EX로 신주쿠까지. 첫날은 이동만 하고, 숙소 근처에서 따뜻한 라멘 한 그릇으로 마무리합니다.</span><span class="jp" lang="ja">午後に到着してN'EXで新宿へ。初日は移動だけにして、宿の近くで温かいラーメンを一杯食べて締めくくります。</span></p>
-      <div class="meta">
-        <span class="num">10:50 → 21:30</span>
-        <span><span class="ko"><span class="walk" aria-hidden="true"><i class="on"></i><i></i><i></i></span>걷기 적음</span><span class="jp" lang="ja"><span class="walk" aria-hidden="true"><i class="on"></i><i></i><i></i></span>歩き 少なめ</span></span>
-        <span class="wx" hidden></span>
-        <span class="pass"><span class="ko">교통 N'EX · 택시</span><span class="jp" lang="ja">交通 N'EX · タクシー</span></span>
-        <span class="bookreq"><span class="ko">N'EX 교환 · 좌석 2번 지정</span><span class="jp" lang="ja">N'EX引き換え · 座席を2回指定</span></span>
-      </div>
-    </div>
-
-    <ol class="stops">
-      <li class="stop" data-kind="move">
-        <div class="t">10:50</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">인천공항 제1터미널 도착</span><span class="jp" lang="ja">仁川空港 第1ターミナルに到着</span></p>
-          <p class="d"><span class="ko">에어프레미아 카운터에서 체크인 (카운터 위치는 당일 출발 안내판 확인). 위탁 1인 15kg 1개. 보조배터리는 반드시 기내 가방에.</span><span class="jp" lang="ja">エアプレミアのカウンターでチェックイン（カウンターの位置は当日の出発案内板で確認）。預け荷物は1人15kg×1。モバイルバッテリーは必ず機内持ち込みの荷物に。</span></p>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">13:50</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">YP 735 출발 → 나리타</span><span class="jp" lang="ja">YP 735 出発 → 成田</span></p>
-          <p class="d"><span class="ko">2시간 40분. 기내에서 Visit Japan Web QR 캡처가 3명 모두 있는지 한 번 더 확인하세요.</span><span class="jp" lang="ja">2時間40分。機内でVisit Japan WebのQRのスクショが3人分そろっているか、もう一度確認しましょう。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="move">
-        <div class="t">16:30</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">나리타 제2터미널 도착 · 입국<span class="ja" lang="ja">成田空港 第2ターミナル</span></span><span class="jp" lang="ja">成田空港 第2ターミナル到着 · 入国</span></p>
-          <p class="d"><span class="ko">입국심사 → 짐 찾기 → 세관. 두 번 다 Visit Japan Web QR을 보여줍니다. 보통 <b>40~70분</b>. 먼저 나온 사람이 짐을 찾아 두면 빠릅니다.</span><span class="jp" lang="ja">入国審査 → 荷物の受け取り → 税関。どちらでもVisit Japan WebのQRを見せます。ふつう<b>40〜70分</b>。先に出た人が荷物を取っておくと早いです。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="move">
-        <div class="t">17:30</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker" style="color:var(--red-ink)"><span class="ko">가장 중요한 30분</span><span class="jp" lang="ja">いちばん大事な30分</span></p>
-            <p class="nm"><span class="ko">N'EX 교환 · 좌석 지정<span class="ja" lang="ja">JR EAST Travel Service Center（地下1階）</span></span><span class="jp" lang="ja">N'EX引き換え · 座席指定<span class="ja" lang="ja">JR EAST Travel Service Center（地下1階）</span></span></p>
-            <p class="d"><span class="ko">도착 로비에서 지하 1층 공항제2빌딩역으로 내려가면 개찰구 앞에 있습니다 (<span class="num">08:30–20:00</span>). 3명 여권과 클룩 바우처를 내고, 좌석을 <b>두 번</b> 지정받으세요.</span><span class="jp" lang="ja">到着ロビーから地下1階の空港第2ビル駅に下りると、改札の前にあります（<span class="num">08:30–20:00</span>）。3人のパスポートとKlookのバウチャーを出し、座席を<b>2回分</b>指定してもらいましょう。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">오늘</span><span class="jp" lang="ja">今日</span></dt><dd><span class="ko">가장 빠른 신주쿠행 N'EX</span><span class="jp" lang="ja">いちばん早い新宿行きのN'EX</span></dd></div>
-              <div><dt>10/5</dt><dd><span class="ko">신주쿠 <b class="num">12:00–12:30</b> 출발 → 공항제2빌딩역</span><span class="jp" lang="ja">新宿 <b class="num">12:00–12:30</b> 発 → 空港第2ビル駅</span></dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>창구 줄이 길면</b> 옆의 지정석 발매기(<span lang="ja">指定席券売機</span>)에서 바우처 QR과 여권으로 발권되는지 먼저 해 보세요. 안 되면 창구로.</span><span class="jp" lang="ja"><b>窓口が混んでいたら</b>、横の指定席券売機でバウチャーのQRとパスポートで発券できるか先に試してみましょう。だめなら窓口へ。</span></p>
-            <p class="tip"><span class="ko"><b>말이 안 통하면</b> 아래 버튼 화면을 그대로 보여주면 됩니다.</span><span class="jp" lang="ja"><b>言葉が通じなければ</b>、下のボタンの画面をそのまま見せれば大丈夫です。</span></p>
-            <div class="acts"><button class="btn show" type="button" data-show="nex"><span class="ko">창구 직원에게 보여주기</span><span class="jp" lang="ja">窓口の係員に見せる</span></button></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">18:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">N'EX → 신주쿠</span><span class="jp" lang="ja">N'EX → 新宿</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln jr wide">N'EX</span> 공항제2빌딩 → 신주쿠</span><span class="jp" lang="ja"><span class="ln jr wide">N'EX</span> 空港第2ビル → 新宿</span></span><span class="arr">·</span><span class="num"><span class="ko">약 80~90분</span><span class="jp" lang="ja">約80〜90分</span></span></div>
-          <p class="d"><span class="ko">전석 지정석. 큰 캐리어는 객실 끝 짐칸에 두고 번호 자물쇠로 잠급니다. 도쿄역에서 앞뒤 차량이 나뉘어 다른 방향으로 가는 열차가 있으니, <b>표에 적힌 호차</b>에 타면 됩니다.</span><span class="jp" lang="ja">全席指定。大きなスーツケースは車両端の荷物置き場に置き、番号式の鍵でロックします。東京駅で前後の車両が切り離されて別方向へ行く列車があるので、<b>切符に書かれた号車</b>に乗りましょう。</span></p>
-          <div class="acts"><a class="btn" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank" rel="noopener"><span class="ko">JR 운행정보</span><span class="jp" lang="ja">JR運行情報</span></a></div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">19:30</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">신주쿠역 → 택시로 숙소</span><span class="jp" lang="ja">新宿駅 → タクシーで宿へ</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln tx wide">TAXI</span> 약 10분</span><span class="jp" lang="ja"><span class="ln tx wide">TAXI</span> 約10分</span></span><span class="arr">·</span><span class="num">¥1,200–1,800</span></div>
-          <p class="d"><span class="ko">'タクシー' 표지를 따라 택시 승강장으로. 걸으면 캐리어 끌고 20분이라 택시가 낫습니다. 기사님께 주소 화면을 보여주세요. 캐리어가 3개면 하나는 좌석에 싣는 경우가 많습니다.</span><span class="jp" lang="ja">「タクシー」の表示に沿ってタクシー乗り場へ。スーツケースを引いて歩くと20分かかるので、タクシーが楽です。運転手さんに住所の画面を見せましょう。スーツケースが3個だと、1個は座席に載せることがよくあります。</span></p>
-          <div class="acts"><button class="btn show" type="button" data-show="home"><span class="ko">숙소 주소 보여주기</span><span class="jp" lang="ja">宿の住所を見せる</span></button></div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move" data-geo="35.6885,139.7115">
-        <div class="t">19:50</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">숙소 체크인</span><span class="jp" lang="ja">宿にチェックイン</span></p>
-          <p class="d"><span class="ko">캡처해 둔 '체크인 안내'대로 들어갑니다. 짐만 내려놓고 바로 저녁 먹으러 나갑니다.</span><span class="jp" lang="ja">スクショしておいた「チェックイン案内」のとおりに入ります。荷物だけ置いて、すぐ夕食に出かけます。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="food" data-geo="35.6908,139.7046">
-        <div class="t">20:20</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">저녁 · 라멘</span><span class="jp" lang="ja">夕食 · ラーメン</span></p>
-            <p class="nm"><span class="ko">하야시다 신주쿠 본점<span class="ja" lang="ja">らぁ麺 はやし田 新宿本店</span></span><span class="jp" lang="ja">らぁ麺 はやし田 新宿本店<span class="ja" lang="ko">하야시다 신주쿠 본점</span></span></p>
-            <p class="d"><span class="ko">맑은 닭 육수에 간장·소금 라멘. 짜지 않고 깔끔해서 첫날 저녁으로 부담이 없습니다. 입구 식권 자판기에서 3명분 먼저 사고 줄을 섭니다. 저녁엔 10~20분 기다릴 수 있습니다.</span><span class="jp" lang="ja">澄んだ鶏スープの醤油・塩ラーメン。しょっぱすぎずすっきりしていて、初日の夕食にぴったりです。入口の食券機で3人分を先に買ってから並びます。夜は10〜20分待つことがあります。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">영업</span><span class="jp" lang="ja">営業</span></dt><dd><span class="ko"><span class="num">11:00–16:00 · 18:00–22:00</span> (쉬는 시간 없이 여는 날도 있음)</span><span class="jp" lang="ja"><span class="num">11:00–16:00 · 18:00–22:00</span>（中休みなしで営業する日もあり）</span></dd></div>
-              <div><dt><span class="ko">위치</span><span class="jp" lang="ja">場所</span></dt><dd><span class="ko">신주쿠산초메역 A5 출구 1분 · 숙소에서 걸어서 약 10분</span><span class="jp" lang="ja">新宿三丁目駅 A5出口から1分 · 宿から歩いて約10分</span></dd></div>
-              <div><dt><span class="ko">예산</span><span class="jp" lang="ja">予算</span></dt><dd><span class="ko">1인 ¥1,300–1,800</span><span class="jp" lang="ja">1人 ¥1,300–1,800</span></dd></div>
-              <div><dt><span class="ko">주소</span><span class="jp" lang="ja">住所</span></dt><dd lang="ja">新宿区新宿3-31-5</dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>다른 선택:</b> 츠나하치 튀김(1924년 창업)도 가깝지만 목요일은 21:00이 마지막 주문이라 오늘은 빠듯합니다.</span><span class="jp" lang="ja"><b>ほかの選択肢：</b>天ぷらの「つな八」（1924年創業）も近いですが、木曜日はラストオーダーが21:00なので今日はぎりぎりです。</span></p>
-            <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%82%89%E3%81%81%E9%BA%BA+%E3%81%AF%E3%82%84%E3%81%97%E7%94%B0+%E6%96%B0%E5%AE%BF%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">21:30</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">편의점 들러 숙소로</span><span class="jp" lang="ja">コンビニに寄って宿へ</span></p>
-          <p class="d"><span class="ko">물과 내일 아침거리(오니기리·빵)를 사 둡니다. 내일은 7:50에 가마쿠라로 출발합니다.</span><span class="jp" lang="ja">水と明日の朝食（おにぎり・パン）を買っておきます。明日は7:50に鎌倉へ出発します。</span></p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ══════════ DAY 2 ══════════ -->
-  <section id="d2" class="day" data-date="2026-10-02" data-wx="kamakura">
-    <div class="dayhead">
-      <div class="row"><span class="dn">DAY 2</span><span class="dd">10.02 FRI</span></div>
-      <p class="kj" lang="ja">鎌倉</p>
-      <h2><span class="ko">가마쿠라 당일치기, 저녁은 오모이데요코초</span><span class="jp" lang="ja">鎌倉日帰り、夜は思い出横丁</span></h2>
-      <p class="sub"><span class="ko">평일이라 가마쿠라가 가장 덜 붐비는 날입니다. 오전엔 신사와 상점가, 점심은 시라스동, 오후엔 대불과 바닷가 건널목을 돌고, 돌아오는 신주쿠역 바로 옆 골목에서 꼬치에 맥주로 마무리합니다.</span><span class="jp" lang="ja">平日なので、鎌倉がいちばん空いている日です。午前は神社と商店街、昼はしらす丼、午後は大仏と海辺の踏切を回り、帰りの新宿駅すぐ横の路地で串焼きとビールで締めくくります。</span></p>
-      <div class="meta">
-        <span class="num">07:50 → 20:00</span>
-        <span><span class="ko"><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>걷기 많음 · 약 1.4만 보</span><span class="jp" lang="ja"><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>歩き 多め · 約1.4万歩</span></span>
-        <span class="wx" hidden></span>
-        <span class="pass"><span class="ko">교통 Suica (JR · 에노덴)</span><span class="jp" lang="ja">交通 Suica（JR · 江ノ電）</span></span>
-      </div>
-      <a class="rainhint" href="#rain-d2" hidden><span aria-hidden="true">☔</span><span><span class="ko"><b>비 예보</b> · 비 오면 4일차와 바꾸는 방법 보기 →</span><span class="jp" lang="ja"><b>雨の予報</b> · 雨なら4日目と入れ替える方法を見る →</span></span></a>
-      <div class="dayacts"><a class="btn" href="https://www.google.com/maps/dir/%E6%96%B0%E5%AE%BF%E9%A7%85/%E9%B6%B4%E5%B2%A1%E5%85%AB%E5%B9%A1%E5%AE%AE/%E9%AB%98%E5%BE%B3%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F/%E9%95%B7%E8%B0%B7%E5%AF%BA%20%E9%8E%8C%E5%80%89/%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85/%E8%97%A4%E6%B2%A2%E9%A7%85/%E6%80%9D%E3%81%84%E5%87%BA%E6%A8%AA%E4%B8%81" target="_blank" rel="noopener"><span class="ko">구글 지도에서 하루 동선 보기</span><span class="jp" lang="ja">Googleマップで1日のルートを見る</span></a></div>
-    </div>
-
-    <figure class="map kmap">
-      <svg viewBox="0 0 360 232" role="img" aria-labelledby="kmapt">
-          <title id="kmapt">가마쿠라 하루 동선 (대략 위치): 가마쿠라역에서 쓰루가오카하치만구와 점심, 에노덴으로 하세역, 대불과 하세데라, 가마쿠라코코마에 건널목, 후지사와역 / 鎌倉の1日のルート（おおよその位置）：鎌倉駅から鶴岡八幡宮と昼食、江ノ電で長谷駅、大仏と長谷寺、鎌倉高校前の踏切、藤沢駅</title>
-          <path class="k-sea" d="M-3.6,152.3 L34.5,164.8 L53.6,170.9 L76.5,172.8 L103.2,178.8 L114.6,181.2 L149.0,185.8 L175.7,192.8 L192.8,202.1 L206.2,190.5 L221.4,176.5 L240.5,164.8 L263.4,162.5 L286.3,164.8 L309.2,171.8 L332.1,185.8 L362.6,204.5 L362.6,251.1 L-3.6,251.1 Z"/>
-          <ellipse class="k-isle" cx="34.5" cy="205.4" rx="19" ry="12"/>
-          <path class="k-bridge" d="M46.7,170.9 L40.2,190.5"/>
-          <path class="k-jr" d="M300.4,115.4 L290.1,69.3 L278.7,-0.7"/>
-          <path class="k-jr" d="M63.5,24.0 L107.0,15.7 L141.3,-0.7"/>
-          <path class="k-walk" d="M300.4,115.4 L326.4,83.7 L315.8,102.8 L300.4,115.4"/>
-          <path class="k-walk" d="M247.4,147.6 L247.0,126.6 L231.2,145.7 L247.4,147.6"/>
-          <path class="k-eno" d="M300.4,115.4 L281.7,140.1 L269.1,149.0 L247.4,147.6 L220.3,154.6 L196.3,173.2 L152.8,175.1 L113.1,173.2 L75.0,164.4 L63.9,156.4 L46.0,125.2 L40.6,91.6 L46.0,66.0 L54.7,44.6 L63.5,24.0"/>
-          <circle class="m-sta" cx="300.4" cy="115.4" r="4.2"/>
-          <circle class="m-sta" cx="247.4" cy="147.6" r="4.2"/>
-          <circle class="m-sta" cx="63.5" cy="24.0" r="4.2"/>
-          <g class="m-pt"><circle cx="326.4" cy="83.7" r="7.5"/><text x="326.4" y="87.3">1</text></g>
-          <g class="m-pt"><circle cx="315.8" cy="102.8" r="7.5"/><text x="315.8" y="106.4">2</text></g>
-          <g class="m-pt"><circle cx="247.0" cy="126.6" r="7.5"/><text x="247.0" y="130.2">3</text></g>
-          <g class="m-pt"><circle cx="231.2" cy="145.7" r="7.5"/><text x="231.2" y="149.3">4</text></g>
-          <g class="m-pt"><circle cx="113.1" cy="173.2" r="7.5"/><text x="113.1" y="176.8">5</text></g>
-          <text class="m-lb ko" x="326.4" y="70.7" text-anchor="middle">하치만구</text><text class="m-lb jp" x="326.4" y="70.7" text-anchor="middle">八幡宮</text>
-          <text class="m-lb ko" x="326.8" y="107.3">점심</text><text class="m-lb jp" x="326.8" y="107.3">昼食</text>
-          <text class="m-lb ko" x="293.4" y="110.4" text-anchor="end">가마쿠라역</text><text class="m-lb jp" x="293.4" y="110.4" text-anchor="end">鎌倉駅</text>
-          <text class="m-lb ko" x="258.0" y="131.1">대불</text><text class="m-lb jp" x="258.0" y="131.1">大仏</text>
-          <text class="m-lb ko" x="221.2" y="141.7" text-anchor="end">하세데라</text><text class="m-lb jp" x="221.2" y="141.7" text-anchor="end">長谷寺</text>
-          <text class="m-lb sm ko" x="252.4" y="163.6">하세역</text><text class="m-lb sm jp" x="252.4" y="163.6">長谷駅</text>
-          <text class="m-lb sm ko" x="113.1" y="149.2" text-anchor="middle">가마쿠라코코마에</text><text class="m-lb sm jp" x="113.1" y="149.2" text-anchor="middle">鎌倉高校前</text>
-          <text class="m-lb ko" x="113.1" y="162.2" text-anchor="middle">건널목</text><text class="m-lb jp" x="113.1" y="162.2" text-anchor="middle">踏切</text>
-          <text class="m-lb ko" x="72.5" y="40.0">후지사와역</text><text class="m-lb jp" x="72.5" y="40.0">藤沢駅</text>
-          <text class="m-lb sm ko" x="72.5" y="53.0">JR로 신주쿠 약 55분</text><text class="m-lb sm jp" x="72.5" y="53.0">JRで新宿まで約55分</text>
-          <text class="m-lb sm ko" x="276" y="14" text-anchor="end">↑ JR 신주쿠에서 약 60분</text><text class="m-lb sm jp" x="276" y="14" text-anchor="end">↑ JR 新宿から約60分</text>
-          <text class="m-lb sm ko" x="34.5" y="229" text-anchor="middle">에노시마</text><text class="m-lb sm jp" x="34.5" y="229" text-anchor="middle">江の島</text>
-          <text class="m-lb sm ko" x="190" y="222" text-anchor="middle">사가미만</text><text class="m-lb sm jp" x="190" y="222" text-anchor="middle">相模湾</text>
-          <path class="m-axis" d="M306,222 H348 M306,218 V226 M348,218 V226"/>
-          <text class="m-lb sm num" x="327" y="214" text-anchor="middle">1 km</text>
-          <path class="m-axis" d="M12,22 V8 M8,12 L12,7 L16,12"/>
-          <text class="m-lb sm num" x="19" y="18">N</text>
-        </svg>
-      <figcaption>
-        <span><span class="ko"><i class="k-k-eno"></i>에노덴 (가마쿠라 → 하세 → 가마쿠라코코마에 → 후지사와)</span><span class="jp" lang="ja"><i class="k-k-eno"></i>江ノ電（鎌倉 → 長谷 → 鎌倉高校前 → 藤沢）</span></span>
-        <span><span class="ko"><i class="k-k-walk"></i>걷는 구간</span><span class="jp" lang="ja"><i class="k-k-walk"></i>歩く区間</span></span>
-        <span><span class="ko"><i class="k-k-jr"></i>JR (신주쿠 오가는 길)</span><span class="jp" lang="ja"><i class="k-k-jr"></i>JR（新宿との往復）</span></span>
-        <span><span class="ko"><i class="k-pt">1</i>가는 순서 · 대략적인 위치</span><span class="jp" lang="ja"><i class="k-pt">1</i>回る順番 · おおよその位置</span></span>
-      </figcaption>
-    </figure>
-
-    <ol class="stops">
-      <li class="stop" data-kind="move">
-        <div class="t">07:50</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">숙소 → JR 신주쿠역</span><span class="jp" lang="ja">宿 → JR新宿駅</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln m">M</span> 신주쿠교엔마에 → 신주쿠 · 2정거장</span><span class="jp" lang="ja"><span class="ln m">M</span> 新宿御苑前 → 新宿 · 2駅</span></span><span class="arr">→</span><span class="seg"><span class="ko"><span class="ln wk wide">도보</span> JR 개찰구</span><span class="jp" lang="ja"><span class="ln wk wide">徒歩</span> JR改札</span></span></div>
-          <p class="d"><span class="ko">오늘은 JR과 에노덴을 타서 지하철 패스 대신 <b>Suica</b>로 다닙니다. 'JR 쇼난신주쿠라인(湘南新宿ライン)' 승강장으로 갑니다.</span><span class="jp" lang="ja">今日はJRと江ノ電に乗るので、地下鉄パスではなく<b>Suica</b>で移動します。「JR湘南新宿ライン」のホームへ向かいます。</span></p>
-          <p class="tip"><span class="ko"><b>평일 출근 시간이라</b> 신주쿠역이 붐빕니다. 짐이 없어 지하철도 괜찮지만, 편하게 가려면 숙소 앞에서 택시로 JR 신주쿠역 동쪽 출구까지 가세요 (약 10분 · ¥1,200 안팎).</span><span class="jp" lang="ja"><b>平日の通勤時間なので</b>新宿駅が混みます。荷物がないので地下鉄でも大丈夫ですが、楽に行くなら宿の前からタクシーでJR新宿駅東口まで行きましょう（約10分 · ¥1,200前後）。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="move">
-        <div class="t">08:15</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">JR 쇼난신주쿠라인 → 가마쿠라</span><span class="jp" lang="ja">JR湘南新宿ライン → 鎌倉</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln jr wide">JR</span> 신주쿠 → 가마쿠라</span><span class="jp" lang="ja"><span class="ln jr wide">JR</span> 新宿 → 鎌倉</span></span><span class="arr">·</span><span class="num"><span class="ko">약 60분 · ¥950 안팎</span><span class="jp" lang="ja">約60分 · ¥950前後</span></span></div>
-          <p class="d"><span class="ko"><b>즈시(逗子)행</b>을 타면 갈아타지 않고 가마쿠라까지 갑니다. 오다와라(小田原)행을 탔다면 오후나(大船)에서 요코스카선으로 한 번 갈아탑니다.</span><span class="jp" lang="ja"><b>逗子行き</b>に乗れば乗り換えなしで鎌倉まで行けます。小田原行きに乗った場合は、大船で横須賀線に1回乗り換えます。</span></p>
-          <p class="tip"><span class="ko"><b>부모님과 편하게 가려면</b> 2층 특실인 <b>그린샤</b>(グリーン車)를 타세요. 승강장 발매기에서 Suica로 그린권을 사면 1인 ¥1,000 안팎이 추가되고, 넓은 좌석에 앉아 갑니다. 출근 방향과 반대라 아침에도 자리가 있습니다.</span><span class="jp" lang="ja"><b>両親と楽に行くなら</b>2階建ての特別車両<b>グリーン車</b>に乗りましょう。ホームの券売機でSuicaにグリーン券を買うと1人¥1,000前後の追加で、広い座席に座って行けます。通勤とは逆方向なので、朝でも席があります。</span></p>
-          <div class="acts"><button class="btn show" type="button" data-show="kamakura"><span class="ko">역무원에게: 가마쿠라 가나요?</span><span class="jp" lang="ja">駅員さんに：鎌倉に行きますか？</span></button><button class="btn show" type="button" data-show="green"><span class="ko">그린권 어디서 사요?</span><span class="jp" lang="ja">グリーン券はどこで買える？</span></button><a class="btn" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank" rel="noopener"><span class="ko">JR 운행정보</span><span class="jp" lang="ja">JR運行情報</span></a></div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.3259,139.5565">
-        <div class="t">09:20</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">가마쿠라의 중심 신사</span><span class="jp" lang="ja">鎌倉の中心の神社</span></p>
-            <p class="nm"><span class="ko">쓰루가오카하치만구 · 고마치도리<span class="ja" lang="ja">鶴岡八幡宮 · 小町通り</span></span><span class="jp" lang="ja">鶴岡八幡宮 · 小町通り<span class="ja" lang="ko">쓰루가오카하치만구 · 고마치도리</span></span></p>
-            <p class="d"><span class="ko">가마쿠라역 동쪽 출구에서 벚나무 참배길(단카즈라)을 따라 올라가면 큰 붉은 신사가 나옵니다. 본궁까지 계단 60여 개. 내려올 때는 상점가 <b>고마치도리</b>로 걸으며 군것질을 합니다 (가게는 10시 전후부터 엽니다).</span><span class="jp" lang="ja">鎌倉駅東口から桜並木の参道（段葛）を上っていくと、大きな朱色の神社が現れます。本宮までは石段60段あまり。帰りは商店街の<b>小町通り</b>を歩いて食べ歩きをします（店は10時前後から開きます）。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">시간</span><span class="jp" lang="ja">時間</span></dt><dd><span class="ko">경내 무료 · 이른 아침부터</span><span class="jp" lang="ja">境内は無料 · 早朝から</span></dd></div>
-              <div><dt><span class="ko">거리</span><span class="jp" lang="ja">距離</span></dt><dd><span class="ko">가마쿠라역에서 걸어서 10분</span><span class="jp" lang="ja">鎌倉駅から歩いて10分</span></dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%B6%B4%E5%B2%A1%E5%85%AB%E5%B9%A1%E5%AE%AE&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="food" data-geo="35.3203,139.5519">
-        <div class="t">11:10</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">점심 · 시라스동</span><span class="jp" lang="ja">昼食 · しらす丼</span></p>
-            <p class="nm"><span class="ko">가마쿠라 아키모토<span class="ja" lang="ja">鎌倉 秋本（小町通り）</span></span><span class="jp" lang="ja">鎌倉 秋本（小町通り）<span class="ja" lang="ko">가마쿠라 아키모토</span></span></p>
-            <p class="d"><span class="ko">가마쿠라 앞바다에서 그날 아침 잡은 잔멸치(시라스)를 밥 위에 듬뿍 올린 <b>생시라스동</b>과 가마쿠라 채소 튀김이 대표 메뉴. 고마치도리 입구 건물 3층이라 조용히 앉아 먹을 수 있습니다.</span><span class="jp" lang="ja">鎌倉の沖でその朝とれたしらすをご飯にたっぷりのせた<b>生しらす丼</b>と、鎌倉野菜の天ぷらが名物。小町通り入口のビルの3階なので、静かに座って食べられます。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">영업</span><span class="jp" lang="ja">営業</span></dt><dd class="num"><span class="ko">11:00–15:30 (마지막 주문 15:00) · 목요일 휴무</span><span class="jp" lang="ja">11:00–15:30（ラストオーダー 15:00）· 木曜定休</span></dd></div>
-              <div><dt><span class="ko">위치</span><span class="jp" lang="ja">場所</span></dt><dd><span class="ko">가마쿠라역 동쪽 출구 3분, i-ZA 가마쿠라 빌딩 3층</span><span class="jp" lang="ja">鎌倉駅東口から3分、i-ZA鎌倉ビル3階</span></dd></div>
-              <div><dt><span class="ko">예산</span><span class="jp" lang="ja">予算</span></dt><dd><span class="ko">1인 ¥2,000–3,000</span><span class="jp" lang="ja">1人 ¥2,000–3,000</span></dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>12시가 넘으면</b> 줄이 길어져서 11시 전후에 들어갑니다. 생시라스는 그날 조업이 없으면 없고, 그땐 삶은 시라스(가마아게)로 나옵니다. 자리가 없으면 역 앞 <b>고하치</b>(<span lang="ja">五八</span>, 연중무휴)로.</span><span class="jp" lang="ja"><b>12時を過ぎると</b>行列が長くなるので、11時前後に入ります。生しらすはその日に漁がなければなく、そのときは釜揚げしらすになります。席がなければ駅前の<b>五八</b>（年中無休）へ。</span></p>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%8E%8C%E5%80%89%20%E7%A7%8B%E6%9C%AC%20%E5%B0%8F%E7%94%BA%E9%80%9A%E3%82%8A&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">12:15</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">에노덴 → 하세</span><span class="jp" lang="ja">江ノ電 → 長谷</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln wide" style="--c:#2E7D5B">江ノ電</span> 가마쿠라 → 하세</span><span class="jp" lang="ja"><span class="ln wide" style="--c:#2E7D5B">江ノ電</span> 鎌倉 → 長谷</span></span><span class="arr">·</span><span class="num"><span class="ko">3정거장 · 약 5분</span><span class="jp" lang="ja">3駅 · 約5分</span></span></div>
-          <p class="d"><span class="ko">초록색 옛날 전차. 가마쿠라역 서쪽 끝의 에노덴 개찰구에서 Suica로 탑니다.</span><span class="jp" lang="ja">緑色のレトロな電車。鎌倉駅の西端にある江ノ電の改札からSuicaで乗ります。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.3167,139.5357">
-        <div class="t">12:30</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">높이 11m, 13세기에 만든 청동 불상</span><span class="jp" lang="ja">高さ11m、13世紀につくられた青銅の仏像</span></p>
-            <p class="nm"><span class="ko">가마쿠라 대불 (고토쿠인)<span class="ja" lang="ja">鎌倉大仏殿 高徳院</span></span><span class="jp" lang="ja">鎌倉大仏殿 高徳院<span class="ja" lang="ko">가마쿠라 대불 (고토쿠인)</span></span></p>
-            <p class="d"><span class="ko">하세역에서 걸어서 7분. 지붕 없이 바깥에 앉아 있는 대불로, 등 뒤로 돌아가면 몸 안에 들어가 볼 수도 있습니다 (¥50).</span><span class="jp" lang="ja">長谷駅から歩いて7分。屋根のない屋外に座る大仏で、背中側に回ると胎内に入ることもできます（¥50）。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">시간</span><span class="jp" lang="ja">時間</span></dt><dd class="num"><span class="ko">08:00–17:00 (10월)</span><span class="jp" lang="ja">08:00–17:00（10月）</span></dd></div>
-              <div><dt><span class="ko">입장</span><span class="jp" lang="ja">拝観料</span></dt><dd><span class="ko">1인 ¥300</span><span class="jp" lang="ja">1人 ¥300</span></dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%AB%98%E5%BE%B3%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="sight" data-geo="35.3126,139.5334">
-        <div class="t">13:20</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="nm"><span class="ko">하세데라<span class="ja" lang="ja">長谷寺</span></span><span class="jp" lang="ja">長谷寺<span class="ja" lang="ko">하세데라</span></span></p>
-            <p class="d"><span class="ko">대불에서 걸어서 5분. 일본 최대급 목조 관음상과 연못 정원이 있고, 언덕 위 전망대에서 가마쿠라 바다가 내려다보입니다. 계단이 있으니 천천히 오르세요.</span><span class="jp" lang="ja">大仏から歩いて5分。日本最大級の木造の観音像と池の庭園があり、丘の上の展望台から鎌倉の海を見下ろせます。階段があるので、ゆっくり上りましょう。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">시간</span><span class="jp" lang="ja">時間</span></dt><dd class="num"><span class="ko">08:00–16:30 (17:00 폐문)</span><span class="jp" lang="ja">08:00–16:30（17:00 閉門）</span></dd></div>
-              <div><dt><span class="ko">입장</span><span class="jp" lang="ja">拝観料</span></dt><dd><span class="ko">1인 ¥400</span><span class="jp" lang="ja">1人 ¥400</span></dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%95%B7%E8%B0%B7%E5%AF%BA%20%E9%8E%8C%E5%80%89&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.3066,139.5006">
-        <div class="t">14:40</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">에노덴 창밖이 바다로 바뀌는 구간</span><span class="jp" lang="ja">江ノ電の車窓が海に変わる区間</span></p>
-            <p class="nm"><span class="ko">가마쿠라코코마에 건널목 · 시치리가하마<span class="ja" lang="ja">鎌倉高校前駅 踏切</span></span><span class="jp" lang="ja">鎌倉高校前駅の踏切 · 七里ヶ浜<span class="ja" lang="ko">가마쿠라코코마에 건널목 · 시치리가하마</span></span></p>
-            <p class="d"><span class="ko">하세역에서 에노덴 4정거장(약 10분). 만화 슬램덩크 오프닝에 나온 그 건널목입니다. 건널목 너머로 바다와, 맑은 날엔 에노시마가 보입니다. 바닷바람 맞으며 해변을 잠깐 걸어도 좋습니다.</span><span class="jp" lang="ja">長谷駅から江ノ電で4駅（約10分）。漫画『スラムダンク』のオープニングに出てくるあの踏切です。踏切の向こうに海と、晴れた日には江の島が見えます。海風に吹かれながら浜辺を少し歩くのもおすすめです。</span></p>
-            <p class="tip"><span class="ko"><b>사진은 인도에서만.</b> 차도에 서서 찍는 관광객 때문에 주민과 차량이 불편을 겪습니다. 전차는 약 12분마다 옵니다.</span><span class="jp" lang="ja"><b>写真は歩道からだけ。</b>車道に立って撮る観光客のせいで、住民や車が迷惑しています。電車は約12分おきに来ます。</span></p>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">15:30</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">에노덴 → 후지사와 → JR로 신주쿠</span><span class="jp" lang="ja">江ノ電 → 藤沢 → JRで新宿</span></p>
-          <div class="rt">
-            <span class="seg"><span class="ko"><span class="ln wide" style="--c:#2E7D5B">江ノ電</span> 가마쿠라코코마에 → 후지사와 · 약 20분</span><span class="jp" lang="ja"><span class="ln wide" style="--c:#2E7D5B">江ノ電</span> 鎌倉高校前 → 藤沢 · 約20分</span></span><span class="arr">→</span>
-            <span class="seg"><span class="ko"><span class="ln jr wide">JR</span> 후지사와 → 신주쿠 · 약 55분</span><span class="jp" lang="ja"><span class="ln jr wide">JR</span> 藤沢 → 新宿 · 約55分</span></span>
-          </div>
-          <p class="d"><span class="ko">후지사와역에서 쇼난신주쿠라인(신주쿠 방면)을 탑니다. 돌아올 때도 그린샤를 타면 편합니다. 17시쯤 신주쿠 도착.</span><span class="jp" lang="ja">藤沢駅で湘南新宿ライン（新宿方面）に乗ります。帰りもグリーン車に乗ると楽です。17時ごろ新宿着。</span></p>
-          <p class="d"><span class="ko">체력이 남으면 에노덴으로 에노시마까지 10분 더 가서 섬을 둘러봐도 되지만, 걷는 양이 크게 늘어납니다.</span><span class="jp" lang="ja">体力が残っていれば、江ノ電でさらに10分の江の島まで行って島を回ってもいいですが、歩く量がかなり増えます。</span></p>
-          <div class="acts"><a class="btn" href="https://transit.yahoo.co.jp/diainfo/148/0" target="_blank" rel="noopener"><span class="ko">에노덴 운행정보</span><span class="jp" lang="ja">江ノ電 運行情報</span></a><a class="btn" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank" rel="noopener"><span class="ko">JR 운행정보</span><span class="jp" lang="ja">JR運行情報</span></a></div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="food" data-geo="35.6929,139.6995">
-        <div class="t">17:15</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">꼭 가고 싶은 곳 · 저녁</span><span class="jp" lang="ja">必ず行きたい場所 · 夕食</span></p>
-            <p class="nm"><span class="ko">오모이데요코초<span class="ja" lang="ja">思い出横丁（新宿西口）</span></span><span class="jp" lang="ja">思い出横丁（新宿西口）<span class="ja" lang="ko">오모이데요코초</span></span></p>
-            <p class="d"><span class="ko">신주쿠역 서쪽 출구 바로 옆, 1940년대부터 이어진 좁은 골목에 꼬치구이집 60여 곳이 붙어 있습니다. 한 바퀴 둘러보고 <b>세 자리가 비어 있는 집</b>에 들어가는 게 요령입니다.</span><span class="jp" lang="ja">新宿駅西口のすぐ横、1940年代から続く細い路地に串焼きの店が60軒あまり並びます。ひと回りしてみて、<b>3席空いている店</b>に入るのがコツです。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">추천</span><span class="jp" lang="ja">おすすめ</span></dt><dd><span class="ko"><b>카부토</b>(<span lang="ja">カブト</span>) — 1948년 창업, 장어 여러 부위를 꼬치로 내는 세트</span><span class="jp" lang="ja"><b>カブト</b> — 1948年創業、うなぎのいろいろな部位を串焼きで出すセット</span></dd></div>
-              <div><dt></dt><dd><span class="ko"><b>기후야</b>(<span lang="ja">岐阜屋</span>) — 1947년 창업 중화요리. 볶음밥과 목이버섯 달걀볶음이 싸고 맛있습니다</span><span class="jp" lang="ja"><b>岐阜屋</b> — 1947年創業の中華。チャーハンときくらげと卵の炒め物が安くておいしい</span></dd></div>
-              <div><dt><span class="ko">예산</span><span class="jp" lang="ja">予算</span></dt><dd><span class="ko">1인 ¥3,000–5,000</span><span class="jp" lang="ja">1人 ¥3,000–5,000</span></dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>알아둘 것:</b> 가게가 대부분 5~10석이라 좁고, 현금만 받는 곳이 많습니다. 자릿세 겸 기본 안주(오토시, ¥300~500)가 붙고 1인 1음료가 기본입니다. 담배 연기가 있을 수 있어요.</span><span class="jp" lang="ja"><b>知っておきたいこと：</b>ほとんどの店が5〜10席と狭く、現金のみの店が多いです。席料を兼ねたお通し（¥300〜500）が付き、1人1ドリンクが基本です。たばこの煙がある場合もあります。</span></p>
-            <div class="acts">
-              <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%80%9D%E3%81%84%E5%87%BA%E6%A8%AA%E4%B8%81&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a>
-              <a class="btn" href="https://kr.shinjuku-omoide.com/map" target="_blank" rel="noopener"><span class="ko">골목 지도 (한국어)</span><span class="jp" lang="ja">横丁マップ（韓国語）</span></a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move" data-geo="35.6885,139.7115">
-        <div class="t">19:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">숙소로</span><span class="jp" lang="ja">宿へ</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln m">M</span> 신주쿠 → 신주쿠교엔마에 · 2정거장</span><span class="jp" lang="ja"><span class="ln m">M</span> 新宿 → 新宿御苑前 · 2駅</span></span><span class="arr"><span class="ko">또는</span><span class="jp" lang="ja">または</span></span><span class="seg"><span class="ko"><span class="ln tx wide">TAXI</span> 약 10분</span><span class="jp" lang="ja"><span class="ln tx wide">TAXI</span> 約10分</span></span></div>
-          <div class="acts"><button class="btn show" type="button" data-show="home"><span class="ko">숙소 주소 보여주기</span><span class="jp" lang="ja">宿の住所を見せる</span></button><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">숙소 길찾기</span><span class="jp" lang="ja">宿へのルート</span></a></div>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ══════════ DAY 3 ══════════ -->
-  <section id="d3" class="day" data-date="2026-10-03">
-    <div class="dayhead">
-      <div class="row"><span class="dn">DAY 3</span><span class="dd">10.03 SAT</span></div>
-      <p class="kj" lang="ja">原宿 · 渋谷</p>
-      <h2><span class="ko">숲길, 그릇 쇼핑, 시부야 해 질 녘</span><span class="jp" lang="ja">森の道、器の買い物、渋谷の夕暮れ</span></h2>
-      <p class="sub"><span class="ko">아침엔 메이지신궁 숲을 걷고, 오후엔 에비스의 그릇 가게 두 곳을 들른 뒤, 해 질 녘 시부야 46층 옥상에서 도쿄를 내려다봅니다.</span><span class="jp" lang="ja">朝は明治神宮の森を歩き、午後は恵比寿の器の店2軒に寄ってから、夕暮れどきに渋谷46階の屋上から東京を見下ろします。</span></p>
-      <div class="meta">
-        <span class="num">08:30 → 20:00</span>
-        <span><span class="ko"><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>걷기 많음 · 약 1.2만 보</span><span class="jp" lang="ja"><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>歩き 多め · 約1.2万歩</span></span>
-        <span class="wx" hidden></span>
-        <span class="pass"><span class="ko">교통 48시간 패스 시작 · JR만 Suica</span><span class="jp" lang="ja">交通 48時間パス開始 · JRだけSuica</span></span>
-        <span class="bookreq"><span class="ko">시부야 스카이 예매 필수</span><span class="jp" lang="ja">SHIBUYA SKY 予約必須</span></span>
-      </div>
-      <a class="rainhint" href="#rain-d3" hidden><span aria-hidden="true">☔</span><span><span class="ko"><b>비 예보</b> · 비 오는 날 이렇게 바꾸세요 →</span><span class="jp" lang="ja"><b>雨の予報</b> · 雨の日はこう変えましょう →</span></span></a>
-      <div class="dayacts"><a class="btn" href="https://www.google.com/maps/dir/%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE/%E3%81%BE%E3%81%84%E6%B3%89%20%E9%9D%92%E5%B1%B1%E6%9C%AC%E5%BA%97/THE%20HARVEST%20KITCHEN%20GENERAL%20STORE%20%E6%81%B5%E6%AF%94%E5%AF%BF/EAST%20table%20%E6%81%B5%E6%AF%94%E5%AF%BF%E5%BA%97/%E6%B8%8B%E8%B0%B7%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%AB%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2/%E7%BE%8E%E7%99%BB%E5%88%A9%E5%AF%BF%E5%8F%B8%20%E6%B8%8B%E8%B0%B7%E5%BA%97" target="_blank" rel="noopener"><span class="ko">구글 지도에서 하루 동선 보기</span><span class="jp" lang="ja">Googleマップで1日のルートを見る</span></a></div>
-    </div>
-
-    <ol class="stops">
-      <li class="stop" data-kind="move">
-        <div class="t">08:30</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">숙소 → 메이지신궁</span><span class="jp" lang="ja">宿 → 明治神宮</span></p>
-          <div class="rt">
-            <span class="seg"><span class="ko"><span class="ln wk wide">도보 8분</span> 신주쿠산초메</span><span class="jp" lang="ja"><span class="ln wk wide">徒歩8分</span> 新宿三丁目</span></span><span class="arr">→</span>
-            <span class="seg"><span class="ko"><span class="ln f">F</span> → 메이지진구마에〈하라주쿠〉</span><span class="jp" lang="ja"><span class="ln f">F</span> → 明治神宮前〈原宿〉</span></span><span class="arr">·</span><span class="num"><span class="ko">2정거장</span><span class="jp" lang="ja">2駅</span></span>
-          </div>
-          <p class="d"><span class="ko">오늘부터 48시간 지하철 패스를 씁니다. 발을 아끼려면 택시도 좋습니다 (약 10분 · ¥1,500 안팎).</span><span class="jp" lang="ja">今日から48時間の地下鉄パスを使います。足を休めたいならタクシーもおすすめです（約10分 · ¥1,500前後）。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.6764,139.6993">
-        <div class="t">09:00</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">도심 한가운데 숲</span><span class="jp" lang="ja">都心のまん中の森</span></p>
-            <p class="nm"><span class="ko">메이지신궁<span class="ja" lang="ja">明治神宮</span></span><span class="jp" lang="ja">明治神宮<span class="ja" lang="ko">메이지신궁</span></span></p>
-            <p class="d"><span class="ko">하라주쿠 쪽 입구의 큰 나무 도리이를 지나 숲길을 10분 걸으면 본전입니다. 참배는 <b>두 번 절, 두 번 박수, 한 번 절</b>. 토요일 오전엔 전통 혼례 행렬을 자주 볼 수 있습니다.</span><span class="jp" lang="ja">原宿側の入口の大きな木の鳥居をくぐり、森の道を10分歩くと本殿です。参拝は<b>二礼二拍手一礼</b>。土曜日の午前は、伝統的な婚礼の行列をよく見かけます。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">시간</span><span class="jp" lang="ja">時間</span></dt><dd><span class="ko">해 뜰 때부터 해 질 때까지 · 무료</span><span class="jp" lang="ja">日の出から日の入りまで · 無料</span></dd></div>
-              <div><dt><span class="ko">길</span><span class="jp" lang="ja">道</span></dt><dd><span class="ko">굵은 자갈길이라 편한 운동화로</span><span class="jp" lang="ja">大粒の砂利道なので歩きやすい運動靴で</span></dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="sight">
-        <div class="t">10:30</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">하라주쿠 → 오모테산도 산책<span class="ja" lang="ja">表参道</span></span><span class="jp" lang="ja">原宿 → 表参道を散歩<span class="ja" lang="ko">오모테산도</span></span></p>
-          <p class="d"><span class="ko">다케시타도리는 입구에서 분위기만 보고, 느티나무 가로수가 이어지는 오모테산도 큰길을 천천히 걷습니다. 다리가 아프면 하라주쿠역 앞 도큐플라자 '오모카도' 옥상 테라스(무료)에서 쉬어 가세요.</span><span class="jp" lang="ja">竹下通りは入口で雰囲気だけ見て、ケヤキ並木の続く表参道の大通りをゆっくり歩きます。足が疲れたら、原宿駅前の東急プラザ「オモカド」の屋上テラス（無料）でひと休みしましょう。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="food" data-geo="35.6677,139.7094">
-        <div class="t">11:30</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">점심 · 돈카츠</span><span class="jp" lang="ja">昼食 · とんかつ</span></p>
-            <p class="nm"><span class="ko">마이센 아오야마 본점<span class="ja" lang="ja">とんかつ まい泉 青山本店</span></span><span class="jp" lang="ja">とんかつ まい泉 青山本店<span class="ja" lang="ko">마이센 아오야마 본점</span></span></p>
-            <p class="d"><span class="ko">옛 대중목욕탕 건물을 고쳐 만든 돈카츠 본점. 젓가락으로 잘릴 만큼 부드럽습니다. 자리가 200석이라 주말에 20~40분 줄이 있어도 금방 빠집니다.</span><span class="jp" lang="ja">昔の銭湯の建物を改装した、とんかつの本店。箸で切れるほどやわらかいです。200席あるので、週末に20〜40分の行列があってもすぐに進みます。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">영업</span><span class="jp" lang="ja">営業</span></dt><dd class="num"><span class="ko">11:00 오픈</span><span class="jp" lang="ja">11:00 開店</span></dd></div>
-              <div><dt><span class="ko">위치</span><span class="jp" lang="ja">場所</span></dt><dd><span class="ko">오모테산도역 A2 출구 3분</span><span class="jp" lang="ja">表参道駅 A2出口から3分</span></dd></div>
-              <div><dt><span class="ko">예산</span><span class="jp" lang="ja">予算</span></dt><dd><span class="ko">정식 1인 ¥2,500–4,000</span><span class="jp" lang="ja">定食 1人 ¥2,500–4,000</span></dd></div>
-              <div><dt><span class="ko">주소</span><span class="jp" lang="ja">住所</span></dt><dd lang="ja">渋谷区神宮前4-8-5</dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%81%BE%E3%81%84%E6%B3%89%20%E9%9D%92%E5%B1%B1%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">13:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">오모테산도 → 에비스</span><span class="jp" lang="ja">表参道 → 恵比寿</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln tx wide">TAXI</span> 약 10분 · ¥1,500–2,000</span><span class="jp" lang="ja"><span class="ln tx wide">TAXI</span> 約10分 · ¥1,500–2,000</span></span><span class="arr"><span class="ko">또는</span><span class="jp" lang="ja">または</span></span><span class="seg"><span class="ko"><span class="ln g">G</span> → 시부야 <span class="ln jr wide">JR</span> → 에비스</span><span class="jp" lang="ja"><span class="ln g">G</span> → 渋谷 <span class="ln jr wide">JR</span> → 恵比寿</span></span></div>
-          <p class="d"><span class="ko">3명이면 택시가 간단합니다. 전철로 가면 시부야에서 JR 야마노테선으로 한 정거장 (JR은 Suica).</span><span class="jp" lang="ja">3人ならタクシーが簡単です。電車なら渋谷からJR山手線で1駅（JRはSuica）。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.6462,139.7100">
-        <div class="t">13:20</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">꼭 가고 싶은 곳 · 그릇 쇼핑</span><span class="jp" lang="ja">必ず行きたい場所 · 器の買い物</span></p>
-            <p class="nm"><span class="ko">에비스 그릇 가게 두 곳<span class="ja" lang="ja">THE HARVEST KITCHEN GENERAL STORE · EAST table 恵比寿店</span></span><span class="jp" lang="ja">THE HARVEST KITCHEN GENERAL STORE · EAST table 恵比寿店<span class="ja" lang="ko">에비스 그릇 가게 두 곳</span></span></p>
-            <p class="d"><span class="ko">에비스역을 사이에 두고 걸어서 5~7분 거리라 둘 다 들르면 됩니다. <b>THE HARVEST</b>는 색감 고운 일본 그릇과 주방 소품 셀렉트숍, <b>EAST table</b>은 일본 최대 도자기 산지 기후현 도키의 미노야키를 싸게 파는 가게(1만 종 이상)입니다.</span><span class="jp" lang="ja">恵比寿駅をはさんで歩いて5〜7分の距離なので、両方寄れます。<b>THE HARVEST</b>は色のきれいな和食器とキッチン雑貨のセレクトショップ、<b>EAST table</b>は日本一の陶磁器産地・岐阜県土岐の美濃焼を手頃な値段で売る店（1万種類以上）です。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">영업</span><span class="jp" lang="ja">営業</span></dt><dd><span class="ko">THE HARVEST <span class="num">11:00–19:00</span> · EAST table <span class="num">11:00–20:00</span> (연중무휴)</span><span class="jp" lang="ja">THE HARVEST <span class="num">11:00–19:00</span> · EAST table <span class="num">11:00–20:00</span>（年中無休）</span></dd></div>
-              <div><dt><span class="ko">주소</span><span class="jp" lang="ja">住所</span></dt><dd><span class="ko">THE HARVEST <span lang="ja">恵比寿南1-18-9</span> (역 서쪽) · EAST table <span lang="ja">恵比寿1-7-13</span> (역 동쪽 3분)</span><span class="jp" lang="ja">THE HARVEST 恵比寿南1-18-9（駅の西側）· EAST table 恵比寿1-7-13（駅の東側 3分）</span></dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>그릇은 깨지기 쉬우니</b> 옷으로 감싸 기내 가방에 넣으세요 (기내 10kg). 한 가게에서 ¥5,000 이상이면 여권으로 면세됩니다. 시간이 모자라면 시부야 스크램블스퀘어 지하 2층의 EAST table 협업 매장도 있습니다.</span><span class="jp" lang="ja"><b>器は割れやすいので</b>服で包んで機内持ち込みの荷物に入れましょう（機内10kg）。1店舗で¥5,000以上ならパスポートで免税になります。時間が足りなければ、渋谷スクランブルスクエア地下2階のEAST tableコラボ店もあります。</span></p>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=THE%20HARVEST%20KITCHEN%20GENERAL%20STORE%20%E6%81%B5%E6%AF%94%E5%AF%BF&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">HARVEST 길찾기</span><span class="jp" lang="ja">HARVESTへのルート</span></a><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=EAST%20table%20%E6%81%B5%E6%AF%94%E5%AF%BF%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">EAST table 길찾기</span><span class="jp" lang="ja">EAST tableへのルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">15:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">에비스 → 시부야</span><span class="jp" lang="ja">恵比寿 → 渋谷</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln jr wide">JR</span> 야마노테선 1정거장 · 2분</span><span class="jp" lang="ja"><span class="ln jr wide">JR</span> 山手線で1駅 · 2分</span></span><span class="arr"><span class="ko">또는</span><span class="jp" lang="ja">または</span></span><span class="seg"><span class="ko"><span class="ln tx wide">TAXI</span> 약 10분</span><span class="jp" lang="ja"><span class="ln tx wide">TAXI</span> 約10分</span></span></div>
-        </div>
-      </li>
-      <li class="stop" data-kind="sight" data-geo="35.6595,139.7005">
-        <div class="t">15:10</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">스크램블 교차로 · 쇼핑<span class="ja" lang="ja">渋谷スクランブル交差点</span></span><span class="jp" lang="ja">スクランブル交差点 · 買い物<span class="ja" lang="ko">스크램블 교차로</span></span></p>
-          <p class="d"><span class="ko">하치코 동상 앞에서 사진 → 교차로를 한 번 건너 보기. 둘러볼 곳: 시부야 스크램블스퀘어, 도큐 푸드쇼(지하 식품관), 로프트, 돈키호테.</span><span class="jp" lang="ja">ハチ公像の前で写真 → 交差点を一度渡ってみる。見どころ：渋谷スクランブルスクエア、東急フードショー（地下の食品館）、ロフト、ドン・キホーテ。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.6585,139.7022">
-        <div class="t">16:40</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">오늘의 하이라이트 · 예매 필수</span><span class="jp" lang="ja">今日のハイライト · 予約必須</span></p>
-            <p class="nm">SHIBUYA SKY<span class="ja" lang="ja">渋谷スクランブルスクエア 14階 入口</span></p>
-            <p class="d"><span class="ko">14층에서 입장해 46층 옥상으로 올라갑니다. 해가 <b>17:22 무렵</b> 지고, 30분쯤 지나면 도시 불이 켜집니다. 둘 다 보고 내려오세요. 날이 맑으면 서쪽으로 후지산 윤곽이 보입니다.</span><span class="jp" lang="ja">14階から入場し、46階の屋上へ上がります。日の入りは<b>17:22ごろ</b>、30分ほどで街の明かりがともります。両方見てから下りましょう。晴れていれば西の方角に富士山のシルエットが見えます。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">요금</span><span class="jp" lang="ja">料金</span></dt><dd><span class="ko">1인 ¥3,400~3,700 (15시 이후 · 온라인이 조금 쌉니다)</span><span class="jp" lang="ja">1人 ¥3,400〜3,700（15時以降 · オンラインが少し安い）</span></dd></div>
-              <div><dt><span class="ko">규칙</span><span class="jp" lang="ja">ルール</span></dt><dd><span class="ko">옥상엔 모자·가방 반입 불가 → 무료 사물함</span><span class="jp" lang="ja">屋上は帽子・かばんの持ち込み不可 → 無料ロッカー</span></dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>바람이 세거나 비가 오면</b> 옥상이 닫히고 실내 전망층만 열립니다.</span><span class="jp" lang="ja"><b>風が強い日や雨の日は</b>屋上が閉まり、屋内の展望フロアだけが開きます。</span></p>
-            <p class="tip"><span class="ko"><b>표를 못 구했으면</b> 당일 14층 매표소에서 남은 시간대를 확인하세요. 무료로 보려면 역 건너편 <b>시부야 히카리에 11층</b>이나 <b>미야시타 파크 옥상 공원</b>도 있습니다.</span><span class="jp" lang="ja"><b>チケットが取れなかったら</b>、当日14階のチケットカウンターで残りの時間帯を確認しましょう。無料で眺めるなら、駅の向かいの<b>渋谷ヒカリエ11階</b>や<b>MIYASHITA PARKの屋上公園</b>もあります。</span></p>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%B8%8B%E8%B0%B7%E3%82%B9%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%96%E3%83%AB%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a><a class="btn" href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank" rel="noopener"><span class="ko">공식 예매</span><span class="jp" lang="ja">公式サイトで予約</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="food" data-geo="35.6583,139.6992">
-        <div class="t">18:20</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">저녁 · 초밥</span><span class="jp" lang="ja">夕食 · 寿司</span></p>
-            <p class="nm"><span class="ko">우메가오카 스시노미도리 시부야점<span class="ja" lang="ja">梅丘寿司の美登利総本店 渋谷店</span></span><span class="jp" lang="ja">梅丘寿司の美登利総本店 渋谷店<span class="ja" lang="ko">스시노미도리 시부야점</span></span></p>
-            <p class="d"><span class="ko">값에 비해 크고 신선한 초밥으로 유명한 집. 시부야역 마크시티 이스트 4층이라 스카이에서 내려와 바로 갈 수 있습니다. 모둠 세트를 3개 시키고 먹고 싶은 걸 한두 개 추가하세요.</span><span class="jp" lang="ja">値段のわりに大きくて新鮮な寿司で有名な店。渋谷マークシティ イースト4階なので、SHIBUYA SKYから下りてすぐ行けます。盛り合わせを3つ頼んで、食べたいものを1〜2貫追加しましょう。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">영업</span><span class="jp" lang="ja">営業</span></dt><dd class="num"><span class="ko">토 11:00–21:00 (마지막 주문 20:30)</span><span class="jp" lang="ja">土 11:00–21:00（ラストオーダー 20:30）</span></dd></div>
-              <div><dt><span class="ko">대기</span><span class="jp" lang="ja">待ち時間</span></dt><dd><span class="ko">입구 번호표 기계 · 클룩 좌석 예약 가능</span><span class="jp" lang="ja">入口の整理券機 · Klookで席の予約可</span></dd></div>
-              <div><dt><span class="ko">예산</span><span class="jp" lang="ja">予算</span></dt><dd><span class="ko">1인 ¥3,000–4,500</span><span class="jp" lang="ja">1人 ¥3,000–4,500</span></dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E7%BE%8E%E7%99%BB%E5%88%A9%E5%AF%BF%E5%8F%B8%20%E6%B8%8B%E8%B0%B7%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move" data-geo="35.6885,139.7115">
-        <div class="t">19:45</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">숙소로</span><span class="jp" lang="ja">宿へ</span></p>
-          <div class="rt">
-            <span class="seg"><span class="ko"><span class="ln f">F</span> 시부야 → 신주쿠산초메</span><span class="jp" lang="ja"><span class="ln f">F</span> 渋谷 → 新宿三丁目</span></span><span class="arr">→</span>
-            <span class="seg"><span class="ln wk wide"><span class="ko">도보 8분</span><span class="jp" lang="ja">徒歩8分</span></span></span><span class="arr">·</span><span class="num"><span class="ko">약 20분</span><span class="jp" lang="ja">約20分</span></span>
-          </div>
-          <p class="d"><span class="ko">많이 걸은 날이니 택시도 좋습니다 (약 20분 · ¥2,500–3,000).</span><span class="jp" lang="ja">たくさん歩いた日なので、タクシーもおすすめです（約20分 · ¥2,500–3,000）。</span></p>
-          <div class="acts"><button class="btn show" type="button" data-show="home"><span class="ko">숙소 주소 보여주기</span><span class="jp" lang="ja">宿の住所を見せる</span></button><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">숙소 길찾기</span><span class="jp" lang="ja">宿へのルート</span></a></div>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ══════════ DAY 4 ══════════ -->
-  <section id="d4" class="day" data-date="2026-10-04">
-    <div class="dayhead">
-      <div class="row"><span class="dn">DAY 4</span><span class="dd">10.04 SUN</span></div>
-      <p class="kj" lang="ja">浅草 · 銀座</p>
-      <h2><span class="ko">아사쿠사와 긴자, 53층에서 장어로 마지막 밤</span><span class="jp" lang="ja">浅草と銀座、53階のうなぎで最後の夜</span></h2>
-      <p class="sub"><span class="ko">센소지와 스키야키로 옛 도쿄를 보고, 차가 다니지 않는 일요일 긴자를 걷고, 해 질 녘 53층 창가에서 나고야식 장어덮밥으로 마지막 저녁을 먹습니다.</span><span class="jp" lang="ja">浅草寺とすき焼きで昔の東京を味わい、車の通らない日曜日の銀座を歩き、夕暮れどきに53階の窓辺で名古屋名物のうなぎで最後の夕食をとります。</span></p>
-      <div class="meta">
-        <span class="num">09:00 → 19:00</span>
-        <span><span class="ko"><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>걷기 보통 · 약 1만 보</span><span class="jp" lang="ja"><span class="walk" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>歩き ふつう · 約1万歩</span></span>
-        <span class="wx" hidden></span>
-        <span class="pass"><span class="ko">교통 48시간 패스 · 게이오선만 Suica</span><span class="jp" lang="ja">交通 48時間パス · 京王線だけSuica</span></span>
-        <span class="bookreq"><span class="ko">우나후지 예약 필수</span><span class="jp" lang="ja">うな富士 予約必須</span></span>
-      </div>
-      <a class="rainhint" href="#rain-d4" hidden><span aria-hidden="true">☔</span><span><span class="ko"><b>비 예보</b> · 비 오는 날 이렇게 바꾸세요 →</span><span class="jp" lang="ja"><b>雨の予報</b> · 雨の日はこう変えましょう →</span></span></a>
-      <div class="dayacts"><a class="btn" href="https://www.google.com/maps/dir/%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91/%E6%B5%85%E8%8D%89%E5%AF%BA/%E6%B5%85%E8%8D%89%E4%BB%8A%E5%8D%8A%20%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E6%9C%AC%E5%BA%97/%E9%8A%80%E5%BA%A7%E5%9B%9B%E4%B8%81%E7%9B%AE%E4%BA%A4%E5%B7%AE%E7%82%B9/%E6%9D%B1%E4%BA%AC%E3%82%AA%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%86%E3%82%A3" target="_blank" rel="noopener"><span class="ko">구글 지도에서 하루 동선 보기</span><span class="jp" lang="ja">Googleマップで1日のルートを見る</span></a></div>
-    </div>
-
-    <ol class="stops">
-      <li class="stop" data-kind="sight" data-geo="35.6852,139.7100">
-        <div class="t">09:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">신주쿠교엔 아침 산책 <span style="font-weight:600;color:var(--muted)">(선택)</span><span class="ja" lang="ja">新宿御苑</span></span><span class="jp" lang="ja">新宿御苑で朝の散歩 <span style="font-weight:600;color:var(--muted)">（任意）</span></span></p>
-          <p class="d"><span class="ko">숙소에서 걸어서 5분. 연못이 있는 일본 정원과 넓은 잔디밭을 50분쯤 걷고 10시에 나옵니다. 09:00 개원, 1인 ¥500 (교통카드·신용카드 가능). 쉬고 싶으면 건너뛰고 10시에 바로 출발하세요.</span><span class="jp" lang="ja">宿から歩いて5分。池のある日本庭園と広い芝生を50分ほど歩いて10時に出ます。09:00開園、1人¥500（交通系IC・クレジットカード可）。休みたければ飛ばして10時にそのまま出発しましょう。</span></p>
-          <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%AE%BF%E5%BE%A1%E8%8B%91&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">10:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">숙소 → 아사쿠사</span><span class="jp" lang="ja">宿 → 浅草</span></p>
-          <div class="rt">
-            <span class="seg"><span class="ko"><span class="ln m">M</span> 신주쿠교엔마에 → 아카사카미츠케</span><span class="jp" lang="ja"><span class="ln m">M</span> 新宿御苑前 → 赤坂見附</span></span><span class="arr">→</span>
-            <span class="seg"><span class="ko"><span class="ln g">G</span> → 아사쿠사</span><span class="jp" lang="ja"><span class="ln g">G</span> → 浅草</span></span><span class="arr">·</span><span class="num"><span class="ko">약 35분</span><span class="jp" lang="ja">約35分</span></span>
-          </div>
-          <p class="d"><span class="ko">아카사카미츠케역에서는 같은 층 건너편에 긴자선(아사쿠사 방면)이 섭니다.</span><span class="jp" lang="ja">赤坂見附駅では、同じホームの向かい側に銀座線（浅草方面）が来ます。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.7148,139.7967">
-        <div class="t">10:40</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">도쿄에서 가장 오래된 절</span><span class="jp" lang="ja">東京でいちばん古いお寺</span></p>
-            <p class="nm"><span class="ko">센소지 · 나카미세<span class="ja" lang="ja">浅草寺 · 雷門 · 仲見世通り</span></span><span class="jp" lang="ja">浅草寺 · 雷門 · 仲見世通り<span class="ja" lang="ko">센소지 · 나카미세</span></span></p>
-            <p class="d"><span class="ko">커다란 붉은 등의 <b>가미나리몬</b> → 기념품 가게가 늘어선 <b>나카미세</b> 250m → 호조몬 → 본당. 본당 옆에서 <b>오미쿠지</b>(운세 종이, ¥100)를 뽑아 보세요. 흉(凶)이 나오면 옆 줄에 묶어 두고 가면 됩니다.</span><span class="jp" lang="ja">大きな赤い提灯の<b>雷門</b> → おみやげ店が並ぶ<b>仲見世</b>250m → 宝蔵門 → 本堂。本堂の横で<b>おみくじ</b>（¥100）を引いてみましょう。凶が出たら、横の棚に結んでいけば大丈夫です。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">본당</span><span class="jp" lang="ja">本堂</span></dt><dd class="num"><span class="ko">06:30–17:00 (10–3월) · 경내 무료</span><span class="jp" lang="ja">06:30–17:00（10–3月）· 境内は無料</span></dd></div>
-              <div><dt><span class="ko">간식</span><span class="jp" lang="ja">おやつ</span></dt><dd><span class="ko">아사쿠사 카게츠도 멜론빵 <span lang="ja">浅草花月堂</span></span><span class="jp" lang="ja">浅草花月堂のメロンパン</span></dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>일요일이라</b> 나카미세가 무척 붐빕니다. 가방은 앞으로 메고, 일행이 흩어지면 본당 앞 큰 향로에서 만나기로 정해 두세요.</span><span class="jp" lang="ja"><b>日曜日なので</b>仲見世がとても混みます。かばんは前に抱え、はぐれたら本堂前の大きな香炉で待ち合わせると決めておきましょう。</span></p>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%B5%85%E8%8D%89%E5%AF%BA&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="food" data-geo="35.7132,139.7905">
-        <div class="t">11:45</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">점심 · 스키야키</span><span class="jp" lang="ja">昼食 · すき焼き</span></p>
-            <p class="nm"><span class="ko">아사쿠사 이마한 국제거리 본점<span class="ja" lang="ja">浅草今半 国際通り本店</span></span><span class="jp" lang="ja">浅草今半 国際通り本店<span class="ja" lang="ko">아사쿠사 이마한 국제거리 본점</span></span></p>
-            <p class="d"><span class="ko">1895년 창업한 스키야키 집. 점원이 옆에서 와규를 한 장씩 구워 날달걀에 찍어 줍니다. 조용한 방에 앉아 먹는, 부모님과 가장 편한 한 끼입니다. 센소지에서 걸어서 약 10분.</span><span class="jp" lang="ja">1895年創業のすき焼き店。仲居さんがそばで和牛を1枚ずつ焼いて、溶き卵につけてくれます。静かな座敷で座って食べる、両親といちばんくつろげる食事です。浅草寺から歩いて約10分。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">점심</span><span class="jp" lang="ja">昼食</span></dt><dd class="num">11:30–14:30</dd></div>
-              <div><dt><span class="ko">예산</span><span class="jp" lang="ja">予算</span></dt><dd><span class="ko">점심 세트 1인 ¥4,000대부터</span><span class="jp" lang="ja">昼のセット 1人 ¥4,000台から</span></dd></div>
-              <div><dt><span class="ko">예약</span><span class="jp" lang="ja">予約</span></dt><dd><span class="ko"><a class="num" href="tel:+81338411114">03-3841-1114</a> · 클룩</span><span class="jp" lang="ja"><a class="num" href="tel:+81338411114">03-3841-1114</a> · Klook</span></dd></div>
-              <div><dt><span class="ko">주소</span><span class="jp" lang="ja">住所</span></dt><dd lang="ja">台東区西浅草3-1-12</dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%B5%85%E8%8D%89%E4%BB%8A%E5%8D%8A%20%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E6%9C%AC%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">13:15</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">아사쿠사 → 긴자</span><span class="jp" lang="ja">浅草 → 銀座</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln g">G</span> 타와라마치 → 긴자</span><span class="jp" lang="ja"><span class="ln g">G</span> 田原町 → 銀座</span></span><span class="arr">·</span><span class="num"><span class="ko">환승 없이 약 20분</span><span class="jp" lang="ja">乗り換えなしで約20分</span></span></div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="sight" data-geo="35.6717,139.7650">
-        <div class="t">13:40</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">주말에만 · 차 없는 거리</span><span class="jp" lang="ja">週末だけ · 車の通らない道</span></p>
-            <p class="nm"><span class="ko">긴자 보행자천국<span class="ja" lang="ja">銀座 歩行者天国（中央通り）</span></span><span class="jp" lang="ja">銀座 歩行者天国（中央通り）<span class="ja" lang="ko">긴자 보행자천국</span></span></p>
-            <p class="d"><span class="ko">주오도리 한가운데를 걷고, 길 위에 놓인 파라솔 의자에서 쉬어 갑니다. 들를 곳:</span><span class="jp" lang="ja">中央通りのまん中を歩き、道に置かれたパラソル付きの椅子でひと休みします。立ち寄り先：</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">빵</span><span class="jp" lang="ja">パン</span></dt><dd><span class="ko">긴자 기무라야 — 1869년 창업, 단팥빵의 원조 <span lang="ja">銀座木村家</span></span><span class="jp" lang="ja">銀座木村家 — 1869年創業、あんぱん発祥の店</span></dd></div>
-              <div><dt><span class="ko">문구</span><span class="jp" lang="ja">文具</span></dt><dd><span class="ko">이토야 — 12층 전체가 문구 <span lang="ja">銀座 伊東屋</span></span><span class="jp" lang="ja">銀座 伊東屋 — 12フロアすべてが文房具</span></dd></div>
-              <div><dt><span class="ko">쇼핑</span><span class="jp" lang="ja">買い物</span></dt><dd><span class="ko">긴자 식스(옥상정원 무료), 미츠코시 지하 식품관, 유니클로 긴자</span><span class="jp" lang="ja">GINZA SIX（屋上庭園は無料）、三越の地下食品館、ユニクロ銀座</span></dd></div>
-              <div><dt><span class="ko">시간</span><span class="jp" lang="ja">時間</span></dt><dd class="num"><span class="ko">토·일 12:00–17:00 (10–3월) · 비 오면 취소</span><span class="jp" lang="ja">土・日 12:00–17:00（10–3月）· 雨天中止</span></dd></div>
-            </dl>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E9%8A%80%E5%BA%A7%E5%9B%9B%E4%B8%81%E7%9B%AE%E4%BA%A4%E5%B7%AE%E7%82%B9&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">16:15</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">긴자 → 도쿄 오페라시티</span><span class="jp" lang="ja">銀座 → 東京オペラシティ</span></p>
-          <div class="rt">
-            <span class="seg"><span class="ko"><span class="ln m">M</span> 긴자 → 신주쿠 · 환승 없이 16분</span><span class="jp" lang="ja"><span class="ln m">M</span> 銀座 → 新宿 · 乗り換えなしで16分</span></span><span class="arr">→</span>
-            <span class="seg"><span class="ko"><span class="ln wide" style="--c:#DD0077">京王新線</span> 신주쿠 → 하쓰다이 · 1정거장</span><span class="jp" lang="ja"><span class="ln wide" style="--c:#DD0077">京王新線</span> 新宿 → 初台 · 1駅</span></span>
-          </div>
-          <p class="d"><span class="ko">하쓰다이역이 오페라시티와 지하로 바로 이어집니다. 게이오신선은 지하철 패스가 안 되니 Suica로 (¥140 안팎). 신주쿠역 서쪽에서 택시로 가도 8분입니다.</span><span class="jp" lang="ja">初台駅はオペラシティと地下で直結しています。京王新線は地下鉄パスが使えないのでSuicaで（¥140前後）。新宿駅西口からタクシーでも8分です。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="food" data-geo="35.6834,139.6868">
-        <div class="t">17:00</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="kicker"><span class="ko">꼭 가고 싶은 곳 · 마지막 저녁</span><span class="jp" lang="ja">必ず行きたい場所 · 最後の夕食</span></p>
-            <p class="nm"><span class="ko">우나후지 도쿄 오페라시티점<span class="ja" lang="ja">炭焼 うな富士 東京オペラシティ店（53階）</span></span><span class="jp" lang="ja">炭焼 うな富士 東京オペラシティ店（53階）<span class="ja" lang="ko">우나후지 도쿄 오페라시티점</span></span></p>
-            <p class="d"><span class="ko">나고야 장어집의 도쿄 지점. 큼직한 장어를 숯불에 겉은 바삭, 속은 부드럽게 굽습니다. 대표 메뉴 <b>히츠마부시</b>는 네 번에 나눠 먹습니다: 그대로 → 파·김·와사비를 얹어 → 육수를 부어 오차즈케로 → 마음에 든 방식으로 한 번 더.</span><span class="jp" lang="ja">名古屋のうなぎ店の東京店。大きなうなぎを炭火で外はパリッと、中はふっくら焼き上げます。名物の<b>ひつまぶし</b>は4回に分けて食べます：そのまま → ねぎ・のり・わさびをのせて → だしをかけてお茶漬けに → 気に入った食べ方でもう一度。</span></p>
-            <dl class="spec">
-              <div><dt><span class="ko">영업</span><span class="jp" lang="ja">営業</span></dt><dd class="num"><span class="ko">점심 11:00–14:30 · 저녁 17:00–22:00</span><span class="jp" lang="ja">昼 11:00–14:30 · 夜 17:00–22:00</span></dd></div>
-              <div><dt><span class="ko">예산</span><span class="jp" lang="ja">予算</span></dt><dd><span class="ko">상 히츠마부시 ¥5,600 안팎부터 (체인 가격 기준)</span><span class="jp" lang="ja">上ひつまぶし ¥5,600前後から（チェーンの価格基準）</span></dd></div>
-              <div><dt><span class="ko">예약</span><span class="jp" lang="ja">予約</span></dt><dd><span class="ko"><b>3명 이상은 전날까지 예약 필수</b> · <a class="num" href="tel:+81364575266">03-6457-5266</a> · 이큐·PayPay 그루메 온라인</span><span class="jp" lang="ja"><b>3名以上は前日までの予約が必須</b> · <a class="num" href="tel:+81364575266">03-6457-5266</a> · 一休・PayPayグルメでオンライン予約</span></dd></div>
-              <div><dt><span class="ko">주소</span><span class="jp" lang="ja">住所</span></dt><dd lang="ja">新宿区西新宿3-20-2 東京オペラシティビル53階</dd></div>
-            </dl>
-            <p class="tip"><span class="ko"><b>17시 입장이 딱 좋은 이유:</b> 해가 17:21 무렵 지니, 창가 자리에서 노을을 보며 먹고 나올 땐 야경입니다. 맑은 날엔 서쪽으로 후지산 실루엣도 보입니다. 예약할 때 창가석을 부탁하세요.</span><span class="jp" lang="ja"><b>17時入店がちょうどいい理由：</b>日の入りが17:21ごろなので、窓側の席で夕焼けを見ながら食べ、店を出るころには夜景です。晴れていれば西の方角に富士山のシルエットも見えます。予約のときに窓側の席をお願いしましょう。</span></p>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%81%86%E3%81%AA%E5%AF%8C%E5%A3%AB%20%E6%9D%B1%E4%BA%AC%E3%82%AA%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%86%E3%82%A3%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">길찾기</span><span class="jp" lang="ja">ルート</span></a><button class="btn show" type="button" data-show="window"><span class="ko">창가 자리 부탁 카드</span><span class="jp" lang="ja">窓側の席をお願いするカード</span></button></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move" data-geo="35.6885,139.7115">
-        <div class="t">18:45</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">숙소로 · 짐 싸기</span><span class="jp" lang="ja">宿へ · 荷造り</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln tx wide">TAXI</span> 약 10분 · ¥1,500 안팎</span><span class="jp" lang="ja"><span class="ln tx wide">TAXI</span> 約10分 · ¥1,500前後</span></span></div>
-          <p class="d"><span class="ko">오늘 밤 짐을 싸고 무게를 재 두세요. <b>위탁 1인 15kg, 기내 10kg</b>입니다. 그릇은 기내 가방에.</span><span class="jp" lang="ja">今夜のうちに荷造りをして重さを量っておきましょう。<b>預け1人15kg、機内10kg</b>です。器は機内持ち込みの荷物に。</span></p>
-          <div class="acts"><button class="btn show" type="button" data-show="home"><span class="ko">숙소 주소 보여주기</span><span class="jp" lang="ja">宿の住所を見せる</span></button><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%96%B0%E5%AE%BF1%E4%B8%81%E7%9B%AE7-2&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">숙소 길찾기</span><span class="jp" lang="ja">宿へのルート</span></a></div>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ══════════ DAY 5 ══════════ -->
-  <section id="d5" class="day" data-date="2026-10-05">
-    <div class="dayhead">
-      <div class="row"><span class="dn">DAY 5</span><span class="dd">10.05 MON</span></div>
-      <p class="kj" lang="ja">帰国</p>
-      <h2><span class="ko">신주쿠역 쇼핑, 제3터미널로</span><span class="jp" lang="ja">新宿駅で買い物、第3ターミナルへ</span></h2>
-      <p class="sub"><span class="ko">비행기는 오후 4시 20분. 오전엔 짐 정리와 신주쿠역 쇼핑만 하고, 12시대 N'EX로 여유 있게 공항에 갑니다.</span><span class="jp" lang="ja">飛行機は午後4時20分。午前は荷物の整理と新宿駅での買い物だけにして、12時台のN'EXで余裕をもって空港へ向かいます。</span></p>
-      <div class="meta">
-        <span class="num">08:00 → 19:10</span>
-        <span><span class="ko"><span class="walk" aria-hidden="true"><i class="on"></i><i></i><i></i></span>걷기 적음</span><span class="jp" lang="ja"><span class="walk" aria-hidden="true"><i class="on"></i><i></i><i></i></span>歩き 少なめ</span></span>
-        <span class="wx" hidden></span>
-        <span class="pass"><span class="ko">교통 택시 · N'EX</span><span class="jp" lang="ja">交通 タクシー · N'EX</span></span>
-        <span class="bookreq"><span class="ko">N'EX 좌석 시간 확인</span><span class="jp" lang="ja">N'EXの座席の時間を確認</span></span>
-      </div>
-    </div>
-
-    <ol class="stops">
-      <li class="stop" data-kind="move">
-        <div class="t">08:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">아침 · 마지막 짐 정리</span><span class="jp" lang="ja">朝 · 最後の荷造り</span></p>
-          <p class="d"><span class="ko">칼, 100ml 넘는 액체류는 위탁 가방에. 보조배터리는 기내 가방에. 쓰레기 분리와 열쇠 반납은 숙소 안내대로.</span><span class="jp" lang="ja">刃物や100mlを超える液体は預け荷物に。モバイルバッテリーは機内持ち込みの荷物に。ごみの分別と鍵の返却は宿の案内どおりに。</span></p>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">10:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">체크아웃 → 택시로 신주쿠역 남쪽</span><span class="jp" lang="ja">チェックアウト → タクシーで新宿駅南口へ</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln tx wide">TAXI</span> 바스타 신주쿠</span><span class="jp" lang="ja"><span class="ln tx wide">TAXI</span> バスタ新宿</span></span><span class="arr">·</span><span class="num"><span class="ko">약 10분 · ¥1,200–1,800</span><span class="jp" lang="ja">約10分 · ¥1,200–1,800</span></span></div>
-          <p class="d"><span class="ko">체크아웃 시간은 '체크인 안내'에서 확인하세요. 11시라면 한 시간 늦춰도 됩니다.</span><span class="jp" lang="ja">チェックアウトの時間は「チェックイン案内」で確認しましょう。11時なら1時間遅らせても大丈夫です。</span></p>
-          <div class="acts"><button class="btn show" type="button" data-show="busta"><span class="ko">택시 기사에게 보여주기</span><span class="jp" lang="ja">タクシー運転手に見せる</span></button></div>
-        </div>
-      </li>
-      <li class="stop" data-kind="sight" data-geo="35.6882,139.7003">
-        <div class="t">10:20</div><div class="node"></div>
-        <div class="c">
-          <div class="box">
-            <p class="nm"><span class="ko">짐 맡기고 마지막 쇼핑<span class="ja" lang="ja">新宿駅 南口 · タカシマヤ タイムズスクエア</span></span><span class="jp" lang="ja">荷物を預けて最後の買い物<span class="ja" lang="ja">新宿駅 南口 · タカシマヤ タイムズスクエア</span></span></p>
-            <p class="d"><span class="ko">캐리어는 미리 예약해 둔 <b>에크보 클로크</b>(ecbo cloak) 보관 장소에 맡깁니다. 신주쿠역 남쪽·다카시마야 주변에 여러 곳, 캐리어 1개 하루 ¥800 안팎. 예약을 못 했으면 남쪽 개찰구 주변 대형 코인로커(¥700~)를 찾으세요. 오전이면 빈칸이 금방 없어집니다.</span><span class="jp" lang="ja">スーツケースは事前に予約しておいた<b>ecbo cloak</b>の預かり場所に預けます。新宿駅南口・高島屋周辺に何か所もあり、1個1日¥800前後。予約できなかった場合は、南改札周辺の大型コインロッカー（¥700〜）を探しましょう。午前中はすぐに空きがなくなります。</span></p>
-            <p class="d"><span class="ko">쇼핑은 다카시마야(10:30 오픈), 뉴우먼, 루미네. 지하 식품관에서 <b>기차에서 먹을 도시락(에키벤)</b>과 선물 과자를 삽니다.</span><span class="jp" lang="ja">買い物は高島屋（10:30開店）、NEWoMan、ルミネ。地下の食品館で<b>電車で食べる駅弁</b>とおみやげのお菓子を買います。</span></p>
-            <div class="acts"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%96%B0%E5%AE%BF%E3%82%BF%E3%82%AB%E3%82%B7%E3%83%9E%E3%83%A4%20%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2&amp;travelmode=transit" target="_blank" rel="noopener"><span class="ko">다카시마야 길찾기</span><span class="jp" lang="ja">高島屋へのルート</span></a><button class="btn show" type="button" data-show="luggage"><span class="ko">짐 맡겨도 돼요?</span><span class="jp" lang="ja">荷物を預けてもいい？</span></button></div>
-          </div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">11:50</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">짐 찾기 → JR 신주쿠역 N'EX 승강장</span><span class="jp" lang="ja">荷物を受け取る → JR新宿駅のN'EXホーム</span></p>
-          <p class="d"><span class="ko">JR 남쪽 개찰구로 들어가 'Narita Express' 표지를 따라갑니다. 출발 10분 전에는 승강장에.</span><span class="jp" lang="ja">JR南改札から入り、「Narita Express」の表示に沿って進みます。出発10分前にはホームへ。</span></p>
-          <div class="acts"><button class="btn show" type="button" data-show="nexplat"><span class="ko">역무원에게: N'EX 타는 곳?</span><span class="jp" lang="ja">駅員さんに：N'EXの乗り場は？</span></button></div>
-        </div>
-      </li>
-      <li class="stop star" data-kind="move">
-        <div class="t">12:15</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">N'EX → 나리타공항</span><span class="jp" lang="ja">N'EX → 成田空港</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln jr wide">N'EX</span> 신주쿠 → 공항제2빌딩</span><span class="jp" lang="ja"><span class="ln jr wide">N'EX</span> 新宿 → 空港第2ビル</span></span><span class="arr">·</span><span class="num"><span class="ko">약 80~90분</span><span class="jp" lang="ja">約80〜90分</span></span></div>
-          <p class="d"><span class="ko">출발 시각은 1일차에 받은 좌석표 기준입니다. 열차에서 도시락으로 점심.</span><span class="jp" lang="ja">出発時刻は1日目に受け取った座席券のとおりです。車内で駅弁の昼食。</span></p>
-          <p class="tip"><span class="ko"><b>공항제2빌딩역(空港第2ビル)에서 내리세요.</b> 종점 제1터미널까지 가면 안 됩니다.</span><span class="jp" lang="ja"><b>空港第2ビル駅で降りてください。</b>終点の第1ターミナルまで行ってはいけません。</span></p>
-          <div class="acts"><a class="btn" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank" rel="noopener"><span class="ko">JR 운행정보</span><span class="jp" lang="ja">JR運行情報</span></a></div>
-        </div>
-      </li>
-      <li class="stop" data-kind="move" data-geo="35.7797,140.3889">
-        <div class="t">13:45</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">공항제2빌딩역 → 제3터미널<span class="ja" lang="ja">第3ターミナル</span></span><span class="jp" lang="ja">空港第2ビル駅 → 第3ターミナル</span></p>
-          <div class="rt"><span class="seg"><span class="ko"><span class="ln wk wide">도보 13분</span> 바닥의 파란 안내선</span><span class="jp" lang="ja"><span class="ln wk wide">徒歩13分</span> 床の青い案内線</span></span><span class="arr"><span class="ko">또는</span><span class="jp" lang="ja">または</span></span><span class="seg"><span class="ko">무료 셔틀버스</span><span class="jp" lang="ja">無料シャトルバス</span></span></div>
-          <p class="d"><span class="ko">평평한 연결 통로라 캐리어를 끌고 가기 편합니다.</span><span class="jp" lang="ja">平らな連絡通路なので、スーツケースを引いても歩きやすいです。</span></p>
-        </div>
-      </li>
-      <li class="stop star" data-kind="move">
-        <div class="t">14:00</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">이스타항공 체크인 · 출국</span><span class="jp" lang="ja">イースター航空 チェックイン · 出国</span></p>
-          <p class="d"><span class="ko">위탁 1인 15kg, 기내 10kg. 한국 대체공휴일이라 줄이 길 수 있습니다. 출국심사를 마치고 제3터미널 푸드코트나 면세점에서 기다립니다.</span><span class="jp" lang="ja">預け1人15kg、機内10kg。韓国の振替休日なので列が長いかもしれません。出国審査を済ませ、第3ターミナルのフードコートや免税店で待ちます。</span></p>
-        </div>
-      </li>
-      <li class="stop" data-kind="move">
-        <div class="t">16:20</div><div class="node"></div>
-        <div class="c">
-          <p class="nm"><span class="ko">ZE 610 출발 → 19:10 인천 도착</span><span class="jp" lang="ja">ZE 610 出発 → 19:10 仁川着</span></p>
-          <p class="d"><span class="ko">2시간 50분. 수고하셨습니다.</span><span class="jp" lang="ja">2時間50分。おつかれさまでした。</span></p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <!-- ══════════ INFO ══════════ -->
+  <section id="d1" class="day" data-date="2026-10-01" data-wx="tokyo"><div class="dayhead"><div class="row"><span class="dn">DAY 1</span><span class="dd">10.01 THU</span></div><h2><span class="ko">도착 · 신주쿠에서 쉬기</span><span class="jp" lang="ja">到着 · 新宿で休む</span></h2><p class="sub"><span class="ko">첫날은 저녁만. 입국이 늦어지면 맛집보다 체크인과 수면을 우선합니다.</span><span class="jp" lang="ja">初日は夕食だけ。入国が遅れたら、食事の行列よりチェックインと睡眠を優先。</span></p><div class="meta"><span><span class="ko">계획 · 예약 내역 우선</span><span class="jp" lang="ja">計画 · 予約内容を優先</span></span><span class="wx" hidden></span></div></div><ol class="stops"><li class="stop" data-kind="move"><div class="t">10:50</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">인천 제1터미널 도착 목표</span><span class="jp" lang="ja">仁川 第1ターミナル 到着目標</span></p><p class="d"><span class="ko">YP735 13:50 출발, 나리타 T2 16:30 도착은 기존 예약 정보 기준입니다. 항공사 앱에서 운항·터미널·개인 수하물 허용량을 다시 확인하세요.</span><span class="jp" lang="ja">YP735 13:50発、成田T2 16:30着は既存の予約情報。航空会社アプリで運航・ターミナル・手荷物条件を再確認。</span></p></div></li><li class="stop" data-kind="move"><div class="t">13:50</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">YP735 · 나리타로 출발</span><span class="jp" lang="ja">YP735 · 成田へ出発</span></p><p class="d"><span class="ko">여권과 항공권 이름, 편명·날짜를 확인합니다.</span><span class="jp" lang="ja">パスポートと航空券の氏名、便名・日付を確認。</span></p></div></li><li class="stop" data-kind="move"><div class="t">16:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">나리타 T2 · 입국과 수하물</span><span class="jp" lang="ja">成田T2 · 入国と荷物</span></p><p class="d"><span class="ko">도착 예정 시각입니다. 입국·수하물·열차 교환 소요시간은 당일 상황에 따라 달라집니다.</span><span class="jp" lang="ja">到着予定。入国・荷物・切符の引換時間は当日の状況次第です。</span></p></div></li><li class="stop" data-kind="move"><div class="t">17:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">N’EX 교환 · 왕복 지정석 확인</span><span class="jp" lang="ja">N’EX引換 · 往復の指定席を確認</span></p><p class="d"><span class="ko">시간은 목표입니다. 3명 여권과 바우처를 준비하고, 바우처에 명시된 교환 창구를 이용하세요. 귀국편은 <b>10/5 T3 13:00~13:20 도착</b>을 기준으로 실제 열차를 선택합니다.</span><span class="jp" lang="ja">時刻は目安。3人分のパスポートとバウチャーを用意し、指定の引換場所へ。帰りは<b>10/5 T3に13:00〜13:20着</b>となる実際の列車を選びます。</span></p><button class="btn" data-show="nex"><span class="ko">창구에 보여주기</span><span class="jp" lang="ja">窓口で見せる</span></button></div></li><li class="stop" data-kind="move"><div class="t">19:50</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">신주쿠 · 숙소 체크인 목표</span><span class="jp" lang="ja">新宿 · チェックイン目標</span></p><p class="d"><span class="ko">열차와 입국 상황에 따라 늦어질 수 있습니다. 택시는 성인 3명과 캐리어 3개를 모두 실을 수 있는지 확인하고, 필요하면 큰 차량이나 2대를 이용합니다.</span><span class="jp" lang="ja">列車や入国状況で遅れる場合あり。大人3人とスーツケース3個が載るか確認し、必要なら大型車か2台に分けます。</span></p></div></li><li class="stop" data-kind="food" data-geo="35.6908,139.7046"><div class="t">20:15</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">하야시다 신주쿠 · 간단한 저녁</span><span class="jp" lang="ja">はやし田 新宿 · 夕食</span></p><p class="d"><span class="ko">간장 라멘<br>오리와 닭을 쓰는 육수가 특징. 도착일에 무거운 코스 대신 한 그릇으로 마무리.<br>예상 대기가 20분을 넘으면 교자노 후쿠호로 전환. 입국·수하물 지연 시 맛집보다 체크인과 휴식 우선.</span><span class="jp" lang="ja">醤油ラーメン。公式案内は11:00〜23:00。20分以上待つなら福包やテイクアウトへ。</span></p><p class="tip"><span class="ko"><b>1인 ¥1,500–2,000</b> · 계획 예산 / 예약 완료 아님</span><span class="jp" lang="ja"><b>1人 ¥1,500–2,000</b> · 予算目安・予約未確認</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%89%E3%81%81%E9%BA%BA%20%E3%81%AF%E3%82%84%E3%81%97%E7%94%B0%20%E6%96%B0%E5%AE%BF%E6%9C%AC%E5%BA%97%20%E6%96%B0%E5%AE%BF3-31-5%20%E3%83%9A%E3%82%AC%E3%82%B5%E3%82%B9%E9%A4%A8102" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://www.ramenings.com/hayashida" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></div></li><li class="stop" data-kind="visit"><div class="t">21:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">아침거리 준비 · 휴식</span><span class="jp" lang="ja">朝食を用意 · 休息</span></p><p class="d"><span class="ko">다음 날 먹을 간단한 아침거리를 준비하고 쉽니다. 다음 날 외출은 가족 컨디션과 날씨를 보고 결정하세요.</span><span class="jp" lang="ja">翌朝の軽食を用意して休みます。翌日の外出は体調と天気で判断。</span></p></div></li></ol></section><!-- ══════════ DAY 2 ══════════ -->
+  <section id="d2" class="day" data-date="2026-10-02" data-wx="kamakura"><div class="dayhead"><div class="row"><span class="dn">DAY 2</span><span class="dd">10.02 FRI</span></div><h2><span class="ko">가마쿠라 · 한 곳 덜 걷기</span><span class="jp" lang="ja">鎌倉 · 歩きすぎない一日</span></h2><p class="sub"><span class="ko">기본은 금요일. 하세 지역은 대불 또는 하세데라 한 곳만 선택하고, 바닷가 건널목·에노시마는 기본안에서 뺐습니다.</span><span class="jp" lang="ja">基本は金曜日。長谷では大仏か長谷寺のどちらか1か所。海辺の踏切と江の島は基本日程に入れません。</span></p><div class="meta"><span><span class="ko">계획 · 예약 내역 우선</span><span class="jp" lang="ja">計画 · 予約内容を優先</span></span><span class="wx" hidden></span></div></div><ol class="stops"><li class="stop" data-kind="move"><div class="t">08:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">신주쿠에서 가마쿠라로</span><span class="jp" lang="ja">新宿から鎌倉へ</span></p><p class="d"><span class="ko">출발 목표입니다. JR 쇼난신주쿠라인의 행선지·환승 여부를 당일 확인하세요. 보통열차 그린차는 <b>자유석</b>이라 3명 좌석을 보장하지 않습니다.</span><span class="jp" lang="ja">出発目標。湘南新宿ラインの行先・乗換を当日確認。普通列車グリーン車は<b>自由席</b>で3人の着席保証はありません。</span></p><a class="btn" href="https://www.jreast.co.jp/multi/green/index.html" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%E9%A7%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="visit"><div class="t">10:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">역 주변 · 고마치도리 짧게</span><span class="jp" lang="ja">駅周辺 · 小町通りを短く</span></p><p class="d"><span class="ko">점심 전 30~40분 정도만 걷습니다. 하치만구까지 왕복하는 코스는 컨디션이 좋을 때 선택합니다.</span><span class="jp" lang="ja">昼食前は30〜40分程度。鶴岡八幡宮までの往復は体調がよい場合だけ。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B0%8F%E7%94%BA%E9%80%9A%E3%82%8A%20%E9%8E%8C%E5%80%89" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="food" data-geo="35.3203,139.5519"><div class="t">11:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">아키모토 · 시라스와 채소</span><span class="jp" lang="ja">秋本 · しらすと鎌倉野菜</span></p><p class="d"><span class="ko">시라스 덮밥·가마쿠라 채소<br>가마쿠라에 간 날 현지 식재료를 먹는 선택. 생시라스가 없으면 가마아게(삶은 시라스)로.<br>생시라스는 당일 수급에 따라 다름. 대기 30분을 넘으면 근처에서 익힌 시라스 메뉴로 변경. 3F 승강기 여부 미확인.</span><span class="jp" lang="ja">予約不可。10:45到着目標。生しらすがなければ釜揚げに。3階のためエレベーター要確認。</span></p><p class="tip"><span class="ko"><b>1인 ¥2,500–3,500</b> · 계획 예산 / 예약 완료 아님</span><span class="jp" lang="ja"><b>1人 ¥2,500–3,500</b> · 予算目安・予約未確認</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8E%8C%E5%80%89%20%E7%A7%8B%E6%9C%AC%20%E9%8E%8C%E5%80%89%E5%B8%82%E5%B0%8F%E7%94%BA1-6-15%20i-ZA%E9%8E%8C%E5%80%893F" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://www.trip-kamakura.com/stay-gurume/detail.php?business_type=gourmet&amp;id=31" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></div></li><li class="stop" data-kind="visit"><div class="t">12:45</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">대불 또는 하세데라 · 한 곳만</span><span class="jp" lang="ja">大仏か長谷寺 · どちらか1か所</span></p><p class="d"><span class="ko">에노덴으로 하세 이동. 계단을 줄이려면 대불을 우선 검토하고, 정원·전망을 원하고 계단이 괜찮으면 하세데라를 고릅니다. 아키모토는 3층으로 승강기 여부 미확인, 대기 30분 넘으면 근처 식사로 바꿉니다.</span><span class="jp" lang="ja">江ノ電で長谷へ。階段を減らしたい場合は大仏を検討。庭園と眺望を重視し階段が問題なければ長谷寺。秋本の待ち時間が30分を超えたら近隣で食事。</span></p><a class="btn" href="https://www.hasedera.jp/guide/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E5%BE%B3%E9%99%A2%20%E9%8E%8C%E5%80%89%E5%A4%A7%E4%BB%8F" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></li><li class="stop" data-kind="visit"><div class="t">14:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">앉아서 30분 쉬기</span><span class="jp" lang="ja">座って30分休む</span></p><p class="d"><span class="ko">자리가 있는 가까운 카페에서 휴식. 사진 명소를 추가하지 않고 가마쿠라역으로 돌아갑니다.</span><span class="jp" lang="ja">空席のある近くのカフェで休憩。撮影スポットを増やさず鎌倉駅へ。</span></p></div></li><li class="stop" data-kind="move"><div class="t">15:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">가마쿠라 출발 목표</span><span class="jp" lang="ja">鎌倉を出発する目安</span></p><p class="d"><span class="ko">저녁 예약까지 이동 여유를 둡니다. 지연되면 요코초 산책을 생략하고 식당에 연락하세요.</span><span class="jp" lang="ja">夕食まで移動の余裕を確保。遅延時は横丁を省き、予約した店へ連絡。</span></p></div></li><li class="stop" data-kind="food"><div class="t">18:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">로바타 쇼 · 예약 희망</span><span class="jp" lang="ja">ろばた翔 · 予約希望</span></p><p class="d"><span class="ko">생선구이·제철 채소구이<br>가마쿠라에서 돌아와 앉아서 저녁을 먹고, 요코초 산책은 식사 뒤 선택합니다.<br>지하 1층, 계단 진입. 3명이 편하게 앉을 의자 좌석을 사전 요청. 부모님이 계단을 피해야 하면 이곳은 제외.</span><span class="jp" lang="ja">地下1階の階段利用。椅子席と3名の席を予約前に確認。階段が難しい場合は別の店へ。</span></p><p class="tip"><span class="ko"><b>1인 ¥5,000–7,000</b> · 계획 예산 / 예약 완료 아님</span><span class="jp" lang="ja"><b>1人 ¥5,000–7,000</b> · 予算目安・予約未確認</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%8D%E3%81%B0%E3%81%9F%20%E7%BF%94%20/%20ROBATA%20SHO%20%E8%A5%BF%E6%96%B0%E5%AE%BF1-4-11%20%E5%AE%9D%E3%83%93%E3%83%ABB1F" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://robata-sho-shinjuku.com/table/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></div></li><li class="stop" data-kind="visit" data-geo="35.6929,139.6995"><div class="t">19:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">오모이데 요코초 · 선택 산책</span><span class="jp" lang="ja">思い出横丁 · 任意の散策</span></p><p class="d"><span class="ko">15~20분만 보고 숙소로. 로바타 쇼는 지하 계단이 있어 계단 이용이 어려우면 제외합니다.</span><span class="jp" lang="ja">15〜20分だけ見て宿へ。疲れていれば散策は省略。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%80%9D%E3%81%84%E5%87%BA%E6%A8%AA%E4%B8%81" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li></ol></section><!-- ══════════ DAY 3 ══════════ -->
+  <section id="d3" class="day" data-date="2026-10-03" data-wx="tokyo"><div class="dayhead"><div class="row"><span class="dn">DAY 3</span><span class="dd">10.03 SAT</span></div><h2><span class="ko">오모테산도 · 카나데에서 쉬기</span><span class="jp" lang="ja">表参道 · KANADEで休む</span></h2><p class="sub"><span class="ko">오후 카페는 카나데 한 곳. 네즈와 사샤는 교체 후보이며, 에비스 그릇 쇼핑은 여유가 있을 때 한 매장만 봅니다.</span><span class="jp" lang="ja">午後のカフェはKANADE1か所。根津と茶洒は入替候補。恵比寿の器の店は余裕があれば1店だけ。</span></p><div class="meta"><span><span class="ko">계획 · 예약 내역 우선</span><span class="jp" lang="ja">計画 · 予約内容を優先</span></span><span class="wx" hidden></span></div></div><ol class="stops"><li class="stop" data-kind="visit" data-geo="35.6764,139.6993"><div class="t">09:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">메이지신궁 · 짧은 산책</span><span class="jp" lang="ja">明治神宮 · 短い散策</span></p><p class="d"><span class="ko">왕복 보행 부담이 있거나 비가 오면 생략하고 늦게 출발합니다.</span><span class="jp" lang="ja">往復の歩行が負担、または雨なら省いて遅めに出発。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="food" data-geo="35.6677,139.7094"><div class="t">11:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">마이센 아오야마 · 점심</span><span class="jp" lang="ja">まい泉 青山本店 · 昼食</span></p><p class="d"><span class="ko">히레카츠 또는 로스카츠 정식<br>메이지신궁 다음 오모테산도 방향에 있어 음식 때문에 멀리 돌아가지 않아도 됨.<br>기름진 음식 부담이 있으면 작은 정식으로. 점심 대기 30분 이상이면 주변 식사로 바꾸고 오후 일정을 지킴.</span><span class="jp" lang="ja">10:45到着目標。土日の通常の食事予約は不可。30分以上待つなら近隣へ。</span></p><p class="tip"><span class="ko"><b>1인 ¥2,500–3,500</b> · 계획 예산 / 예약 완료 아님</span><span class="jp" lang="ja"><b>1人 ¥2,500–3,500</b> · 予算目安・予約未確認</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%20%E3%81%BE%E3%81%84%E6%B3%89%20%E9%9D%92%E5%B1%B1%E6%9C%AC%E5%BA%97%20%E7%A5%9E%E5%AE%AE%E5%89%8D4-8-5" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://mai-sen.com/restaurant/aoyama/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></div></li><li class="stop" data-kind="visit"><div class="t">12:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">오모테산도 · 산책과 이동 여유</span><span class="jp" lang="ja">表参道 · 散策と移動の余裕</span></p><p class="d"><span class="ko">메이지신궁·점심이 늦어지면 산책을 줄입니다. 메구로까지 이동할 시간을 포함한 구간이며 네즈 관람을 추가하지 않습니다.</span><span class="jp" lang="ja">神宮や昼食が遅れたら散策を短縮。目黒への移動時間も含み、根津の見学は追加しません。</span></p></div></li><li class="stop" data-kind="food"><div class="t">14:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">카나데 라운지 · 오늘의 주 카페</span><span class="jp" lang="ja">KANADE LOUNGE · 今日のカフェ</span></p><p class="d"><span class="ko">호텔 가조엔 도쿄의 정원·폭포를 바라보며 60~90분 쉽니다. 좌석만 예약 가능한지 먼저 확인하세요. 커피 1,600엔, 케이크 2,000엔(14~17시). 메뉴 금액은 세금·서비스료 포함입니다.</span><span class="jp" lang="ja">ホテル雅叙園東京で庭園と滝を眺めながら60〜90分休憩。席のみ予約を確認。コーヒー1,600円、ケーキ2,000円（14〜17時）。表示価格は税・サービス料込み。</span></p><p class="tip"><span class="ko">1인 1,600~4,200엔 계획. 창가·빈자리 미확인. 네즈를 택하면 카나데를 빼고 미술관 입장료를 추가합니다.</span><span class="jp" lang="ja">1人1,600〜4,200円の目安。窓側・空席未確認。根津を選ぶならKANADEを外し美術館入場料を追加。</span></p><a class="btn" href="https://www.tablecheck.com/ja/shops/gajoentokyo-kanadelounge/reserve" target="_blank" rel="noopener"><span class="ko">예약 확인</span><span class="jp" lang="ja">予約確認</span></a><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%9B%E3%83%86%E3%83%AB%E9%9B%85%E5%8F%99%E5%9C%92%E6%9D%B1%E4%BA%AC%20KANADE%20LOUNGE" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="visit"><div class="t">16:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">에비스 그릇 가게 · 선택 1곳</span><span class="jp" lang="ja">恵比寿の器の店 · 任意で1店</span></p><p class="d"><span class="ko">카나데에서 메구로·에비스 방향으로 이동. THE HARVEST 또는 EAST table 중 한 곳만 보고, 피곤하면 생략합니다. 실제 영업·이동 경로는 당일 지도에서 확인하세요.</span><span class="jp" lang="ja">目黒から恵比寿へ。THE HARVESTかEAST tableの1店だけ。疲れたら省略。営業とルートは当日地図で確認。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=THE%20HARVEST%20%E6%81%B5%E6%AF%94%E5%AF%BF" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="food"><div class="t">17:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">폰가 에비스 · 특별한 저녁 후보</span><span class="jp" lang="ja">ぽんが恵比寿 · 特別な夕食候補</span></p><p class="d"><span class="ko">네기탄·와규 구이<br>고기 좋아하는 가족의 특별한 저녁으로 배치. 1만 엔 코스 선택 시 서비스료를 별도로 계산.<br>공식 코스 10,000엔(세금 포함)+서비스 10%=11,000엔, 음료 별도. 생·덜 익힌 소고기/내장 메뉴 교체 가능 여부와 2F 엘리베이터를 예약 전 확인.</span><span class="jp" lang="ja">1万円コースは税別ではなく税込、別途サービス10%。飲物を含め1人12,000〜14,000円目安。生肉・内臓の変更と2階への移動方法を事前確認。</span></p><p class="tip"><span class="ko"><b>1인 ¥12,000–14,000</b> · 계획 예산 / 예약 완료 아님</span><span class="jp" lang="ja"><b>1人 ¥12,000–14,000</b> · 予算目安・予約未確認</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%84%BC%E8%82%89%E3%81%BD%E3%82%93%E3%81%8C%20%E6%81%B5%E6%AF%94%E5%AF%BF%E5%BA%97%20%E6%81%B5%E6%AF%94%E5%AF%BF%E8%A5%BF1-21-5%20Sreed%20EBISU%2Bt%202F" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://yakiniku-ponga.com/ebisu/course/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></div></li><li class="stop" data-kind="visit"><div class="t">19:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">숙소로 · 저녁 예산 조정 가능</span><span class="jp" lang="ja">宿へ · 夕食予算は調整可</span></p><p class="d"><span class="ko">폰가는 고가 선택입니다. 생고기·내장 제외와 2층 승강기를 확인하세요. 부담되면 스시노 미도리 시부야점(1인 3,000~5,000엔 계획)으로 바꾸되, <b>에비스 쇼핑을 빼고</b> 시부야로 이동합니다. 두 저녁을 함께 예약하지 않습니다.</span><span class="jp" lang="ja">高予算なら美登利寿司渋谷店（1人3,000〜5,000円目安）へ変更。その場合は<b>恵比寿の買物を省き</b>渋谷へ。夕食2店を両方予約しないでください。</span></p><a class="btn" href="https://www.sushinomidori.co.jp/shops/shibuya/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></div></li></ol></section><!-- ══════════ DAY 4 ══════════ -->
+  <section id="d4" class="day" data-date="2026-10-04" data-wx="tokyo"><div class="dayhead"><div class="row"><span class="dn">DAY 4</span><span class="dd">10.04 SUN</span></div><h2><span class="ko">아사쿠사 · 긴자 · 우나후지</span><span class="jp" lang="ja">浅草 · 銀座 · うな富士</span></h2><p class="sub"><span class="ko">저녁 장어에 맞춰 점심은 소바. 하마리큐 다실은 맑고 다리가 편할 때만, 비 오면 긴자 카페 한 곳으로 바꿉니다.</span><span class="jp" lang="ja">夕食はうなぎなので昼はそば。浜離宮の茶屋は晴れて歩ける日だけ。雨なら銀座のカフェ1か所へ。</span></p><div class="meta"><span><span class="ko">계획 · 예약 내역 우선</span><span class="jp" lang="ja">計画 · 予約内容を優先</span></span><span class="wx" hidden></span></div></div><ol class="stops"><li class="stop" data-kind="visit" data-geo="35.7148,139.7967"><div class="t">09:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">센소지 · 아사쿠사</span><span class="jp" lang="ja">浅草寺 · 浅草</span></p><p class="d"><span class="ko">상점가와 경내를 천천히 둘러봅니다. 가메주 포장은 선택이며 대기 20분이 넘으면 생략합니다.</span><span class="jp" lang="ja">境内と商店街をゆっくり。亀十のテイクアウトは任意、20分以上待つなら省略。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%85%E8%8D%89%E5%AF%BA" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="food"><div class="t">11:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">나미키 야부소바 · 가벼운 점심</span><span class="jp" lang="ja">並木藪蕎麦 · 軽めの昼食</span></p><p class="d"><span class="ko">자루소바 또는 덴푸라 소바<br>저녁 장어를 고려해 가벼운 점심으로 선택. 타베로그 소바 EAST 백명점 2025 선정 확인.<br>메밀 알레르기가 있으면 제외. 소바만으로 부족하면 튀김을 곁들이되 점심을 과하게 늘리지 않음.</span><span class="jp" lang="ja">予約不可。そばアレルギーがあれば別の食事に。日曜11時開店を目標に。</span></p><p class="tip"><span class="ko"><b>1인 ¥1,500–2,500</b> · 계획 예산 / 예약 완료 아님</span><span class="jp" lang="ja"><b>1人 ¥1,500–2,500</b> · 予算目安・予約未確認</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%A6%E6%9C%A8%E8%97%AA%E8%95%8E%E9%BA%A6%20%E9%9B%B7%E9%96%802-11-9" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://tabelog.com/tokyo/A1311/A131102/13003650/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></div></li><li class="stop" data-kind="visit"><div class="t">12:45</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">하마리큐 · 나카지마노 오차야 (선택)</span><span class="jp" lang="ja">浜離宮 · 中島の御茶屋（任意）</span></p><p class="d"><span class="ko">날씨와 체력이 좋으면 연못 위 다실에서 쉽니다. 정원 성인 입장료 300엔, 차·과자는 900~1,500엔 계획값(최신 메뉴값 미확인). 비가 오거나 피곤하면 긴자로 바로 갑니다.</span><span class="jp" lang="ja">天気と体調がよければ池の茶屋で休憩。庭園入場300円、茶菓900〜1,500円は予算目安（最新価格未確認）。雨や疲れがあれば直接銀座へ。</span></p><a class="btn" href="https://www.tokyo-park.or.jp/park/hama-rikyu/facility/index.html" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%9C%E9%9B%A2%E5%AE%AE%E6%81%A9%E8%B3%9C%E5%BA%AD%E5%9C%92%20%E4%B8%AD%E5%B3%B6%E3%81%AE%E5%BE%A1%E8%8C%B6%E5%B1%8B" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="visit" data-geo="35.6717,139.7650"><div class="t">14:45</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">긴자 · 짧게 둘러보기</span><span class="jp" lang="ja">銀座 · 短い散策</span></p><p class="d"><span class="ko">하마리큐를 다녀왔으면 카페를 추가하지 않습니다. 정원을 뺐다면 시세이도 3F 카페 또는 가까운 빈자리 있는 카페 한 곳. 긴 대기는 피합니다.</span><span class="jp" lang="ja">浜離宮に行ったらカフェは追加しません。庭園を省いた場合は資生堂3Fか近くの空席のあるカフェへ。長い行列は避けます。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8A%80%E5%BA%A7" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="move"><div class="t">15:45</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">하쓰다이 · 오페라시티로 이동</span><span class="jp" lang="ja">初台 · オペラシティへ移動</span></p><p class="d"><span class="ko">전철 환승과 53층 승강기까지 75분의 계획 여유입니다. 실제 경로·지연을 확인하고 늦을 것 같으면 식당에 연락합니다.</span><span class="jp" lang="ja">乗換と53階への移動を含め75分の余裕を設定。実際の経路と遅延を確認し、遅れるなら店に連絡。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E3%82%AA%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%86%E3%82%A3" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="food"><div class="t">17:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">우나후지 · 예약 희망</span><span class="jp" lang="ja">うな富士 · 予約希望</span></p><p class="d"><span class="ko">상 히츠마부시<br>장어구이를 그대로, 약미와 함께, 육수에 말아 먹는 메뉴. 기존 희망 장소를 유지.<br>개인실은 저녁 별도 3,000엔/120분 안내. 기본 예산은 일반석 기준. 창가·야경·좌석을 보장하지 않음. 하쓰다이역에서 53F 전용 승강기 이용.</span><span class="jp" lang="ja">一般席3名を予約推奨。3名以上予約必須という規則は公式で確認できていません。窓側や夕日を保証しません。個室は追加料金。</span></p><p class="tip"><span class="ko"><b>1인 ¥6,500–8,500</b> · 계획 예산 / 예약 완료 아님</span><span class="jp" lang="ja"><b>1人 ¥6,500–8,500</b> · 予算目安・予約未確認</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%82%AD%E7%84%BC%20%E3%81%86%E3%81%AA%E5%AF%8C%E5%A3%AB%20%E6%9D%B1%E4%BA%AC%E3%82%AA%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%86%E3%82%A3%E5%BA%97%20%E8%A5%BF%E6%96%B0%E5%AE%BF3-20-2%20%E6%9D%B1%E4%BA%AC%E3%82%AA%E3%83%9A%E3%83%A9%E3%82%B7%E3%83%86%E3%82%A353F" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://sumiyaki-unafuji.com/shops/tokyo_opera_city/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></div></li></ol></section><!-- ══════════ DAY 5 ══════════ -->
+  <section id="d5" class="day" data-date="2026-10-05" data-wx="tokyo"><div class="dayhead"><div class="row"><span class="dn">DAY 5</span><span class="dd">10.05 MON</span></div><h2><span class="ko">귀국 · 공항에 일찍 도착하기</span><span class="jp" lang="ja">帰国 · 空港には早めに</span></h2><p class="sub"><span class="ko">귀국일 쇼핑·관광은 넣지 않습니다. N’EX 실제 지정석과 T3 이동을 먼저 확정하세요.</span><span class="jp" lang="ja">帰国日は観光や買物を入れません。N’EXの実際の指定席とT3への移動を先に確定。</span></p><div class="meta"><span><span class="ko">계획 · 예약 내역 우선</span><span class="jp" lang="ja">計画 · 予約内容を優先</span></span><span class="wx" hidden></span></div></div><ol class="stops"><li class="stop" data-kind="visit"><div class="t">09:30</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">짐 정리 · 체크아웃 준비</span><span class="jp" lang="ja">荷物整理 · チェックアウト準備</span></p><p class="d"><span class="ko">체크아웃 마감은 예약 앱에서 확인. 여권·휴대폰·충전기·약을 먼저 챙기세요.</span><span class="jp" lang="ja">チェックアウト期限は予約アプリで確認。パスポート・スマホ・充電器・薬を確認。</span></p></div></li><li class="stop" data-kind="move"><div class="t">10:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">신주쿠역으로 출발 목표</span><span class="jp" lang="ja">新宿駅へ出発目標</span></p><p class="d"><span class="ko">짐 보관과 백화점 쇼핑을 생략합니다. N’EX 실제 승차 시각에 맞춰 역에서 여유를 둡니다.</span><span class="jp" lang="ja">荷物預かりと百貨店の買物は省略。実際のN’EX出発に合わせ駅で余裕を確保。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%B0%E5%AE%BF%E9%A7%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="move"><div class="t">11:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">N’EX · 11시대 실제 열차 선택</span><span class="jp" lang="ja">N’EX · 11時台の実際の列車を選択</span></p><p class="d"><span class="ko"><b>11:00은 발권 시각이 아닌 계획용 표시</b>입니다. T3 13:00~13:20 도착을 만족하는 실제 열차로 지정석을 확보하세요. 적절한 열차가 없으면 더 일찍 출발합니다.</span><span class="jp" lang="ja"><b>11:00は発券済みの時刻ではなく計画上の表示</b>。T3に13:00〜13:20に着く実際の列車を予約。適切な便がなければ早めます。</span></p></div></li><li class="stop" data-kind="move"><div class="t">13:00</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">나리타 T3 · 13:20까지 도착 목표</span><span class="jp" lang="ja">成田T3 · 13:20までに到着目標</span></p><p class="d"><span class="ko">공항제2빌딩역에서 T3까지 걷거나 연결 교통을 이용합니다. 짐·승강기·이동 대기를 포함해 여유를 두세요. ZE610 체크인·수하물 마감은 항공사 안내 우선입니다.</span><span class="jp" lang="ja">空港第2ビル駅からT3へ徒歩または連絡交通。荷物・エレベーター・待ち時間も考慮。ZE610のチェックイン・手荷物締切は航空会社の案内を優先。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%20%E7%AC%AC3%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a></div></div></li><li class="stop" data-kind="move"><div class="t">16:20</div><div class="node"></div><div class="c"><p class="nm"><span class="ko">ZE610 · 인천행</span><span class="jp" lang="ja">ZE610 · 仁川行き</span></p><p class="d"><span class="ko">기존 예약 기준 인천 19:10 도착. 탑승구와 출발 시각은 당일 안내판을 확인하세요.</span><span class="jp" lang="ja">既存予約では仁川19:10着。搭乗口と出発時刻は当日案内で確認。</span></p></div></li></ol></section><div class="sec" id="i-cafes"><div class="sh"><p class="eyebrow">Cafes · choose one</p><h2><span class="ko">한 곳만 간다면 카나데</span><span class="jp" lang="ja">1か所ならKANADE</span></h2><p class="note"><span class="ko">6곳을 다 방문하지 않습니다. 분위기 취향과 날씨에 맞춰 서로 바꾸는 후보입니다. 예약·만석·임시휴무는 별도 확인이 필요합니다.</span><span class="jp" lang="ja">6か所すべてには行きません。雰囲気の好みと天気に合わせて入れ替える候補です。予約・満席・臨時休業は別途確認。</span></p></div><div class="cafe-list"><article class="cafe-item"><p class="eyebrow"><span class="ko">기본 · 서부 일정일 14:00</span><span class="jp" lang="ja">基本 · 西側の日14:00</span></p><h3><span class="ko">카나데 라운지</span><span class="jp" lang="ja">KANADE LOUNGE</span></h3><p class="d"><span class="ko">정원·폭포가 있는 호텔 라운지. 10:30~22:30, 케이크 14~17시. 커피 1,600엔, 케이크 2,000엔. 세금·서비스료 포함.</span><span class="jp" lang="ja">庭園と滝のホテルラウンジ。10:30〜22:30、ケーキ14〜17時。コーヒー1,600円、ケーキ2,000円。税・サービス料込み。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=KANADE%20LOUNGE%20/%20%E3%82%AB%E3%83%8A%E3%83%87%20%E3%83%A9%E3%82%A6%E3%83%B3%E3%82%B8%20%E7%9B%AE%E9%BB%92%E5%8C%BA%E4%B8%8B%E7%9B%AE%E9%BB%921-8-1%20%E3%83%9B%E3%83%86%E3%83%AB%E9%9B%85%E5%8F%99%E5%9C%92%E6%9D%B1%E4%BA%AC1F" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://gajoen-tokyo.hiltonjapan.co.jp/restaurants/kanade-lounge" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></article><article class="cafe-item"><p class="eyebrow"><span class="ko">카나데 대신 · 미술관도 보고 싶을 때</span><span class="jp" lang="ja">KANADEの代わり · 美術館も見たい時</span></p><h3><span class="ko">네즈 카페</span><span class="jp" lang="ja">NEZUCAFÉ</span></h3><p class="d"><span class="ko">네즈역이 아닌 미나미아오야마의 네즈미술관 안. 입장권 필요(온라인 성인 1,400엔), 카페 예약 불가. 10~16:30, 음료 주문마감 16시. 10/5 월요일 제외.</span><span class="jp" lang="ja">根津駅ではなく南青山の根津美術館内。入場券が必要（大人オンライン1,400円）。カフェ予約不可。10〜16:30、飲物LO16時。10/5月曜は除外。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=NEZUCAF%C3%89%20/%20%E3%83%8D%E3%83%85%E3%82%AB%E3%83%95%E3%82%A7%20%E6%B8%AF%E5%8C%BA%E5%8D%97%E9%9D%92%E5%B1%B16-5-1%20%E6%A0%B9%E6%B4%A5%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%86%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://www.nezu-muse.or.jp/jp/visit/cafe/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></article><article class="cafe-item"><p class="eyebrow"><span class="ko">10/4 선택 · 맑고 걷기 편한 날</span><span class="jp" lang="ja">10/4 任意 · 晴れて歩ける日</span></p><h3><span class="ko">나카지마노 오차야</span><span class="jp" lang="ja">中島の御茶屋</span></h3><p class="d"><span class="ko">하마리큐 연못 위 다실. 다실 9~16:45, 주문마감 16:30. 정원 성인 300엔 별도, 65세 이상 150엔(증빙). 차·과자 예산 900~1,500엔은 추정.</span><span class="jp" lang="ja">浜離宮の池の茶屋。9〜16:45、LO16:30。庭園大人300円別、65歳以上150円（証明）。茶菓900〜1,500円は予算目安。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E5%B3%B6%E3%81%AE%E5%BE%A1%E8%8C%B6%E5%B1%8B%20/%20Nakajima-no-Ochaya%20%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%B5%9C%E9%9B%A2%E5%AE%AE%E5%BA%AD%E5%9C%921-1%20%E6%B5%9C%E9%9B%A2%E5%AE%AE%E6%81%A9%E8%B3%9C%E5%BA%AD%E5%9C%92%E5%86%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://www.tokyo-park.or.jp/park/hama-rikyu/facility/index.html" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></article><article class="cafe-item"><p class="eyebrow"><span class="ko">네즈·카나데 대신 · 건축과 일본식 디저트</span><span class="jp" lang="ja">根津・KANADEの代わり · 建築と和菓子</span></p><h3><span class="ko">사샤 카네타나카</span><span class="jp" lang="ja">茶洒 金田中</span></h3><p class="d"><span class="ko">카페 14시부터, 일반 카페 예약 불가. 13세 미만 입장 불가 안내. 와라비모치 1,650엔, 음료 포함 2,000~3,500엔 계획.</span><span class="jp" lang="ja">カフェ14時から、通常のカフェ予約不可。13歳未満不可の案内あり。わらび餅1,650円、飲物込み2,000〜3,500円目安。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%8C%B6%E6%B4%92%20%E9%87%91%E7%94%B0%E4%B8%AD%20/%20Sahsya%20Kanetanaka%20%E6%B8%AF%E5%8C%BA%E5%8C%97%E9%9D%92%E5%B1%B13-6-1%20%E3%82%AA%E3%83%BC%E3%82%AF%E8%A1%A8%E5%8F%82%E9%81%932F" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://tabelog.com/tokyo/A1306/A130602/13154538/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></article><article class="cafe-item"><p class="eyebrow"><span class="ko">반일 일정 교체용 · 현재 동선에 추가하지 않기</span><span class="jp" lang="ja">半日の入替用 · 今のルートに追加しない</span></p><h3><span class="ko">오리엔토 카페</span><span class="jp" lang="ja">オリエント・カフェ</span></h3><p class="d"><span class="ko">동양문고·시볼트 정원과 묶는 별도 반일 코스. 디저트 11:30~17시, 화요일·박물관 휴관일 휴무. 카페 단독 입장 조건은 문의 필요.</span><span class="jp" lang="ja">東洋文庫・シーボルトガルテンと半日で。デザート11:30〜17時、火曜・博物館休館日休み。カフェ単独入場条件は要問合せ。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AA%E3%83%AA%E3%82%A8%E3%83%B3%E3%83%88%E3%83%BB%E3%82%AB%E3%83%95%E3%82%A7%20/%20Orient%20Caf%C3%A9%20%E6%96%87%E4%BA%AC%E5%8C%BA%E6%9C%AC%E9%A7%92%E8%BE%BC2-28-21%20%E6%9D%B1%E6%B4%8B%E6%96%87%E5%BA%AB%E5%86%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://www.koiwaifarmdining.co.jp/brands/orientcafe/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></article><article class="cafe-item"><p class="eyebrow"><span class="ko">10/4 우천 교체 · 하마리큐 대신</span><span class="jp" lang="ja">10/4雨天の入替 · 浜離宮の代わり</span></p><h3><span class="ko">카페 다이닝 사후</span><span class="jp" lang="ja">カフェダイニング茶楓 SAFU</span></h3><p class="d"><span class="ko">디저트 카페 15~18시(LO17:30), 월요일 휴무. 카페 예약 불가. 15:00~15:45 방문 후 우나후지로 바로 이동, 긴자 쇼핑도 줄입니다. 단독 입장 조건 문의 필요.</span><span class="jp" lang="ja">デザート15〜18時（LO17:30）、月曜休み。カフェ予約不可。15:00〜15:45利用後はうな富士へ直行し、銀座の買物も短縮。単独入場条件は要確認。</span></p><div class="acts"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AB%E3%83%95%E3%82%A7%E3%83%80%E3%82%A4%E3%83%8B%E3%83%B3%E3%82%B0%20%E8%8C%B6%E6%A5%93%20/%20SAFU%20by%20Onko%20Chishin%20%E6%B8%AF%E5%8C%BA%E8%99%8E%E3%83%8E%E9%96%804-1-35%20%E8%8F%8A%E6%B1%A0%E5%AF%9B%E5%AE%9F%E8%A8%98%E5%BF%B5%20%E6%99%BA%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%86%85" target="_blank" rel="noopener"><span class="ko">지도</span><span class="jp" lang="ja">地図</span></a><a class="btn" href="https://safu.by-onko-chishin.com/" target="_blank" rel="noopener"><span class="ko">매장 정보</span><span class="jp" lang="ja">店舗情報</span></a></div></article></div></div><!-- ══════════ INFO ══════════ -->
   <section id="info">
     <div class="infohead">
       <p class="eyebrow">Info</p>
       <h2><span class="ko">교통 · 식당 · 짐 · 비상</span><span class="jp" lang="ja">交通 · 食事 · 荷物 · 緊急</span></h2>
     </div>
 
-    <div class="isec" id="i-transit">
-      <h3><span class="ko">도쿄에서 이동하기</span><span class="jp" lang="ja">東京での移動</span></h3>
-      <ul class="lines">
-        <li><span class="ln m">M</span><span><span class="ko"><b>마루노우치선</b> — 우리 노선. 숙소 앞 <b>신주쿠교엔마에(M10)</b>에서 신주쿠·긴자까지 환승 없이 갑니다.</span><span class="jp" lang="ja"><b>丸ノ内線</b> — 私たちの路線。宿の前の<b>新宿御苑前（M10）</b>から新宿・銀座まで乗り換えなしで行けます。</span></span></li>
-        <li><span class="ln f">F</span><span><span class="ko"><b>후쿠토신선</b> — 신주쿠산초메(F13)에서 메이지진구마에〈하라주쿠〉·시부야까지 (3일차). 숙소에서 걸어서 8분.</span><span class="jp" lang="ja"><b>副都心線</b> — 新宿三丁目（F13）から明治神宮前〈原宿〉・渋谷まで（3日目）。宿から歩いて8分。</span></span></li>
-        <li><span class="ln g">G</span><span><span class="ko"><b>긴자선</b> — 아사쿠사↔긴자 (4일차), 오모테산도↔시부야.</span><span class="jp" lang="ja"><b>銀座線</b> — 浅草↔銀座（4日目）、表参道↔渋谷。</span></span></li>
-        <li><span class="ln jr wide">JR</span><span><span class="ko"><b>쇼난신주쿠라인 · 야마노테선</b> — 신주쿠↔가마쿠라·후지사와 (2일차), 에비스↔시부야 (3일차). Suica로.</span><span class="jp" lang="ja"><b>湘南新宿ライン · 山手線</b> — 新宿↔鎌倉・藤沢（2日目）、恵比寿↔渋谷（3日目）。Suicaで。</span></span></li>
-        <li><span class="ln wide" style="--c:#2E7D5B">江ノ電</span><span><span class="ko"><b>에노덴</b> — 가마쿠라↔하세↔가마쿠라코코마에↔후지사와 (2일차). Suica로.</span><span class="jp" lang="ja"><b>江ノ電</b> — 鎌倉↔長谷↔鎌倉高校前↔藤沢（2日目）。Suicaで。</span></span></li>
-        <li><span class="ln wide" style="--c:#DD0077">京王</span><span><span class="ko"><b>게이오신선</b> — 신주쿠↔하쓰다이〈오페라시티〉 한 정거장 (4일차 저녁). Suica로.</span><span class="jp" lang="ja"><b>京王新線</b> — 新宿↔初台〈オペラシティ〉1駅（4日目の夜）。Suicaで。</span></span></li>
-        <li><span class="ln jr wide">N'EX</span><span><span class="ko"><b>나리타 익스프레스</b> — 공항 오갈 때만 (클룩 왕복권).</span><span class="jp" lang="ja"><b>成田エクスプレス</b> — 空港との行き来だけ（Klookの往復券）。</span></span></li>
-      </ul>
-
-      <ul class="list" style="margin-top:14px">
-        <li><div class="ko"><h4><span class="tag rec">교통권</span>도쿄 서브웨이 티켓 48시간 + Suica</h4>
-          지하철 패스는 1인 ¥1,500. 10/3(토) 아침 첫 개찰부터 48시간이라 토·일의 도쿄메트로·도에이 지하철이 전부 됩니다. JR·에노덴·게이오선은 안 되니 <b>Suica</b>를 같이 씁니다. 아이폰은 'Welcome Suica Mobile' 앱으로 바로 만들 수 있고, 안드로이드는 나리타공항 JR EAST Travel Service Center에서 Welcome Suica 카드를 삽니다. QR형 지하철 패스는 앱에서 '사용 시작'을 누르고 QR 리더가 있는 개찰구로 들어가세요.</div><div class="jp" lang="ja"><h4><span class="tag rec">乗車券</span>Tokyo Subway Ticket 48時間 + Suica</h4>
-地下鉄パスは1人¥1,500。10/3（土）朝の最初の改札から48時間なので、土・日の東京メトロ・都営地下鉄が全部乗れます。JR・江ノ電・京王線は使えないので<b>Suica</b>と併用します。iPhoneは「Welcome Suica Mobile」アプリですぐ作れ、Androidは成田空港のJR EAST Travel Service CenterでWelcome Suicaカードを買います。QR版の地下鉄パスは、アプリで「利用開始」を押してQRリーダーのある改札から入りましょう。</div></li>
-        <li><div class="ko"><h4><span class="tag rec">택시</span>3명이면 가까운 거리는 택시도 비슷합니다</h4>
-          지하철 3명 요금이 ¥600~900이라, ¥1,500~2,500 거리는 택시가 크게 비싸지 않습니다. 카카오T 해외 호출(GO 연동, 원화 결제)이나 GO 앱으로 부르면 목적지 설명이 필요 없습니다. 뒷문은 자동으로 열리고 닫히니 손대지 마세요.</div><div class="jp" lang="ja"><h4><span class="tag rec">タクシー</span>3人なら近い距離はタクシーとあまり変わりません</h4>
-地下鉄の3人分の運賃が¥600〜900なので、¥1,500〜2,500の距離ならタクシーでもそれほど高くありません。カカオTの海外配車（GOと連携、ウォン決済）やGOアプリで呼べば、行き先を説明する必要がありません。後ろのドアは自動で開閉するので触らないでください。</div></li>
-        <li><div class="ko"><h4><span class="tag rec">부모님과</span>지하철 팁</h4>
-          엘리베이터는 역마다 'エレベーター' 표지와 바닥 노란 점자 블록을 따라가면 있습니다. 도쿄 에스컬레이터는 <b>왼쪽에 서고</b> 오른쪽을 비웁니다. 출구 번호(A2, A5 등)를 먼저 확인하고 나가면 헤매지 않습니다. 평일 아침 러시아워(7:30~9:30)에 도심으로 들어가는 전철은 타지 않게 짰습니다. 금요일 아침 가마쿠라행은 반대 방향이라 덜 붐비고, 그린샤면 앉아 갑니다.</div><div class="jp" lang="ja"><h4><span class="tag rec">両親と</span>地下鉄のコツ</h4>
-エレベーターは、各駅の「エレベーター」表示と床の黄色い点字ブロックをたどれば見つかります。東京のエスカレーターは<b>左側に立ち</b>、右側を空けます。出口番号（A2、A5など）を先に確認してから出れば迷いません。平日朝のラッシュ（7:30〜9:30）に都心へ向かう電車には乗らない日程にしました。金曜朝の鎌倉行きは逆方向なので比較的すいていて、グリーン車なら座れます。</div></li>
-      </ul>
-
-      <div class="status" id="i-status">
+    <div class="isec" id="i-transit"><h3><span class="ko">교통 · 좌석과 계단부터 확인</span><span class="jp" lang="ja">交通 · 席と階段を先に確認</span></h3><p class="d"><span class="ko">시내 기본은 Suica 등 교통카드. 48시간 지하철권은 선택한 이틀의 실제 도쿄메트로·도에이 운임과 비교한 뒤 구매하세요. JR·에노덴·게이오는 별도입니다. 가마쿠라를 토요일로 바꾸면 금·일은 연속 이틀이 아니므로 패스 효율도 다시 계산합니다.</span><span class="jp" lang="ja">市内は交通系ICを基本に。48時間地下鉄券は実際のメトロ・都営運賃と比較して購入。JR・江ノ電・京王は別。鎌倉を土曜へ替えると金・日は連続日ではないため再計算。</span></p><p class="d"><span class="ko">보통열차 그린차는 자유석으로 착석 보장 없음. 역마다 엘리베이터 위치를 역 구내도에서 확인하고 エレベーター 표지를 따르세요. 에스컬레이터에서는 걷지 말고 손잡이를 잡고 서세요. 택시 요금과 짐 적재 가능 여부는 호출 전 확인합니다.</span><span class="jp" lang="ja">普通列車グリーン車は自由席で着席保証なし。駅構内図でエレベーターを確認。エスカレーターでは歩かず手すりにつかまって立ちます。タクシーの料金と荷物が載るかは乗車前に確認。</span></p><a class="btn" href="https://www.jreast.co.jp/multi/green/index.html" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a><div class="status" id="i-status">
         <h4><span class="ko">지금 운행 상황 보기</span><span class="jp" lang="ja">いまの運行状況を見る</span></h4>
         <p><span class="ko">지연이나 운행 중단이 있는지 공식 페이지에서 바로 확인합니다. <b>平常運転</b> = 정상 운행, <b>遅延</b> = 지연, <b>運転見合わせ</b> = 운행 중단.</span><span class="jp" lang="ja">遅延や運転見合わせがないか、公式ページですぐに確認できます。<b>平常運転</b> = 通常どおり、<b>遅延</b> = 遅れ、<b>運転見合わせ</b> = 運行停止。</span></p>
         <div class="acts">
@@ -1806,109 +983,7 @@
           <a class="btn" href="https://transit.yahoo.co.jp/diainfo/pref/13" target="_blank" rel="noopener"><span class="ko">도쿄 전체 한눈에</span><span class="jp" lang="ja">東京全体をひと目で</span></a>
         </div>
       </div>
-    </div>
-
-    <div class="isec" id="i-nex">
-      <h3><span class="ko">N'EX 교환부터 탑승까지</span><span class="jp" lang="ja">N'EXの引き換えから乗車まで</span></h3>
-      <ol class="steps">
-        <li><span><span class="ko"><b>제2터미널 입국 후 지하 1층</b>으로 내려갑니다. 공항제2빌딩역 개찰구 앞 JR EAST Travel Service Center (<span class="num">08:30–20:00</span>).</span><span class="jp" lang="ja"><b>第2ターミナルで入国後、地下1階</b>へ下ります。空港第2ビル駅の改札前、JR EAST Travel Service Center（<span class="num">08:30–20:00</span>）。</span></span></li>
-        <li><span><span class="ko"><b>3명 여권 + 클룩 바우처</b>를 냅니다. 여권 실물이 3개 모두 있어야 합니다.</span><span class="jp" lang="ja"><b>3人分のパスポート + Klookのバウチャー</b>を出します。パスポートの原本が3冊すべて必要です。</span></span></li>
-        <li><span><span class="ko">오늘 신주쿠행과 <b>10/5 신주쿠 12시대 출발</b> 좌석을 함께 지정받습니다. 좌석표 2장씩 × 3명을 받습니다.</span><span class="jp" lang="ja">今日の新宿行きと<b>10/5 新宿12時台発</b>の座席を一緒に指定してもらいます。座席券を2枚ずつ × 3人分受け取ります。</span></span></li>
-        <li><span><span class="ko">승차권을 개찰구에 넣고 통과 → 승강장. 표에 적힌 <b>호차·좌석</b>에 앉습니다.</span><span class="jp" lang="ja">乗車券を改札に通して → ホームへ。券に書かれた<b>号車・座席</b>に座ります。</span></span></li>
-        <li><span><span class="ko">10/5 귀국 날은 신주쿠역 JR 개찰구로 들어가 같은 방식으로 탑니다. <b>공항제2빌딩역</b>에서 내립니다.</span><span class="jp" lang="ja">10/5の帰国日は、新宿駅のJR改札から入って同じように乗ります。<b>空港第2ビル駅</b>で降ります。</span></span></li>
-      </ol>
-      <div class="acts"><button class="btn show" type="button" data-show="nex"><span class="ko">창구 직원에게 보여주기</span><span class="jp" lang="ja">窓口の係員に見せる</span></button></div>
-    </div>
-
-    <div class="isec" id="i-food">
-      <h3><span class="ko">식사 한눈에 · 베스트 코스</span><span class="jp" lang="ja">食事のまとめ · ベストコース</span></h3>
-      <p class="note"><span class="ko">꼭 가실 곳(오모이데요코초, 우나후지)을 중심에 두고, 평점과 후기가 꾸준한 곳만 남겼습니다. 라멘, 시라스동, 꼬치, 돈카츠, 초밥, 스키야키, 장어까지 겹치지 않습니다. 가격은 1인 기준 대략입니다.</span><span class="jp" lang="ja">必ず行きたい場所（思い出横丁、うな富士）を中心に、評価と口コミが安定している店だけを残しました。ラーメン、しらす丼、串焼き、とんかつ、寿司、すき焼き、うなぎと、ジャンルが重なりません。価格は1人あたりの目安です。</span></p>
-      <div class="tw">
-        <table>
-          <thead><tr><th><span class="ko">언제</span><span class="jp" lang="ja">いつ</span></th><th><span class="ko">어디 · 무엇</span><span class="jp" lang="ja">どこ · なに</span></th><th class="r"><span class="ko">1인</span><span class="jp" lang="ja">1人</span></th></tr></thead>
-          <tbody>
-            <tr><td class="n"><span class="ko">1일 20:20</span><span class="jp" lang="ja">1日目 20:20</span></td><td><span class="ko">하야시다<span class="ja" lang="ja">らぁ麺 はやし田</span><span class="what">라멘 · 신주쿠산초메</span></span><span class="jp" lang="ja">らぁ麺 はやし田<span class="ja" lang="ko">하야시다</span><span class="what">ラーメン · 新宿三丁目</span></span></td><td class="n r">¥1,500</td></tr>
-            <tr><td class="n"><span class="ko">2일 11:10</span><span class="jp" lang="ja">2日目 11:10</span></td><td><span class="ko">가마쿠라 아키모토<span class="ja" lang="ja">鎌倉 秋本</span><span class="what">생시라스동 · 채소 튀김</span></span><span class="jp" lang="ja">鎌倉 秋本<span class="ja" lang="ko">가마쿠라 아키모토</span><span class="what">生しらす丼 · 野菜の天ぷら</span></span></td><td class="n r">¥2,500</td></tr>
-            <tr><td class="n"><span class="ko">2일 17:15</span><span class="jp" lang="ja">2日目 17:15</span></td><td><span class="ko">오모이데요코초<span class="ja" lang="ja">思い出横丁 · カブト · 岐阜屋</span><span class="what">꼬치구이·중화 · 꼭 가실 곳</span></span><span class="jp" lang="ja">思い出横丁 · カブト · 岐阜屋<span class="ja" lang="ko">오모이데요코초</span><span class="what">串焼き・中華 · 必ず行きたい場所</span></span></td><td class="n r">¥4,000</td></tr>
-            <tr><td class="n"><span class="ko">3일 11:30</span><span class="jp" lang="ja">3日目 11:30</span></td><td><span class="ko">마이센 아오야마<span class="ja" lang="ja">まい泉 青山本店</span><span class="what">돈카츠</span></span><span class="jp" lang="ja">まい泉 青山本店<span class="ja" lang="ko">마이센 아오야마</span><span class="what">とんかつ</span></span></td><td class="n r">¥3,000</td></tr>
-            <tr><td class="n"><span class="ko">3일 18:20</span><span class="jp" lang="ja">3日目 18:20</span></td><td><span class="ko">스시노미도리 시부야<span class="ja" lang="ja">美登利寿司 渋谷店</span><span class="what">초밥 · 클룩 좌석 예약</span></span><span class="jp" lang="ja">美登利寿司 渋谷店<span class="ja" lang="ko">스시노미도리 시부야</span><span class="what">寿司 · Klookで席の予約</span></span></td><td class="n r">¥4,000</td></tr>
-            <tr><td class="n"><span class="ko">4일 11:45</span><span class="jp" lang="ja">4日目 11:45</span></td><td><span class="ko">아사쿠사 이마한<span class="ja" lang="ja">浅草今半</span><span class="what">스키야키 · 예약 권장</span></span><span class="jp" lang="ja">浅草今半<span class="ja" lang="ko">아사쿠사 이마한</span><span class="what">すき焼き · 予約推奨</span></span></td><td class="n r">¥4,500</td></tr>
-            <tr><td class="n"><span class="ko">4일 17:00</span><span class="jp" lang="ja">4日目 17:00</span></td><td><span class="ko">우나후지 오페라시티점<span class="ja" lang="ja">炭焼 うな富士 53階</span><span class="what">히츠마부시 · 예약 필수 · 꼭 가실 곳</span></span><span class="jp" lang="ja">炭焼 うな富士 53階<span class="ja" lang="ko">우나후지 오페라시티점</span><span class="what">ひつまぶし · 予約必須 · 必ず行きたい場所</span></span></td><td class="n r">¥6,000–8,000</td></tr>
-            <tr><td class="n"><span class="ko">5일 12:15</span><span class="jp" lang="ja">5日目 12:15</span></td><td><span class="ko">N'EX 열차 안<span class="what">에키벤 (도시락)</span></span><span class="jp" lang="ja">N'EXの車内<span class="what">駅弁</span></span></td><td class="n r">¥1,800</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <ul class="list" style="margin-top:10px">
-        <li><div class="ko"><h4>막히면 여기로</h4><b>츠나하치 총본점</b>(신주쿠 튀김, 1924년 창업, <span lang="ja">新宿3-31-8</span>) · <b>고하치</b>(가마쿠라역 1분 시라스동, 연중무휴) · <b>비어홀 라이온 긴자 7초메</b>(1934년 개업한 비어홀, 일 11:30–22:00, 우나후지 예약을 못 잡았을 때).</div><div class="jp" lang="ja"><h4>行けなかったときはここへ</h4><b>つな八 総本店</b>（新宿の天ぷら、1924年創業、新宿3-31-8）· <b>五八</b>（鎌倉駅から1分のしらす丼、年中無休）· <b>ビヤホールライオン 銀座七丁目店</b>（1934年開業のビヤホール、日 11:30–22:00、うな富士の予約が取れなかったとき）。</div></li>
-      </ul>
-    </div>
-
-    <div class="isec" id="i-rain">
-      <h3><span class="ko">비가 오면</span><span class="jp" lang="ja">雨が降ったら</span></h3>
-      <p class="note"><span class="ko">날짜별 머리글의 날씨 칩에 강수확률(비 올 확률)이 뜹니다. 50%를 넘으면 칩이 노랗게 바뀌고, 그 날 머리글에 이 안내로 오는 링크가 생깁니다.</span><span class="jp" lang="ja">日ごとの見出しにある天気のチップに降水確率が出ます。50%を超えるとチップが黄色に変わり、その日の見出しにこの案内へのリンクが表示されます。</span></p>
-      <ul class="list">
-        <li id="rain-d2"><div class="ko"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">2</span>가마쿠라</h4>종일 비 예보면 <b>4일차(일)와 낮 일정만 바꾸고 저녁은 그대로</b> 둡니다. 금요일: 아사쿠사·긴자(보행자천국은 주말에만 열리니 긴자 식스·미츠코시 안에서) → 저녁 오모이데요코초. 일요일: 가마쿠라 → 저녁 우나후지(돌아오는 신주쿠 바로 다음 역이라 그대로 이어집니다). <b>우나후지 예약은 날짜 그대로</b> 두고 시간만 17:30으로, 이마한 점심만 금요일로 옮기세요. 지하철 48시간 패스는 금요일 아침부터 쓰면 토요일까지 됩니다. 약한 비면 그대로 가고 바닷가 건널목만 짧게.</div><div class="jp" lang="ja"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">2</span>鎌倉</h4>一日中雨の予報なら、<b>4日目（日）と昼の予定だけを入れ替え、夕食はそのまま</b>にします。金曜日：浅草・銀座（歩行者天国は週末だけなので、GINZA SIX・三越の中で）→ 夜は思い出横丁。日曜日：鎌倉 → 夜はうな富士（帰りの新宿の次の駅なのでそのままつながります）。<b>うな富士の予約は日付そのまま</b>で時間だけ17:30に、今半の昼食だけ金曜日に移しましょう。48時間の地下鉄パスは金曜日の朝から使えば土曜日まで使えます。小雨ならそのまま行って、海辺の踏切だけ短めに。</div></li>
-        <li id="rain-d3"><div class="ko"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">3</span>하라주쿠 · 에비스 · 시부야</h4>메이지신궁은 짧게 본전만. 에비스 그릇 가게는 실내라 그대로. 시부야 스카이 옥상이 닫히면 실내 전망층만 열리니 예매 변경 규정을 전날 확인하세요.</div><div class="jp" lang="ja"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">3</span>原宿 · 恵比寿 · 渋谷</h4>明治神宮は本殿だけ短めに。恵比寿の器の店は屋内なのでそのまま。SHIBUYA SKYは屋上が閉まると屋内の展望フロアだけになるので、予約の変更ルールを前日に確認しましょう。</div></li>
-        <li id="rain-d4"><div class="ko"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">4</span>아사쿠사 · 긴자</h4>센소지는 우산 쓰고 그대로. 보행자천국은 비 오면 열리지 않으니 긴자 식스·미츠코시 안에서 보냅니다. 우나후지는 실내라 그대로 (구름이 많으면 후지산은 안 보입니다).</div><div class="jp" lang="ja"><h4><span class="ln" style="--c:var(--ink);color:var(--surface)">4</span>浅草 · 銀座</h4>浅草寺は傘をさしてそのまま。歩行者天国は雨だと実施されないので、GINZA SIX・三越の中で過ごします。うな富士は屋内なのでそのまま（雲が多いと富士山は見えません）。</div></li>
-      </ul>
-    </div>
-
-    <div class="isec" id="i-shop">
-      <h3><span class="ko">쇼핑 · 면세</span><span class="jp" lang="ja">買い物 · 免税</span></h3>
-      <ul class="list">
-        <li><div class="ko"><h4>이번 여행은 지금 방식 그대로 면세됩니다</h4>계산할 때 <b>여권 실물</b>을 보여주면 그 자리에서 소비세(10%)를 빼 줍니다. 같은 가게에서 하루 ¥5,000(세전) 이상일 때. 과자·화장품 같은 소모품은 봉인 포장해 주는데, <b>일본 안에서 뜯으면 안 됩니다</b>. 2026년 11월 1일부터 '먼저 내고 공항에서 돌려받는' 방식으로 바뀌지만, 10월 여행이라 해당되지 않습니다.</div><div class="jp" lang="ja"><h4>今回の旅行は今の方式のまま免税になります</h4>会計のときに<b>パスポートの原本</b>を見せると、その場で消費税（10%）を引いてくれます。同じ店で1日¥5,000（税抜）以上のとき。お菓子・化粧品などの消耗品は封をした袋に入れてくれますが、<b>日本国内で開けてはいけません</b>。2026年11月1日から「先に払って空港で払い戻す」方式に変わりますが、10月の旅行なので対象外です。</div></li>
-        <li><div class="ko"><h4>선물 고르기</h4>에비스 THE HARVEST·EAST table의 그릇, 긴자 기무라야 단팥빵(당일 먹기), 이세탄·다카시마야 지하 식품관의 과자, 이토야 문구, 돈키호테 생활용품. 도쿄 바나나 같은 대표 과자는 공항에도 있습니다.</div><div class="jp" lang="ja"><h4>おみやげ選び</h4>恵比寿 THE HARVEST・EAST tableの器、銀座木村家のあんぱん（当日中に）、伊勢丹・高島屋の地下食品館のお菓子、伊東屋の文房具、ドン・キホーテの日用品。東京ばな奈のような定番のお菓子は空港にもあります。</div></li>
-        <li><div class="ko"><h4>무게를 먼저 생각하세요</h4>귀국 편 위탁이 1인 15kg입니다. 병 음료, 그릇, 조미료는 금방 무거워집니다. 그릇은 옷으로 감싸 기내 가방(10kg)에 넣으면 깨질 걱정이 적습니다. 휴대용 저울이 있으면 편합니다.</div><div class="jp" lang="ja"><h4>まず重さを考えましょう</h4>帰りの便の預け荷物は1人15kgです。瓶の飲み物、器、調味料はすぐ重くなります。器は服で包んで機内持ち込みの荷物（10kg）に入れれば、割れる心配が減ります。携帯用のはかりがあると便利です。</div></li>
-      </ul>
-    </div>
-
-    <div class="isec" id="i-bags">
-      <h3><span class="ko">짐 규정</span><span class="jp" lang="ja">手荷物の規定</span></h3>
-      <div class="tw">
-        <table>
-          <thead><tr><th></th><th><span class="ko">가는 편 · 에어프레미아</span><span class="jp" lang="ja">往路 · エアプレミア</span></th><th><span class="ko">오는 편 · 이스타항공</span><span class="jp" lang="ja">復路 · イースター航空</span></th></tr></thead>
-          <tbody>
-            <tr><th scope="row"><span class="ko">위탁</span><span class="jp" lang="ja">預け</span></th><td><span class="ko">1인 1개 · 15kg</span><span class="jp" lang="ja">1人1個 · 15kg</span></td><td><span class="ko">1인 1개 · 15kg · 세 변 합 203cm 이하</span><span class="jp" lang="ja">1人1個 · 15kg · 3辺の合計203cm以下</span></td></tr>
-            <tr><th scope="row"><span class="ko">기내</span><span class="jp" lang="ja">機内</span></th><td><span class="ko">1개 10kg (55×40×20cm) + 작은 소지품 1개</span><span class="jp" lang="ja">1個10kg（55×40×20cm）+ 小さな身の回り品1個</span></td><td><span class="ko">1개 10kg · 55×40×20cm</span><span class="jp" lang="ja">1個10kg · 55×40×20cm</span></td></tr>
-            <tr><th scope="row"><span class="ko">공통</span><span class="jp" lang="ja">共通</span></th><td colspan="2"><span class="ko">보조배터리·전자담배는 <b>기내에만</b> (위탁 불가, 기내 사용 제한). 100ml 넘는 액체와 칼은 위탁으로.</span><span class="jp" lang="ja">モバイルバッテリー・電子たばこは<b>機内持ち込みのみ</b>（預け不可、機内での使用制限あり）。100mlを超える液体と刃物は預け荷物に。</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="isec" id="i-budget">
-      <h3><span class="ko">예상 경비 (3명 · 현지에서 쓰는 돈)</span><span class="jp" lang="ja">予想される費用（3人 · 現地で使うお金）</span></h3>
-      <p class="note"><span class="ko">항공·숙소·N'EX는 이미 결제했습니다. 쇼핑은 빼고 계산했습니다.</span><span class="jp" lang="ja">航空券・宿・N'EXは支払い済みです。買い物は除いて計算しました。</span></p>
-      <div class="tw">
-        <table id="budget">
-          <thead><tr><th><span class="ko">항목</span><span class="jp" lang="ja">項目</span></th><th class="r"><span class="ko">엔</span><span class="jp" lang="ja">円</span></th><th class="r"><span class="ko">원 (환산)</span><span class="jp" lang="ja">ウォン（換算）</span></th></tr></thead>
-          <tbody>
-            <tr><td><span class="ko">지하철 48시간 패스 × 3</span><span class="jp" lang="ja">地下鉄48時間パス × 3</span></td><td class="n r" data-yen="4500">¥4,500</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">Suica (가마쿠라 JR·에노덴, JR·게이오)</span><span class="jp" lang="ja">Suica（鎌倉のJR・江ノ電、JR・京王）</span></td><td class="n r" data-yen="9000">¥9,000</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">택시 (신주쿠역 왕복 + 여분)</span><span class="jp" lang="ja">タクシー（新宿駅の往復 + 予備）</span></td><td class="n r" data-yen="8000">¥8,000</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">아침 4번</span><span class="jp" lang="ja">朝食 4回</span></td><td class="n r" data-yen="12000">¥12,000</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">점심 4번</span><span class="jp" lang="ja">昼食 4回</span></td><td class="n r" data-yen="35000">¥35,000</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">저녁 4번 (우나후지 포함)</span><span class="jp" lang="ja">夕食 4回（うな富士を含む）</span></td><td class="n r" data-yen="50000">¥50,000</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">카페·간식·음료</span><span class="jp" lang="ja">カフェ・おやつ・飲み物</span></td><td class="n r" data-yen="22000">¥22,000</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">입장료 (스카이·대불·하세데라·교엔)</span><span class="jp" lang="ja">入場料（SKY・大仏・長谷寺・御苑）</span></td><td class="n r" data-yen="14000">¥14,000</td><td class="n r won"></td></tr>
-            <tr><td><span class="ko">기타 (코인로커·편의점)</span><span class="jp" lang="ja">その他（コインロッカー・コンビニ）</span></td><td class="n r" data-yen="6000">¥6,000</td><td class="n r won"></td></tr>
-          </tbody>
-          <tfoot><tr><td><span class="ko">합계 (1인 약 ¥53,500 · 그린샤 제외)</span><span class="jp" lang="ja">合計（1人 約¥53,500 · グリーン車を除く）</span></td><td class="n r" data-yen="160500">¥160,500</td><td class="n r won"></td></tr></tfoot>
-        </table>
-      </div>
-      <div class="tw" style="margin-top:10px">
-        <table>
-          <thead><tr><th><span class="ko">이미 결제</span><span class="jp" lang="ja">支払い済み</span></th><th class="r"><span class="ko">금액</span><span class="jp" lang="ja">金額</span></th></tr></thead>
-          <tbody>
-            <tr><td><span class="ko">항공 가는 편 (YP 735 × 3)</span><span class="jp" lang="ja">航空券 往路（YP 735 × 3）</span></td><td class="n r">₩689,988</td></tr>
-            <tr><td><span class="ko">항공 오는 편 (ZE 610 × 3)</span><span class="jp" lang="ja">航空券 復路（ZE 610 × 3）</span></td><td class="n r">₩1,258,179</td></tr>
-            <tr><td><span class="ko">N'EX 왕복 × 3</span><span class="jp" lang="ja">N'EX 往復 × 3</span></td><td class="n r">₩150,300</td></tr>
-            <tr><td><span class="ko">숙소 4박</span><span class="jp" lang="ja">宿 4泊</span></td><td><span class="ko">아고다 앱에서 확인</span><span class="jp" lang="ja">Agodaアプリで確認</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="conv" id="i-conv">
+    </div><div class="isec" id="i-nex"><h3><span class="ko">N’EX · 바우처와 지정석은 별개</span><span class="jp" lang="ja">N’EX · バウチャーと指定席は別</span></h3><p class="d"><span class="ko">구매한 바우처의 교환 장소·마감 시각·유효기간을 우선 확인하세요. 3명 여권과 바우처를 제시하고 오늘 신주쿠행과 10/5 귀국편 좌석을 지정합니다. 돌아오는 열차는 신주쿠 11시대 후보 중 T3 13:00~13:20 도착이 가능한 편으로 선택하며, 실제 발권 시각이 일정표보다 우선입니다.</span><span class="jp" lang="ja">購入したバウチャーの引換場所・締切・有効期間を確認。3人分の旅券で往復指定席を確保。帰りは新宿11時台を候補にT3到着13:00〜13:20となる実際の列車を選びます。発券時刻を優先。</span></p><button class="btn" data-show="nex"><span class="ko">창구에 보여주기</span><span class="jp" lang="ja">窓口で見せる</span></button><a class="btn" href="https://www.jreast.co.jp/multi/en/nex/" target="_blank" rel="noopener"><span class="ko">공식 안내</span><span class="jp" lang="ja">公式案内</span></a></div><div class="isec" id="i-food"><h3><span class="ko">식당 선택 · 같은 지점인지 확인</span><span class="jp" lang="ja">食事の選択 · 同じ支店か確認</span></h3><p class="d"><span class="ko">기본 식당 7곳과 카페 6곳, 대안·간식 8곳은 엑셀 상세에 출처·주소·예산을 함께 정리했습니다. 아키모토·마이센·소바는 30분, 간식·카페는 20분을 대기 상한으로 삼고 넘으면 다른 곳으로 바꿉니다. 이는 예상 대기시간이 아니라 여행 운영 기준입니다.</span><span class="jp" lang="ja">基本の食事7店、カフェ6店、代替・軽食8店はExcelに出典・住所・予算を記載。食事30分、軽食・カフェ20分を待つ上限に。それ以上なら変更。予想待ち時間ではなく行動の基準です。</span></p><p class="d"><span class="ko">우나후지 17:00은 예약 희망 시간입니다. 폰가는 고가 선택이며 미도리로 바꾸면 가족 식비가 약 27,000엔 줄어드는 예산 구조입니다. 이마한 별관은 원래 가이드의 아사쿠사이마한 국제거리본점과 다른 업체이므로 이름만 보고 예약하지 마세요.</span><span class="jp" lang="ja">うな富士17:00は予約希望。ぽんがを美登利へ替えると家族の食費目安は約27,000円減。今半別館は元の日程の浅草今半国際通り本店とは別なので店名を確認。</span></p></div><div class="isec" id="i-rain"><h3><span class="ko">비·피로에 따른 변경</span><span class="jp" lang="ja">雨・疲れによる変更</span></h3><ul class="list"><li id="rain-d2"><p class="d"><span class="ko">가마쿠라: 2일↔3일 변경은 상단 선택에서. 식당 예약까지 자동 이동하지 않습니다. 양일 모두 비·강풍이면 가마쿠라를 무리해서 넣지 말고 도쿄 실내 일정과 휴식으로 바꿉니다.</span><span class="jp" lang="ja">鎌倉：2日と3日の変更は上部で選択。店の予約は自動変更しません。両日雨・強風なら東京の屋内と休息へ。</span></p></li><li id="rain-d3"><p class="d"><span class="ko">서부 도쿄: 메이지신궁과 그릇 쇼핑부터 생략하고, 점심·카나데·저녁만 남깁니다.</span><span class="jp" lang="ja">東京西側：神宮と器の買物を先に省き、昼食・KANADE・夕食だけ。</span></p></li><li id="rain-d4"><p class="d"><span class="ko">동부 도쿄: 하마리큐를 빼고 긴자 실내 카페로. 사후를 택하면 15시 방문 후 우나후지로 바로 이동하고 긴자 쇼핑은 줄입니다.</span><span class="jp" lang="ja">東京東側：浜離宮を外し銀座のカフェへ。茶楓なら15時利用後うな富士へ直行、銀座の買物を短縮。</span></p></li></ul></div><div class="isec" id="i-shop"><h3><span class="ko">쇼핑은 여유 시간에</span><span class="jp" lang="ja">買物は余裕のある時だけ</span></h3><p class="d"><span class="ko">에비스 그릇은 서부 일정일 카페 뒤 한 매장, 긴자는 일요일 짧게. 귀국일 추가 쇼핑은 넣지 않습니다. 면세·포장·수하물 조건은 매장과 항공사에서 확인하세요.</span><span class="jp" lang="ja">恵比寿の器は西側の日のカフェ後に1店、銀座は日曜に短く。帰国日の買物は追加しません。免税・梱包・手荷物条件は店舗と航空会社で確認。</span></p></div><div class="isec" id="i-bags"><h3><span class="ko">짐 · 귀국일은 바로 공항으로</span><span class="jp" lang="ja">荷物 · 帰国日は空港へ直行</span></h3><p class="d"><span class="ko">귀국일 쇼핑·짐 보관을 기본안에서 제외했습니다. 캐리어 크기와 무게는 실제 항공권 조건을 확인하고, 택시 한 대에 실을 수 있는지 기사에게 먼저 확인하세요. 숙소 체크아웃 마감과 귀중품도 다시 점검합니다.</span><span class="jp" lang="ja">帰国日の買物・荷物預かりは基本案から除外。荷物の大きさ・重量は航空券条件を確認。タクシーに載るか運転手へ先に確認。チェックアウト期限と貴重品を再点検。</span></p></div><div class="isec" id="i-budget"><h3><span class="ko">가족 3명 예산 · 식비와 입장료</span><span class="jp" lang="ja">3人の予算 · 食費と入場料</span></h3><p class="d"><span class="ko"><b>식비 121,500~164,100엔</b>: 기본 식사 7번, 4일 아침, 귀국일 점심, 카나데·하마리큐 차, 간식 여유 포함. <b>하마리큐 입장 900엔</b>을 더하면 <b>122,400~165,000엔</b>. 항공·숙박·교통·쇼핑·그 외 관광 입장은 제외입니다.</span><span class="jp" lang="ja"><b>食費121,500〜164,100円</b>：基本7食、朝食4回、帰国日昼食、KANADE・浜離宮の茶、軽食込み。<b>浜離宮入場900円</b>を加えて<b>122,400〜165,000円</b>。航空・宿・交通・買物・その他観光入場は別。</span></p><p class="tip"><span class="ko">네즈는 기본 합계에서 제외했습니다. 카나데 대신 고르면 카나데 비용을 빼고 네즈 음료·입장료를 더하세요. 대안 식당·카페를 모두 더하지 않습니다. 하마리큐를 생략해도 대체 카페 비용은 별도로 예상하세요.</span><span class="jp" lang="ja">根津は基本合計から除外。KANADEの代わりならKANADEを引き根津の飲物・入場料を加算。代替店を全部加算しません。浜離宮を省く場合も代替カフェ代を見込みます。</span></p><div class="conv" id="i-conv">
         <div class="row" style="justify-content:space-between">
           <span style="font-weight:800"><span class="ko">엔 → 원 계산기</span><span class="jp" lang="ja">円 → ウォン 換算</span></span>
           <span class="row" style="gap:6px"><label for="rate"><span class="ko">1엔 =</span><span class="jp" lang="ja">1円 =</span></label><input id="rate" type="text" inputmode="decimal" value="8.7" aria-label="1엔당 원 환율 / 1円あたりのウォン"><label for="rate"><span class="ko">원</span><span class="jp" lang="ja">ウォン</span></label></span>
@@ -1923,13 +998,11 @@
         </div>
         <p class="rate-note"><span id="rate-note">인터넷이 되면 오늘 환율로 자동으로 바뀝니다</span><button type="button" id="rate-auto" hidden><span class="ko">자동 환율로 되돌리기</span><span class="jp" lang="ja">自動レートに戻す</span></button></p>
       </div>
-    </div>
-
-    <div class="isec" id="i-phrases">
+    </div><div class="isec" id="i-phrases">
       <h3><span class="ko">보여주기 카드</span><span class="jp" lang="ja">見せるカード</span></h3>
       <p class="note"><span class="ko">누르면 화면 가득 일본어로 크게 뜹니다. 말하지 않고 휴대폰을 보여주면 됩니다.</span><span class="jp" lang="ja">タップすると画面いっぱいに日本語が大きく表示されます。話さなくても、スマホを見せれば伝わります。</span></p>
       <div class="phr">
-        <button type="button" class="wide" data-show="home"><span class="k"><span class="ko">숙소로 가 주세요 (택시)</span><span class="jp" lang="ja">宿までお願いします（タクシー）</span></span><span class="j" lang="ja">東京都新宿区新宿1丁目7-2</span></button>
+        <button type="button" class="wide" data-show="home"><span class="k"><span class="ko">숙소로 가 주세요 (택시)</span><span class="jp" lang="ja">宿までお願いします（タクシー）</span></span><span class="j" lang="ja">新宿御苑前駅（宿の住所は予約アプリで確認）</span></button>
         <button type="button" data-show="lost"><span class="k"><span class="ko">길을 잃었어요</span><span class="jp" lang="ja">道に迷いました</span></span><span class="j" lang="ja">道に迷いました</span></button>
         <button type="button" data-show="three"><span class="k"><span class="ko">3명이에요</span><span class="jp" lang="ja">3人です</span></span><span class="j" lang="ja">3人です</span></button>
         <button type="button" data-show="card"><span class="k"><span class="ko">카드 되나요?</span><span class="jp" lang="ja">カードは使えますか？</span></span><span class="j" lang="ja">カードで払えますか？</span></button>
@@ -1958,7 +1031,7 @@
 
     <div class="isec" id="i-sos">
       <h3><span class="ko">비상 연락처</span><span class="jp" lang="ja">緊急連絡先</span></h3>
-      <p class="note"><span class="ko">떨어졌을 때: 그 자리에서 전화 → 안 되면 '숙소로 가 주세요' 카드를 택시 기사에게 보여주고 숙소에서 만납니다.</span><span class="jp" lang="ja">はぐれたとき：その場で電話 → つながらなければ「宿までお願いします」カードをタクシーの運転手に見せて、宿で落ち合います。</span></p>
+      <p class="note"><span class="ko">헤어지면 그 자리에서 먼저 전화하세요. 연락이 안 되면 사전에 정한 만남 장소나 예약 앱의 실제 숙소 주소를 이용합니다. 이 공개 페이지의 카드에는 숙소 주소가 없습니다.</span><span class="jp" lang="ja">はぐれたらその場でまず電話。つながらなければ決めておいた集合場所か予約アプリの宿住所へ。この公開ページのカードに宿の住所はありません。</span></p>
       <ul class="sos">
         <li><span class="w"><span class="ko">경찰<small>일본어 · 가까운 파출소(交番)도 도와줍니다</small></span><span class="jp" lang="ja">警察<small>日本語 · 近くの交番でも助けてもらえます</small></span></span><a href="tel:110">110</a></li>
         <li><span class="w"><span class="ko">구급차 · 화재<small>일본어</small></span><span class="jp" lang="ja">救急車 · 火事<small>日本語</small></span></span><a href="tel:119">119</a></li>
@@ -1967,8 +1040,7 @@
         <li><span class="w"><span class="ko">주일본 한국대사관 영사부<small>평일 09:00–17:00</small></span><span class="jp" lang="ja">駐日韓国大使館 領事部<small>平日 09:00–17:00</small></span></span><a href="tel:+81334552601">03-3455-2601</a></li>
         <li><span class="w"><span class="ko">대사관 긴급 당직<small>야간 · 휴일 사건사고</small></span><span class="jp" lang="ja">大使館 緊急当直<small>夜間 · 休日の事件・事故</small></span></span><a href="tel:+817021535454">070-2153-5454</a></li>
         <li><span class="w"><span class="ko">외교부 영사콜센터<small>24시간 · 서울</small></span><span class="jp" lang="ja">韓国外交部 領事コールセンター<small>24時間 · ソウル</small></span></span><a href="tel:+82232100404">+82-2-3210-0404</a></li>
-        <li><span class="w"><span class="ko">숙소 호스트<small>Room In Tokyo</small></span><span class="jp" lang="ja">宿のホスト<small>Room In Tokyo</small></span></span><a href="tel:+819037005566">090-3700-5566</a></li>
-      </ul>
+        </ul>
       <p class="quake"><span class="ko"><b>지진이 나면</b> 흔들리는 동안은 테이블 밑에 들어가거나 가방으로 머리를 보호하고, 멈추면 출구 쪽으로 나갑니다. 엘리베이터는 타지 않습니다. 관광청 공식 앱 <b>Safety tips</b>를 깔아 두면 지진·쓰나미 경보가 한국어로 옵니다.</span><span class="jp" lang="ja"><b>地震が起きたら</b>、揺れている間はテーブルの下に入るか、かばんで頭を守り、揺れが収まったら出口の方へ移動します。エレベーターには乗りません。観光庁の公式アプリ<b>Safety tips</b>を入れておくと、地震・津波の警報が韓国語で届きます。</span></p>
     </div>
 
@@ -1976,7 +1048,7 @@
       <h3><span class="ko">준비물</span><span class="jp" lang="ja">持ち物</span></h3>
       <div class="chkbar"><span id="pack-count">0 / 16</span><button type="button" data-reset="pack">체크 모두 지우기</button></div>
       <div class="chk" data-group="pack">
-        <label><input type="checkbox" data-ck="p-passport"><span><span class="ko"><b>여권 3개</b>귀국일 기준 6개월 이상 남았는지</span><span class="jp" lang="ja"><b>パスポート 3冊</b>帰国日の時点で残り6か月以上あるか</span></span></label>
+        <label><input type="checkbox" data-ck="p-passport"><span><span class="ko"><b>여권 3개</b>일본 체류기간 중 유효한지 · 항공사 조건 확인</span><span class="jp" lang="ja"><b>パスポート 3冊</b>日本滞在中有効か · 航空会社条件も確認</span></span></label>
         <label><input type="checkbox" data-ck="p-vjw"><span><b><span class="ko">Visit Japan Web QR 캡처 3개</span><span class="jp" lang="ja">Visit Japan WebのQRスクショ 3人分</span></b></span></label>
         <label><input type="checkbox" data-ck="p-klook"><span><span class="ko"><b>클룩 N'EX 바우처</b>앱 로그인 확인</span><span class="jp" lang="ja"><b>KlookのN'EXバウチャー</b>アプリにログインできるか確認</span></span></label>
         <label><input type="checkbox" data-ck="p-agoda"><span><span class="ko"><b>아고다 앱 로그인</b>항공 2건 · 숙소 1건</span><span class="jp" lang="ja"><b>Agodaアプリにログイン</b>航空券2件 · 宿1件</span></span></label>
@@ -1986,7 +1058,7 @@
         <label><input type="checkbox" data-ck="p-battery"><span><span class="ko"><b>보조배터리</b>기내 가방에</span><span class="jp" lang="ja"><b>モバイルバッテリー</b>機内持ち込みの荷物に</span></span></label>
         <label><input type="checkbox" data-ck="p-umbrella"><span><b><span class="ko">접이식 우산</span><span class="jp" lang="ja">折りたたみ傘</span></b></span></label>
         <label><input type="checkbox" data-ck="p-jacket"><span><span class="ko"><b>얇은 겉옷 · 가디건</b>아침저녁 18℃ 안팎</span><span class="jp" lang="ja"><b>薄手の上着 · カーディガン</b>朝晩は18℃前後</span></span></label>
-        <label><input type="checkbox" data-ck="p-shoes"><span><span class="ko"><b>편한 운동화</b>3·4일차는 1만 보 이상</span><span class="jp" lang="ja"><b>歩きやすい運動靴</b>3・4日目は1万歩以上</span></span></label>
+        <label><input type="checkbox" data-ck="p-shoes"><span><span class="ko"><b>편한 운동화</b>장거리 보행을 줄여도 편한 신발은 필요</span><span class="jp" lang="ja"><b>歩きやすい運動靴</b>歩行を減らしても歩きやすい靴を</span></span></label>
         <label><input type="checkbox" data-ck="p-meds"><span><span class="ko"><b>상비약</b>소화제, 진통제, 파스, 밴드, 평소 드시는 약</span><span class="jp" lang="ja"><b>常備薬</b>胃腸薬、痛み止め、湿布、絆創膏、ふだん飲んでいる薬</span></span></label>
         <label><input type="checkbox" data-ck="p-coin"><span><span class="ko"><b>동전 지갑</b>일본은 동전을 많이 씁니다</span><span class="jp" lang="ja"><b>小銭入れ</b>日本は硬貨をよく使います</span></span></label>
         <label><input type="checkbox" data-ck="p-bag"><span><span class="ko"><b>접는 장바구니</b>편의점 봉투는 유료</span><span class="jp" lang="ja"><b>折りたたみのエコバッグ</b>コンビニの袋は有料</span></span></label>
@@ -1997,7 +1069,7 @@
 
     <footer>
       <p><span class="ko">영업시간·요금은 2026년 9월에 확인한 값이며 바뀔 수 있습니다. 특히 N'EX 정확한 출발 시각과 숙소 체크아웃 시간은 직접 확인이 필요합니다.</span><span class="jp" lang="ja">営業時間・料金は2026年9月に確認した内容で、変わることがあります。特にN'EXの正確な出発時刻と宿のチェックアウト時間は、ご自身での確認が必要です。</span></p>
-      <p id="offline" hidden><span class="ko">✓ 이 휴대폰에 저장됨 · 데이터가 없어도 열립니다</span><span class="jp" lang="ja">✓ このスマホに保存済み · データ通信がなくても開けます</span></p>
+      <p id="offline" hidden><span class="ko">가이드 파일 저장 확인 · 출발 전 비행기 모드로 다시 열어 확인하세요. 지도·날씨·예약은 인터넷이 필요합니다.</span><span class="jp" lang="ja">ガイド保存確認。出発前に機内モードで再表示して確認。地図・天気・予約には通信が必要。</span></p>
       <p class="num">TOKYO 2026.10.01–05 · YP735 / ZE610</p>
     </footer>
   </section>
@@ -2017,7 +1089,7 @@
   <div id="toast" role="status" aria-live="polite"></div>
 </div>
 
-<script>
+<script src="final-plan.js"></script><script>
 (function(){
   var root = document.documentElement;
   var app = document.getElementById('app');
@@ -2120,11 +1192,11 @@
   }
 
   /* ── show-to-staff cards ───────────── */
-  var HOME = '東京都新宿区\n新宿1丁目7-2\n（新宿御苑前駅の近く）';
+  var HOME = '宿の予約アプリで住所を確認してください。';
   var CARDS = {
-    home:    { tag:'TAXI · 택시', addr:true, ja:'この住所まで\nお願いします。\n\n' + HOME, yomi:'코노 쥬-쇼 마데 오네가이시마스', ko:'이 주소로 가 주세요.\n도쿄도 신주쿠구 신주쿠 1초메 7-2 (신주쿠교엔마에역 근처)' },
+    home:    { tag:'TAXI · 택시', addr:true, ja:'この住所まで\nお願いします。\n\n' + HOME, yomi:'코노 쥬-쇼 마데 오네가이시마스', ko:'이 주소로 가 주세요.\n숙소 예약 앱의 주소 화면을 함께 보여주세요.' },
     busta:   { tag:'TAXI · 택시', addr:true, ja:'バスタ新宿\n（新宿駅 南口）まで\nお願いします。', yomi:'바스타 신주쿠 마데 오네가이시마스', ko:'바스타 신주쿠(신주쿠역 남쪽 출구)로 가 주세요.' },
-    nex:     { tag:'JR 窓口 · N’EX', ja:'3人です。Klookのバウチャーです。\n\n① 今日 → 新宿 の N’EX\n② 10月5日 12時ごろ 新宿発 → 空港第2ビル の N’EX\n\nこの2本の座席を予約したいです。', yomi:'', ko:'3명입니다. 클룩 바우처입니다.\n① 오늘 신주쿠행 N\'EX\n② 10월 5일 12시쯤 신주쿠 출발 → 공항제2빌딩행 N\'EX\n이 두 열차의 좌석을 예약하고 싶어요.' },
+    nex:     { tag:'JR 窓口 · N’EX', ja:'3人です。Klookのバウチャーです。\n\n① 今日 → 新宿 の N’EX\n② 10月5日 11時台（T3に13時〜13時20分着） 新宿発 → 空港第2ビル の N’EX\n\nこの2本の座席を予約したいです。', yomi:'', ko:'3명입니다. 클룩 바우처입니다.\n① 오늘 신주쿠행 N\'EX\n② 10월 5일 11시대(T3 13:00~13:20 도착 기준) 신주쿠 출발 → 공항제2빌딩행 N\'EX\n이 두 열차의 좌석을 예약하고 싶어요.' },
     lost:    { tag:'HELP · 도움', addr:true, ja:'道に迷いました。\nこの住所に行きたいです。\n\n' + HOME, yomi:'미치니 마요이마시타. 코노 쥬-쇼니 이키타이데스', ko:'길을 잃었어요. 이 주소로 가고 싶어요.' },
     three:   { tag:'お店 · 가게', ja:'3人です。', yomi:'산닌 데스', ko:'3명이에요.' },
     card:    { tag:'お会計 · 계산', ja:'カードで\n払えますか？', yomi:'카-도데 하라에마스카', ko:'카드로 계산할 수 있나요?' },
@@ -2156,7 +1228,8 @@
     lastFocus = document.activeElement;
     ovTag.textContent = c.tag;
     ovJa.textContent = c.ja;
-    ovJa.className = 'ja' + (c.addr ? ' addr' : '');
+    ovJa.className = 'ja' + (c.addr ? ' addr' : '') + (c.ja.length > 80 ? ' long' : '');
+    ov.querySelector('.body').scrollTop = 0;
     ovYomi.textContent = c.yomi || '';
     ovYomi.hidden = !c.yomi;
     ovKo.textContent = c.ko;
@@ -2199,8 +1272,8 @@
     var days = Math.ceil(msLeft / 86400000);
     document.getElementById('prep-when').textContent = days <= 1 ? L('내일 출발', '明日出発') : L('출발 ' + days + '일 전', '出発まであと' + days + '日');
     document.getElementById('prep-title').textContent = left.length
-      ? L('꼭 해야 할 일 ' + left.length + '개가 남았습니다', '必須のやることが あと' + left.length + '件')
-      : L('꼭 해야 할 일은 모두 끝냈습니다', '必須のやることはすべて完了しました');
+      ? L('확인할 항목 ' + left.length + '개가 남았습니다', '確認する項目が あと' + left.length + '件')
+      : L('출발 전 확인 항목을 모두 체크했습니다', '出発前の確認項目をすべてチェック済み');
     var box = document.getElementById('prep-items');
     box.innerHTML = '';
     left.forEach(function(t){ var sp = document.createElement('span'); sp.textContent = t; box.appendChild(sp); });
@@ -2397,7 +1470,7 @@
   /* ── live weather (Open-Meteo, no API key) ── */
   var WX_URL = 'https://api.open-meteo.com/v1/forecast?latitude=35.6895,35.3192&longitude=139.6917,139.5467'
     + '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max'
-    + '&current=temperature_2m,weather_code&timezone=Asia%2FTokyo&forecast_days=16&past_days=2';
+    + '&hourly=precipitation_probability,precipitation,wind_speed_10m&current=temperature_2m,weather_code&timezone=Asia%2FTokyo&forecast_days=16&past_days=2';
   var WX_DAYS = [['2026-10-01','10/1 목','10/1 木'],['2026-10-02','10/2 금','10/2 金'],['2026-10-03','10/3 토','10/3 土'],['2026-10-04','10/4 일','10/4 日'],['2026-10-05','10/5 월','10/5 月']];
   function wxLabel(c){
     if (c === 0) return ['☀️', L('맑음', '晴れ')];
@@ -2422,7 +1495,8 @@
   function renderWx(data, at){
     if (!data || !data.length) return;
     wxLast = { d:data, at:at };
-    var tokyo = data[0], kama = data[1] || data[0];
+    window.dispatchEvent(new CustomEvent('tokyo-weather', {detail:{data:data,at:at}}));
+    var tokyo = data[0], kama = data[1];
     document.querySelectorAll('section.day[data-date]').forEach(function(sec){
       var chip = sec.querySelector('.meta .wx'), hint = sec.querySelector('.rainhint');
       if (!chip) return;
@@ -2446,7 +1520,7 @@
     var list = document.getElementById('wx-days'), shown = 0;
     list.innerHTML = '';
     WX_DAYS.forEach(function(p, i){
-      var kamaDay = (i === 1);
+      var kamaDay = p[0] === (document.documentElement.dataset.kamakura || '2026-10-02');
       var w = dayWx(kamaDay ? kama : tokyo, p[0]);
       var li = document.createElement('li');
       if (w){
@@ -2479,21 +1553,21 @@
   }
   function loadWx(){
     var cached = null;
-    try{ cached = JSON.parse(load('tokyo.wx') || 'null'); }catch(e){}
+    try{ cached = JSON.parse(load('tokyo.wx.final') || 'null'); }catch(e){}
     if (cached && cached.d) renderWx(cached.d, cached.t);
     if (cached && Date.now() - cached.t < 30 * 60000) return;
     if (!window.fetch) return;
     fetch(WX_URL).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); }).then(function(d){
       if (!Array.isArray(d)) d = [d];
       var at = Date.now();
-      store('tokyo.wx', JSON.stringify({ t:at, d:d }));
+      store('tokyo.wx.final', JSON.stringify({ t:at, d:d }));
       renderWx(d, at);
-    }).catch(function(){});
+    }).catch(function(){ window.dispatchEvent(new CustomEvent('tokyo-weather-error')); });
   }
   loadWx();
 
   /* ── my location → distances ───────── */
-  var HOME_GEO = [35.6885, 139.7115];
+  var HOME_GEO = [35.6886, 139.7107];
   var geoCard = document.getElementById('geo-card');
   var geoOff = document.getElementById('geo-off'), geoOn = document.getElementById('geo-on');
   var watchId = null, myPos = null, lastFix = 0;
@@ -2628,16 +1702,13 @@
   mark('top');
 
   /* ── offline ───────────────────────── */
-  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')){
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')){
     window.addEventListener('load', function(){
       navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' })
         .then(function(reg){ reg.update(); })
         .catch(function(){});
     });
-    navigator.serviceWorker.ready.then(function(){
-      var o = document.getElementById('offline');
-      if (o) o.hidden = false;
-    });
+    navigator.serviceWorker.ready.then(function(){ return caches.open('tokyo-trip-final-20260927-2'); }).then(function(c){ return c.match('./index.html'); }).then(function(hit){ if (hit) document.getElementById('offline').hidden = false; }).catch(function(){});
   }
 })();
 </script>
