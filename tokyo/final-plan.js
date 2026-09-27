@@ -79,7 +79,7 @@
     var note = document.createElement('p');
     var at = lastWeather && lastWeather.at;
     note.textContent = at
-      ? words('조회 ', '取得 ') + new Date(at).toLocaleString('ko-KR', {timeZone:'Asia/Tokyo'}) + ' JST · Open-Meteo · '
+      ? words('조회 ', '取得 ') + new Date(at).toLocaleString(words('ko-KR', 'ja-JP'), {timeZone:'Asia/Tokyo', month:'numeric', day:'numeric', hour:'2-digit', minute:'2-digit'}) + ' JST · Open-Meteo · '
         + ((failed || Date.now() - at > 3 * 3600000) ? words('저장된 이전 예보. 최신 예보를 다시 확인하세요.', '保存済みの古い予報。最新予報を再確認。') : words('예보이며 확정 날씨가 아닙니다.', '予報であり確定ではありません。'))
       : words('예보를 가져오지 못하면 기상 링크로 확인하세요. 날씨를 0으로 표시하지 않습니다.', '取得できない場合は気象リンクで確認。欠測値は0として表示しません。');
     box.appendChild(note);
