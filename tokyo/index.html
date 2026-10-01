@@ -1486,7 +1486,7 @@
   function dynCard(key){
     var addr = me.a, ph = phones();
     if (key === 'nex'){
-      if (Date.now() < new Date('2026-10-02T04:00:00+09:00').getTime()) return null;   // 10/1: both trains
+      if (Date.now() < new Date('2026-10-02T00:00:00+09:00').getTime()) return null;   // through 10/1: both trains
       return { tag:'JR 窓口 · N’EX', ja:'3人です。Klookのバウチャーです。\n\n10月5日 新宿 11:08発\n成田エクスプレス21号\n（空港第2ビル 12:27着）\n\nこの列車の座席を予約したいです。', yomi:'',
         ko:'3명입니다. 클룩 바우처입니다.\n10월 5일 신주쿠 11:08 발 나리타 익스프레스 21호(공항제2빌딩 12:27 도착)\n이 열차의 좌석을 예약하고 싶어요.' };
     }
