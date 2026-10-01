@@ -2,20 +2,31 @@
   'use strict';
   var root = document.documentElement;
   var url = new URL(location.href);
+  var KEY = 'tokyo.kamakura.final';
+  var DATES = ['2026-10-02', '2026-10-03'];
   var saved = null;
-  try { saved = localStorage.getItem('tokyo.kamakura.final'); } catch (_) {}
-  // Every page view writes ?kamakura= into the address, so a 10/2 value in a link is
-  // usually just the old default; it must not undo a 10/3 choice made on this device.
-  // A 10/3 link is always someone's choice: keep it here, so the home-screen icon
-  // (which opens without the parameter) shows the same plan.
+  try { saved = localStorage.getItem(KEY); } catch (_) {}
+  if (DATES.indexOf(saved) < 0) saved = null;
+  // A choice someone made (a button here, a shared link or the QR, all marked pick=1)
+  // always wins and is kept on this device, so the home-screen icon, which opens
+  // without parameters, shows the same plan. Older pages wrote ?kamakura= into every
+  // address, so an unmarked 10/2 may be just that default and yields to a saved
+  // choice; an unmarked 10/3 was always someone's choice.
   var param = url.searchParams.get('kamakura');
-  if (param === '2026-10-03') {
-    try { localStorage.setItem('tokyo.kamakura.final', param); } catch (_) {}
+  if (DATES.indexOf(param) >= 0 && (url.searchParams.get('pick') === '1' || param === '2026-10-03')) {
+    saved = param;
+    try { localStorage.setItem(KEY, param); } catch (_) {}
   }
-  var requested = param === '2026-10-03' ? param : saved || param;
-  var selected = requested === '2026-10-03' ? requested : '2026-10-02';
+  var selected = saved || '2026-10-02';
   root.dataset.kamakura = selected;
-  url.searchParams.set('kamakura', selected);
+  // The address carries the plan only when it was chosen, so copying it shares a choice.
+  if (saved) {
+    url.searchParams.set('kamakura', saved);
+    url.searchParams.set('pick', '1');
+  } else {
+    url.searchParams.delete('kamakura');
+    url.searchParams.delete('pick');
+  }
   try { history.replaceState(null, '', url); } catch (_) {}
 
   if (selected === '2026-10-03') {
@@ -57,9 +68,10 @@
   document.querySelectorAll('[data-kama]').forEach(function (button) {
     button.setAttribute('aria-pressed', String(button.dataset.kama === selected));
     button.addEventListener('click', function () {
-      try { localStorage.setItem('tokyo.kamakura.final', button.dataset.kama); } catch (_) {}
+      try { localStorage.setItem(KEY, button.dataset.kama); } catch (_) {}
       var next = new URL(location.href);
       next.searchParams.set('kamakura', button.dataset.kama);
+      next.searchParams.set('pick', '1');
       next.hash = 'i-choice';
       location.assign(next.href);
     });
