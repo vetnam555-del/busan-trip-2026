@@ -23,6 +23,11 @@
       section.querySelector('.dn').textContent = 'DAY ' + (i + 2);
       section.querySelector('.dd').textContent = i ? '10.03 SAT' : '10.02 FRI';
     });
+    // Evening plans belong to the calendar date, not to the route (10/2 shoe
+    // shopping and an early dinner, 10/3 the Unafuji booking): move them back.
+    var eveA = a.querySelectorAll('li[data-fixed]'), eveB = b.querySelectorAll('li[data-fixed]');
+    Array.prototype.forEach.call(eveA, function (li) { b.querySelector('ol.stops').appendChild(li); });
+    Array.prototype.forEach.call(eveB, function (li) { a.querySelector('ol.stops').appendChild(li); });
     ['.st[data-t="d2"] b', '#i-overview a[href="#d2"] .s'].forEach(function (selector, i) {
       var other = i ? '#i-overview a[href="#d3"] .s' : '.st[data-t="d3"] b';
       var x = document.querySelector(selector), y = document.querySelector(other);
