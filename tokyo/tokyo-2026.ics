@@ -6,20 +6,20 @@ X-WR-CALNAME:도쿄 가족여행 - 가마쿠라 10/2
 X-WR-TIMEZONE:Asia/Tokyo
 BEGIN:VEVENT
 UID:final20260927-d1-s0@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T015000Z
 DTEND:20261001T022000Z
 SUMMARY:[계획] 인천 제1터미널 도착 목표
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- nYP735 13:50 출발\, 나리타 T2 16:30 도착은 기존 예약 정보
-  기준입니다. 항공사 앱에서 운항·터미널·개인 수하
- 물 허용량을 다시 확인하세요.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\nYP735 13
+ :50 출발\, 나리타 T2 16:30 도착은 기존 예약 정보 기준입
+ 니다. 항공사 앱에서 운항·터미널·개인 수하물 허용량
+ 을 다시 확인하세요.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
@@ -28,18 +28,18 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d1-s1@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T045000Z
 DTEND:20261001T073000Z
 SUMMARY:[계획] YP735 · 나리타로 출발
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n여권과 항공권 이름\, 편명·날짜를 확인합니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n여권
+ 과 항공권 이름\, 편명·날짜를 확인합니다.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
@@ -48,89 +48,118 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d1-s2@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T073000Z
 DTEND:20261001T080000Z
 SUMMARY:[계획] 나리타 T2 · 입국과 수하물
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n도착 예정 시각입니다. 입국·수하물·열차 교환 소요
- 시간은 당일 상황에 따라 달라집니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n도착 
+ 예정 시각입니다. 입국·수하물·열차 교환 소요시간은 
+ 당일 상황에 따라 달라집니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 나리타 T2 · 입국과 수하물
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d1-s3@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T083000Z
 DTEND:20261001T090000Z
 SUMMARY:[계획] N’EX 교환 · 왕복 지정석 확인
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n시간은 목표입니다. 3명 여권과 바우처를 준비하고\,
-  바우처에 명시된 교환 창구를 이용하세요. 귀국편은 1
- 0/5 T3 13:00~13:20 도착을 기준으로 실제 열차를 선택합니
- 다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n3명 여
+ 권과 바우처를 준비해 교환 창구로. 공항제2빌딩역 → 
+ 신주쿠 N’EX는 평일 17:19 · 17:48 · 18:19 · 18:48 · 19:20 · 19
+ :53경 출발\, 신주쿠까지 약 1시간 25분입니다. 이때 10/5 
+ 귀국 좌석도 함께: 신주쿠 11:08 발 21호(공항제2빌딩 12:27 
+ 도착)를 요청하세요. 지정석 표에 적힌 시각이 가장 정
+ 확합니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] N’EX 교환 · 왕복 지정석 확인
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d1-s4@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T105000Z
 DTEND:20261001T112000Z
 SUMMARY:[계획] 신주쿠 · 숙소 체크인 목표
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n열차와 입국 상황에 따라 늦어질 수 있습니다. 택시는
-  성인 3명과 캐리어 3개를 모두 실을 수 있는지 확인하
- 고\, 필요하면 큰 차량이나 2대를 이용합니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n열차
+ 와 입국 상황에 따라 늦어질 수 있습니다. 택시는 성인 3
+ 명과 캐리어 3개를 모두 실을 수 있는지 확인하고\, 필요
+ 하면 큰 차량이나 2대를 이용합니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 신주쿠 · 숙소 체크인 목표
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d1-s5@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T111500Z
 DTEND:20261001T114500Z
 SUMMARY:[계획] 하야시다 신주쿠 · 간단한 저녁
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n간장 라멘오리와 닭을 쓰는 육수가 특징. 도착일에 무
- 거운 코스 대신 한 그릇으로 마무리.예상 대기가 20분
- 을 넘으면 교자노 후쿠호로 전환. 입국·수하물 지연
-  시 맛집보다 체크인과 휴식 우선.\n1인 ¥1\,500–2\,000 ·
-  계획 예산 / 예약 완료 아님
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n간장 
+ 라멘\n오리와 닭을 쓰는 육수가 특징. 도착일에 무거운 
+ 코스 대신 한 그릇으로 마무리.\n예상 대기가 20분을 넘
+ 으면 교자노 후쿠호로 전환. 입국·수하물 지연 시 맛집
+ 보다 체크인과 휴식 우선.\n1인 ¥1\,500–2\,000 · 계획 예
+ 산 / 예약 완료 아님
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 하야시다 신주쿠 · 간단한 저녁
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d1-s6@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T123000Z
 DTEND:20261001T130000Z
 SUMMARY:[계획] 아침거리 준비 · 휴식
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n다음 날 먹을 간단한 아침거리를 준비하고 쉽니다. 다
- 음 날 외출은 가족 컨디션과 날씨를 보고 결정하세요.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n내일(1
+ 0/2)은 07:00에 숙소를 나서 가마쿠라로 갑니다. 편의점에
+ 서 아침거리를 사 두고 일찍 쉬세요. 자기 전에 위쪽 ‘
+ 가마쿠라’ 칸에서 날씨를 보고\, 오전에 비가 많으면 10
+ /3으로 바꿉니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 아침거리 준비 · 휴식
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d2-s0@tokyo-trip.local
@@ -717,90 +746,109 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d5-s0@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261005T003000Z
 DTEND:20261005T010000Z
 SUMMARY:[계획] 짐 정리 · 체크아웃 준비
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n체크아웃 마감은 예약 앱에서 확인. 여권·휴대폰·충
- 전기·약을 먼저 챙기세요.
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d5-s1@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261005T010000Z
-DTEND:20261005T013000Z
-SUMMARY:[계획] 신주쿠역으로 출발 목표
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n짐 보관과 백화점 쇼핑을 생략합니다. N’EX 실제 승차
-  시각에 맞춰 역에서 여유를 둡니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n체크
+ 아웃 마감은 예약 앱에서 확인. 여권·휴대폰·충전기·
+ 약을 먼저 챙기세요.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 신주쿠역으로 출발 목표
+DESCRIPTION:[계획] 짐 정리 · 체크아웃 준비
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:final20260927-d5-s1@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261005T012000Z
+DTEND:20261005T015000Z
+SUMMARY:[계획] 숙소 출발 · 신주쿠역으로
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n택시
+ 로 신주쿠역(약 10분\, 캐리어 3개가 실리는지 먼저 확인)
+ . 짐 보관과 쇼핑은 하지 않고\, N’EX 승강장에 10:55까지 
+ 갑니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 숙소 출발 · 신주쿠역으로
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d5-s2@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261005T020000Z
-DTEND:20261005T023000Z
-SUMMARY:[계획] N’EX · 11시대 실제 열차 선택
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n11:00은 발권 시각이 아닌 계획용 표시입니다. T3 13:00~13
- :20 도착을 만족하는 실제 열차로 지정석을 확보하세요
- . 적절한 열차가 없으면 더 일찍 출발합니다.
+DTSTART:20261005T020800Z
+DTEND:20261005T032700Z
+SUMMARY:[계획] N’EX 21호 · 신주쿠 → 공항제2빌딩
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n신주
+ 쿠 11:08 발 → 공항제2빌딩 12:27 도착(평일 시각). 지정석 
+ 표의 열차가 우선입니다. 놓치면 11:38 발 23호(12:54 도착)
+ 까지는 괜찮고\, 더 여유를 두려면 10:38 발 19호(11:53 도착
+ )도 있습니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] N’EX 21호 · 신주쿠 → 공항제2빌딩
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d5-s3@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261005T040000Z
-DTEND:20261005T043000Z
-SUMMARY:[계획] 나리타 T3 · 13:20까지 도착 목표
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n공항제2빌딩역에서 T3까지 걷거나 연결 교통을 이용합
- 니다. 짐·승강기·이동 대기를 포함해 여유를 두세요.
-  ZE610 체크인·수하물 마감은 항공사 안내 우선입니다.
+DTSTART:20261005T034500Z
+DTEND:20261005T041500Z
+SUMMARY:[계획] 나리타 제3터미널 도착
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n공항
+ 제2빌딩역에서 제3터미널까지 걸어서 약 15분(무빙워크 
+ 통로) 또는 무료 순환버스. 23호를 타도 13:20 전에 도착합
+ 니다. 10/5는 한국 대체공휴일이라 붐비니 바로 체크인하
+ 세요. ZE610 체크인·수하물 마감은 항공사 안내가 우선입
+ 니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 나리타 제3터미널 도착
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d5-s4@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261005T072000Z
 DTEND:20261005T101000Z
 SUMMARY:[계획] ZE610 · 인천행
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n기존 예약 기준 인천 19:10 도착. 탑승구와 출발 시각은
-  당일 안내판을 확인하세요.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n기존 
+ 예약 기준 인천 19:10 도착. 탑승구와 출발 시각은 당일 
+ 안내판을 확인하세요.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
