@@ -28,6 +28,14 @@
     var eveA = a.querySelectorAll('li[data-fixed]'), eveB = b.querySelectorAll('li[data-fixed]');
     Array.prototype.forEach.call(eveA, function (li) { b.querySelector('ol.stops').appendChild(li); });
     Array.prototype.forEach.call(eveB, function (li) { a.querySelector('ol.stops').appendChild(li); });
+    // Keep each day in time order; the trip-day "now / next" bar relies on it.
+    [a, b].forEach(function (section) {
+      var list = section.querySelector('ol.stops');
+      Array.prototype.slice.call(list.children).sort(function (x, y) {
+        var tx = x.querySelector('.t').textContent, ty = y.querySelector('.t').textContent;
+        return tx < ty ? -1 : tx > ty ? 1 : 0;
+      }).forEach(function (li) { list.appendChild(li); });
+    });
     ['.st[data-t="d2"] b', '#i-overview a[href="#d2"] .s'].forEach(function (selector, i) {
       var other = i ? '#i-overview a[href="#d3"] .s' : '.st[data-t="d3"] b';
       var x = document.querySelector(selector), y = document.querySelector(other);
@@ -89,7 +97,12 @@
       : words('예보를 가져오지 못하면 기상 링크로 확인하세요. 날씨를 0으로 표시하지 않습니다.', '取得できない場合は気象リンクで確認。欠測値は0として表示しません。');
     box.appendChild(note);
   }
-  window.addEventListener('tokyo-weather', function (event) { lastWeather = event.detail; failed = false; paintComparison(); });
+  window.addEventListener('tokyo-weather', function (event) {
+    // A language switch re-sends the same cached forecast; only a new fetch clears the failure note.
+    if (!lastWeather || event.detail.at !== lastWeather.at) failed = false;
+    lastWeather = event.detail;
+    paintComparison();
+  });
   window.addEventListener('tokyo-weather-error', function () { failed = true; paintComparison(); });
   new MutationObserver(paintComparison).observe(root, {attributes:true, attributeFilter:['data-lang']});
   paintComparison();
