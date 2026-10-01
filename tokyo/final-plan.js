@@ -4,7 +4,15 @@
   var url = new URL(location.href);
   var saved = null;
   try { saved = localStorage.getItem('tokyo.kamakura.final'); } catch (_) {}
-  var requested = url.searchParams.get('kamakura') || saved;
+  // Every page view writes ?kamakura= into the address, so a 10/2 value in a link is
+  // usually just the old default; it must not undo a 10/3 choice made on this device.
+  // A 10/3 link is always someone's choice: keep it here, so the home-screen icon
+  // (which opens without the parameter) shows the same plan.
+  var param = url.searchParams.get('kamakura');
+  if (param === '2026-10-03') {
+    try { localStorage.setItem('tokyo.kamakura.final', param); } catch (_) {}
+  }
+  var requested = param === '2026-10-03' ? param : saved || param;
   var selected = requested === '2026-10-03' ? requested : '2026-10-02';
   root.dataset.kamakura = selected;
   url.searchParams.set('kamakura', selected);
