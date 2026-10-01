@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Tokyo Family Trip//Final 20260927//KO
+PRODID:-//Tokyo Family Trip//Update 20261001//KO
 CALSCALE:GREGORIAN
 X-WR-CALNAME:도쿄 가족여행 - 가마쿠라 10/2
 X-WR-TIMEZONE:Asia/Tokyo
@@ -133,21 +133,21 @@ DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
  음 날 외출은 가족 컨디션과 날씨를 보고 결정하세요.
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s0@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261002-s0@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261001T233000Z
 DTEND:20261002T000000Z
 SUMMARY:[계획] 신주쿠에서 가마쿠라로
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n출발 목표입니다. JR 쇼난신주쿠라인의 행선지·환승
-  여부를 당일 확인하세요. 보통열차 그린차는 자유석
- 이라 3명 좌석을 보장하지 않습니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n출발 
+ 목표입니다. JR 쇼난신주쿠라인의 행선지·환승 여부를 
+ 당일 확인하세요. 보통열차 그린차는 자유석이라 3명 좌
+ 석을 보장하지 않습니다.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
@@ -155,202 +155,279 @@ DESCRIPTION:[계획] 신주쿠에서 가마쿠라로
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s1@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261002-s1@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T010000Z
 DTEND:20261002T013000Z
 SUMMARY:[계획] 역 주변 · 고마치도리 짧게
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n점심 전 30~40분 정도만 걷습니다. 하치만구까지 왕복
- 하는 코스는 컨디션이 좋을 때 선택합니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n점심 
+ 전 30~40분 정도만 걷습니다. 하치만구까지 왕복하는 코
+ 스는 컨디션이 좋을 때 선택합니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 역 주변 · 고마치도리 짧게
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s2@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261002-s2@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T020000Z
 DTEND:20261002T023000Z
 SUMMARY:[계획] 아키모토 · 시라스와 채소
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n시라스 덮밥·가마쿠라 채소가마쿠라에 간 날 현지 식
- 재료를 먹는 선택. 생시라스가 없으면 가마아게(삶은
-  시라스)로.생시라스는 당일 수급에 따라 다름. 대기 30
- 분을 넘으면 근처에서 익힌 시라스 메뉴로 변경. 3F 승
- 강기 여부 미확인.\n1인 ¥2\,500–3\,500 · 계획 예산 / 예
- 약 완료 아님
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n시라
+ 스 덮밥·가마쿠라 채소\n가마쿠라에 간 날 현지 식재료
+ 를 먹는 선택. 생시라스가 없으면 가마아게(삶은 시라스
+ )로.\n생시라스는 당일 수급에 따라 다름. 대기 30분을 넘
+ 으면 근처에서 익힌 시라스 메뉴로 변경. 3F 승강기 여부
+  미확인.\n1인 ¥2\,500–3\,500 · 계획 예산 / 예약 완료 아
+ 님
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 아키모토 · 시라스와 채소
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s3@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261002-s3@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261002T034500Z
-DTEND:20261002T041500Z
+DTSTART:20261002T033000Z
+DTEND:20261002T040000Z
 SUMMARY:[계획] 대불 또는 하세데라 · 한 곳만
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n에노덴으로 하세 이동. 계단을 줄이려면 대불을 우선
-  검토하고\, 정원·전망을 원하고 계단이 괜찮으면 하
- 세데라를 고릅니다. 아키모토는 3층으로 승강기 여부
-  미확인\, 대기 30분 넘으면 근처 식사로 바꿉니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n에노
+ 덴으로 하세 이동. 계단을 줄이려면 대불을 우선 검토하
+ 고\, 정원·전망을 원하고 계단이 괜찮으면 하세데라를 
+ 고릅니다. 아키모토는 3층으로 승강기 여부 미확인\, 대
+ 기 30분 넘으면 근처 식사로 바꿉니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 대불 또는 하세데라 · 한 곳만
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s4@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261002-s4@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261002T044500Z
+DTEND:20261002T051500Z
+SUMMARY:[계획] 앉아서 30분 쉬기
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n자리
+ 가 있는 가까운 카페에서 휴식. 사진 명소를 추가하지 
+ 않고 가마쿠라역으로 돌아갑니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 앉아서 30분 쉬기
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261002-s5@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T053000Z
 DTEND:20261002T060000Z
-SUMMARY:[계획] 앉아서 30분 쉬기
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n자리가 있는 가까운 카페에서 휴식. 사진 명소를 추가
- 하지 않고 가마쿠라역으로 돌아갑니다.
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d2-s5@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261002T063000Z
-DTEND:20261002T070000Z
 SUMMARY:[계획] 가마쿠라 출발 목표
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n저녁 예약까지 이동 여유를 둡니다. 지연되면 요코초
-  산책을 생략하고 식당에 연락하세요.
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d2-s6@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261002T090000Z
-DTEND:20261002T093000Z
-SUMMARY:[계획] 로바타 쇼 · 예약 희망
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n생선구이·제철 채소구이가마쿠라에서 돌아와 앉아서
-  저녁을 먹고\, 요코초 산책은 식사 뒤 선택합니다.지
- 하 1층\, 계단 진입. 3명이 편하게 앉을 의자 좌석을 사
- 전 요청. 부모님이 계단을 피해야 하면 이곳은 제외.\n1
- 인 ¥5\,000–7\,000 · 계획 예산 / 예약 완료 아님
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n신주
+ 쿠에 15:40경 도착합니다. 저녁 일정은 날짜에 묶여 있어 
+ 가마쿠라 날짜를 바꿔도 그대로입니다. 늦어지면 저녁 
+ 전 일정을 줄이세요.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 로바타 쇼 · 예약 희망
+DESCRIPTION:[계획] 가마쿠라 출발 목표
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s7@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261002-s6@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261002T103000Z
-DTEND:20261002T110000Z
-SUMMARY:[계획] 오모이데 요코초 · 선택 산책
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n15~20분만 보고 숙소로. 로바타 쇼는 지하 계단이 있어
-  계단 이용이 어려우면 제외합니다.
+DTSTART:20261002T070000Z
+DTEND:20261002T073000Z
+SUMMARY:[계획] 오다큐 백화점 신주쿠점 · 엄마 신발
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n신주
+ 쿠역 서쪽 출구 앞 ‘신주쿠 니시구치 하루쿠’ 건물 2
+ 층 여성화 매장의 MARGARET HOWELL idea. 찾는 제품은 플랫슈
+ 즈 품번 132505 · LBG(라이트 베이지)입니다. 아래 카드를 
+ 점원에게 보여 주세요. 사이즈와 재고는 미리 전화로 물
+ 어보면 헛걸음이 없습니다. 금요일 10:00–20:30.\n재고가 
+ 없으면 도부백화점 이케부쿠로점 2층 같은 브랜드 코너(
+ ☎ 03-5951-6599)의 재고를 확인해 달라고 부탁하세요. 있으
+ 면 다른 날 따로 다녀옵니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 오다큐 백화점 신주쿠점 · 엄마 신발
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d3-s0@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261002-s7@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261002T080000Z
+DTEND:20261002T083000Z
+SUMMARY:[계획] 츠나하치 총본점 · 이른 저녁
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n덴푸
+ 라 정식\n1924년부터 이어 온 신주쿠의 튀김집. 오다큐에
+ 서 걸어서 약 10분(신주쿠 3초메 쪽)\, 택시면 기본요금 
+ 거리입니다. 매일 11:00–22:00 영업이라 17시에는 비교적 
+ 바로 앉을 수 있는 시간대입니다.\n대기가 20분을 넘으면
+  근처 다른 식당으로 바꿉니다.\n1인 ¥2\,500–4\,500 · 계
+ 획 예산 / 예약 없이 방문
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 츠나하치 총본점 · 이른 저녁
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261002-s8@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261002T084000Z
+DTEND:20261002T091000Z
+SUMMARY:[계획] 따로 이동 · 부모님은 택시로 숙소
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n개인 
+ 약속이 있는 사람은 여기서 먼저 출발합니다. 부모님은 
+ 가게 앞 큰길에서 택시를 타고 ‘숙소로 가 주세요’ 카
+ 드를 보여 주세요. 숙소(신주쿠교엔마에)까지 약 5~10분\,
+  1\,000엔 안팎입니다. 도착하면 가족에게 메시지를 보내 
+ 주세요.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 따로 이동 · 부모님은 택시로 숙소
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261003-s0@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261003T000000Z
 DTEND:20261003T003000Z
 SUMMARY:[계획] 메이지신궁 · 짧은 산책
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n왕복 보행 부담이 있거나 비가 오면 생략하고 늦게 출
- 발합니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n왕복 
+ 보행 부담이 있거나 비가 오면 생략하고 늦게 출발합니
+ 다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 메이지신궁 · 짧은 산책
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d3-s1@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261003-s1@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261003T020000Z
 DTEND:20261003T023000Z
 SUMMARY:[계획] 마이센 아오야마 · 점심
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n히레카츠 또는 로스카츠 정식메이지신궁 다음 오모테
- 산도 방향에 있어 음식 때문에 멀리 돌아가지 않아도
-  됨.기름진 음식 부담이 있으면 작은 정식으로. 점심
-  대기 30분 이상이면 주변 식사로 바꾸고 오후 일정을
-  지킴.\n1인 ¥2\,500–3\,500 · 계획 예산 / 예약 완료 아님
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n히레
+ 카츠 또는 로스카츠 정식\n메이지신궁 다음 오모테산도 
+ 방향에 있어 음식 때문에 멀리 돌아가지 않아도 됨.\n기
+ 름진 음식 부담이 있으면 작은 정식으로. 점심 대기 30분
+  이상이면 주변 식사로 바꾸고 오후 일정을 지킴.\n1인 ¥
+ 2\,500–3\,500 · 계획 예산 / 예약 완료 아님
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 마이센 아오야마 · 점심
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d3-s2@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261003-s2@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261003T033000Z
 DTEND:20261003T040000Z
 SUMMARY:[계획] 오모테산도 · 산책과 이동 여유
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n메이지신궁·점심이 늦어지면 산책을 줄입니다. 메구
- 로까지 이동할 시간을 포함한 구간이며 네즈 관람을
-  추가하지 않습니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n메이
+ 지신궁·점심이 늦어지면 산책을 줄입니다. 메구로까지 
+ 이동할 시간을 포함한 구간이며 네즈 관람을 추가하지 
+ 않습니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 오모테산도 · 산책과 이동 여유
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d3-s3@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261003-s3@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261003T050000Z
 DTEND:20261003T063000Z
 SUMMARY:[계획] 카나데 라운지 · 오늘의 주 카페
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n호텔 가조엔 도쿄의 정원·폭포를 바라보며 60~90분 쉽
- 니다. 좌석만 예약 가능한지 먼저 확인하세요. 커피 1\,
- 600엔\, 케이크 2\,000엔(14~17시). 메뉴 금액은 세금·서비
- 스료 포함입니다.\n1인 1\,600~4\,200엔 계획. 창가·빈자리
-  미확인. 네즈를 택하면 카나데를 빼고 미술관 입장료
- 를 추가합니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n호텔 
+ 가조엔 도쿄의 정원·폭포를 바라보며 60~90분 쉬고 15:30 
+ 전후에 일어납니다. 좌석만 예약 가능한지 먼저 확인하
+ 세요. 커피 1\,600엔\, 케이크 2\,000엔(14~17시). 메뉴 금액은
+  세금·서비스료 포함입니다.\n1인 1\,600~4\,200엔 계획. 창
+ 가·빈자리 미확인. 네즈를 택하면 카나데를 빼고 미술
+ 관 입장료를 추가합니다.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
@@ -358,176 +435,284 @@ DESCRIPTION:[계획] 카나데 라운지 · 오늘의 주 카페
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d3-s4@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261003-s4@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261003T070000Z
 DTEND:20261003T073000Z
-SUMMARY:[계획] 에비스 그릇 가게 · 선택 1곳
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n카나데에서 메구로·에비스 방향으로 이동. THE HARVEST
-  또는 EAST table 중 한 곳만 보고\, 피곤하면 생략합니다.
-  실제 영업·이동 경로는 당일 지도에서 확인하세요.
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d3-s5@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261003T083000Z
-DTEND:20261003T090000Z
-SUMMARY:[계획] 폰가 에비스 · 특별한 저녁 후보
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n네기탄·와규 구이고기 좋아하는 가족의 특별한 저녁
- 으로 배치. 1만 엔 코스 선택 시 서비스료를 별도로 계
- 산.공식 코스 10\,000엔(세금 포함)+서비스 10%=11\,000엔\,
-  음료 별도. 생·덜 익힌 소고기/내장 메뉴 교체 가능
-  여부와 2F 엘리베이터를 예약 전 확인.\n1인 ¥12\,000–14
- \,000 · 계획 예산 / 예약 완료 아님
+SUMMARY:[계획] 하쓰다이 · 오페라시티로 이동
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n신주
+ 쿠역에서 게이오 신선(京王新線)으로 1정거장인 하쓰다
+ 이역\, 오페라시티 53층은 전용 승강기로 올라갑니다. 각
+ 역정차(各駅停車)를 타면 확실합니다. 메구로(카나데)에
+ 서는 야마노테선으로 신주쿠까지 약 20분\, 택시는 약 25
+ 분. 가마쿠라에서 오는 날은 쇼난신주쿠라인으로 신주
+ 쿠까지 약 1시간입니다. 늦을 것 같으면 가게에 전화하
+ 세요.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 폰가 에비스 · 특별한 저녁 후보
+DESCRIPTION:[계획] 하쓰다이 · 오페라시티로 이동
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d3-s6@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
+UID:r20261001-20261003-s5@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
-DTSTART:20261003T103000Z
-DTEND:20261003T110000Z
-SUMMARY:[계획] 숙소로 · 저녁 예산 조정 가능
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n폰가는 고가 선택입니다. 생고기·내장 제외와 2층 승
- 강기를 확인하세요. 부담되면 스시노 미도리 시부야점
- (1인 3\,000~5\,000엔 계획)으로 바꾸되\, 에비스 쇼핑을 빼
- 고 시부야로 이동합니다. 두 저녁을 함께 예약하지 않
- 습니다.
+DTSTART:20261003T080000Z
+DTEND:20261003T083000Z
+SUMMARY:[예약] 우나후지 · 예약 완료 ✓
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n상 히
+ 츠마부시\n10/3(토) 17:00 예약 완료. 도착하면 예약자 이름
+ 을 말하세요. 장어구이를 그대로\, 약미와 함께\, 육수에
+  말아 먹는 메뉴입니다.\n창가·야경 좌석은 예약 내역에
+  따라 다릅니다. 하쓰다이역에서 53F 전용 승강기.\n1인 ¥
+ 6\,500–8\,500 · 계획 예산 / 예약 완료
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[예약] 우나후지 · 예약 완료 ✓
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d4-s0@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261003-s6@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261003T094500Z
+DTEND:20261003T101500Z
+SUMMARY:[계획] 오모이데 요코초 · 선택 산책
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n하쓰
+ 다이에서 게이오 신선으로 신주쿠까지 1정거장. 서쪽 출
+ 구 옆 골목을 15~20분만 보고 택시로 숙소에 갑니다. 피곤
+ 하면 하쓰다이에서 바로 택시(약 15분).
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 오모이데 요코초 · 선택 산책
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s0@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261004T003000Z
 DTEND:20261004T010000Z
 SUMMARY:[계획] 센소지 · 아사쿠사
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n상점가와 경내를 천천히 둘러봅니다. 가메주 포장은
-  선택이며 대기 20분이 넘으면 생략합니다.
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n상점
+ 가와 경내를 천천히 둘러봅니다. 가메주 포장은 선택이
+ 며 대기 20분이 넘으면 생략합니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 센소지 · 아사쿠사
+END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d4-s1@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
+UID:r20261001-20261004-s1@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261004T020000Z
 DTEND:20261004T023000Z
 SUMMARY:[계획] 나미키 야부소바 · 가벼운 점심
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n자루소바 또는 덴푸라 소바저녁 장어를 고려해 가벼
- 운 점심으로 선택. 타베로그 소바 EAST 백명점 2025 선정
-  확인.메밀 알레르기가 있으면 제외. 소바만으로 부족
- 하면 튀김을 곁들이되 점심을 과하게 늘리지 않음.\n1
- 인 ¥1\,500–2\,500 · 계획 예산 / 예약 완료 아님
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d4-s2@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261004T034500Z
-DTEND:20261004T041500Z
-SUMMARY:[계획] 하마리큐 · 나카지마노 오차야 (선택)
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n날씨와 체력이 좋으면 연못 위 다실에서 쉽니다. 정원
-  성인 입장료 300엔\, 차·과자는 900~1\,500엔 계획값(최신
-  메뉴값 미확인). 비가 오거나 피곤하면 긴자로 바로
-  갑니다.
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d4-s3@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261004T054500Z
-DTEND:20261004T061500Z
-SUMMARY:[계획] 긴자 · 짧게 둘러보기
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n하마리큐를 다녀왔으면 카페를 추가하지 않습니다.
-  정원을 뺐다면 시세이도 3F 카페 또는 가까운 빈자리
-  있는 카페 한 곳. 긴 대기는 피합니다.
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d4-s4@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261004T064500Z
-DTEND:20261004T071500Z
-SUMMARY:[계획] 하쓰다이 · 오페라시티로 이동
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n전철 환승과 53층 승강기까지 75분의 계획 여유입니다.
-  실제 경로·지연을 확인하고 늦을 것 같으면 식당에
-  연락합니다.
-END:VEVENT
-BEGIN:VEVENT
-UID:final20260927-d4-s5@tokyo-trip.local
-DTSTAMP:20260927T060000Z
-SEQUENCE:1
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DTSTART:20261004T080000Z
-DTEND:20261004T083000Z
-SUMMARY:[계획] 우나후지 · 예약 희망
-DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데
-  외 표시된 30분은 확정 체류시간이 아닙니다.\n계획용
-  일정입니다. 실제 항공권·지정석·식당 예약 우선. 기
- 존 캘린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\
- n상 히츠마부시장어구이를 그대로\, 약미와 함께\, 육
- 수에 말아 먹는 메뉴. 기존 희망 장소를 유지.개인실은
-  저녁 별도 3\,000엔/120분 안내. 기본 예산은 일반석 기
- 준. 창가·야경·좌석을 보장하지 않음. 하쓰다이역에
- 서 53F 전용 승강기 이용.\n1인 ¥6\,500–8\,500 · 계획 예
- 산 / 예약 완료 아님
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n자루
+ 소바 또는 덴푸라 소바\n저녁 야키니쿠를 고려해 가벼운
+  점심으로 선택. 타베로그 소바 EAST 백명점 2025 선정 확
+ 인.\n메밀 알레르기가 있으면 제외. 소바만으로 부족하
+ 면 튀김을 곁들이되 점심을 과하게 늘리지 않음.\n1인 ¥1
+ \,500–2\,500 · 계획 예산 / 예약 완료 아님
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 우나후지 · 예약 희망
+DESCRIPTION:[계획] 나미키 야부소바 · 가벼운 점심
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s2@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261004T033000Z
+DTEND:20261004T040000Z
+SUMMARY:[계획] 아키하바라 · 가이요도 하비로비 도쿄
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n피규
+ 어·캡슐토이(가챠)로 유명한 가이요도의 직영 장난감 
+ 가게. 아키하바라역 전기상가 출구 바로 앞 라디오회관 
+ 5층(엘리베이터). 토·일 11:00–19:00. 아사쿠사에서는 긴
+ 자선으로 스에히로초까지 약 6분 + 걸어서 5분\, 또는 택
+ 시 약 15분.\n일요일 오후에는 중앙도리가 차 없는 거리
+ 가 되기도 해서\, 택시는 큰길에서 조금 벗어난 곳에서 
+ 타고 내립니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 아키하바라 · 가이요도 하비로비 도쿄
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s3@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261004T044500Z
+DTEND:20261004T051500Z
+SUMMARY:[계획] 하마리큐 · 나카지마노 오차야 (선택)
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n아키
+ 하바라에서 JR로 신바시까지 약 7분\, 걸어서 약 12분. 날
+ 씨와 체력이 좋으면 연못 위 다실에서 쉽니다. 정원 성
+ 인 입장료 300엔\, 차·과자는 900~1\,500엔 계획값(최신 메
+ 뉴값 미확인). 비가 오거나 피곤하면 긴자로 바로 갑니
+ 다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 하마리큐 · 나카지마노 오차야 (선택)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s4@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261004T061500Z
+DTEND:20261004T064500Z
+SUMMARY:[계획] 긴자 · 짧게 둘러보기
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n하마
+ 리큐를 다녀왔으면 카페를 추가하지 않습니다. 정원을 
+ 뺐다면 시세이도 3F 카페 또는 가까운 빈자리 있는 카페 
+ 한 곳. 긴 대기는 피합니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 긴자 · 짧게 둘러보기
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s5@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261004T073000Z
+DTEND:20261004T080000Z
+SUMMARY:[계획] 에비스로 이동
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n긴자
+ 역에서 히비야선(나카메구로 방면) 직통 약 17분. 피곤하
+ 면 그릇 가게는 생략하고 저녁만 갑니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 에비스로 이동
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s6@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261004T075000Z
+DTEND:20261004T082000Z
+SUMMARY:[계획] 에비스 그릇 가게 · 선택 1곳
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n에비
+ 스역 주변. THE HARVEST 또는 EAST table 중 한 곳만 보고\, 피
+ 곤하면 생략합니다. 실제 영업은 당일 지도에서 확인하
+ 세요.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 에비스 그릇 가게 · 선택 1곳
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s7@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261004T090000Z
+DTEND:20261004T093000Z
+SUMMARY:[계획] 폰가 에비스 · 마지막 밤 저녁
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n네기
+ 탄·와규 구이\n고기 좋아하는 가족의 마지막 밤 저녁. 
+ 아직 예약 전이면 10/4 18:00 3명으로 예약하세요. 예약이 
+ 안 되면 에비스로 가지 말고 긴자에서 비어홀 라이온 긴
+ 자 7초메(1934년 개업\, 일 11:30–22:00)로 바꿉니다.\n공식 
+ 코스 10\,000엔(세금 포함)+서비스 10%=11\,000엔\, 음료 별도.
+  생·덜 익힌 소고기/내장 메뉴 교체 가능 여부와 2F 엘리
+ 베이터를 예약 전 확인.\n1인 ¥12\,000–14\,000 · 계획 예산
+  / 예약 필요
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 폰가 에비스 · 마지막 밤 저녁
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:r20261001-20261004-s8@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:2
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261004T104500Z
+DTEND:20261004T111500Z
+SUMMARY:[계획] 숙소로 · 내일은 귀국
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n에비
+ 스역 앞에서 택시로 약 20분\, 또는 JR 야마노테선으로 신
+ 주쿠까지 7분 뒤 택시. 내일 아침 짐 정리가 있으니 일찍
+  쉽니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 숙소로 · 내일은 귀국
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
