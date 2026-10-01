@@ -135,7 +135,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d3-s0@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T000000Z
@@ -156,7 +156,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d3-s1@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T020000Z
@@ -180,7 +180,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d3-s2@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T033000Z
@@ -202,7 +202,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d3-s3@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T050000Z
@@ -232,7 +232,7 @@ STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261002T070000Z
 DTEND:20261002T073000Z
-SUMMARY:[계획] 오다큐 백화점 신주쿠점 · 엄마 신발
+SUMMARY:[계획] 엄마 신발 · 오다큐 백화점 신주쿠점
 DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
  표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
  입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
@@ -248,7 +248,7 @@ DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 오다큐 백화점 신주쿠점 · 엄마 신발
+DESCRIPTION:[계획] 엄마 신발 · 오다큐 백화점 신주쿠점
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -268,8 +268,10 @@ DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외
  서 걸어서 약 10분(신주쿠 3초메 쪽)\, 택시면 기본요금 
  거리입니다. 매일 11:00–22:00 영업이라 17시에는 비교적 
  바로 앉을 수 있는 시간대입니다.\n대기가 20분을 넘으면
-  근처 다른 식당으로 바꿉니다.\n1인 ¥2\,500–4\,500 · 계
- 획 예산 / 예약 없이 방문
+  근처 다른 식당으로 바꿉니다. 노게에서 많이 먹었다면
+  저녁은 생략하고\, 오다큐 지하 식품관에서 도시락을 
+ 사서 숙소에서 드셔도 됩니다.\n1인 ¥2\,500–4\,500 · 계획
+  예산 / 예약 없이 방문
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
@@ -303,54 +305,85 @@ END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d2-s0@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261002T233000Z
-DTEND:20261003T000000Z
-SUMMARY:[계획] 신주쿠에서 가마쿠라로
+DTSTART:20261002T223000Z
+DTEND:20261002T230000Z
+SUMMARY:[계획] 신주쿠에서 가마쿠라로 · 아침 일찍
 DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
  표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
  입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
- 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n출발 
- 목표입니다. JR 쇼난신주쿠라인의 행선지·환승 여부를 
- 당일 확인하세요. 보통열차 그린차는 자유석이라 3명 좌
- 석을 보장하지 않습니다.
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n숙소
+ 에서 07:00쯤 나와 택시로 신주쿠역(약 10분). JR 쇼난신주
+ 쿠라인 즈시(逗子)행을 타면 가마쿠라까지 갈아타지 않
+ 고 약 1시간입니다. 정확한 열차는 당일 앱으로 확인하
+ 세요. 3명이 앉아 가려면 그린차(2층 특실\, 자유석)를 이
+ 용합니다.\n그린차는 자유석이라 3명 좌석이 보장되지 
+ 않습니다. 표는 Suica로 승강장의 그린권 발매기에서 삽
+ 니다.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 신주쿠에서 가마쿠라로
+DESCRIPTION:[계획] 신주쿠에서 가마쿠라로 · 아침 일찍
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:final20260927-d2-s3@tokyo-trip.local
+DTSTAMP:20261001T000000Z
+SEQUENCE:3
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+DTSTART:20261002T234000Z
+DTEND:20261003T001000Z
+SUMMARY:[계획] 대불 또는 하세데라 · 한 곳만
+DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
+ 표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
+ 입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n가마
+ 쿠라역에서 에노덴으로 하세역까지 3정거장(약 5분)\, 걸
+ 어서 7~10분. 둘 다 아침 8시에 문을 열어 일찍 갈수록 한
+ 산합니다. 계단을 줄이려면 대불(입장 300엔)\, 정원·바
+ 다 전망을 원하고 계단이 괜찮으면 하세데라(400엔). 한 
+ 곳만 봅니다.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:[계획] 대불 또는 하세데라 · 한 곳만
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d2-s1@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261003T010000Z
-DTEND:20261003T013000Z
-SUMMARY:[계획] 역 주변 · 고마치도리 짧게
+DTSTART:20261003T005000Z
+DTEND:20261003T012000Z
+SUMMARY:[계획] 쓰루가오카 하치만구 · 고마치도리 따라
 DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
  표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
  입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
- 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n점심 
- 전 30~40분 정도만 걷습니다. 하치만구까지 왕복하는 코
- 스는 컨디션이 좋을 때 선택합니다.
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n에노
+ 덴으로 가마쿠라역에 돌아와 기념품 가게가 늘어선 고
+ 마치도리를 따라 걸으면 약 15분 만에 가마쿠라의 상징 
+ 쓰루가오카 하치만구에 닿습니다. 가게는 10시쯤부터 엽
+ 니다. 본궁은 계단(약 60단)이 있어\, 힘들면 아래 무대(
+ 舞殿) 앞에서 참배하고 돌아옵니다.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 역 주변 · 고마치도리 짧게
+DESCRIPTION:[계획] 쓰루가오카 하치만구 · 고마치도리 따라
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d2-s2@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261003T020000Z
-DTEND:20261003T023000Z
+DTSTART:20261003T021000Z
+DTEND:20261003T024000Z
 SUMMARY:[계획] 아키모토 · 시라스와 채소
 DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
  표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
@@ -369,69 +402,80 @@ DESCRIPTION:[계획] 아키모토 · 시라스와 채소
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s3@tokyo-trip.local
+UID:final20260927-d2-s5@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 DTSTART:20261003T033000Z
 DTEND:20261003T040000Z
-SUMMARY:[계획] 대불 또는 하세데라 · 한 곳만
+SUMMARY:[계획] 가마쿠라 → 요코하마 사쿠라기초
 DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
  표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
  입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
- 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n에노
- 덴으로 하세 이동. 계단을 줄이려면 대불을 우선 검토하
- 고\, 정원·전망을 원하고 계단이 괜찮으면 하세데라를 
- 고릅니다. 아키모토는 3층으로 승강기 여부 미확인\, 대
- 기 30분 넘으면 근처 식사로 바꿉니다.
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\nJR 요
+ 코스카선으로 요코하마역(약 25분)\, 네기시선으로 갈아
+ 타 2정거장 사쿠라기초역(약 4분). 합계 약 35분\, 1인 440
+ 엔(Suica).
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 대불 또는 하세데라 · 한 곳만
+DESCRIPTION:[계획] 가마쿠라 → 요코하마 사쿠라기초
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:final20260927-d2-s4@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261003T044500Z
-DTEND:20261003T051500Z
-SUMMARY:[계획] 앉아서 30분 쉬기
+DTSTART:20261003T041500Z
+DTEND:20261003T044500Z
+SUMMARY:[계획] 요코하마 노게 · 선술집 거리
 DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
  표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
  입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
- 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n자리
- 가 있는 가까운 카페에서 휴식. 사진 명소를 추가하지 
- 않고 가마쿠라역으로 돌아갑니다.
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n요코
+ 하마의 대표 술집 골목 노게(野毛). 사쿠라기초역 남쪽 
+ 개찰구를 나와 오른쪽\, 지하도 노게 치카미치(野毛ちか
+ みち)로 내려가면 바로 피오시티(ぴおシティ) 지하 2층 
+ 선술집 거리입니다. 쇼와 시대 분위기의 작은 술집이 모
+ 여 있고 비가 와도 젖지 않습니다.\n부모님과는 앉을 수 
+ 있는 곳으로: 대중 스시 술집 메노지(大衆すし酒場 めの
+ じ\, 매일 12:00–22:00\, 35석) 또는 대중 술집 고노고(大衆
+ 酒場 五の五\, 11:00–22:00). 서서 마시는 진짜 선술집은 
+ 사카구라 이시마쓰(酒蔵 石松\, 화–토 11:00–21:00) — 분
+ 위기만 보고 와도 됩니다.\n1인 ¥1\,500–3\,000 · 계획 예
+ 산 / 예약 없이. 시간이 남으면 지상으로 올라가 노게 골
+ 목과 오오카강 옆 ‘하모니카 골목’(都橋商店街) 바깥
+ 만 5~10분 걷습니다. 골목 가게는 대부분 저녁에 엽니다.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 앉아서 30분 쉬기
+DESCRIPTION:[계획] 요코하마 노게 · 선술집 거리
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:final20260927-d2-s5@tokyo-trip.local
+UID:r20261001-to-shinjuku@tokyo-trip.local
 DTSTAMP:20261001T000000Z
-SEQUENCE:2
+SEQUENCE:3
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
-DTSTART:20261003T053000Z
-DTEND:20261003T060000Z
-SUMMARY:[계획] 가마쿠라 출발 목표
+DTSTART:20261003T054500Z
+DTEND:20261003T061500Z
+SUMMARY:[계획] 사쿠라기초 → 신주쿠
 DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외 
  표시된 30분은 확정 체류시간이 아닙니다.\n계획용 일정
  입니다. 실제 항공권·지정석·식당 예약 우선. 기존 캘
- 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n신주
- 쿠에 15:40경 도착합니다. 저녁 일정은 날짜에 묶여 있어 
- 가마쿠라 날짜를 바꿔도 그대로입니다. 늦어지면 저녁 
- 전 일정을 줄이세요.
+ 린더를 삭제한 뒤 한 가지 날짜안만 가져오세요.\n네기
+ 시선으로 요코하마역(2정거장)\, 쇼난신주쿠라인으로 갈
+ 아타 신주쿠까지 약 30분. 합계 약 45~50분\, 신주쿠에 15:40
+ 경 도착합니다. 저녁 일정은 날짜에 묶여 있어 가마쿠라
+  날짜를 바꿔도 그대로입니다.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:[계획] 가마쿠라 출발 목표
+DESCRIPTION:[계획] 사쿠라기초 → 신주쿠
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -451,9 +495,9 @@ DESCRIPTION:시작 시각 중심 일정입니다. 항공편·카나데 외
  이역\, 오페라시티 53층은 전용 승강기로 올라갑니다. 각
  역정차(各駅停車)를 타면 확실합니다. 메구로(카나데)에
  서는 야마노테선으로 신주쿠까지 약 20분\, 택시는 약 25
- 분. 가마쿠라에서 오는 날은 쇼난신주쿠라인으로 신주
- 쿠까지 약 1시간입니다. 늦을 것 같으면 가게에 전화하
- 세요.
+ 분. 가마쿠라·요코하마에서 오는 날은 사쿠라기초에서 
+ 신주쿠까지 약 45~50분입니다. 늦을 것 같으면 가게에 전
+ 화하세요.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
